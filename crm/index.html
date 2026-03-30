@@ -437,7 +437,7 @@
   async function loadLeads() {
     try {
       const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`, {
-        headers: { Authorization: `token ${getToken()}`, Accept: 'application/vnd.github.v3+json' }
+        headers: { Authorization: `Bearer ${getToken()}`, Accept: 'application/vnd.github.v3+json' }
       });
       if (!res.ok) throw new Error();
       const data = await res.json();
@@ -452,14 +452,14 @@
   // SAVE TO GITHUB
   async function saveToGitHub(message) {
     const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`, {
-      headers: { Authorization: `token ${getToken()}`, Accept: 'application/vnd.github.v3+json' }
+      headers: { Authorization: `Bearer ${getToken()}`, Accept: 'application/vnd.github.v3+json' }
     });
     const current = await res.json();
     const sha = current.sha;
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(leads, null, 2))));
     await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`, {
       method: 'PUT',
-      headers: { Authorization: `token ${getToken()}`, 'Content-Type': 'application/json' },
+      headers: { Authorization: `Bearer ${getToken()}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({ message, content, sha })
     });
   }
