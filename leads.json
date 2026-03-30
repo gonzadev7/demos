@@ -1,0 +1,27 @@
+[
+  {
+    "id": "est-1",
+    "name": "Om Leloir",
+    "niche": "estetica",
+    "status": "demo_enviada",
+    "instagram": "https://www.instagram.com/omleloir",
+    "phone": "5491140983886",
+    "demo_link": "https://gonzadev7.github.io/demos/om-leloir/",
+    "lastContact": "2026-03-30",
+    "nextStep": "Seguimiento si no responde en 24hs",
+    "history": [
+      {
+        "date": "2026-03-30",
+        "action": "Primer mensaje enviado: propuesta de demo"
+      },
+      {
+        "date": "2026-03-30",
+        "action": "Respondieron interesados, pidieron ver demo sin compromiso"
+      },
+      {
+        "date": "2026-03-30",
+        "action": "Demo enviada: https://gonzadev7.github.io/demos/om-leloir/"
+      }
+    ]
+  }
+]
