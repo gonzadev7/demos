@@ -23,5 +23,30 @@
         "action": "Demo enviada: https://gonzadev7.github.io/demos/om-leloir/"
       }
     ]
+  },
+  {
+    "id": "con-1",
+    "name": "Nora Congelados",
+    "niche": "alimentos",
+    "status": "cotizacion_enviada",
+    "instagram": "",
+    "phone": "",
+    "demo_link": "",
+    "lastContact": "2026-03-30",
+    "nextStep": "Esperar respuesta a seguimiento",
+    "history": [
+      {
+        "date": "2026-03-25",
+        "action": "Entraron por referido de Dulce Araica, pidieron cotización"
+      },
+      {
+        "date": "2026-03-27",
+        "action": "Cotización enviada: Opción A $750k+$15k/mes, Opción B $400k+$25k/mes. 25-30 productos."
+      },
+      {
+        "date": "2026-03-30",
+        "action": "Seguimiento enviado: sin respuesta desde el 27/3"
+      }
+    ]
   }
 ]
