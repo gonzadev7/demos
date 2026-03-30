@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GonzaDev CRM</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0f0f0f;
+      --bg2: #1a1a1a;
+      --bg3: #242424;
+      --gold: #c9a96e;
+      --text: #f0f0f0;
+      --muted: #888;
+      --green: #4caf7d;
+      --yellow: #f0b429;
+      --red: #e05252;
+      --blue: #5b9cf6;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--bg2);
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #2a2a2a;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    header h1 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+    header .stats {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* TABS */
+    .tabs {
+      display: flex;
+      background: var(--bg2);
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .tab {
+      flex: 1;
+      padding: 12px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .tab.active {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    /* MAIN */
+    main { padding: 16px; max-width: 600px; margin: 0 auto; }
+
+    /* SETUP */
+    #setup-screen {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #setup-screen h2 { color: var(--gold); margin-bottom: 12px; }
+    #setup-screen p { color: var(--muted); font-size: 0.85rem; margin-bottom: 24px; line-height: 1.6; }
+    #setup-screen a { color: var(--blue); }
+
+    /* LEADS LIST */
+    .leads-list { display: flex; flex-direction: column; gap: 12px; }
+
+    .lead-card {
+      background: var(--bg2);
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid #2a2a2a;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .lead-card:hover { border-color: var(--gold); }
+
+    .lead-card .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    .lead-card .name {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .lead-card .niche {
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .badge {
+      font-size: 0.65rem;
+      padding: 3px 8px;
+      border-radius: 20px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .badge.contactado { background: rgba(91,156,246,0.15); color: var(--blue); }
+    .badge.demo_enviada { background: rgba(240,180,41,0.15); color: var(--yellow); }
+    .badge.cotizacion_enviada { background: rgba(201,169,110,0.15); color: var(--gold); }
+    .badge.cerrado { background: rgba(76,175,125,0.15); color: var(--green); }
+    .badge.perdido { background: rgba(224,82,82,0.15); color: var(--red); }
+
+    .lead-card .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .lead-card .last-contact {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .lead-card .next-step {
+      font-size: 0.72rem;
+      color: var(--muted);
+      max-width: 180px;
+      text-align: right;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* LEAD DETAIL */
+    #detail-screen { display: none; }
+    .detail-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .back-btn {
+      background: var(--bg3);
+      border: none;
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .detail-name { font-size: 1.2rem; font-weight: 600; }
+
+    .detail-section {
+      background: var(--bg2);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      border: 1px solid #2a2a2a;
+    }
+    .detail-section h3 {
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px solid #2a2a2a;
+      font-size: 0.85rem;
+    }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-row .label { color: var(--muted); }
+    .detail-row a { color: var(--blue); text-decoration: none; }
+
+    .history-item {
+      padding: 8px 0;
+      border-bottom: 1px solid #2a2a2a;
+      font-size: 0.82rem;
+    }
+    .history-item:last-child { border-bottom: none; }
+    .history-item .date { color: var(--gold); font-size: 0.7rem; margin-bottom: 2px; }
+
+    /* FORM */
+    #form-screen { display: none; }
+    .form-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--gold);
+    }
+
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--bg2);
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      padding: 12px;
+      color: var(--text);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-group select option { background: var(--bg2); }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-gold { background: var(--gold); color: #0f0f0f; }
+    .btn-ghost { background: var(--bg3); color: var(--text); margin-top: 8px; }
+
+    /* FAB */
+    .fab {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #0f0f0f;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(201,169,110,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 40;
+    }
+
+    /* EMPTY */
+    .empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+    .empty p { margin-top: 8px; font-size: 0.85rem; }
+
+    /* LOADING */
+    .loading {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* TOAST */
+    .toast {
+      position: fixed;
+      bottom: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg3);
+      color: var(--text);
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      border: 1px solid #3a3a3a;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 100;
+      white-space: nowrap;
+    }
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<div id="setup-screen" style="display:none;">
+  <main>
+    <div style="margin-bottom:32px;">
+      <div style="font-size:2rem;margin-bottom:16px;">🔑</div>
+      <h2>Configuración inicial</h2>
+      <p>Para guardar leads necesitás un <strong>GitHub Personal Access Token</strong> con permisos de repo.<br><br>
+      Generalo en: <a href="https://github.com/settings/tokens/new" target="_blank">github.com/settings/tokens/new</a><br><br>
+      Seleccioná scope: <strong>repo</strong> → Generate → Copialo acá abajo.</p>
+    </div>
+    <div class="form-group">
+      <label>Token de GitHub</label>
+      <input type="password" id="token-input" placeholder="ghp_xxxxxxxxxxxx" />
+    </div>
+    <button class="btn btn-gold" onclick="saveToken()">Guardar y continuar</button>
+  </main>
+</div>
+
+<div id="app-screen" style="display:none;">
+  <header>
+    <h1>GONZADEV CRM</h1>
+    <span class="stats" id="stats-text">Cargando...</span>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('todos')">Todos</div>
+    <div class="tab" onclick="showTab('activos')">Activos</div>
+    <div class="tab" onclick="showTab('cerrados')">Cerrados</div>
+  </div>
+
+  <main>
+    <div id="leads-screen">
+      <div class="loading" id="loading">Cargando leads...</div>
+      <div class="leads-list" id="leads-list" style="display:none;"></div>
+      <div class="empty" id="empty-state" style="display:none;">
+        <div style="font-size:2rem;">📋</div>
+        <p>No hay leads todavía.<br>Tocá + para agregar uno.</p>
+      </div>
+    </div>
+
+    <div id="detail-screen">
+      <div class="detail-header">
+        <button class="back-btn" onclick="showLeads()">← Volver</button>
+        <span class="detail-name" id="detail-name"></span>
+      </div>
+      <div id="detail-content"></div>
+    </div>
+
+    <div id="form-screen">
+      <div class="detail-header">
+        <button class="back-btn" onclick="showLeads()">← Cancelar</button>
+        <span class="form-title" id="form-title">Nuevo Lead</span>
+      </div>
+      <div class="form-group">
+        <label>Nombre del negocio</label>
+        <input type="text" id="f-name" placeholder="Om Leloir" />
+      </div>
+      <div class="form-group">
+        <label>Rubro</label>
+        <input type="text" id="f-niche" placeholder="estetica, restaurante, abogado..." />
+      </div>
+      <div class="form-group">
+        <label>Estado</label>
+        <select id="f-status">
+          <option value="contactado">Contactado</option>
+          <option value="demo_enviada">Demo enviada</option>
+          <option value="cotizacion_enviada">Cotización enviada</option>
+          <option value="cerrado">Cerrado ✅</option>
+          <option value="perdido">Perdido ❌</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Instagram</label>
+        <input type="url" id="f-instagram" placeholder="https://instagram.com/..." />
+      </div>
+      <div class="form-group">
+        <label>Teléfono (con código país)</label>
+        <input type="tel" id="f-phone" placeholder="5491112345678" />
+      </div>
+      <div class="form-group">
+        <label>Link de demo</label>
+        <input type="url" id="f-demo" placeholder="https://gonzadev7.github.io/demos/..." />
+      </div>
+      <div class="form-group">
+        <label>Próximo paso</label>
+        <input type="text" id="f-next" placeholder="Seguimiento en 24hs..." />
+      </div>
+      <div class="form-group">
+        <label>Nota inicial</label>
+        <textarea id="f-note" placeholder="Cómo llegó el lead, qué quiere, etc."></textarea>
+      </div>
+      <button class="btn btn-gold" id="save-btn" onclick="saveLead()">Guardar lead</button>
+      <button class="btn btn-ghost" onclick="showLeads()">Cancelar</button>
+    </div>
+  </main>
+
+  <button class="fab" id="fab" onclick="showForm()">+</button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  const REPO = 'gonzadev7/demos';
+  const FILE = 'leads.json';
+  let leads = [];
+  let currentTab = 'todos';
+  let editingId = null;
+
+  // TOKEN
+  function getToken() { return localStorage.getItem('gh_token'); }
+  function saveToken() {
+    const t = document.getElementById('token-input').value.trim();
+    if (!t) return showToast('Ingresá el token');
+    localStorage.setItem('gh_token', t);
+    init();
+  }
+
+  // INIT
+  async function init() {
+    const token = getToken();
+    if (!token) {
+      document.getElementById('setup-screen').style.display = 'block';
+      document.getElementById('app-screen').style.display = 'none';
+      return;
+    }
+    document.getElementById('setup-screen').style.display = 'none';
+    document.getElementById('app-screen').style.display = 'block';
+    await loadLeads();
+  }
+
+  // LOAD
+  async function loadLeads() {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`, {
+        headers: { Authorization: `token ${getToken()}`, Accept: 'application/vnd.github.v3+json' }
+      });
+      if (!res.ok) throw new Error();
+      const data = await res.json();
+      leads = JSON.parse(atob(data.content.replace(/\n/g, '')));
+      renderLeads();
+    } catch(e) {
+      showToast('Error al cargar. Verificá el token.');
+      document.getElementById('loading').textContent = 'Error al cargar leads.';
+    }
+  }
+
+  // SAVE TO GITHUB
+  async function saveToGitHub(message) {
+    const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`, {
+      headers: { Authorization: `token ${getToken()}`, Accept: 'application/vnd.github.v3+json' }
+    });
+    const current = await res.json();
+    const sha = current.sha;
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(leads, null, 2))));
+    await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`, {
+      method: 'PUT',
+      headers: { Authorization: `token ${getToken()}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, content, sha })
+    });
+  }
+
+  // RENDER
+  function renderLeads() {
+    const loading = document.getElementById('loading');
+    const list = document.getElementById('leads-list');
+    const empty = document.getElementById('empty-state');
+    loading.style.display = 'none';
+
+    let filtered = leads;
+    if (currentTab === 'activos') filtered = leads.filter(l => !['cerrado','perdido'].includes(l.status));
+    if (currentTab === 'cerrados') filtered = leads.filter(l => ['cerrado','perdido'].includes(l.status));
+
+    updateStats();
+
+    if (filtered.length === 0) {
+      list.style.display = 'none';
+      empty.style.display = 'block';
+      return;
+    }
+    empty.style.display = 'none';
+    list.style.display = 'flex';
+
+    list.innerHTML = filtered.map(lead => `
+      <div class="lead-card" onclick="showDetail('${lead.id}')">
+        <div class="top">
+          <div>
+            <div class="name">${lead.name}</div>
+            <div class="niche">${lead.niche}</div>
+          </div>
+          <span class="badge ${lead.status}">${statusLabel(lead.status)}</span>
+        </div>
+        <div class="bottom">
+          <span class="last-contact">Último: ${lead.lastContact}</span>
+          <span class="next-step">${lead.nextStep || ''}</span>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function statusLabel(s) {
+    const map = {
+      contactado: 'Contactado',
+      demo_enviada: 'Demo enviada',
+      cotizacion_enviada: 'Cotización enviada',
+      cerrado: '✅ Cerrado',
+      perdido: '❌ Perdido'
+    };
+    return map[s] || s;
+  }
+
+  function updateStats() {
+    const activos = leads.filter(l => !['cerrado','perdido'].includes(l.status)).length;
+    const cerrados = leads.filter(l => l.status === 'cerrado').length;
+    document.getElementById('stats-text').textContent = `${activos} activos · ${cerrados} cerrados`;
+  }
+
+  // TABS
+  function showTab(tab) {
+    currentTab = tab;
+    document.querySelectorAll('.tab').forEach((t,i) => {
+      t.classList.toggle('active', ['todos','activos','cerrados'][i] === tab);
+    });
+    renderLeads();
+  }
+
+  // DETAIL
+  function showDetail(id) {
+    const lead = leads.find(l => l.id === id);
+    if (!lead) return;
+    document.getElementById('leads-screen').style.display = 'none';
+    document.getElementById('form-screen').style.display = 'none';
+    document.getElementById('detail-screen').style.display = 'block';
+    document.getElementById('fab').style.display = 'none';
+    document.getElementById('detail-name').textContent = lead.name;
+
+    document.getElementById('detail-content').innerHTML = `
+      <div class="detail-section">
+        <h3>Info</h3>
+        <div class="detail-row"><span class="label">Estado</span><span class="badge ${lead.status}">${statusLabel(lead.status)}</span></div>
+        <div class="detail-row"><span class="label">Rubro</span><span>${lead.niche}</span></div>
+        ${lead.phone ? `<div class="detail-row"><span class="label">WhatsApp</span><a href="https://wa.me/${lead.phone}" target="_blank">Abrir chat</a></div>` : ''}
+        ${lead.instagram ? `<div class="detail-row"><span class="label">Instagram</span><a href="${lead.instagram}" target="_blank">Ver perfil</a></div>` : ''}
+        ${lead.demo_link ? `<div class="detail-row"><span class="label">Demo</span><a href="${lead.demo_link}" target="_blank">Ver demo</a></div>` : ''}
+        <div class="detail-row"><span class="label">Último contacto</span><span>${lead.lastContact}</span></div>
+        ${lead.nextStep ? `<div class="detail-row"><span class="label">Próximo paso</span><span>${lead.nextStep}</span></div>` : ''}
+      </div>
+      <div class="detail-section">
+        <h3>Historial</h3>
+        ${(lead.history || []).slice().reverse().map(h => `
+          <div class="history-item">
+            <div class="date">${h.date}</div>
+            <div>${h.action}</div>
+          </div>
+        `).join('') || '<div style="color:var(--muted);font-size:0.82rem;">Sin historial</div>'}
+      </div>
+      <div style="display:flex;gap:8px;margin-top:8px;">
+        <button class="btn btn-gold" style="flex:1;" onclick="editLead('${lead.id}')">Editar</button>
+        <button class="btn btn-ghost" style="flex:1;" onclick="addHistory('${lead.id}')">+ Nota</button>
+      </div>
+    `;
+  }
+
+  // ADD HISTORY NOTE
+  async function addHistory(id) {
+    const note = prompt('¿Qué pasó?');
+    if (!note) return;
+    const lead = leads.find(l => l.id === id);
+    lead.history.push({ date: today(), action: note });
+    lead.lastContact = today();
+    showToast('Guardando...');
+    await saveToGitHub(`CRM: nota en ${lead.name}`);
+    showToast('Guardado ✓');
+    showDetail(id);
+  }
+
+  // FORM
+  function showForm() {
+    editingId = null;
+    document.getElementById('form-title').textContent = 'Nuevo Lead';
+    document.getElementById('f-name').value = '';
+    document.getElementById('f-niche').value = '';
+    document.getElementById('f-status').value = 'contactado';
+    document.getElementById('f-instagram').value = '';
+    document.getElementById('f-phone').value = '';
+    document.getElementById('f-demo').value = '';
+    document.getElementById('f-next').value = '';
+    document.getElementById('f-note').value = '';
+    document.getElementById('leads-screen').style.display = 'none';
+    document.getElementById('detail-screen').style.display = 'none';
+    document.getElementById('form-screen').style.display = 'block';
+    document.getElementById('fab').style.display = 'none';
+  }
+
+  function editLead(id) {
+    editingId = id;
+    const lead = leads.find(l => l.id === id);
+    document.getElementById('form-title').textContent = 'Editar Lead';
+    document.getElementById('f-name').value = lead.name;
+    document.getElementById('f-niche').value = lead.niche;
+    document.getElementById('f-status').value = lead.status;
+    document.getElementById('f-instagram').value = lead.instagram || '';
+    document.getElementById('f-phone').value = lead.phone || '';
+    document.getElementById('f-demo').value = lead.demo_link || '';
+    document.getElementById('f-next').value = lead.nextStep || '';
+    document.getElementById('f-note').value = '';
+    document.getElementById('leads-screen').style.display = 'none';
+    document.getElementById('detail-screen').style.display = 'none';
+    document.getElementById('form-screen').style.display = 'block';
+    document.getElementById('fab').style.display = 'none';
+  }
+
+  async function saveLead() {
+    const name = document.getElementById('f-name').value.trim();
+    if (!name) return showToast('Ingresá el nombre');
+
+    const btn = document.getElementById('save-btn');
+    btn.textContent = 'Guardando...';
+    btn.disabled = true;
+
+    if (editingId) {
+      const lead = leads.find(l => l.id === editingId);
+      const oldStatus = lead.status;
+      lead.name = name;
+      lead.niche = document.getElementById('f-niche').value.trim();
+      lead.status = document.getElementById('f-status').value;
+      lead.instagram = document.getElementById('f-instagram').value.trim();
+      lead.phone = document.getElementById('f-phone').value.trim();
+      lead.demo_link = document.getElementById('f-demo').value.trim();
+      lead.nextStep = document.getElementById('f-next').value.trim();
+      lead.lastContact = today();
+      const note = document.getElementById('f-note').value.trim();
+      if (note) lead.history.push({ date: today(), action: note });
+      if (lead.status !== oldStatus) lead.history.push({ date: today(), action: `Estado cambiado a: ${statusLabel(lead.status)}` });
+      await saveToGitHub(`CRM: actualizar ${name}`);
+    } else {
+      const id = name.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'') + '-' + Date.now();
+      const note = document.getElementById('f-note').value.trim();
+      const newLead = {
+        id,
+        name,
+        niche: document.getElementById('f-niche').value.trim(),
+        status: document.getElementById('f-status').value,
+        instagram: document.getElementById('f-instagram').value.trim(),
+        phone: document.getElementById('f-phone').value.trim(),
+        demo_link: document.getElementById('f-demo').value.trim(),
+        lastContact: today(),
+        nextStep: document.getElementById('f-next').value.trim(),
+        history: note ? [{ date: today(), action: note }] : []
+      };
+      leads.push(newLead);
+      await saveToGitHub(`CRM: nuevo lead ${name}`);
+    }
+
+    btn.textContent = 'Guardar lead';
+    btn.disabled = false;
+    showToast('Lead guardado ✓');
+    showLeads();
+  }
+
+  // SHOW LEADS
+  function showLeads() {
+    document.getElementById('detail-screen').style.display = 'none';
+    document.getElementById('form-screen').style.display = 'none';
+    document.getElementById('leads-screen').style.display = 'block';
+    document.getElementById('fab').style.display = 'flex';
+    renderLeads();
+  }
+
+  // TOAST
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2500);
+  }
+
+  function today() {
+    return new Date().toISOString().split('T')[0];
+  }
+
+  init();
+</script>
+</body>
+</html>
