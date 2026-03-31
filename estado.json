@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "ultima_actualizacion": "2026-03-30",
+    "version": "1.0"
+  },
+  "perfil": {
+    "nombre": "Gonzalo Meza",
+    "edad": 24,
+    "ciudad": "Buenos Aires",
+    "rol": "Desarrollador web freelance",
+    "stack": ["HTML", "CSS", "JS vanilla", "Firebase", "Supabase"],
+    "flujo": "GitHub Desktop + VS Code + Netlify",
+    "portfolio": "gonzalodev.netlify.app",
+    "no_disponible": "11:30 a 13:00 (lleva sobrinas al colegio, ~25-30 cuadras)",
+    "socio": "Farid (SaaS)",
+    "pareja": "Denise"
+  },
+  "finanzas": {
+    "ahorro_meta_mensual": 200000,
+    "ahorro_acumulado": 0,
+    "proposito_ahorro": "Viaje de Denise",
+    "fondo_proteinas_denise": {
+      "total": 40000,
+      "aporte_gonza": 25000
+    },
+    "ingresos_mes_actual": [],
+    "pendientes_cobro": []
+  },
+  "proyectos": {
+    "freelance": [
+      {
+        "nombre": "Dulce Araica",
+        "estado": "en_produccion",
+        "repo": "gonzadev7/dulce-araica",
+        "pendiente": "Pago parcial pendiente",
+        "proximo_paso": null
+      },
+      {
+        "nombre": "WorryFreeCut",
+        "estado": "activo",
+        "repo": "WorryFreeCut",
+        "pendiente": null,
+        "proximo_paso": null
+      },
+      {
+        "nombre": "gestor-costos-recetas",
+        "estado": "activo",
+        "pendiente": "Correcciones pendientes",
+        "proximo_paso": null
+      }
+    ],
+    "saas": {
+      "nombre": "SaaS contabilidad e inventario para comercios",
+      "estado": "pre_propuesta",
+      "socios": ["Farid", "Valentín", "otro chico"],
+      "roles": {
+        "gonza": "frontend",
+        "farid": "backend"
+      },
+      "cotizacion_estimada_usd": 3000,
+      "modelo": "upfront + mensualidad",
+      "proxima_reunion": "miercoles ~2026-04-01",
+      "pendiente": "Definir división del upfront y precio mensualidad con Farid"
+    }
+  },
+  "leads": [
+    {
+      "id": "est-1",
+      "nombre": "Om Leloir",
+      "nicho": "estetica",
+      "estado": "demo_enviada",
+      "instagram": "omleloir",
+      "ultimo_contacto": "2026-03-30",
+      "proximo_paso": "Seguimiento si no responde — límite 2026-03-31"
+    },
+    {
+      "id": "con-1",
+      "nombre": "Nora Congelados",
+      "nicho": "alimentos",
+      "estado": "seguimiento_enviado",
+      "ultimo_contacto": "2026-03-30",
+      "cotizacion": {
+        "opcion_a": { "upfront": 750000, "mensual": 15000 },
+        "opcion_b": { "upfront": 400000, "mensual": 25000 },
+        "recomendada": "opcion_a"
+      },
+      "proximo_paso": "Esperar respuesta"
+    },
+    {
+      "id": "saas-valentin-1",
+      "nombre": "Valentín (SaaS contabilidad)",
+      "nicho": "SaaS",
+      "estado": "reunion_realizada",
+      "ultimo_contacto": "2026-03-30",
+      "proximo_paso": "Reunión con Farid ~miércoles para armar propuesta técnica"
+    }
+  ],
+  "salud": {
+    "peso_kg": 69,
+    "altura_m": 1.75,
+    "objetivo": "ganar masa muscular sin perder agilidad",
+    "agua_meta_litros": 2.5,
+    "pendiente": "Pesarse y medirse antes del miércoles",
+    "actividad": {
+      "gym": "1-2 veces por semana",
+      "caminata": "25-30 cuadras diarias",
+      "futbol": "sábados 17:30, a veces domingos"
+    }
+  },
+  "comportamiento": {
+    "patron_central": "no perder vs ir a ganar",
+    "manifestaciones": [
+      "Subcobrarse",
+      "Evitar movimientos audaces",
+      "En fútbol: fue suplente por falta de confianza — mejorando"
+    ],
+    "meta_futbol": "Una decisión propia por partido"
+  },
+  "prospección": {
+    "estado": "arranca_semana_31_03",
+    "meta": "outreach a 10-15 prospectos en Instagram sin sitio web",
+    "completado": 0
+  }
+}
