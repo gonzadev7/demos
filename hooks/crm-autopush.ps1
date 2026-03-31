@@ -5,7 +5,7 @@ $file = $json.tool_input.file_path
 if (-not ($file -like '*leads.json' -or $file -like '*estado.json')) { exit 0 }
 
 # Auto-push
-Set-Location 'C:/Users/casa/Documents/GitHub/demos'
+Set-Location 'C:/Users/casa/Documents/GitHub/gonza-private'
 git add leads.json estado.json 2>&1 | Out-Null
 $commit = git commit -m 'CRM: auto-save' 2>&1
 git push 2>&1 | Out-Null
