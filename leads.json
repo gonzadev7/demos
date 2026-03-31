@@ -37,11 +37,11 @@
     "history": [
       {
         "date": "2026-03-25",
-        "action": "Entraron por referido de Dulce Araica, pidieron cotización"
+        "action": "Entraron por referido de Dulce Araica, pidieron cotizacion"
       },
       {
         "date": "2026-03-27",
-        "action": "Cotización enviada: Opción A $750k+$15k/mes, Opción B $400k+$25k/mes. 25-30 productos."
+        "action": "Cotizacion enviada: Opcion A $750k+$15k/mes, Opcion B $400k+$25k/mes. 25-30 productos."
       },
       {
         "date": "2026-03-30",
@@ -51,18 +51,18 @@
   },
   {
     "id": "saas-valentin-1743292800000",
-    "name": "Valentín (SaaS contabilidad)",
+    "name": "Valentin (SaaS contabilidad)",
     "niche": "SaaS",
-    "status": "contactado",
+    "status": "reunion_realizada",
     "instagram": "",
     "phone": "",
     "demo_link": "",
     "lastContact": "2026-03-30",
-    "nextStep": "Reunión 30/03 19:00 con Farid — escuchar idea y luego cotizar",
+    "nextStep": "Reunion con Farid ~miercoles 01/04 para armar propuesta tecnica",
     "history": [
       {
         "date": "2026-03-30",
-        "action": "La idea es interesante. SaaS de contabilidad e inventario para comercios. Modelo de suscripción 3 planes. Reunión hoy 19:00 los 4. Preguntas para la reunión: 1) ¿Tienen algún negocio ya usando algo parecido, aunque sea Excel? 2) ¿Imaginan lanzar con un negocio piloto o directo a varios? 3) ¿Qué funcionalidades son las que sí o sí tienen que estar en la primera versión?"
+        "action": "Reunion realizada. SaaS de contabilidad e inventario para comercios. Cotizacion estimada $3000 USD upfront + mensualidad. Gonza frontend, Farid backend. Proxima reunion miercoles para definir division del upfront y precio mensualidad."
       }
     ]
   }
