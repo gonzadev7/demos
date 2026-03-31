@@ -17,7 +17,7 @@
   },
   "finanzas": {
     "ahorro_meta_mensual": 200000,
-    "ahorro_acumulado": 0,
+    "ahorro_acumulado": 20000,
     "proposito_ahorro": "Viaje de Denise",
     "fondo_proteinas_denise": {
       "total": 40000,
