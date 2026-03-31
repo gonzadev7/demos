@@ -23,7 +23,11 @@
       "total": 40000,
       "aporte_gonza": 25000
     },
-    "ingresos_mes_actual": [],
+    "ingresos_mes_actual": [
+      { "cliente": "Dulce Araica", "concepto": "actualizaciones", "monto": 400000, "fecha": "2026-03" },
+      { "cliente": "Daniel Alonso", "concepto": "landing page", "monto": 150000, "fecha": "2026-03" }
+    ],
+    "total_ingresos_mes_actual": 550000,
     "pendientes_cobro": []
   },
   "proyectos": {
