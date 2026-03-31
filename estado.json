@@ -51,16 +51,17 @@
     ],
     "saas": {
       "nombre": "SaaS contabilidad e inventario para comercios",
-      "estado": "pre_propuesta",
+      "estado": "propuesta_en_preparacion",
       "socios": ["Farid", "Valentín", "otro chico"],
       "roles": {
         "gonza": "frontend",
         "farid": "backend"
       },
       "cotizacion_estimada_usd": 3000,
-      "modelo": "upfront + mensualidad",
-      "proxima_reunion": "miercoles ~2026-04-01",
-      "pendiente": "Definir división del upfront y precio mensualidad con Farid"
+      "modelo": "upfront + mensualidad (monto a definir)",
+      "reunion_realizada": "2026-03-30",
+      "proxima_reunion": "2026-04-01 (miércoles, con Farid)",
+      "pendiente": "Definir división del upfront y precio mensualidad con Farid el miércoles"
     }
   },
   "leads": [
