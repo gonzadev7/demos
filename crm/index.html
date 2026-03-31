@@ -105,6 +105,8 @@
       transition: border-color 0.2s;
     }
     .lead-card:hover { border-color: var(--gold); }
+    .lead-card.vencido { border-color: rgba(224,82,82,0.4); }
+    .lead-card.vencido .days-badge { color: var(--red); }
 
     .lead-card .top {
       display: flex;
@@ -139,7 +141,7 @@
       justify-content: space-between;
       align-items: center;
     }
-    .lead-card .last-contact {
+    .days-badge {
       font-size: 0.72rem;
       color: var(--muted);
     }
@@ -189,6 +191,7 @@
     .detail-row {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 6px 0;
       border-bottom: 1px solid #2a2a2a;
       font-size: 0.85rem;
@@ -197,6 +200,19 @@
     .detail-row .label { color: var(--muted); }
     .detail-row a { color: var(--blue); text-decoration: none; }
 
+    /* STATUS SELECTOR inline */
+    .status-select {
+      background: var(--bg3);
+      border: 1px solid #3a3a3a;
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 0.8rem;
+      padding: 4px 8px;
+      cursor: pointer;
+      outline: none;
+    }
+    .status-select:focus { border-color: var(--gold); }
+
     .history-item {
       padding: 8px 0;
       border-bottom: 1px solid #2a2a2a;
@@ -204,6 +220,34 @@
     }
     .history-item:last-child { border-bottom: none; }
     .history-item .date { color: var(--gold); font-size: 0.7rem; margin-bottom: 2px; }
+
+    /* COPY MSG BUTTON */
+    .copy-msg-btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #3a3a3a;
+      background: var(--bg3);
+      color: var(--muted);
+      font-size: 0.82rem;
+      cursor: pointer;
+      text-align: left;
+      transition: border-color 0.2s, color 0.2s;
+      margin-bottom: 8px;
+    }
+    .copy-msg-btn:hover { border-color: var(--gold); color: var(--text); }
+    .copy-msg-btn .msg-label {
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .copy-msg-btn .msg-preview {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
     /* FORM */
     #form-screen { display: none; }
@@ -477,6 +521,24 @@
     });
   }
 
+  // DAYS SINCE LAST CONTACT
+  function daysSince(dateStr) {
+    const diff = Date.now() - new Date(dateStr).getTime();
+    return Math.floor(diff / (1000 * 60 * 60 * 24));
+  }
+
+  function daysLabel(dateStr) {
+    const d = daysSince(dateStr);
+    if (d === 0) return 'Hoy';
+    if (d === 1) return 'Ayer';
+    return `Hace ${d} días`;
+  }
+
+  function isVencido(lead) {
+    if (['cerrado','perdido'].includes(lead.status)) return false;
+    return daysSince(lead.lastContact) > 7;
+  }
+
   // RENDER
   function renderLeads() {
     const loading = document.getElementById('loading');
@@ -484,9 +546,16 @@
     const empty = document.getElementById('empty-state');
     loading.style.display = 'none';
 
-    let filtered = leads;
-    if (currentTab === 'activos') filtered = leads.filter(l => !['cerrado','perdido'].includes(l.status));
-    if (currentTab === 'cerrados') filtered = leads.filter(l => ['cerrado','perdido'].includes(l.status));
+    let filtered = [...leads];
+    if (currentTab === 'activos') filtered = filtered.filter(l => !['cerrado','perdido'].includes(l.status));
+    if (currentTab === 'cerrados') filtered = filtered.filter(l => ['cerrado','perdido'].includes(l.status));
+
+    // Vencidos primero
+    filtered.sort((a, b) => {
+      const aV = isVencido(a) ? 0 : 1;
+      const bV = isVencido(b) ? 0 : 1;
+      return aV - bV;
+    });
 
     updateStats();
 
@@ -499,7 +568,7 @@
     list.style.display = 'flex';
 
     list.innerHTML = filtered.map(lead => `
-      <div class="lead-card" onclick="showDetail('${lead.id}')">
+      <div class="lead-card ${isVencido(lead) ? 'vencido' : ''}" onclick="showDetail('${lead.id}')">
         <div class="top">
           <div>
             <div class="name">${lead.name}</div>
@@ -508,7 +577,7 @@
           <span class="badge ${lead.status}">${statusLabel(lead.status)}</span>
         </div>
         <div class="bottom">
-          <span class="last-contact">Último: ${lead.lastContact}</span>
+          <span class="days-badge">${daysLabel(lead.lastContact)}</span>
           <span class="next-step">${lead.nextStep || ''}</span>
         </div>
       </div>
@@ -529,7 +598,10 @@
   function updateStats() {
     const activos = leads.filter(l => !['cerrado','perdido'].includes(l.status)).length;
     const cerrados = leads.filter(l => l.status === 'cerrado').length;
-    document.getElementById('stats-text').textContent = `${activos} activos · ${cerrados} cerrados`;
+    const vencidos = leads.filter(isVencido).length;
+    let text = `${activos} activos · ${cerrados} cerrados`;
+    if (vencidos > 0) text += ` · ${vencidos} sin seguimiento`;
+    document.getElementById('stats-text').textContent = text;
   }
 
   // TABS
@@ -539,6 +611,40 @@
       t.classList.toggle('active', ['todos','activos','cerrados'][i] === tab);
     });
     renderLeads();
+  }
+
+  // MENSAJE DE SEGUIMIENTO según estado
+  function getSeguimientoMsg(lead) {
+    const msgs = {
+      contactado: `Hola! Te escribo porque vi que ${lead.name} no tiene página web. Armé una demo gratuita para que veas cómo quedaría. ¿La querés ver?`,
+      demo_enviada: `Hola! Te mandé la demo de ${lead.name} hace unos días. ¿Pudiste verla? Cualquier consulta avisame.`,
+      cotizacion_enviada: `Hola! Te había enviado la cotización para la web de ${lead.name}. ¿Tuviste oportunidad de revisarla? Quedo a disposición.`,
+      cerrado: '',
+      perdido: ''
+    };
+    return msgs[lead.status] || '';
+  }
+
+  async function copyMsg(id) {
+    const lead = leads.find(l => l.id === id);
+    const msg = getSeguimientoMsg(lead);
+    if (!msg) return;
+    await navigator.clipboard.writeText(msg);
+    showToast('Mensaje copiado al portapapeles');
+  }
+
+  // CAMBIO DE ESTADO RÁPIDO desde detalle
+  async function quickChangeStatus(id, newStatus) {
+    const lead = leads.find(l => l.id === id);
+    if (!lead || lead.status === newStatus) return;
+    const oldStatus = lead.status;
+    lead.status = newStatus;
+    lead.lastContact = today();
+    lead.history.push({ date: today(), action: `Estado cambiado: ${statusLabel(oldStatus)} → ${statusLabel(newStatus)}` });
+    showToast('Guardando...');
+    await saveToGitHub(`CRM: estado ${lead.name} → ${newStatus}`);
+    showToast('Estado actualizado ✓');
+    showDetail(id);
   }
 
   // DETAIL
@@ -551,17 +657,37 @@
     document.getElementById('fab').style.display = 'none';
     document.getElementById('detail-name').textContent = lead.name;
 
+    const seguimientoMsg = getSeguimientoMsg(lead);
+    const isActive = !['cerrado','perdido'].includes(lead.status);
+
     document.getElementById('detail-content').innerHTML = `
       <div class="detail-section">
         <h3>Info</h3>
-        <div class="detail-row"><span class="label">Estado</span><span class="badge ${lead.status}">${statusLabel(lead.status)}</span></div>
+        <div class="detail-row">
+          <span class="label">Estado</span>
+          <select class="status-select" onchange="quickChangeStatus('${lead.id}', this.value)">
+            <option value="contactado" ${lead.status==='contactado'?'selected':''}>Contactado</option>
+            <option value="demo_enviada" ${lead.status==='demo_enviada'?'selected':''}>Demo enviada</option>
+            <option value="cotizacion_enviada" ${lead.status==='cotizacion_enviada'?'selected':''}>Cotización enviada</option>
+            <option value="cerrado" ${lead.status==='cerrado'?'selected':''}>Cerrado ✅</option>
+            <option value="perdido" ${lead.status==='perdido'?'selected':''}>Perdido ❌</option>
+          </select>
+        </div>
         <div class="detail-row"><span class="label">Rubro</span><span>${lead.niche}</span></div>
         ${lead.phone ? `<div class="detail-row"><span class="label">WhatsApp</span><a href="https://wa.me/${lead.phone}" target="_blank">Abrir chat</a></div>` : ''}
         ${lead.instagram ? `<div class="detail-row"><span class="label">Instagram</span><a href="${lead.instagram}" target="_blank">Ver perfil</a></div>` : ''}
         ${lead.demo_link ? `<div class="detail-row"><span class="label">Demo</span><a href="${lead.demo_link}" target="_blank">Ver demo</a></div>` : ''}
-        <div class="detail-row"><span class="label">Último contacto</span><span>${lead.lastContact}</span></div>
+        <div class="detail-row"><span class="label">Último contacto</span><span>${daysLabel(lead.lastContact)}</span></div>
         ${lead.nextStep ? `<div class="detail-row"><span class="label">Próximo paso</span><span>${lead.nextStep}</span></div>` : ''}
       </div>
+
+      ${isActive && seguimientoMsg ? `
+      <button class="copy-msg-btn" onclick="copyMsg('${lead.id}')">
+        <div class="msg-label">Copiar mensaje de seguimiento</div>
+        <div class="msg-preview">${seguimientoMsg}</div>
+      </button>
+      ` : ''}
+
       <div class="detail-section">
         <h3>Historial</h3>
         ${(lead.history || []).slice().reverse().map(h => `
