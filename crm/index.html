@@ -498,7 +498,10 @@
       });
       if (!res.ok) throw new Error();
       const data = await res.json();
-      leads = JSON.parse(atob(data.content.replace(/\n/g, '')));
+      const binary = atob(data.content.replace(/\n/g, ''));
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+      leads = JSON.parse(new TextDecoder('utf-8').decode(bytes));
       renderLeads();
     } catch(e) {
       showToast('Error al cargar. Verificá el token.');
