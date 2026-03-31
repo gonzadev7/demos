@@ -28,7 +28,16 @@
       { "cliente": "Daniel Alonso", "concepto": "landing page", "monto": 150000, "fecha": "2026-03" }
     ],
     "total_ingresos_mes_actual": 550000,
-    "pendientes_cobro": []
+    "pendientes_cobro": [
+      { "cliente": "Dulce Araica", "monto": 50000, "concepto": "actualización pendiente" }
+    ],
+    "membresias_mensuales": [
+      { "cliente": "Dulce Araica", "monto": 40000 },
+      { "cliente": "Quinta Ferreyra (Marcela)", "monto": 10000 },
+      { "cliente": "TuTecnicoResponde (Martin)", "monto": 8000 },
+      { "cliente": "ItuzcCombos (Fernanda)", "monto": 10000 }
+    ],
+    "total_membresias": 68000
   },
   "proyectos": {
     "freelance": [
