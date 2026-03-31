@@ -523,7 +523,8 @@
 
   // DAYS SINCE LAST CONTACT
   function daysSince(dateStr) {
-    const diff = Date.now() - new Date(dateStr).getTime();
+    const todayStr = today();
+    const diff = new Date(todayStr) - new Date(dateStr);
     return Math.floor(diff / (1000 * 60 * 60 * 24));
   }
 
@@ -826,7 +827,7 @@
   }
 
   function today() {
-    return new Date().toISOString().split('T')[0];
+    return new Date().toLocaleDateString('en-CA', { timeZone: 'America/Argentina/Buenos_Aires' });
   }
 
   init();
