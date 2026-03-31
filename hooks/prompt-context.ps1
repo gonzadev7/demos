@@ -6,16 +6,16 @@ $m = $now.Minute
 
 $warning = ''
 if ($h -ge 0 -and $h -lt 6) {
-  $warning = " | ALERTA SUENO: son las $horaStr, Gonza deberia estar durmiendo — recordarle que se vaya a dormir ya."
+  $warning = " | ALERTA SUENO: son las $horaStr, Gonza deberia estar durmiendo - recordarle que se vaya a dormir ya."
 } elseif ($h -eq 23 -and $m -ge 30) {
-  $warning = " | ALERTA SUENO: son las $horaStr, Gonza deberia irse a dormir pronto — recordarle."
+  $warning = " | ALERTA SUENO: son las $horaStr, Gonza deberia irse a dormir pronto - recordarle."
 }
 
 $ctx = "Hora actual Buenos Aires: $horaStr$warning"
 
 [pscustomobject]@{
   hookSpecificOutput = [pscustomobject]@{
-    hookEventName   = 'UserPromptSubmit'
+    hookEventName = 'UserPromptSubmit'
     additionalContext = $ctx
   }
 } | ConvertTo-Json -Compress
