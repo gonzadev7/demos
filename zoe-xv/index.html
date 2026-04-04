@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="youtube-id" content="">
+  <title>Invitación XV - Zoe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='12' fill='%23FFC107'/%3E%3Cg stroke='%23FFC107' stroke-width='4' stroke-linecap='round'%3E%3Cline x1='32' y1='6' x2='32' y2='16'/%3E%3Cline x1='32' y1='48' x2='32' y2='58'/%3E%3Cline x1='6' y1='32' x2='16' y2='32'/%3E%3Cline x1='48' y1='32' x2='58' y2='32'/%3E%3Cline x1='14' y1='14' x2='20' y2='20'/%3E%3Cline x1='44' y1='44' x2='50' y2='50'/%3E%3Cline x1='44' y1='20' x2='50' y2='14'/%3E%3Cline x1='14' y1='50' x2='20' y2='44'/%3E%3C/g%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="overlay"></div>
+  <header class="hero" id="inicio">
+    <div class="hero-content card">
+      <p class="badge">XV - Pool Party</p>
+      <h1 class="name">Zoe</h1>
+      <p class="phrase">where summer memories are made</p>
+      <div class="date-band" aria-label="Fecha del evento">
+        <div class="date-center"><span class="date-label">Marzo</span> <span class="date-day">14</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="details" id="detalles">
+      <h2>Detalles del evento</h2>
+      <ul class="detail-list text-glow">
+        <li><span>Fecha:</span> 14/03/2026</li>
+        <li><span>Horario:</span> 14:00 a 22:00</li>
+        <li><span>Ubicación:</span> Espejo y Portela, Pontevedra (entrada por la calle Espejo)</li>
+      </ul>
+      <div class="actions">
+        <a class="btn primary" href="https://maps.app.goo.gl/pAk96FD3mpnCbs9D7" target="_blank" rel="noopener" aria-label="Abrir Google Maps">Cómo llegar</a>
+      </div>
+    </section>
+
+    <section class="dresscode" id="dresscode">
+      <h2>Dress code</h2>
+      <p class="dc-type text-glow">Casual / quinta</p>
+      <p class="dc-note text-glow">Trae tu outfit más fresco para el día. ¡No olvides el traje de baño y protector solar!</p>
+    </section>
+
+    <section class="gifts" id="transferencias">
+      <h2>Transferencias</h2>
+      <p class="gift-text text-glow">Tu presencia es mi mejor regalo, pero si querés tener un detalle conmigo.</p>
+      <div class="alias-box">
+        <span class="alias-label">Alias:</span>
+        <span class="alias-value" id="alias">zooiitoo</span>
+        <button class="btn small primary" id="copy-alias" aria-label="Copiar alias">Copiar</button>
+      </div>
+    </section>
+
+    <section class="final-cta" id="confirmar">
+      <h2>¿Podés venir?</h2>
+      <p class="cta-note text-glow">Contame si podés acompañarme en mis XV Pool Party</p>
+      <a class="btn primary big" id="cta-whatsapp-final" aria-label="Confirmar asistencia por WhatsApp">Confirmar asistencia</a>
+      <p class="signature text-glow">Con cariño, Zoe <span class="heart" aria-hidden="true">♥</span></p>
+      <div class="footer-credit">sitio desarrollado por <a href="https://gonzalodev.netlify.app" target="_blank" rel="noopener">gondev</a></div>
+    </section>
+  </main>
+
+  <audio id="bg-audio" preload="auto" loop playsinline>
+    <source src="audio/musica.mp3" type="audio/mpeg">
+  </audio>
+  <div id="music-modal" class="music-modal" role="dialog" aria-modal="true" aria-labelledby="music-title" aria-describedby="music-desc" hidden>
+    <div class="music-overlay"></div>
+    <div class="music-dialog">
+      <h3 id="music-title" class="music-title">¿Le damos play al verano?</h3>
+      <p id="music-desc" class="music-subtitle">Música para ambientar la pool party. Podés cambiarlo cuando quieras.</p>
+      <div class="music-actions">
+        <button id="music-yes" class="btn primary big">¡Sí, dale play! 🎵</button>
+        <button id="music-no" class="btn outline big">Mejor sin música ✖</button>
+      </div>
+    </div>
+  </div>
+  <button id="audio-toggle" class="audio-toggle" aria-label="Activar música" title="Música">🔇</button>
+  <script src="script.js"></script>
+</body>
+</html>
