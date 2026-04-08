@@ -532,6 +532,7 @@
   }
 
   function daysLabel(dateStr) {
+    if (!dateStr) return 'Sin contacto';
     const d = daysSince(dateStr);
     if (d === 0) return 'Hoy';
     if (d === 1) return 'Ayer';
@@ -540,6 +541,7 @@
 
   function isVencido(lead) {
     if (['cerrado','perdido'].includes(lead.status)) return false;
+    if (!lead.lastContact) return false;
     return daysSince(lead.lastContact) > 7;
   }
 
