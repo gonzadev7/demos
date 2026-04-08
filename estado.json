@@ -134,5 +134,31 @@
     "estado": "arranca_semana_31_03",
     "meta": "outreach a 10-15 prospectos en Instagram sin sitio web",
     "completado": 0
+  },
+  "hoy": {
+    "fecha": "2026-04-01",
+    "sueno": {
+      "hora_dormir": "00:30",
+      "hora_despertar": "07:30",
+      "horas_total": 7,
+      "calidad": "muy bien"
+    },
+    "comidas": {
+      "desayuno": null,
+      "almuerzo": null,
+      "merienda": null,
+      "cena": null
+    },
+    "agua_litros": 0,
+    "gym": false,
+    "caminata": false,
+    "outreaches_hoy": 0,
+    "energia": 9,
+    "humor": 9,
+    "nota_dia": "Motivado. Jugó de titular 70 minutos completos el domingo contra el campeón del torneo F11. Reunión con Farid hoy por SaaS."
+  },
+  "ayer_31_03": {
+    "outreaches": 5,
+    "nota": "5 outreaches + 1 demo enviada"
   }
 }

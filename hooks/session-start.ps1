@@ -11,7 +11,7 @@ $l = Get-Content (Join-Path $privatePath "leads.json") -Raw -ErrorAction Silentl
 $canal = Get-Content (Join-Path $carritoyaPath "CANAL.md") -Raw -ErrorAction SilentlyContinue
 $compartido = Get-Content (Join-Path $hubPath "estado-compartido.md") -Raw -ErrorAction SilentlyContinue
 
-$ctx = "=== HORA ACTUAL (Buenos Aires): $hora ===`n`n=== ESTADO.JSON ===`n$e`n`n=== LEADS.JSON ===`n$l`n`n=== CANAL.MD (preguntas de Claude VS Code) ===`n$canal`n`n=== ESTADO COMPARTIDO (Vida + Negocio) ===`n$compartido"
+$ctx = "=== HORA ACTUAL (Buenos Aires): $hora ===`n`n=== ESTADO COMPARTIDO ===`n$compartido"
 
 [pscustomobject]@{
   hookSpecificOutput = [pscustomobject]@{
