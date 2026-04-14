@@ -1,0 +1,50 @@
+{
+  "ahorro_meta_mensual": 200000,
+  "ahorro_acumulado": 20000,
+  "proposito_ahorro": "Viaje de Denise",
+  "fondo_proteinas_denise": {
+    "total": 40000,
+    "aporte_gonza": 25000
+  },
+  "ingresos_mes_actual": [
+    {
+      "cliente": "Dulce Araica",
+      "concepto": "actualizaciones",
+      "monto": 400000,
+      "fecha": "2026-03"
+    },
+    {
+      "cliente": "Daniel Alonso",
+      "concepto": "landing page",
+      "monto": 150000,
+      "fecha": "2026-03"
+    }
+  ],
+  "total_ingresos_mes_actual": 550000,
+  "pendientes_cobro": [
+    {
+      "cliente": "Dulce Araica",
+      "monto": 50000,
+      "concepto": "actualización pendiente"
+    }
+  ],
+  "membresias_mensuales": [
+    {
+      "cliente": "Dulce Araica",
+      "monto": 40000
+    },
+    {
+      "cliente": "Quinta Ferreyra (Marcela)",
+      "monto": 10000
+    },
+    {
+      "cliente": "TuTecnicoResponde (Martin)",
+      "monto": 8000
+    },
+    {
+      "cliente": "ItuzcCombos (Fernanda)",
+      "monto": 10000
+    }
+  ],
+  "total_membresias": 68000
+}
