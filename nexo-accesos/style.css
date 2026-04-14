@@ -1,6 +1,6 @@
 :root {
-    --primary: #1a2b4a;
-    --accent: #f97316;
+    --primary: #0a0f1a;
+    --accent: #00c9a7;
     --steel: #64748b;
     --light: #f1f5f9;
     --white: #ffffff;
@@ -98,7 +98,7 @@ nav {
     transition: var(--transition);
 }
 
-.btn-primary:hover { background: #ea6c0a; }
+.btn-primary:hover { background: #00b396; }
 
 /* Hamburger */
 .hamburger {
@@ -143,7 +143,7 @@ nav {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: radial-gradient(ellipse at 70% 50%, rgba(249,115,22,0.08) 0%, transparent 60%);
+    background: radial-gradient(ellipse at 70% 50%, rgba(0,201,167,0.08) 0%, transparent 60%);
 }
 
 .hero-content {
@@ -156,8 +156,8 @@ nav {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(249,115,22,0.15);
-    border: 1px solid rgba(249,115,22,0.3);
+    background: rgba(0,201,167,0.15);
+    border: 1px solid rgba(0,201,167,0.3);
     color: var(--accent);
     padding: 7px 16px;
     border-radius: 50px;
@@ -205,9 +205,9 @@ nav {
 }
 
 .btn-primary-lg:hover {
-    background: #ea6c0a;
+    background: #00b396;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(249,115,22,0.4);
+    box-shadow: 0 8px 25px rgba(0,201,167,0.4);
 }
 
 .btn-outline-lg {
@@ -466,7 +466,9 @@ nav {
 
 /* CTA */
 .cta-section {
-    background: var(--accent);
+    background: #0d1520;
+    border-top: 1px solid rgba(0,201,167,0.15);
+    border-bottom: 1px solid rgba(0,201,167,0.15);
     padding: 70px 0;
 }
 
@@ -486,14 +488,14 @@ nav {
 }
 
 .cta-text p {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.6);
     font-size: 1rem;
     max-width: 550px;
 }
 
 .btn-cta {
-    background: var(--white);
-    color: var(--accent);
+    background: var(--accent);
+    color: var(--dark);
     padding: 16px 35px;
     border-radius: 6px;
     font-weight: 700;
@@ -512,7 +514,7 @@ nav {
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
-.btn-cta i { font-size: 1.2rem; color: #25d366; }
+.btn-cta i { font-size: 1.2rem; color: var(--dark); }
 
 /* Footer */
 footer {
