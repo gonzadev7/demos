@@ -33,7 +33,7 @@ body {
 /* Header */
 #main-header {
     position: fixed;
-    top: 0;
+    top: 38px;
     width: 100%;
     z-index: 1000;
     padding: 20px 0;
