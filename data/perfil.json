@@ -1,0 +1,18 @@
+{
+  "nombre": "Gonzalo Meza",
+  "edad": 24,
+  "ciudad": "Buenos Aires",
+  "rol": "Desarrollador web freelance",
+  "stack": [
+    "HTML",
+    "CSS",
+    "JS vanilla",
+    "Firebase",
+    "Supabase"
+  ],
+  "flujo": "GitHub Desktop + VS Code + Netlify",
+  "portfolio": "gonzalodev.netlify.app",
+  "no_disponible": "11:30 a 13:00 (lleva sobrinas al colegio, ~25-30 cuadras)",
+  "socio": "Farid (SaaS)",
+  "pareja": "Denise"
+}
