@@ -1,0 +1,42 @@
+{
+  "freelance": [
+    {
+      "nombre": "Dulce Araica",
+      "estado": "en_produccion",
+      "repo": "gonzadev7/dulce-araica",
+      "pendiente": "Pago parcial pendiente",
+      "proximo_paso": null
+    },
+    {
+      "nombre": "WorryFreeCut",
+      "estado": "activo",
+      "repo": "WorryFreeCut",
+      "pendiente": null,
+      "proximo_paso": null
+    },
+    {
+      "nombre": "gestor-costos-recetas",
+      "estado": "activo",
+      "pendiente": "Correcciones pendientes",
+      "proximo_paso": null
+    }
+  ],
+  "saas": {
+    "nombre": "SaaS contabilidad e inventario para comercios",
+    "estado": "propuesta_en_preparacion",
+    "socios": [
+      "Farid",
+      "Valentín",
+      "otro chico"
+    ],
+    "roles": {
+      "gonza": "frontend",
+      "farid": "backend"
+    },
+    "cotizacion_estimada_usd": 3000,
+    "modelo": "upfront + mensualidad (monto a definir)",
+    "reunion_realizada": "2026-03-30",
+    "proxima_reunion": "2026-04-01 (miércoles, con Farid)",
+    "pendiente": "Definir división del upfront y precio mensualidad con Farid el miércoles"
+  }
+}
