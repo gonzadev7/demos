@@ -32,11 +32,12 @@ body {
 
 /* Header */
 #main-header {
-    position: fixed;
-    top: 38px;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 1000;
     padding: 20px 0;
+    background: rgba(10, 20, 50, 0.5);
     transition: var(--transition);
 }
 
@@ -120,7 +121,7 @@ nav {
 
 /* Hero */
 .hero {
-    height: 100vh;
+    height: calc(100vh - 38px);
     background:
         linear-gradient(rgba(10, 20, 50, 0.55), rgba(10, 20, 50, 0.25)),
         url('https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=1920&q=80') no-repeat center center/cover;
