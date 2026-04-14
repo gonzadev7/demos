@@ -1,10 +1,11 @@
 :root {
-    --primary: #1e4a1e;
-    --accent: #5a9e2f;
-    --warm: #b8935a;
-    --light: #f2ede4;
+    --primary: #1a3a6b;
+    --accent: #e8a020;
+    --warm: #d94f3d;
+    --green: #2e8b57;
+    --light: #fdf6ec;
     --white: #ffffff;
-    --dark: #131f13;
+    --dark: #111827;
     --text: #333333;
     --transition: all 0.3s ease;
 }
@@ -106,22 +107,23 @@ nav {
 
 .btn-primary {
     background: var(--accent);
-    color: var(--white) !important;
+    color: var(--dark) !important;
     padding: 10px 22px;
     border-radius: 50px;
     transition: var(--transition);
+    font-weight: 700;
 }
 
 .btn-primary:hover {
-    background: var(--primary);
+    background: #d08a10;
 }
 
 /* Hero */
 .hero {
     height: 100vh;
     background:
-        linear-gradient(rgba(10, 35, 10, 0.55), rgba(10, 35, 10, 0.3)),
-        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80') no-repeat center center/cover;
+        linear-gradient(rgba(10, 20, 50, 0.55), rgba(10, 20, 50, 0.25)),
+        url('https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=1920&q=80') no-repeat center center/cover;
     display: flex;
     align-items: center;
     position: relative;
@@ -132,7 +134,7 @@ nav {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: linear-gradient(135deg, rgba(20,60,20,0.5) 0%, rgba(0,0,0,0.15) 100%);
+    background: linear-gradient(135deg, rgba(26,58,107,0.45) 0%, rgba(0,0,0,0.1) 100%);
 }
 
 .hero-content {
@@ -143,7 +145,7 @@ nav {
 
 .hero-badge {
     display: inline-block;
-    background: rgba(90, 158, 47, 0.85);
+    background: rgba(232, 160, 32, 0.9);
     color: var(--white);
     padding: 6px 18px;
     border-radius: 50px;
@@ -178,7 +180,7 @@ nav {
 
 .btn-primary-lg {
     background: var(--accent);
-    color: var(--white);
+    color: var(--dark);
     padding: 15px 35px;
     border-radius: 50px;
     font-weight: 700;
@@ -190,9 +192,9 @@ nav {
 }
 
 .btn-primary-lg:hover {
-    background: #4a8a22;
+    background: #d08a10;
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(90,158,47,0.4);
+    box-shadow: 0 10px 25px rgba(232,160,32,0.45);
 }
 
 .btn-outline-lg {
@@ -228,6 +230,27 @@ nav {
     0%, 100% { transform: translateX(-50%) translateY(0); }
     50% { transform: translateX(-50%) translateY(8px); }
 }
+
+/* Zócalos strip — decoración tipo Guatapé */
+.zocalos-strip {
+    display: flex;
+    height: 18px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.zocalo {
+    flex: 1;
+}
+
+.z1 { background: #e8a020; }
+.z2 { background: #d94f3d; }
+.z3 { background: #1a3a6b; }
+.z4 { background: #2e8b57; }
+.z5 { background: #c0392b; }
+.z6 { background: #f39c12; }
+.z7 { background: #2980b9; }
+.z8 { background: #27ae60; }
 
 /* Sections */
 .section {
@@ -309,7 +332,7 @@ nav {
 
 .badge-item {
     background: var(--white);
-    border: 2px solid #e8f4df;
+    border: 2px solid #fde8b8;
     border-radius: 15px;
     padding: 30px 20px;
     text-align: center;
@@ -319,7 +342,7 @@ nav {
 .badge-item:hover {
     border-color: var(--accent);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(90,158,47,0.15);
+    box-shadow: 0 10px 30px rgba(232,160,32,0.2);
 }
 
 .badge-item i {
@@ -404,23 +427,27 @@ nav {
 
 .btn-reservar {
     display: inline-block;
-    background: var(--primary);
-    color: var(--white);
+    background: var(--accent);
+    color: var(--dark);
     padding: 12px 28px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     transition: var(--transition);
 }
 
 .btn-reservar:hover {
-    background: var(--accent);
+    background: #d08a10;
     transform: translateY(-2px);
 }
 
 /* Servicios */
 .dark {
     background: var(--primary);
+    color: var(--white);
+}
+
+.dark .section-title h2 {
     color: var(--white);
 }
 
@@ -443,7 +470,7 @@ nav {
 
 .servicio-item i {
     font-size: 2.8rem;
-    color: var(--warm);
+    color: var(--accent);
     margin-bottom: 18px;
     display: block;
 }
@@ -489,7 +516,8 @@ nav {
     border-radius: 20px;
     padding: 45px 40px;
     text-align: center;
-    border: 2px solid #e8f4df;
+    border: 2px solid #fde8b8;
+    border-top: 6px solid var(--accent);
 }
 
 .ubicacion-card > i {
