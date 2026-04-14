@@ -1,0 +1,12 @@
+{
+  "peso_kg": 69,
+  "altura_m": 1.75,
+  "objetivo": "ganar masa muscular sin perder agilidad",
+  "agua_meta_litros": 2.5,
+  "pendiente": "Pesarse y medirse antes del miércoles",
+  "actividad": {
+    "gym": "1-2 veces por semana",
+    "caminata": "25-30 cuadras diarias",
+    "futbol": "sábados 17:30, a veces domingos"
+  }
+}
