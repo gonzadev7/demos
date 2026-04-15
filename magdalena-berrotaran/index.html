@@ -1,155 +1,143 @@
 <!DOCTYPE html>
-<html lang='es'>
+<html lang="es">
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Lic. Magdalena Berrotarán | Psicóloga</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'>
-    <style>
-        :root {
-            --primary: #7b9cba;
-            --secondary: #f3f6f9;
-            --text: #333;
-            --accent: #b5c9d8;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--text); background: #fff; line-height: 1.6; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lic. Magdalena Berrotarán | Psicóloga — Villa Allende & Córdoba</title>
+    <meta name="description" content="Psicoterapia clínica individual para jóvenes y adultos. Presencial en Villa Allende y Córdoba Capital. También online.">
 
-        header {
-            height: 85vh;
-            background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
-                url('https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            text-align: center; padding: 20px;
-        }
-        header h1 { font-size: 2.8rem; color: var(--primary); margin-bottom: 10px; font-weight: 300; }
-        header .subtitulo { font-size: 1.1rem; color: #666; margin-bottom: 6px; }
-        header .zona { font-size: 0.95rem; color: #999; margin-bottom: 24px; }
-
-        .btn {
-            display: inline-block; margin-top: 10px; padding: 14px 32px;
-            background: var(--primary); color: #fff; text-decoration: none;
-            border-radius: 50px; transition: 0.3s; font-size: 1rem;
-        }
-        .btn:hover { background: #5a7f9c; transform: translateY(-2px); }
-
-        .badge-online {
-            display: inline-block; margin-left: 10px;
-            background: #e6f4ea; color: #2e7d32;
-            font-size: 0.8rem; padding: 3px 10px; border-radius: 20px;
-            font-weight: 600; vertical-align: middle;
-        }
-
-        section { padding: 70px 20px; max-width: 960px; margin: 0 auto; }
-        h2 { text-align: center; color: var(--primary); font-size: 1.8rem; font-weight: 400; }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; margin-top: 40px; }
-        .card { background: var(--secondary); padding: 28px; border-radius: 14px; text-align: center; }
-        .card i { font-size: 2.2rem; color: var(--primary); margin-bottom: 16px; }
-        .card h3 { margin-bottom: 8px; font-size: 1.05rem; }
-        .card p { font-size: 0.92rem; color: #555; }
-
-        .sobre-mi-texto { margin-top: 28px; text-align: center; font-size: 1.02rem; color: #555; max-width: 700px; margin-left: auto; margin-right: auto; }
-
-        .modalidades { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 32px; }
-        .modalidad { background: var(--secondary); border-radius: 12px; padding: 18px 28px; text-align: center; min-width: 160px; }
-        .modalidad i { font-size: 1.8rem; color: var(--primary); margin-bottom: 10px; display: block; }
-        .modalidad span { font-size: 0.95rem; font-weight: 500; }
-
-        .section-gray { background: var(--secondary); padding: 70px 20px; }
-        .section-gray > div { max-width: 960px; margin: 0 auto; }
-
-        .contacto-info { text-align: center; margin-top: 30px; }
-        .contacto-info p { margin: 10px 0; font-size: 1rem; color: #555; }
-        .contacto-info p i { color: var(--primary); margin-right: 8px; }
-        .contacto-info .horario { font-size: 0.9rem; color: #888; margin-top: 4px; }
-
-        footer { background: var(--secondary); text-align: center; padding: 36px; margin-top: 60px; font-size: 0.88rem; color: #888; }
-
-        .whatsapp-float {
-            position: fixed; bottom: 28px; right: 28px;
-            background: #25d366; color: white;
-            width: 58px; height: 58px; border-radius: 50%;
-            display: flex; justify-content: center; align-items: center;
-            font-size: 28px; box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
-            text-decoration: none; transition: transform 0.2s;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <h1>Lic. Magdalena Berrotarán</h1>
-        <p class='subtitulo'>Psicóloga Clínica — Jóvenes y Adultos</p>
-        <p class='zona'><i class='fas fa-map-marker-alt'></i> Villa Allende &amp; Córdoba Capital <span class='badge-online'>Online disponible</span></p>
-        <a href='#contacto' class='btn'>Solicitar Turno</a>
+    <!-- Banner DEMO -->
+    <div style="position:fixed;top:0;left:0;width:100%;background:#2d3a32;color:#f5f0e8;text-align:center;padding:10px 0;font-family:sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:1px;z-index:9999;border-bottom:2px solid #8fad9a;">DEMO — Sitio no activo · <a href="https://www.instagram.com/gondev.web" target="_blank" style="color:#8fad9a;text-decoration:none;">@gondev.web</a></div>
+
+    <header id="main-header">
+        <nav class="container">
+            <div class="logo">
+                <span class="logo-text">Magdalena <span>Berrotarán</span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#contacto" class="btn-primary">Pedir turno</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
     </header>
 
-    <section id='sobre-mi'>
-        <h2>Un espacio para vos</h2>
-        <p class='sobre-mi-texto'>
-            Ofrezco un espacio de escucha, confianza y acompañamiento terapéutico para jóvenes y adultos desde los 18 años.
-            Trabajo de forma individual, tanto en consultorio como de manera online, adaptando el proceso a las necesidades de cada persona.
-        </p>
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-eyebrow">Psicoterapia individual · Jóvenes y adultos</span>
+            <h1>Un espacio para<br>encontrarte</h1>
+            <p>Acompañamiento psicológico clínico en Villa Allende, Córdoba Capital<br>y modalidad online para todo el país.</p>
+            <div class="hero-btns">
+                <a href="https://wa.me/5493543554230" class="btn-primary-lg" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Pedir turno
+                </a>
+                <a href="#sobre-mi" class="btn-outline-lg">Conocer más</a>
+            </div>
+        </div>
     </section>
 
-    <div class='section-gray'>
-        <div>
-            <h2>Especialidades</h2>
-            <div class='grid'>
-                <div class='card'>
-                    <i class='fas fa-wind'></i>
+    <section id="sobre-mi" class="sobre-mi section">
+        <div class="container sobre-mi-inner">
+            <div class="sobre-mi-img"></div>
+            <div class="sobre-mi-text">
+                <span class="tag">Sobre mí</span>
+                <h2>Lic. Magdalena<br>Berrotarán</h2>
+                <p>Soy psicóloga clínica con orientación en psicoterapia individual. Trabajo con jóvenes y adultos desde los 18 años, en un espacio de escucha, confianza y movimiento real.</p>
+                <p>Atiendo de forma presencial en <strong>Villa Allende</strong> y en <strong>Córdoba Capital</strong> (zona Deán Funes), y también en modalidad <strong>online</strong> para quienes están en otro lugar del país.</p>
+                <a href="https://wa.me/5493543554230" class="btn-secondary" target="_blank">Consultar disponibilidad</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-sage">
+        <div class="container">
+            <div class="section-title">
+                <span class="tag">En qué puedo ayudarte</span>
+                <h2>Especialidades</h2>
+            </div>
+            <div id="especialidades" class="especialidades-grid">
+                <div class="esp-card">
+                    <div class="esp-icon"><i class="fas fa-wind"></i></div>
                     <h3>Ansiedad y Fobias</h3>
-                    <p>Ataques de pánico, fobias específicas y manejo de la ansiedad cotidiana.</p>
+                    <p>Ataques de pánico, miedos específicos y ansiedad generalizada que interfieren en el día a día.</p>
                 </div>
-                <div class='card'>
-                    <i class='fas fa-cloud-rain'></i>
+                <div class="esp-card">
+                    <div class="esp-icon"><i class="fas fa-cloud-rain"></i></div>
                     <h3>Depresión</h3>
-                    <p>Acompañamiento en procesos depresivos con enfoque clínico individual.</p>
+                    <p>Acompañamiento sostenido en procesos depresivos, con foco en recuperar el movimiento y el sentido.</p>
                 </div>
-                <div class='card'>
-                    <i class='fas fa-link'></i>
+                <div class="esp-card">
+                    <div class="esp-icon"><i class="fas fa-link"></i></div>
                     <h3>Adicciones y Codependencia</h3>
-                    <p>Trabajo sobre vínculos disfuncionales y conductas adictivas.</p>
+                    <p>Trabajo sobre vínculos que lastiman y conductas que se repiten aunque sabemos que no nos hacen bien.</p>
+                </div>
+                <div class="esp-card">
+                    <div class="esp-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Bienestar emocional</h3>
+                    <p>Para quienes quieren entenderse mejor, crecer, o simplemente tener un espacio propio de reflexión.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <section id='modalidades'>
-        <h2>Modalidades de atención</h2>
-        <div class='modalidades'>
-            <div class='modalidad'>
-                <i class='fas fa-building'></i>
-                <span>Presencial<br><small style='color:#888'>Villa Allende<br>Córdoba Capital</small></span>
+    <section class="modalidades section">
+        <div class="container">
+            <div class="section-title">
+                <span class="tag">Cómo trabajo</span>
+                <h2>Modalidades de atención</h2>
             </div>
-            <div class='modalidad'>
-                <i class='fas fa-laptop'></i>
-                <span>Online<br><small style='color:#888'>Videollamada<br>Todo el país</small></span>
+            <div class="modalidades-grid">
+                <div class="modalidad-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Presencial</h3>
+                    <p><strong>Villa Allende</strong> · <strong>Córdoba Capital</strong><br>(zona Deán Funes 1900)</p>
+                </div>
+                <div class="modalidad-card destacado">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Online <span class="badge-online">Disponible</span></h3>
+                    <p>Por videollamada, desde cualquier parte del país. Misma calidad de atención.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id='contacto'>
-        <h2>Contacto</h2>
-        <div class='contacto-info'>
-            <p><i class='fas fa-map-marker-alt'></i> Deán Funes 1900, Córdoba Capital · Villa Allende</p>
-            <p><i class='fab fa-whatsapp'></i> +54 9 3543 55-4230</p>
-            <p class='horario'>Lunes a Viernes — Turnos a convenir</p>
-            <a href='https://wa.me/5493543554230' class='btn' style='margin-top: 24px;'>Pedir turno por WhatsApp</a>
+    <footer id="contacto">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Lic. Magdalena Berrotarán</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Deán Funes 1900, Córdoba · Villa Allende</p>
+                <p><i class="fas fa-phone"></i> +54 9 3543 55-4230</p>
+                <p><i class="fas fa-clock"></i> Lunes a Viernes · Turnos a convenir</p>
+            </div>
+            <div class="footer-cta">
+                <h4>¿Querés empezar?</h4>
+                <p>Escribime y coordinamos un primer encuentro, presencial u online.</p>
+                <a href="https://wa.me/5493543554230" class="btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
+                </a>
+            </div>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 — Diseñado por <a href='https://gonzalodev.netlify.app' style='color: var(--primary); text-decoration: none;'>GonzaDev</a></p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lic. Magdalena Berrotarán. Todos los derechos reservados.</p>
+            <p class="dev-credit">Demo desarrollada por <a href="https://www.instagram.com/gondev.web" target="_blank">@gondev.web</a></p>
+        </div>
     </footer>
 
-    <a href='https://wa.me/5493543554230' class='whatsapp-float' target='_blank'>
-        <i class='fab fa-whatsapp'></i>
+    <a href="https://wa.me/5493543554230" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script src="script.js"></script>
 </body>
 </html>
