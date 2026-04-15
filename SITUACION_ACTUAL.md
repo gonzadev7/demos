@@ -4,5 +4,5 @@
 - Próximo paso: Actualizar hooks de PowerShell para Claude.
 
 ## Metas Hoy
-- Organizar data en /data/.
-- Limpiar raíz del repo.
+- [x] Organizar data en /data/.
+- [x] Limpiar raíz del repo. (borrados: estado.json, leads.json, LEADS_DEPRECATED.md)
