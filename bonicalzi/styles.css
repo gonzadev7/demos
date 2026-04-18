@@ -97,11 +97,26 @@ h3 {
 
 /* ===================== HERO ===================== */
 .hero {
-    background: var(--dark);
-    padding: 100px 0;
+    background-image: url('bonicalzi-hero.jpg');
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    padding: 120px 0;
     color: var(--white);
     text-align: center;
     border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(2,6,23,0.92) 0%, rgba(12,21,35,0.85) 100%);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content {
