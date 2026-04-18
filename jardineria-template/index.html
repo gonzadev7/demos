@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[NOMBRE] | Jardinería Profesional</title>
+    <meta name="description" content="[NOMBRE] — Diseño, mantenimiento y cuidado de jardines. Servicio profesional, resultados garantizados.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Banner DEMO -->
+    <div class="demo-banner">DEMO — Sitio no activo · <a href="https://www.instagram.com/gondev.web" target="_blank">@gondev.web</a></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <div class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <div>
+                    <span>[NOMBRE]</span>
+                    <small>Jardinería Profesional</small>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto" class="nav-cta"><i class="fab fa-whatsapp"></i> Presupuesto gratis</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <span class="hero-tag"><i class="fas fa-seedling"></i> Jardinería profesional en [ZONA]</span>
+                <h1>Tu jardín, <em>transformado.</em></h1>
+                <p>Diseño, mantenimiento y cuidado experto para que tu espacio verde luzca impecable todo el año. Presupuesto sin cargo.</p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/[NUMERO]?text=Hola%2C%20quiero%20un%20presupuesto%20para%20mi%20jardín." class="btn-green" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Pedir presupuesto
+                    </a>
+                    <a href="#servicios" class="btn-ghost">Ver servicios <i class="fas fa-arrow-down"></i></a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item"><i class="fas fa-check-circle"></i> Sin contrato mínimo</div>
+                    <div class="trust-item"><i class="fas fa-check-circle"></i> Presupuesto en 24hs</div>
+                    <div class="trust-item"><i class="fas fa-check-circle"></i> Resultado garantizado</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll"><i class="fas fa-chevron-down"></i></div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+        <div class="container stats-inner">
+            <div class="stat">
+                <strong>[X]+</strong>
+                <span>años de experiencia</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat">
+                <strong>[X]+</strong>
+                <span>jardines realizados</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat">
+                <strong>100%</strong>
+                <span>satisfacción garantizada</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat">
+                <strong>[ZONA]</strong>
+                <span>y alrededores</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Servicios -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Servicios</span>
+                <h2>Todo lo que tu jardín necesita</h2>
+                <p>Desde mantenimiento regular hasta diseño completo — cubrimos cada aspecto del cuidado de espacios verdes.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-icon"><i class="fas fa-cut"></i></div>
+                    <h3>Poda y Mantenimiento</h3>
+                    <p>Poda de árboles y arbustos, corte de césped, bordes y limpieza general. Servicio semanal, quincenal o mensual.</p>
+                    <div class="service-tag">Más solicitado</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h3>Diseño de Jardines</h3>
+                    <p>Creación completa de espacios verdes desde cero. Selección de plantas, trazado, iluminación y acabados.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tint"></i></div>
+                    <h3>Riego Automatizado</h3>
+                    <p>Instalación de sistemas de riego programable para mantener tus plantas siempre en su punto ideal.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Plantación</h3>
+                    <p>Selección y plantación de especies según el clima, suelo y estética de tu espacio. Plantas de temporada y permanentes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tree"></i></div>
+                    <h3>Tala y Extracción</h3>
+                    <p>Remoción segura de árboles, ramas peligrosas y tocos. Trabajo en altura con equipos profesionales.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
+                    <h3>Espacios Corporativos</h3>
+                    <p>Mantenimiento de jardines para empresas, countries y edificios. Contrato de servicio mensual con informe de visitas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section class="about" id="nosotros">
+        <div class="container about-wrapper">
+            <div class="about-visual">
+                <div class="about-img-main"></div>
+                <div class="about-badge-float">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <strong>[X]+ años</strong>
+                        <span>en el rubro</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-tag">Quiénes somos</span>
+                <h2>Pasión por los espacios verdes</h2>
+                <p>[NOMBRE] es un servicio de jardinería profesional con base en [ZONA]. Trabajamos con herramientas de primera calidad y un enfoque en los detalles que hace la diferencia.</p>
+                <p>Cada jardín es único. Por eso escuchamos lo que querés, analizamos el espacio y proponemos la solución más adecuada — sin presionar, sin letra chica.</p>
+                <div class="about-highlights">
+                    <div class="highlight"><i class="fas fa-leaf"></i><span>Productos y técnicas ecológicas</span></div>
+                    <div class="highlight"><i class="fas fa-clock"></i><span>Puntualidad garantizada</span></div>
+                    <div class="highlight"><i class="fas fa-star"></i><span>Trabajo prolijo y limpio</span></div>
+                    <div class="highlight"><i class="fas fa-comments"></i><span>Comunicación directa siempre</span></div>
+                </div>
+                <a href="https://wa.me/[NUMERO]?text=Hola%2C%20quiero%20saber%20más%20sobre%20sus%20servicios." class="btn-green mt-4" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Hablar con nosotros
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="proceso" id="proceso">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Cómo funciona</span>
+                <h2>Simple, rápido, sin vueltas</h2>
+                <p>En 3 pasos tenés tu jardín en marcha.</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                        <i class="fas fa-comments"></i>
+                        <h3>Nos contactás</h3>
+                        <p>Mandás un WhatsApp o completás el formulario. Sin turno ni burocracia.</p>
+                    </div>
+                </div>
+                <div class="step-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                        <i class="fas fa-search-location"></i>
+                        <h3>Visita y presupuesto</h3>
+                        <p>Coordinamos una visita al espacio y te enviamos el presupuesto en 24hs. Sin cargo.</p>
+                    </div>
+                </div>
+                <div class="step-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                        <i class="fas fa-star"></i>
+                        <h3>Manos a la obra</h3>
+                        <p>Arrancamos cuando vos lo confirmés. Trabajo prolijo, limpieza incluida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios" id="testimonios">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag green-tag">Testimonios</span>
+                <h2>Lo que dicen nuestros clientes</h2>
+            </div>
+            <div class="testimonios-grid">
+                <div class="testi-card">
+                    <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Transformaron el jardín de mi casa por completo. Trabajo impecable, puntuales y dejaron todo limpio. Ya los contraté para el mantenimiento mensual."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar"><i class="fas fa-user"></i></div>
+                        <div><strong>Marcela V.</strong><span>Casa particular — [ZONA]</span></div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Contraté el servicio para el jardín del country. Siempre cumplen, el trabajo es prolijo y nunca me dieron un problema. Lo recomiendo sin dudarlo."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar"><i class="fas fa-user"></i></div>
+                        <div><strong>Roberto G.</strong><span>Country — [ZONA]</span></div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Pedí diseño y plantación para el fondo de mi casa. Me escucharon, propusieron ideas que no se me habían ocurrido y el resultado superó mis expectativas."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar"><i class="fas fa-user"></i></div>
+                        <div><strong>Carolina M.</strong><span>Residencial — [ZONA]</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <div class="contact-wrap">
+                <div class="contact-left">
+                    <span class="section-tag">Contacto</span>
+                    <h2>¿Listo para transformar tu jardín?</h2>
+                    <p>Presupuesto sin cargo, respuesta en el día. Hablamos por WhatsApp o completás el formulario.</p>
+                    <a href="https://wa.me/[NUMERO]?text=Hola%2C%20quiero%20un%20presupuesto%20para%20mi%20jardín." class="btn-green wa-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
+                    </a>
+                    <div class="contact-info-items">
+                        <div class="ci"><i class="fas fa-map-marker-alt"></i><span>[ZONA] y alrededores</span></div>
+                        <div class="ci"><i class="fas fa-clock"></i><span>Lun a Sáb, 8:00 a 18:00</span></div>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form id="lead-form">
+                        <input type="text" placeholder="Tu nombre" required>
+                        <input type="tel" placeholder="Tu teléfono" required>
+                        <select required>
+                            <option value="" disabled selected>¿Qué necesitás?</option>
+                            <option value="mantenimiento">Poda / Mantenimiento</option>
+                            <option value="diseño">Diseño de jardín</option>
+                            <option value="riego">Sistema de riego</option>
+                            <option value="tala">Tala / Extracción</option>
+                            <option value="otro">Otro servicio</option>
+                        </select>
+                        <textarea placeholder="Contanos algo del espacio (opcional)" rows="3"></textarea>
+                        <button type="submit">Pedir presupuesto gratis <i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <i class="fas fa-leaf"></i>
+                <div>
+                    <strong>[NOMBRE]</strong>
+                    <span>Jardinería Profesional · [ZONA]</span>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2026 [NOMBRE]. Todos los derechos reservados.</p>
+            <p class="dev-credit">Demo por <a href="https://www.instagram.com/gondev.web" target="_blank">@gondev.web</a></p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/[NUMERO]?text=Hola%2C%20quiero%20un%20presupuesto%20para%20mi%20jardín." class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
