@@ -359,6 +359,12 @@ h1, h2, h3 { font-family: 'Fraunces', serif; }
     gap: 24px;
 }
 
+.services-grid .service-card:last-child:nth-child(3n+1) {
+    grid-column: 1 / -1;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
 .service-card {
     background: var(--white);
     padding: 36px 28px;
