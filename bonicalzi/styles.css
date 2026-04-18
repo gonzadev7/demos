@@ -440,6 +440,226 @@ select:focus {
     color: var(--dark);
 }
 
+/* ===================== ABOUT ===================== */
+.about {
+    padding: 90px 0;
+    background: var(--light);
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-avatar {
+    width: 120px;
+    height: 120px;
+    background: var(--dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    border: 3px solid var(--secondary);
+}
+
+.about-avatar i {
+    font-size: 3rem;
+    color: var(--secondary);
+}
+
+.about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.stat-item {
+    text-align: center;
+    background: var(--white);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.stat-num {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--secondary);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.stat-label {
+    font-size: 0.78rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.about-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.about-text p {
+    color: #64748b;
+    line-height: 1.75;
+    margin-bottom: 14px;
+    font-size: 0.97rem;
+}
+
+/* ===================== METODOLOGÍA ===================== */
+.metodologia {
+    padding: 90px 0;
+    background: var(--white);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.step-card {
+    background: var(--light);
+    border-radius: 14px;
+    padding: 38px 28px;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+}
+
+.step-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgba(197, 160, 89, 0.15);
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 16px;
+    right: 22px;
+    line-height: 1;
+}
+
+.step-icon {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-bottom: 16px;
+}
+
+.step-card h3 {
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+/* ===================== TESTIMONIOS ===================== */
+.testimonios {
+    padding: 90px 0;
+    background: var(--dark);
+}
+
+.section-title.light h2 {
+    color: var(--white);
+}
+
+.section-title.light p {
+    color: #94a3b8;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 20px;
+}
+
+.testimonio-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(197,160,89,0.2);
+    border-radius: 14px;
+    padding: 34px 28px;
+    transition: all 0.3s;
+}
+
+.testimonio-card:hover {
+    background: rgba(255,255,255,0.07);
+    transform: translateY(-4px);
+}
+
+.stars {
+    color: var(--secondary);
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.testimonio-card > p {
+    color: #cbd5e1;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.testimonio-autor {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.autor-avatar {
+    width: 42px;
+    height: 42px;
+    background: rgba(197,160,89,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.autor-avatar i {
+    color: var(--secondary);
+    font-size: 1rem;
+}
+
+.testimonio-autor strong {
+    display: block;
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.testimonio-autor span {
+    font-size: 0.78rem;
+    color: #64748b;
+}
+
 /* ===================== FOOTER ===================== */
 footer {
     background: #020617;
@@ -554,6 +774,37 @@ footer .brand p {
 
     .features-text h2 {
         font-size: 1.7rem;
+    }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-icon-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-stats {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        min-width: 100px;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .testimonios-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
     }
 }
 
