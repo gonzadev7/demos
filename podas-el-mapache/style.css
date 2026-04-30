@@ -169,7 +169,7 @@ nav {
     min-height: 600px;
     background:
         linear-gradient(to right, rgba(10, 20, 13, 0.85) 50%, rgba(10, 20, 13, 0.4) 100%),
-        url('https://images.unsplash.com/photo-1626828476637-5bd713ef9f22?w=1920&auto=format&fit=crop&q=80') no-repeat center center / cover;
+        url('hero.jpeg') no-repeat center center / cover;
     display: flex;
     align-items: center;
     position: relative;
@@ -365,20 +365,19 @@ nav {
 }
 
 .s-img-1 {
-    background-image: url('https://images.unsplash.com/photo-1626828476637-5bd713ef9f22?w=800&auto=format&fit=crop&q=80');
+    background-image: url('poda-altura.jpeg');
 }
 
 .s-img-2 {
-    background-image: url('https://media.istockphoto.com/id/511438623/es/foto/hombre-con-el-%C3%A1rbol-de-corte-de-sierra-de-cadena.webp?a=1&b=1&s=612x612&w=0&k=20&c=Kq6kE-U7dso2uG-kyc15VaFN1P5uB5ml5i4fEVLO9Mc=');
+    background-image: url('tala.jpeg');
 }
 
 .s-img-3 {
-    background-image: url('https://images.unsplash.com/photo-1717964291724-9fa92f4a6fb8?w=800&auto=format&fit=crop&q=80');
+    background-image: url('poda-palmeras.jpeg');
 }
 
 .s-img-4 {
-    background-image: url('podaentrecables.png');
-    background-color: #2a3d2e;
+    background-image: url('trabajos-riesgo.jpeg');
 }
 
 .servicio-info {
@@ -557,7 +556,7 @@ nav {
 .visual-img {
     height: 520px;
     border-radius: 4px;
-    background: url('https://plus.unsplash.com/premium_photo-1663134018102-2b27cd4a3f83?w=800&auto=format&fit=crop&q=80') no-repeat center center / cover;
+    background: url('nosotros.jpeg') no-repeat center center / cover;
     border: 3px solid rgba(232, 132, 26, 0.3);
 }
 
@@ -634,6 +633,141 @@ nav {
     color: var(--accent);
     font-weight: 600;
     text-decoration: none;
+}
+
+/* Reseñas */
+.resenas { background: var(--light); }
+
+.resenas-google {
+    font-style: italic;
+    color: var(--accent);
+}
+
+.resenas-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px 40px;
+    max-width: 480px;
+    margin: 0 auto 60px;
+}
+
+.resenas-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.resenas-num {
+    font-family: 'Lora', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.resenas-stars-row {
+    display: flex;
+    gap: 4px;
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.resenas-total {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+}
+
+.resenas-logo {
+    font-size: 2.8rem;
+    color: #4285F4;
+    opacity: 0.85;
+    border-left: 1px solid var(--border);
+    padding-left: 28px;
+}
+
+.resenas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.resena-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: var(--transition);
+}
+
+.resena-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(15, 31, 21, 0.1);
+    border-color: var(--accent);
+}
+
+.resena-stars {
+    display: flex;
+    gap: 3px;
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.resena-text {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.resena-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+}
+
+.resena-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--green-mid);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+.resena-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.resena-info strong {
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.resena-info span {
+    font-size: 0.8rem;
+    color: var(--text-light);
 }
 
 /* Footer */
@@ -737,6 +871,11 @@ footer {
 
 /* Mobile */
 @media (max-width: 768px) {
+    .hero {
+        align-items: flex-start;
+        padding-top: 120px;
+    }
+
     .hero h1 { font-size: 2.4rem; }
     .hero p { font-size: 0.98rem; }
 
@@ -789,4 +928,21 @@ footer {
     .section-header h2 { font-size: 1.9rem; }
 
     .zona-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .resenas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resenas-badge {
+        flex-direction: column;
+        gap: 18px;
+        padding: 24px;
+    }
+
+    .resenas-logo {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 18px;
+    }
 }
