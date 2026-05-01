@@ -18,14 +18,18 @@
     box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    overflow-x: hidden;
+}
 
 body {
     font-family: 'Outfit', sans-serif;
     line-height: 1.7;
     color: var(--text);
     background: var(--white);
-    padding-top: 38px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -37,7 +41,7 @@ body {
 /* Header */
 #main-header {
     position: fixed;
-    top: 38px;
+    top: 0;
     width: 100%;
     z-index: 1000;
     padding: 18px 0;
@@ -166,10 +170,11 @@ nav {
 /* Hero */
 .hero {
     height: 100vh;
+    height: 100dvh;
     min-height: 600px;
     background:
         linear-gradient(to right, rgba(10, 20, 13, 0.85) 50%, rgba(10, 20, 13, 0.4) 100%),
-        url('hero.jpeg') no-repeat center center / cover;
+        url('hero.jpeg') no-repeat center 20% / cover;
     display: flex;
     align-items: center;
     position: relative;
@@ -359,25 +364,29 @@ nav {
 }
 
 .servicio-img {
-    height: 200px;
+    height: 240px;
     background-size: cover;
     background-position: center;
 }
 
 .s-img-1 {
     background-image: url('poda-altura.jpeg');
+    background-position: center 40%;
 }
 
 .s-img-2 {
     background-image: url('tala.jpeg');
+    background-position: center 15%;
 }
 
 .s-img-3 {
     background-image: url('poda-palmeras.jpeg');
+    background-position: center 20%;
 }
 
 .s-img-4 {
     background-image: url('trabajos-riesgo.jpeg');
+    background-position: center 8%;
 }
 
 .servicio-info {
@@ -556,7 +565,7 @@ nav {
 .visual-img {
     height: 520px;
     border-radius: 4px;
-    background: url('nosotros.jpeg') no-repeat center center / cover;
+    background: url('nosotros.jpeg') no-repeat center 30% / cover;
     border: 3px solid rgba(232, 132, 26, 0.3);
 }
 
@@ -869,15 +878,97 @@ footer {
     text-decoration: none;
 }
 
+/* Lightbox */
+.servicio-img {
+    cursor: zoom-in;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 8000;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    padding: 20px;
+    animation: lbFadeIn 0.2s ease;
+}
+
+.lightbox.open { display: flex; }
+
+@keyframes lbFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+    cursor: default;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 2.2rem;
+    line-height: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 4px 8px;
+}
+
+.lightbox-close:hover { color: var(--white); }
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero h1 { font-size: 3rem; }
+    .nosotros-inner { gap: 50px; }
+    .visual-img { height: 400px; }
+    .resenas-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .resena-card { padding: 20px; }
+    .resena-text { font-size: 0.88rem; }
+}
+
 /* Mobile */
 @media (max-width: 768px) {
+    .container { padding: 0 18px; }
+
     .hero {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh;
         align-items: flex-start;
-        padding-top: 120px;
+        padding-top: 110px;
+        padding-bottom: 70px;
     }
 
-    .hero h1 { font-size: 2.4rem; }
-    .hero p { font-size: 0.98rem; }
+    .hero h1 {
+        font-size: 2.3rem;
+        line-height: 1.18;
+    }
+    .hero p { font-size: 0.97rem; }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .btn-primary-lg,
+    .btn-outline-lg {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
 
     .hamburger { display: flex; }
 
@@ -899,50 +990,69 @@ footer {
     .nav-links a { font-size: 1.2rem; color: var(--white) !important; }
     .btn-cta { font-size: 1.2rem !important; padding: 12px 28px !important; }
 
-    .trust-inner { gap: 12px; }
-    .trust-item { font-size: 0.82rem; }
-
-    .servicios-grid {
-        grid-template-columns: 1fr;
+    .trust-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px 16px;
+        justify-items: start;
     }
+    .trust-item { font-size: 0.85rem; }
+
+    .section { padding: 60px 0; }
+
+    .section-header { margin-bottom: 40px; }
+    .section-header h2 { font-size: 1.9rem; }
+
+    .servicios-grid { grid-template-columns: 1fr; }
+
+    .servicio-img { height: 200px; }
 
     .servicio-wide-content {
         flex-direction: column;
         gap: 16px;
     }
-
-    .servicio-wide-content .btn-servicio {
-        margin-left: 0;
-    }
+    .servicio-wide-content .btn-servicio { margin-left: 0; }
 
     .nosotros-inner {
         grid-template-columns: 1fr;
         gap: 50px;
     }
 
-    .visual-img { height: 300px; }
-    .visual-badge { left: 10px; bottom: -15px; padding: 14px 18px; }
-
-    .section { padding: 70px 0; }
-
-    .section-header h2 { font-size: 1.9rem; }
+    .visual-img { height: 290px; }
+    .visual-badge {
+        left: 10px;
+        bottom: -15px;
+        padding: 14px 18px;
+        font-size: 0.82rem;
+    }
+    .nosotros-visual { padding-bottom: 28px; }
 
     .zona-grid { grid-template-columns: repeat(2, 1fr); }
 
-    .resenas-grid {
-        grid-template-columns: 1fr;
-    }
+    .resenas-grid { grid-template-columns: 1fr; }
 
     .resenas-badge {
         flex-direction: column;
         gap: 18px;
         padding: 24px;
     }
-
     .resenas-logo {
         border-left: none;
         border-top: 1px solid var(--border);
         padding-left: 0;
         padding-top: 18px;
+    }
+
+    .footer-content {
+        gap: 36px;
+        margin-bottom: 36px;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 54px;
+        height: 54px;
+        font-size: 24px;
     }
 }
