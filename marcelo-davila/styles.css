@@ -418,6 +418,19 @@ footer .brand p {
 }
 
 /* ===================== RESPONSIVE ===================== */
+@media (max-width: 1024px) {
+    .hero h2 {
+        font-size: clamp(2.5rem, 6vw, 3.2rem);
+    }
+    .hero {
+        padding: 100px 0;
+    }
+    .contact-wrapper {
+        gap: 40px;
+        padding: 40px;
+    }
+}
+
 @media (max-width: 992px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -426,11 +439,14 @@ footer .brand p {
         grid-template-columns: 1fr;
         gap: 50px;
     }
+    .features-image {
+        order: -1; /* Pone la imagen/logo arriba en mobile */
+    }
     .logo-display {
         margin: 0 auto;
-    }
-    .hero {
-        padding: 100px 0;
+        width: clamp(200px, 50vw, 280px);
+        height: clamp(200px, 50vw, 280px);
+        font-size: clamp(4rem, 10vw, 8rem);
     }
 }
 
@@ -443,8 +459,12 @@ footer .brand p {
     .hero h2 { 
         font-size: clamp(2rem, 8vw, 2.5rem); 
     }
+    .hero p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
     .hero {
-        padding: 80px 0;
+        padding: 60px 0;
     }
     .services-grid { 
         grid-template-columns: 1fr; 
@@ -452,6 +472,7 @@ footer .brand p {
     .contact-wrapper { 
         grid-template-columns: 1fr; 
         padding: 30px 20px; 
+        gap: 30px;
     }
     .section-title h2 {
         font-size: 2.2rem;
@@ -466,11 +487,17 @@ footer .brand p {
     .feature-list li {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
     }
     .btn-primary-dark {
         width: 100%;
+        display: block;
         text-align: center;
+        padding: 16px 20px;
+    }
+    .btn-outline-dark {
+        padding: 10px 20px;
+        font-size: 0.75rem;
     }
 }
 
@@ -480,6 +507,12 @@ footer .brand p {
         height: 200px;
         font-size: 5rem;
     }
+    .logo-display::after {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+    }
     .service-card {
         padding: 30px 20px;
     }
@@ -487,5 +520,21 @@ footer .brand p {
         flex-direction: column;
         text-align: center;
         align-items: center;
+        padding: 15px;
+    }
+    .section-title h2 {
+        font-size: 1.9rem;
+    }
+    .features-text h2 {
+        font-size: 1.9rem;
+    }
+    .features {
+        padding: 80px 0;
+    }
+    .services {
+        padding: 80px 0;
+    }
+    .contact {
+        padding: 80px 0;
     }
 }
