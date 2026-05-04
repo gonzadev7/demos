@@ -352,23 +352,49 @@ h1, h2, h3 {
     font-size: 1.1rem;
 }
 
+.contact-form-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
 input, select {
+    width: 100%;
     background: var(--secondary);
     border: 1px solid var(--border);
     color: var(--white);
     border-radius: 10px;
     padding: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
-input:focus {
+input:focus, select:focus {
     border-color: var(--accent-start);
 }
 
 .btn-submit {
+    width: 100%;
+    display: block;
     background: linear-gradient(to right, var(--accent-start), var(--accent-end));
     border-radius: 50px;
     color: var(--white);
     font-weight: 700;
+    padding: 18px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
 }
 
 /* ===================== FOOTER ===================== */
