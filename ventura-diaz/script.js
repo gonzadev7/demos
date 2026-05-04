@@ -5,6 +5,6 @@ document.getElementById('lead-form').addEventListener('submit', function (e) {
     const area = this.querySelector('select').value;
     const message = `Hola Dra. Ventura Díaz, mi nombre es ${name}. Mi teléfono es ${phone}. Me contacto por una consulta sobre: ${area}.`;
 
-    const waUrl = `https://wa.me/5491141648518?text=${encodeURIComponent(message)}`;
+    const waUrl = `https://wa.me/541141648518?text=${encodeURIComponent(message)}`;
     window.open(waUrl, '_blank');
 });
