@@ -1,18 +1,18 @@
 :root {
-    --primary: #72224b; /* Burgundy Logo */
-    --primary-light: #8e3160;
-    --primary-dark: #4d1733;
+    --primary: #6d1c44; /* Exact Burgundy from Logo */
+    --primary-light: #8b2d5d;
+    --primary-dark: #4a122e;
     --secondary: #c5a059; /* Premium Gold */
     --accent: #c5a059;
     --accent-hover: #a8863d;
-    --dark: #1a0812; /* Deep burgundy near-black */
-    --dark-2: #2d0e1e;
+    --dark: #12030a; /* Deepest burgundy black */
+    --dark-2: #240614;
     --light: #fdfafb;
-    --text: #4a333f;
+    --text: #3d1428;
     --text-muted: #8c717e;
     --white: #ffffff;
     --glass: rgba(255, 255, 255, 0.03);
-    --border: rgba(114, 34, 75, 0.1);
+    --border: rgba(109, 28, 68, 0.1);
 }
 
 * {
