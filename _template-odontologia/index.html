@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ✏️ TÍTULO: "Od. [Nombre Apellido] | [Especialidad] · [Ciudad]" -->
+    <title>Od. [NOMBRE APELLIDO] | Odontología · [CIUDAD]</title>
+    <!-- ✏️ DESCRIPCIÓN META -->
+    <meta name="description"
+        content="Od. [NOMBRE APELLIDO], especialista en [ESPECIALIDAD]. M.P [MATRICULA]. [CIUDAD].">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="top-header">
+        <div class="container header-container">
+            <div class="logo">
+                <!-- ✏️ NOMBRE -->
+                <h1>OD. [NOMBRE] <span>[APELLIDO]</span></h1>
+                <!-- ✏️ ESPECIALIDADES -->
+                <p>[Especialidad 1] &bull; [Especialidad 2] &bull; M.P [MATRICULA]</p>
+            </div>
+            <!-- ✏️ WHATSAPP: reemplazar [NUMERO_WA] por ej: 5491134826947 (sin + ni espacios) -->
+            <a href="https://wa.me/[NUMERO_WA]?text=Hola%20Od.%20[NOMBRE]%2C%20quiero%20pedir%20un%20turno."
+                class="btn-outline-light header-cta" target="_blank">
+                <i class="fab fa-whatsapp"></i> Pedir Turno
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <div class="hero-photo">
+                <!-- ✏️ FOTO: guardar imagen en esta carpeta y cambiar el nombre aquí -->
+                <img src="foto-profesional.jpg" alt="Od. [NOMBRE APELLIDO]" width="150" height="150">
+            </div>
+            <div class="hero-text">
+                <!-- ✏️ BADGE: frase corta de autoridad -->
+                <span class="badge">Especialista en [ESPECIALIDAD] · M.P [MATRICULA]</span>
+                <!-- ✏️ TÍTULO HERO -->
+                <h2>Tu sonrisa, en las mejores manos</h2>
+                <!-- ✏️ DESCRIPCIÓN HERO -->
+                <p>El <strong>Od. [NOMBRE APELLIDO]</strong> combina experiencia clínica con las últimas técnicas en [ESPECIALIDAD] y odontología integral. Cada tratamiento es pensado a medida para vos, con atención personalizada y resultados que se notan.</p>
+                <div class="hero-actions">
+                    <!-- ✏️ WHATSAPP -->
+                    <a href="https://wa.me/[NUMERO_WA]?text=Hola%20Od.%20[NOMBRE]%2C%20quiero%20pedir%20un%20turno."
+                        class="btn-primary-glow" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Pedir Turno Ahora
+                    </a>
+                    <!-- ✏️ ZONA -->
+                    <span class="urgency-text"><i class="fas fa-map-marker-alt"></i> [BARRIO/CIUDAD]</span>
+                </div>
+                <div class="trust-badge-bottom">
+                    <i class="fas fa-tooth"></i>
+                    <!-- ✏️ NOMBRE -->
+                    Od. [NOMBRE APELLIDO] &mdash; Odontólogo Especialista
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tratamientos</h2>
+                <p>Desde una limpieza hasta implantes de última generación. Todo lo que tu boca necesita, en un solo lugar.</p>
+            </div>
+            <div class="services-grid">
+
+                <!-- ✏️ SERVICIO DESTACADO (el que más vende / especialidad principal) -->
+                <div class="service-card highlight">
+                    <div class="card-icon"><i class="fas fa-tooth"></i></div>
+                    <h3>[SERVICIO PRINCIPAL]</h3>
+                    <p>[Descripción del servicio principal. 2-3 oraciones destacando el beneficio para el paciente.]</p>
+                </div>
+
+                <!-- ✏️ SERVICIO 2 -->
+                <div class="service-card">
+                    <div class="card-icon"><i class="fas fa-star"></i></div>
+                    <h3>[SERVICIO 2]</h3>
+                    <p>[Descripción breve del servicio.]</p>
+                </div>
+
+                <!-- ✏️ SERVICIO 3 -->
+                <div class="service-card">
+                    <div class="card-icon"><i class="fas fa-align-center"></i></div>
+                    <h3>[SERVICIO 3]</h3>
+                    <p>[Descripción breve del servicio.]</p>
+                </div>
+
+                <!-- ✏️ SERVICIO 4 -->
+                <div class="service-card">
+                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>[SERVICIO 4]</h3>
+                    <p>[Descripción breve del servicio.]</p>
+                </div>
+
+                <!-- ✏️ SERVICIO 5 -->
+                <div class="service-card">
+                    <div class="card-icon"><i class="fas fa-teeth"></i></div>
+                    <h3>[SERVICIO 5]</h3>
+                    <p>[Descripción breve del servicio.]</p>
+                </div>
+
+                <!-- ✏️ SERVICIO 6 -->
+                <div class="service-card">
+                    <div class="card-icon"><i class="fas fa-magic"></i></div>
+                    <h3>[SERVICIO 6]</h3>
+                    <p>[Descripción breve del servicio.]</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="features">
+        <div class="container">
+            <div class="features-text">
+                <!-- ✏️ TÍTULO FEATURES -->
+                <h2>¿Por qué elegir al Od. [APELLIDO]?</h2>
+                <!-- ✏️ INTRO FEATURES -->
+                <p>[Frase de autoridad/confianza. Mencionar seguidores en Instagram u otro indicador social si aplica.]</p>
+                <ul class="feature-list">
+                    <!-- ✏️ PUNTO 1 -->
+                    <li><i class="fas fa-check-circle"></i>
+                        <div><strong>Especialista certificado:</strong> Matrícula M.P [MATRICULA]. [Detalle de formación o especialización.]</div>
+                    </li>
+                    <!-- ✏️ PUNTO 2 -->
+                    <li><i class="fas fa-check-circle"></i>
+                        <div><strong>Atención personalizada:</strong> Sin apuro. El Od. [APELLIDO] escucha, analiza y te explica cada paso de tu tratamiento antes de empezar.</div>
+                    </li>
+                    <!-- ✏️ PUNTO 3 -->
+                    <li><i class="fas fa-check-circle"></i>
+                        <div><strong>Resultados estéticos y duraderos:</strong> Trabajamos con materiales de primera calidad para que tu sonrisa luzca perfecta y se mantenga en el tiempo.</div>
+                    </li>
+                    <!-- ✏️ PUNTO 4: UBICACIÓN -->
+                    <li><i class="fas fa-check-circle"></i>
+                        <div><strong>Ubicación accesible:</strong> Consultorio en [DIRECCIÓN COMPLETA]. [Referencia de acceso si aplica.]</div>
+                    </li>
+                </ul>
+                <a href="#contacto" class="btn-primary mt-4">Reservar mi Turno</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <!-- ✏️ TÍTULO CONTACTO -->
+                    <h2>Sacá tu turno hoy</h2>
+                    <p>No dejes para mañana el cuidado de tu sonrisa. Completá el formulario y el Od. [APELLIDO] te responde a la brevedad para coordinar tu consulta.</p>
+                    <!-- ✏️ TELÉFONO VISIBLE (formato legible: 11 1234-5678) -->
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>[TELEFONO VISIBLE]</p>
+                        </div>
+                    </div>
+                    <!-- ✏️ DIRECCIÓN -->
+                    <div class="info-item">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <div>
+                            <h4>Consultorio</h4>
+                            <p>[DIRECCIÓN COMPLETA]</p>
+                        </div>
+                    </div>
+                    <!-- ✏️ INSTAGRAM -->
+                    <div class="info-item">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>@[INSTAGRAM]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h3>Consulta sin compromiso</h3>
+                    <form id="lead-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Tu Nombre Completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Tu Teléfono / WhatsApp" required>
+                        </div>
+                        <div class="form-group">
+                            <!-- ✏️ OPCIONES DEL SELECT: adaptar a los servicios reales -->
+                            <select required>
+                                <option value="" disabled selected>¿Qué tratamiento te interesa?</option>
+                                <option value="servicio1">[Servicio 1]</option>
+                                <option value="servicio2">[Servicio 2]</option>
+                                <option value="servicio3">[Servicio 3]</option>
+                                <option value="servicio4">[Servicio 4]</option>
+                                <option value="servicio5">[Servicio 5]</option>
+                                <option value="consulta">Consulta General</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Consulta <i class="fas fa-lock"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="brand">
+                <!-- ✏️ NOMBRE -->
+                <h3>OD. [NOMBRE] <span>[APELLIDO]</span></h3>
+                <!-- ✏️ ESPECIALIDADES Y CIUDAD -->
+                <p>[Especialidad 1] · [Especialidad 2] — [CIUDAD]</p>
+            </div>
+            <div class="footer-links">
+                <!-- ✏️ NOMBRE -->
+                <p>&copy; 2026 Od. [NOMBRE APELLIDO]. Todos los derechos reservados.</p>
+                <p class="dev-credit">Sitio desarrollado por <a href="https://www.instagram.com/gondev.web"
+                        target="_blank">@gondev.web</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
