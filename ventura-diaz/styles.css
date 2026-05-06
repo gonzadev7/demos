@@ -306,8 +306,17 @@ h1, h2, h3 {
 /* ===================== FEATURES ===================== */
 .features {
     padding: 90px 0;
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, #0a0f1a 60%, #111827 100%);
     color: var(--white);
+    position: relative;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(197, 160, 89, 0.07) 0%, transparent 65%);
+    pointer-events: none;
 }
 
 .features-text h2 {
@@ -347,10 +356,12 @@ h1, h2, h3 {
 
 .testimonial {
     margin-top: 30px;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.10);
     border-left: 4px solid var(--secondary);
     padding: 20px 24px;
     border-radius: 0 10px 10px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(4px);
 }
 
 .testimonial p {
@@ -554,6 +565,13 @@ footer .brand p {
     font-size: 0.82rem;
     color: #475569;
     margin-top: 4px;
+}
+
+.matriculas {
+    font-size: 0.80rem;
+    color: #64748b;
+    margin-top: 6px;
+    letter-spacing: 0.02em;
 }
 
 .footer-keywords {
