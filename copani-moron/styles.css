@@ -41,6 +41,28 @@ h1, h2, h3 {
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.header.scrolled {
+    background: var(--dark);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.header.scrolled .logo-name {
+    color: var(--white);
+}
+
+.header.scrolled .logo-sub {
+    color: #a06040;
+}
+
+.header.scrolled .nav a {
+    color: #d0a090;
+}
+
+.header.scrolled .nav a:hover {
+    color: var(--red);
 }
 
 .header-inner {
