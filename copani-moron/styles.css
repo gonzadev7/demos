@@ -623,6 +623,51 @@ footer {
     opacity: 0.8;
 }
 
+/* ===================== ANIMACIONES ===================== */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 30px rgba(204, 0, 0, 0.5); }
+    50% { box-shadow: 0 0 50px rgba(204, 0, 0, 0.85); }
+}
+
+@keyframes floatWa {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-6px) scale(1.05); }
+}
+
+.hero-tag, .hero h1, .hero p, .btn-hero {
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards;
+}
+.hero-tag { animation-delay: 0.1s; }
+.hero h1  { animation-delay: 0.25s; }
+.hero p   { animation-delay: 0.4s; }
+.btn-hero { animation-delay: 0.55s; animation: fadeUp 0.7s ease 0.55s forwards, pulse 2.5s ease 1.3s infinite; }
+
+.wa-float {
+    animation: floatWa 2.5s ease-in-out infinite;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 900px) {
     .cat-grid {
