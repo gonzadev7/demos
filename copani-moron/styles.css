@@ -355,10 +355,12 @@ h1, h2, h3 {
     font-size: 3.5rem;
 }
 
-.product-img.choco { background: linear-gradient(135deg, #3d1a00, #1a0800); color: #cc8040; }
-.product-img.choco-light { background: linear-gradient(135deg, #c8956a, #a06040); color: #fff5ee; }
-.product-img.figuras { background: linear-gradient(135deg, #2d1200, #5a2800); color: #cc6020; }
-.product-img.cafe { background: linear-gradient(135deg, #1a0a00, #3d2010); color: #cc8040; }
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .product-img.smoothie { background: linear-gradient(135deg, #cc2200, #880000); color: #ffaaaa; }
 .product-img.regalo { background: linear-gradient(135deg, #8a0000, #cc0000); color: #fff5ee; }
 
