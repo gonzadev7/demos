@@ -6,7 +6,7 @@ document.getElementById('lead-form').addEventListener('submit', function (e) {
     const servicio = this.querySelector('select').value;
 
     const texto = `Hola Verónica! Te contacto desde la web. Mi nombre es ${nombre}, mi teléfono es ${telefono} y quisiera consultar sobre: ${servicio}.`;
-    const url = `https://wa.me/5491166713506?text=${encodeURIComponent(texto)}`;
+    const url = `https://wa.me/5491138144045?text=${encodeURIComponent(texto)}`;
 
     window.open(url, '_blank');
 });
