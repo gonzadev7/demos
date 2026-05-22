@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laura Gómez | Cosmiatra · Dermatocosmiatra · Coach de Bienestar</title>
     <meta name="description"
-        content="Laura Gómez, Cosmiatra y Dermatocosmiatra. Experiencias faciales, Derma Glow, HIFU, Peeling y Coach de Bienestar. Turnos por WhatsApp.">
+        content="Laura Gómez, Cosmiatra y Dermatocosmiatra. Experiencias faciales, Derma Glow, Exosomas + Dermapen, Peeling y Coach de Bienestar. Turnos por WhatsApp.">
     <link rel="stylesheet" href="styles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
@@ -79,8 +79,8 @@
 
                 <div class="service-card">
                     <div class="card-icon"><i class="fas fa-magic"></i></div>
-                    <h3>HIFU</h3>
-                    <p>La mejor forma de renovar la piel. Tecnología de alta intensidad para tensado, firmeza y efecto antiedad sin cirugía ni recuperación.</p>
+                    <h3>Exosomas + Dermapen</h3>
+                    <p>Tratamiento de vanguardia para regenerar y rejuvenecer la piel. Exosomas que estimulan la renovación celular combinados con Dermapen para potenciar su absorción y mejorar textura, manchas y cicatrices.</p>
                 </div>
 
                 <div class="service-card">
@@ -101,6 +101,66 @@
                     <p>Rutinas personalizadas para cuidar tu piel desde casa. Aprendés a conocer tu biotipo y armar una rutina que realmente funcione para vos.</p>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>El espacio</h2>
+                <p>Un studio pensado para que te sientas en calma, a gusto y bien cuidado desde el momento en que entrás.</p>
+            </div>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn carousel-btn-prev" id="carousel-prev">&#8249;</button>
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="carousel-track">
+                        <div class="carousel-item"><img src="WhatsApp Image 2026-05-22 at 11.56.58.jpeg" alt="Sala de tratamiento Studio Bienestar"></div>
+                        <div class="carousel-item"><img src="WhatsApp Image 2026-05-22 at 11.41.36.jpeg" alt="Laura Gómez con productos"></div>
+                        <div class="carousel-item"><img src="WhatsApp Image 2026-05-22 at 11.57.01.jpeg" alt="Ambiente Studio Bienestar"></div>
+                        <div class="carousel-item"><img src="WhatsApp Image 2026-05-22 at 11.41.38 (2).jpeg" alt="Activos y productos"></div>
+                        <div class="carousel-item"><img src="WhatsApp Image 2026-05-22 at 11.49.45.jpeg" alt="Consultorio Studio Bienestar"></div>
+                        <div class="carousel-item"><img src="WhatsApp Image 2026-05-22 at 11.49.45 (1).jpeg" alt="Diagnóstico facial"></div>
+                        <div class="carousel-item"><img src="WhatsApp Image 2026-05-22 at 11.57.00.jpeg" alt="Detalles del studio"></div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-next" id="carousel-next">&#8250;</button>
+            </div>
+
+            <!-- Lightbox -->
+            <div class="lightbox" id="lightbox">
+                <button class="lightbox-close" id="lightbox-close">&times;</button>
+                <button class="lightbox-prev" id="lightbox-prev">&#8249;</button>
+                <img src="" alt="" id="lightbox-img">
+                <button class="lightbox-next" id="lightbox-next">&#8250;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reseñas -->
+    <section class="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lo que dicen quienes ya vinieron</h2>
+                <p>Experiencias reales de personas que eligieron cuidarse con Laura.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Me hice el Derma Glow y salí con la piel completamente diferente. Luminosa, suave, sin marcas. Laura te explica todo lo que hace y por qué. Se nota que sabe y que le importa el resultado."</p>
+                    <span class="reviewer">— Valentina R., Buenos Aires</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Me hice Exosomas con Dermapen y los resultados fueron increíbles. Tenía manchas y textura irregular, y después de dos sesiones se notó un cambio real. El studio es hermoso, limpio y se siente un ambiente muy cuidado."</p>
+                    <span class="reviewer">— Marcelo T., GBA</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Fui por el tratamiento holístico sin saber muy bien qué esperar. Fue mucho más que un facial: Laura trabaja con la piel pero también con cómo te sentís. Me fui relajada, liviana y con ganas de volver."</p>
+                    <span class="reviewer">— Florencia M., Buenos Aires</span>
+                </div>
             </div>
         </div>
     </section>
@@ -174,7 +234,7 @@
                                 <option value="" disabled selected>¿Qué te interesa?</option>
                                 <option value="glow">Derma Glow Facial</option>
                                 <option value="holistica">Cosmiátría Holística</option>
-                                <option value="hifu">HIFU</option>
+                                <option value="exosomas">Exosomas + Dermapen</option>
                                 <option value="peeling">Peeling / Activos</option>
                                 <option value="coach">Coach de Bienestar</option>
                                 <option value="online">Rutina online</option>
