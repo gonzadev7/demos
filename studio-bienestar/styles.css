@@ -54,7 +54,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--dark); }
 /* ===================== HERO ===================== */
 .hero {
     background: var(--dark);
-    padding: 100px 0;
+    padding: 60px 0;
     color: var(--white);
     position: relative;
     overflow: hidden;
