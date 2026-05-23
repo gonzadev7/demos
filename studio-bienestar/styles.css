@@ -89,8 +89,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--dark); }
     border-radius: 50%;
     border: 3px solid var(--secondary);
     box-shadow: 0 0 30px rgba(122,140,114,0.3);
-    object-fit: contain;
-    background: var(--white);
+    object-fit: cover;
     display: block;
     margin: 0 auto;
 }
