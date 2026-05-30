@@ -176,6 +176,45 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--dark); }
 .service-card h3 { font-size: 1.05rem; margin-bottom: 12px; color: var(--dark); }
 .service-card p { font-size: 0.9rem; color: #0a4a4a; line-height: 1.6; }
 
+/* ===================== SPORT COLORS ===================== */
+/* Pilates - turquesa */
+.sport-pilates .card-icon, .sport-pilates .schedule-icon { color: #00bcd4; }
+.service-card.sport-pilates { border-color: #00bcd4; }
+.service-card.sport-pilates:hover { border-color: #00bcd4; box-shadow: 0 15px 35px rgba(0,188,212,0.2); }
+.service-card.highlight.sport-pilates { border-color: #00bcd4; }
+.service-card.highlight.sport-pilates .card-icon { color: #00bcd4; }
+.schedule-card.sport-pilates { border-left-color: #00bcd4; }
+.schedule-card.sport-pilates .schedule-icon { color: #00bcd4; }
+.schedule-card.sport-pilates .schedule-days { color: #00bcd4; }
+
+/* Yoga - púrpura */
+.sport-yoga .card-icon, .sport-yoga .schedule-icon { color: #9c27b0; }
+.service-card.sport-yoga { border-color: #9c27b0; }
+.service-card.sport-yoga:hover { border-color: #9c27b0; box-shadow: 0 15px 35px rgba(156,39,176,0.15); }
+.schedule-card.sport-yoga { border-left-color: #9c27b0; }
+.schedule-card.sport-yoga .schedule-days { color: #9c27b0; }
+
+/* Funcional - naranja */
+.sport-funcional .card-icon, .sport-funcional .schedule-icon { color: #ff9800; }
+.service-card.sport-funcional { border-color: #ff9800; }
+.service-card.sport-funcional:hover { border-color: #ff9800; box-shadow: 0 15px 35px rgba(255,152,0,0.15); }
+.schedule-card.sport-funcional { border-left-color: #ff9800; }
+.schedule-card.sport-funcional .schedule-days { color: #ff9800; }
+
+/* Caminatas - verde */
+.sport-caminatas .card-icon, .sport-caminatas .schedule-icon { color: #4caf50; }
+.service-card.sport-caminatas { border-color: #4caf50; }
+.service-card.sport-caminatas:hover { border-color: #4caf50; box-shadow: 0 15px 35px rgba(76,175,80,0.15); }
+.schedule-card.sport-caminatas { border-left-color: #4caf50; }
+.schedule-card.sport-caminatas .schedule-days { color: #4caf50; }
+
+/* Bota de Rebote - fucsia */
+.sport-bota .card-icon, .sport-bota .schedule-icon { color: #e91e63; }
+.service-card.sport-bota { border-color: #e91e63; }
+.service-card.sport-bota:hover { border-color: #e91e63; box-shadow: 0 15px 35px rgba(233,30,99,0.15); }
+.schedule-card.sport-bota { border-left-color: #e91e63; }
+.schedule-card.sport-bota .schedule-days { color: #e91e63; }
+
 /* ===================== SCHEDULE ===================== */
 .schedule { padding: 90px 0; background: var(--dark); }
 .schedule .section-title h2 { color: var(--white); }
