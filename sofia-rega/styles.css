@@ -109,7 +109,27 @@ h1, h2, h3 { font-family: Arial, Helvetica, sans-serif; color: var(--dark); }
 }
 
 .hero h2 { color: var(--white); font-size: 2.4rem; max-width: 800px; margin: 0 0 20px; line-height: 1.2; }
-.hero p { font-size: 1rem; max-width: 620px; margin: 0 0 30px; color: #d8b8f0; line-height: 1.7; }
+.hero p { font-size: 1rem; max-width: 620px; margin: 0 0 16px; color: #d8b8f0; line-height: 1.7; }
+
+.hero-about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.hero-about-tags span {
+    background: rgba(176,108,208,0.15);
+    border: 1px solid rgba(176,108,208,0.35);
+    color: #e0c0f8;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.hero-about-tags span i { color: var(--secondary); }
 
 .btn-primary-glow {
     background: var(--accent);
