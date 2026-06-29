@@ -91,7 +91,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     object-fit: contain;
     display: block;
     margin: 0 auto;
-    background: var(--white);
+    background: none;
     padding: 22px;
 }
 
