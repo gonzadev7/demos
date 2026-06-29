@@ -30,6 +30,12 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.top-header .logo h1,
+.top-header .logo p {
+    transition: color 0.4s ease;
 }
 
 .header-container { display: flex; justify-content: space-between; align-items: center; }
