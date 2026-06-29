@@ -156,7 +156,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     padding: 38px 28px;
     border-radius: 12px;
     text-align: center;
-    border: 1px solid rgba(212,168,40,0.25);
+    border: 2px solid var(--secondary);
     transition: all 0.3s;
     color: var(--white);
 }
