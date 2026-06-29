@@ -92,7 +92,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     display: block;
     margin: 0 auto;
     background: var(--white);
-    padding: 8px;
+    padding: 22px;
 }
 
 .badge {
