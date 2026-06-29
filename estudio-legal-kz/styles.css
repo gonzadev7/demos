@@ -64,9 +64,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 .hero-bg {
     position: absolute;
     inset: 0;
-    background:
-        radial-gradient(ellipse at 80% 50%, rgba(201,168,76,0.18) 0%, transparent 55%),
-        radial-gradient(ellipse at 10% 80%, rgba(10,20,64,0.8) 0%, transparent 45%);
+    background: none;
 }
 
 .hero-content {
