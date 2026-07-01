@@ -38,16 +38,6 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 
 .header-container { display: flex; justify-content: space-between; align-items: center; }
 
-.logo { display: flex; align-items: center; gap: 14px; }
-
-.header-logo {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--primary);
-}
-
 .logo h1 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.15rem; color: var(--dark); }
 .logo h1 span { color: var(--primary); }
 .logo p { font-size: 0.68rem; color: #3a7878; text-transform: uppercase; letter-spacing: 1.2px; margin-top: 2px; }
