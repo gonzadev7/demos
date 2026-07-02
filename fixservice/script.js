@@ -1,16 +1,3 @@
-document.getElementById('lead-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const nombre = this.querySelector('input[type="text"]').value.trim();
-    const telefono = this.querySelector('input[type="tel"]').value.trim();
-    const equipo = this.querySelector('select').value;
-
-    const texto = `Hola Fix Service! Necesito un servicio técnico a domicilio. Mi nombre es ${nombre}, mi WhatsApp es ${telefono} y necesito reparar: ${equipo}.`;
-    const url = `https://wa.me/5491136880088?text=${encodeURIComponent(texto)}`;
-
-    window.open(url, '_blank');
-});
-
 window.addEventListener('scroll', function () {
     const header = document.querySelector('.top-header');
     if (window.scrollY > 60) {
