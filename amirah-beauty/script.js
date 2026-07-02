@@ -1,10 +1,10 @@
 window.addEventListener('scroll', function () {
     const header = document.querySelector('.top-header');
     if (window.scrollY > 60) {
-        header.style.background = '#0d0d0d';
+        header.style.background = '#1a1208';
         header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.4)';
         header.querySelector('.logo h1').style.color = '#ffffff';
-        header.querySelector('.logo p').style.color = 'rgba(200,160,32,0.6)';
+        header.querySelector('.logo p').style.color = 'rgba(200,160,64,0.6)';
     } else {
         header.style.background = '#ffffff';
         header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.07)';
