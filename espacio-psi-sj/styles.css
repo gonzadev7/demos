@@ -207,7 +207,8 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 .contact-info h2 { font-size: 2rem; color: var(--dark); margin-bottom: 14px; font-style: italic; }
 .contact-info > p { color: #2a2018; font-size: 0.95rem; line-height: 1.7; }
 
-.info-item { display: flex; align-items: center; gap: 15px; margin-top: 20px; padding: 16px 18px; background: var(--white); border-radius: 12px; border: 1px solid #e0d8c8; }
+.info-item { display: flex; align-items: center; gap: 15px; margin-top: 20px; padding: 16px 18px; background: var(--white); border-radius: 12px; border: 1px solid #e0d8c8; text-decoration: none; transition: border-color 0.2s, box-shadow 0.2s; }
+.info-item:hover { border-color: var(--accent); box-shadow: 0 4px 15px rgba(138,122,170,0.12); }
 .info-item i { font-size: 1.8rem; color: var(--secondary); flex-shrink: 0; }
 .info-item .fab.fa-whatsapp { color: #25d366; }
 .info-item .fab.fa-instagram { color: #e1306c; }
