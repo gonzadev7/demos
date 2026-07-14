@@ -24,7 +24,7 @@ Actualizar el CRM después de cada interacción sin que Gonzalo lo pida.
 - Carpeta: `c:\Users\casa\Documents\GitHub\demos\[nombre-lead]\`
 - Cada demo tiene: `index.html`, `styles.css`, `script.js`
 - Template de referencia: `demos/crv-legales/` — seguir su estructura exacta
-- Colores: basarse SIEMPRE en el logo del prospecto, no en el feed
+- Colores: basarse en el feed general del prospecto (tonos dominantes, paleta visual) — no en gráficas promocionales aisladas
 - Logos cuadrados con fondo propio: quitar `padding` y `background` del `.hero-photo img`
 - GitHub Pages URL: `gonzadev7.github.io/demos/[nombre-carpeta]/`
 
@@ -36,4 +36,4 @@ Flujo: VS Code → GitHub Desktop → Netlify (clientes activos).
 - Precio SIEMPRE después de que reaccionen a la demo
 - Actualizar CRM automáticamente tras cada interacción
 - Seguir la estructura exacta del template (no inventar CSS propio)
-- Colores del logo, no del feed ni de gráficas promocionales
+- Colores del feed general, no de gráficas promocionales aisladas

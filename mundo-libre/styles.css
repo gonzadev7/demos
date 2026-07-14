@@ -377,6 +377,12 @@ footer .brand p { font-size: 0.85rem; color: #8a3a58; }
     display: block;
 }
 
+/* ===================== PROMO FECHAS ===================== */
+.promo-fechas { padding: 80px 0; background: var(--light); }
+.promo-img-wrapper { max-width: 700px; margin: 0 auto 32px; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(74,26,40,0.12); }
+.promo-img-wrapper img { width: 100%; display: block; }
+.promo-cta { text-align: center; }
+
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
     .carousel-item { min-width: calc(100% - 0px); }
