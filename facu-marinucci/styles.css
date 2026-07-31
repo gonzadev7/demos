@@ -890,6 +890,9 @@ footer .brand p { font-size: 0.85rem; color: #6a5010; }
     .contact-info h2 { font-size: 1.6rem; }
     .features-text h2 { font-size: 1.7rem; }
     .sobre-mi-wrapper { grid-template-columns: 1fr; gap: 40px; }
+    .sobre-mi-text { text-align: center; }
+    .sobre-mi-foto { width: 85%; }
+    .btn-sobre { display: inline-block; }
     .libro-wrapper { grid-template-columns: 1fr; gap: 36px; text-align: center; }
     .libro-imagen img { max-width: 240px; }
     .libro-cta { justify-content: center; }
