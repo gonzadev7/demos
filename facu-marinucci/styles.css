@@ -446,6 +446,19 @@ h1, h2, h3 {
     color: var(--white);
 }
 
+.libro-nota {
+    font-size: 0.85rem;
+    color: #a08050;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.libro-nota i {
+    color: var(--secondary);
+}
+
 .libro-disponible {
     font-size: 0.85rem;
     color: #a08050;
