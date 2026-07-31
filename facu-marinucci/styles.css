@@ -414,10 +414,52 @@ h1, h2, h3 {
     margin-bottom: 32px;
 }
 
+.libro-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
 .libro-cta {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+}
+
+.btn-dedicatoria {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-dedicatoria:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.libro-disponible {
+    font-size: 0.85rem;
+    color: #a08050;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.libro-disponible i {
+    color: var(--secondary);
+}
+
+.libro-disponible strong {
+    color: #d4a843;
 }
 
 /* ===================== CONTENIDO ===================== */
