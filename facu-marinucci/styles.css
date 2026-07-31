@@ -305,7 +305,7 @@ h1, h2, h3 {
     object-fit: cover;
     object-position: top;
     border-radius: 10px;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
     display: block;
 }
 
