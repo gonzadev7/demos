@@ -292,11 +292,9 @@ h1, h2, h3 {
     background: var(--light);
 }
 
-.sobre-mi-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
+.formaciones-centered {
+    max-width: 680px;
+    margin: 0 auto;
 }
 
 .sobre-mi-foto {
