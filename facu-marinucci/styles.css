@@ -109,21 +109,49 @@ h1, h2, h3 {
 .hero-content {
     position: relative;
     z-index: 1;
-    display: grid;
-    grid-template-columns: 180px 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 50px;
-    max-width: 900px;
+    text-align: center;
+    gap: 32px;
+    max-width: 780px;
     margin: 0 auto;
 }
 
-.hero-text { text-align: left; }
+.hero-text { text-align: center; }
 
-.hero-actions {
+.hero-libro {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    gap: 32px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(139,105,20,0.25);
+    border-radius: 14px;
+    padding: 28px;
+    text-align: left;
+    width: 100%;
+}
+
+.hero-libro-img {
+    width: 130px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+}
+
+.hero-libro-texto h3 {
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.hero-libro-texto > p {
+    color: #c8b080;
+    font-size: 0.87rem;
+    line-height: 1.65;
+    margin-bottom: 18px;
 }
 
 .hero-photo img {
@@ -873,13 +901,15 @@ footer .brand p { font-size: 0.85rem; color: #6a5010; }
     .top-header { position: relative; padding: 15px 10px; }
     .logo h1 { font-size: 1.1rem; }
     .hero { padding: 60px 0; }
-    .hero-content { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+    .hero-content { gap: 24px; }
     .hero-text { text-align: center; }
-    .hero-actions { align-items: center; }
     .hero h2 { font-size: 1.75rem; margin: 0 auto 20px; }
     .hero p { font-size: 0.97rem; margin: 0 auto 30px; }
     .btn-primary-glow { width: 100%; text-align: center; font-size: 1rem; padding: 14px 20px; }
-    .trust-badge-bottom { font-size: 0.78rem; padding: 10px 16px; margin: 20px auto 0; }
+    .hero-libro { flex-direction: column; align-items: center; text-align: center; }
+    .hero-libro-img { width: 160px; margin: 0 auto; }
+    .libro-nota { justify-content: center; }
+    .libro-disponible { justify-content: center; }
     .services-grid { grid-template-columns: 1fr; gap: 18px; }
     .service-card.highlight { transform: none; }
     .section-title h2 { font-size: 1.8rem; }
