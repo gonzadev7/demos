@@ -120,39 +120,6 @@ h1, h2, h3 {
 
 .hero-text { text-align: center; }
 
-.hero-libro {
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(139,105,20,0.25);
-    border-radius: 14px;
-    padding: 28px;
-    text-align: left;
-    width: 100%;
-}
-
-.hero-libro-img {
-    width: 130px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    flex-shrink: 0;
-}
-
-.hero-libro-texto h3 {
-    color: var(--white);
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    line-height: 1.3;
-}
-
-.hero-libro-texto > p {
-    color: #c8b080;
-    font-size: 0.87rem;
-    line-height: 1.65;
-    margin-bottom: 18px;
-}
 
 .hero-photo img {
     width: 150px;
@@ -906,8 +873,6 @@ footer .brand p { font-size: 0.85rem; color: #6a5010; }
     .hero h2 { font-size: 1.75rem; margin: 0 auto 20px; }
     .hero p { font-size: 0.97rem; margin: 0 auto 30px; }
     .btn-primary-glow { width: 100%; text-align: center; font-size: 1rem; padding: 14px 20px; }
-    .hero-libro { flex-direction: column; align-items: center; text-align: center; }
-    .hero-libro-img { width: 160px; margin: 0 auto; }
     .libro-nota { justify-content: center; }
     .libro-disponible { justify-content: center; }
     .services-grid { grid-template-columns: 1fr; gap: 18px; }
