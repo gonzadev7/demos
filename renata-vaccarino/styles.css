@@ -79,8 +79,12 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 .hero-text {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 18px;
 }
+
+.hero-text h2 { line-height: 1.2; }
+.hero-text p { color: rgba(255,255,255,0.68); font-size: 0.97rem; line-height: 1.75; }
 
 .hero-photo img {
     width: 130px;
@@ -395,8 +399,8 @@ footer .brand p { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
     .hero { padding: 70px 20px 60px; }
-    .hero-content { grid-template-columns: 1fr; text-align: center; gap: 24px; }
-    .hero-text { align-items: center; }
+    .hero-content { grid-template-columns: 1fr; text-align: center; gap: 24px; justify-items: center; }
+    .hero-text { align-items: center; width: 100%; }
     .hero-text h2 { font-size: 1.9rem; }
     .hero-text p { font-size: 0.93rem; }
 
