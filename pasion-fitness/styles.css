@@ -217,6 +217,12 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--dark); }
 .schedule-card.sport-bota { border-left-color: #e91e63; }
 .schedule-card.sport-bota .schedule-days { color: #e91e63; }
 
+.sport-tameana .card-icon, .sport-tameana .schedule-icon { color: #7c4dff; }
+.service-card.sport-tameana { border-color: #7c4dff; }
+.service-card.sport-tameana:hover { border-color: #7c4dff; box-shadow: 0 15px 35px rgba(124,77,255,0.15); }
+.schedule-card.sport-tameana { border-left-color: #7c4dff; }
+.schedule-card.sport-tameana .schedule-days { color: #7c4dff; }
+
 /* ===================== SCHEDULE ===================== */
 .schedule { padding: 90px 0; background: var(--dark); }
 .schedule .section-title h2 { color: var(--white); }
