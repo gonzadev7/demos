@@ -59,6 +59,9 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     background: var(--dark);
     padding: 90px 24px;
     position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .hero-bg { background: none; }
@@ -68,6 +71,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     grid-template-columns: 160px 1fr;
     align-items: center;
     gap: 50px;
+    width: 100%;
 }
 
 .hero-photo img {
