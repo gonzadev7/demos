@@ -481,6 +481,10 @@ footer .brand p { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
 .dev-credit a:hover { opacity: 0.75; }
 
 /* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 768px) {
     .hero { padding: 70px 0 60px; }
     .hero-content { grid-template-columns: 1fr; text-align: center; gap: 24px; }
@@ -497,13 +501,4 @@ footer .brand p { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
 
     .section-title h2 { font-size: 1.85rem; }
     .hero-text h2 { font-size: 1.7rem; }
-}
-
-@media (max-width: 640px) {
-    .hero-text h2 { font-size: 1.5rem; }
-    .services-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 900px) {
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
 }
