@@ -1,10 +1,10 @@
 :root {
-    --primary: #c2185b;
-    --secondary: #c2185b;
-    --accent: #c2185b;
-    --accent-hover: #880e4f;
-    --dark: #1a1f3a;
-    --light: #fdf4f8;
+    --primary: #3d52e0;
+    --secondary: #3d52e0;
+    --accent: #3d52e0;
+    --accent-hover: #2a3bb8;
+    --dark: #111827;
+    --light: #f0f4ff;
     --text: #1a1a2e;
     --white: #ffffff;
 }
@@ -26,7 +26,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 .top-header {
     background: var(--white);
     padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(194,24,91,0.08);
+    box-shadow: 0 2px 10px rgba(61,82,224,0.08);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -85,7 +85,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     height: 150px;
     border-radius: 50%;
     border: 3px solid var(--primary);
-    box-shadow: 0 0 30px rgba(194,24,91,0.35);
+    box-shadow: 0 0 30px rgba(61,82,224,0.35);
     object-fit: cover;
     display: block;
     margin: 0 auto;
@@ -93,9 +93,9 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 
 .badge {
     display: inline-block;
-    background: rgba(194,24,91,0.15);
-    color: #f06292;
-    border: 1px solid rgba(194,24,91,0.35);
+    background: rgba(61,82,224,0.15);
+    color: #7b8ef5;
+    border: 1px solid rgba(61,82,224,0.35);
     padding: 5px 18px;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -138,14 +138,14 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     font-weight: 700;
     font-size: 0.97rem;
     text-decoration: none;
-    box-shadow: 0 0 20px rgba(194,24,91,0.4);
+    box-shadow: 0 0 20px rgba(61,82,224,0.4);
     transition: all 0.3s;
 }
 
 .btn-primary-glow:hover {
     background: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(194,24,91,0.5);
+    box-shadow: 0 8px 28px rgba(61,82,224,0.5);
 }
 
 .trust-badge-bottom {
@@ -153,12 +153,12 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     align-items: center;
     gap: 10px;
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(194,24,91,0.2);
+    border: 1px solid rgba(61,82,224,0.2);
     padding: 10px 22px;
     border-radius: 50px;
     font-size: 0.8rem;
     font-weight: 600;
-    color: #f06292;
+    color: #7b8ef5;
 }
 
 /* ===================== ENFOQUE ===================== */
@@ -234,24 +234,24 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     border-radius: 12px;
     padding: 32px 24px;
     text-align: center;
-    border: 1px solid #f0d0dd;
+    border: 1px solid #d0d8fa;
     transition: all 0.3s;
 }
 
 .service-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 14px 32px rgba(194,24,91,0.12);
+    box-shadow: 0 14px 32px rgba(61,82,224,0.12);
 }
 
 .service-card.highlight {
     background: var(--dark);
     border-color: var(--primary);
-    box-shadow: 0 10px 32px rgba(194,24,91,0.18);
+    box-shadow: 0 10px 32px rgba(61,82,224,0.18);
 }
 
 .service-card.highlight h3 { color: var(--white); }
 .service-card.highlight p { color: rgba(255,255,255,0.7); }
-.service-card.highlight .card-icon { color: #f06292; }
+.service-card.highlight .card-icon { color: #7b8ef5; }
 
 .card-icon {
     font-size: 1.8rem;
@@ -315,7 +315,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 }
 
 .pc-list li i {
-    color: #f06292;
+    color: #7b8ef5;
     font-size: 1rem;
     margin-top: 3px;
     flex-shrink: 0;
@@ -344,7 +344,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 
 .pc-badge-box {
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(194,24,91,0.3);
+    border: 1px solid rgba(61,82,224,0.3);
     border-radius: 16px;
     padding: 40px 32px;
     text-align: center;
@@ -352,7 +352,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 
 .pc-badge-box i {
     font-size: 2.4rem;
-    color: #f06292;
+    color: #7b8ef5;
     margin-bottom: 20px;
     display: block;
 }
@@ -366,7 +366,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 }
 
 .pc-badge-box p {
-    color: rgba(194,24,91,0.8);
+    color: rgba(61,82,224,0.8);
     font-size: 0.85rem;
     font-weight: 600;
 }
@@ -394,11 +394,11 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     align-items: center;
     gap: 12px;
     font-size: 0.93rem;
-    color: #3a2040;
+    color: #1a2060;
     padding: 14px 18px;
     background: var(--light);
     border-radius: 8px;
-    border: 1px solid #f0d0dd;
+    border: 1px solid #d0d8fa;
 }
 
 .formaciones-list li i {
@@ -436,7 +436,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    background: var(--primary);
     color: var(--white);
     padding: 15px 36px;
     border-radius: 8px;
@@ -477,7 +477,7 @@ footer .brand span { color: var(--primary); }
 footer .brand p { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
 
 .dev-credit { font-size: 0.75rem; color: rgba(255,255,255,0.25); margin-top: 4px; }
-.dev-credit a { color: #f06292; text-decoration: none; font-weight: 600; }
+.dev-credit a { color: #7b8ef5; text-decoration: none; font-weight: 600; }
 .dev-credit a:hover { opacity: 0.75; }
 
 /* ===================== RESPONSIVE ===================== */
