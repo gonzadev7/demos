@@ -32,13 +32,11 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 
 .header-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.logo { text-align: center; }
-
-.logo h1 {
+.header-name {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 1.1rem;
@@ -46,14 +44,18 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     color: var(--dark);
 }
 
-.logo h1 span { color: var(--primary); }
+.header-name span { color: var(--primary); }
 
-.logo p {
-    font-size: 0.7rem;
+.header-esp {
+    font-size: 0.72rem;
     color: #888;
     letter-spacing: 1.5px;
-    margin-top: 2px;
     text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .header-container { justify-content: center; flex-direction: column; gap: 2px; }
+    .header-esp { letter-spacing: 1px; }
 }
 
 /* ===================== HERO ===================== */
