@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
-            header.style.background = 'var(--white)';
+            header.style.background = '#ffffff';
             header.style.boxShadow = '0 4px 20px rgba(160,120,80,0.15)';
         } else {
             header.classList.remove('scrolled');
