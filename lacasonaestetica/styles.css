@@ -26,8 +26,11 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     background: transparent;
     padding: 16px 0;
     box-shadow: none;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 100;
     transition: background 0.3s, box-shadow 0.3s;
 }
@@ -64,7 +67,7 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 /* ===================== HERO ===================== */
 .hero {
     background: var(--dark);
-    padding: 40px 24px;
+    padding: 80px 24px 40px;
     position: relative;
     min-height: 100vh;
     display: flex;
