@@ -2,9 +2,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.top-header');
     window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
-            header.style.boxShadow = '0 4px 20px rgba(160,120,80,0.2)';
+            header.classList.add('scrolled');
+            header.style.background = 'var(--white)';
+            header.style.boxShadow = '0 4px 20px rgba(160,120,80,0.15)';
         } else {
-            header.style.boxShadow = '0 2px 12px rgba(160,120,80,0.1)';
+            header.classList.remove('scrolled');
+            header.style.background = 'transparent';
+            header.style.boxShadow = 'none';
         }
     });
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {

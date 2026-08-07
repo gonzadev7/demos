@@ -23,12 +23,13 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
 
 /* ===================== HEADER ===================== */
 .top-header {
-    background: var(--white);
+    background: transparent;
     padding: 16px 0;
-    box-shadow: 0 2px 12px rgba(160,120,80,0.1);
+    box-shadow: none;
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 .header-container {
@@ -42,17 +43,23 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
     font-weight: 800;
     font-size: 1.1rem;
     letter-spacing: 2px;
-    color: var(--dark);
+    color: var(--white);
+    transition: color 0.3s;
 }
 
-.header-name span { color: var(--primary); }
+.header-name span { color: #c8a070; transition: color 0.3s; }
 
 .header-esp {
     font-size: 0.7rem;
-    color: #aaa;
+    color: rgba(255,255,255,0.6);
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    transition: color 0.3s;
 }
+
+.top-header.scrolled .header-name { color: var(--dark); }
+.top-header.scrolled .header-name span { color: var(--primary); }
+.top-header.scrolled .header-esp { color: #aaa; }
 
 /* ===================== HERO ===================== */
 .hero {
