@@ -344,6 +344,165 @@ h3 {
     margin-top: 20px;
 }
 
+/* ===================== PDF PRODUCT ===================== */
+.pdf-product {
+    padding: 90px 0;
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    color: var(--white);
+}
+
+.pdf-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pdf-badge-top {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--white);
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+}
+
+.pdf-product h2 {
+    color: var(--white);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.pdf-intro {
+    color: #e8c8d0;
+    font-size: 0.97rem;
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.pdf-target {
+    color: #c9a0ad;
+    font-size: 0.93rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.pdf-target strong {
+    color: var(--secondary);
+}
+
+.pdf-bullets {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.pdf-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #f0d0d8;
+    font-size: 0.94rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.pdf-bullets i {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.pdf-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(212, 96, 122, 0.35);
+    border-radius: 16px;
+    padding: 32px 40px;
+}
+
+.pdf-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #c9a0ad;
+}
+
+.price-amount {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    line-height: 1;
+}
+
+.price-note {
+    font-size: 0.82rem;
+    color: #c9a0ad;
+}
+
+.btn-pdf-buy {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--secondary);
+    color: var(--white);
+    padding: 16px 44px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    box-shadow: 0 0 28px rgba(212, 96, 122, 0.45);
+    transition: all 0.3s;
+}
+
+.btn-pdf-buy:hover {
+    background: var(--accent-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 96, 122, 0.6);
+}
+
+@media (max-width: 768px) {
+    .pdf-product h2 {
+        font-size: 1.7rem;
+    }
+
+    .pdf-cta {
+        padding: 24px 20px;
+    }
+
+    .price-amount {
+        font-size: 2.4rem;
+    }
+
+    .btn-pdf-buy {
+        width: 100%;
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    .pdf-bullets {
+        text-align: left;
+        width: 100%;
+    }
+}
+
 /* ===================== CONTACT ===================== */
 .contact {
     padding: 90px 0;
@@ -601,96 +760,4 @@ footer .brand p {
     .service-card {
         padding: 28px 18px;
     }
-}
-
-/* ===================== GUÍA DIGITAL ===================== */
-.guia {
-    padding: 80px 0;
-    background: var(--primary);
-}
-
-.guia-wrapper {
-    max-width: 640px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.guia-badge {
-    display: inline-block;
-    background: rgba(212,96,122,0.15);
-    color: var(--secondary);
-    border: 1px solid rgba(212,96,122,0.3);
-    padding: 5px 18px;
-    border-radius: 20px;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    margin-bottom: 18px;
-}
-
-.guia-wrapper h2 {
-    font-family: 'Playfair Display', serif;
-    color: #ffffff;
-    font-size: 2rem;
-    margin-bottom: 14px;
-}
-
-.guia-wrapper > div > p {
-    color: rgba(255,255,255,0.6);
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 28px;
-}
-
-.guia-precio {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 24px;
-}
-
-.precio-label {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.45);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.precio-monto {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--secondary);
-}
-
-.guia-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--secondary);
-    color: #ffffff;
-    padding: 14px 32px;
-    border-radius: 6px;
-    font-weight: 800;
-    font-size: 0.97rem;
-    text-decoration: none;
-    box-shadow: 0 0 24px rgba(212,96,122,0.35);
-    transition: all 0.3s;
-    margin-bottom: 16px;
-}
-
-.guia-cta:hover {
-    background: var(--accent-hover);
-    transform: translateY(-2px);
-}
-
-.guia-nota {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.3);
-    margin-top: 4px;
-}
-
-.guia-nota i {
-    color: var(--secondary);
-    margin-right: 5px;
 }
