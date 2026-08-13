@@ -74,8 +74,10 @@ a { text-decoration: none; }
   max-width: 1080px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.15rem;
 }
 
 .header-name {
@@ -87,8 +89,8 @@ a { text-decoration: none; }
 }
 
 .header-title {
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--mid);
   transition: color 0.35s;
@@ -605,8 +607,7 @@ footer a:hover { color: var(--white); }
   .hero-photo { order: -1; }
   .hero-photo img { width: 180px; height: 180px; }
 
-  .header-title { display: none; }
-  .header-inner { justify-content: center; }
+  .header-inner { align-items: center; gap: 0.15rem; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
   .enfoque-grid { grid-template-columns: 1fr; gap: 3rem; }
   .pasos-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -626,9 +627,9 @@ footer a:hover { color: var(--white); }
   .contacto-botones { flex-direction: column; align-items: stretch; }
   .btn-primary, .btn-secondary { text-align: center; }
   #top-header { padding: 0.9rem 1.2rem; }
-  .header-inner { justify-content: center; }
-  .header-name { font-size: 0.95rem; text-align: center; }
-  .header-title { display: none; }
+  .header-inner { align-items: center; gap: 0.1rem; }
+  .header-name { font-size: 0.9rem; }
+  .header-title { font-size: 0.6rem; }
   .enfoque, .primera-consulta, .areas, .testimonios, .faq, .contacto {
     padding: 70px 0;
   }
