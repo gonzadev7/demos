@@ -174,15 +174,19 @@ a { text-decoration: none; }
 }
 
 .hero-photo {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero-img {
-  width: 100%;
-  height: 560px;
+.hero-photo img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  filter: grayscale(20%) contrast(1.05);
+  border: 3px solid var(--terracota);
+  box-shadow: 0 0 60px rgba(184,115,85,0.25);
 }
 
 /* ============================
@@ -545,7 +549,7 @@ footer a:hover { color: var(--white); }
   }
   .hero { padding: 120px 5% 70px; }
   .hero-photo { order: -1; }
-  .hero-img { height: 380px; }
+  .hero-photo img { width: 180px; height: 180px; }
 
   .enfoque-grid { grid-template-columns: 1fr; gap: 3rem; }
   .pasos-grid { grid-template-columns: 1fr; gap: 2rem; }
