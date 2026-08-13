@@ -208,7 +208,7 @@ a { text-decoration: none; }
 .stat-num {
   display: block;
   font-family: var(--serif);
-  font-size: 2.8rem;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
   font-weight: 600;
   color: var(--white);
   line-height: 1;
@@ -605,6 +605,8 @@ footer a:hover { color: var(--white); }
   .hero-photo { order: -1; }
   .hero-photo img { width: 180px; height: 180px; }
 
+  .header-title { display: none; }
+  .header-inner { justify-content: center; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
   .enfoque-grid { grid-template-columns: 1fr; gap: 3rem; }
   .pasos-grid { grid-template-columns: 1fr; gap: 2rem; }
