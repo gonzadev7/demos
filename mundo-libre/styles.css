@@ -525,3 +525,40 @@ footer .brand p { font-size: 0.85rem; color: #8a3a58; }
     .testimonios-ml-grid { grid-template-columns: 1fr; }
     .faq-ml-grid { grid-template-columns: 1fr; }
 }
+
+.testimonios-ml-grid--single {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.compromiso-ml {
+    padding: 60px 0;
+    background: #1a0a0a;
+    text-align: center;
+}
+
+.compromiso-ml-inner h2 {
+    color: #c0392b;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.compromiso-ml-inner p {
+    font-style: italic;
+    color: rgba(255,255,255,0.8);
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 0 auto 0.6rem;
+    line-height: 1.7;
+}
+
+.compromiso-ml-inner span {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #c0392b;
+}
