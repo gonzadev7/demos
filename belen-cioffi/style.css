@@ -375,44 +375,6 @@ a { text-decoration: none; }
 .area-card p { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
 
 /* ============================
-   FAQ
-   ============================ */
-.faq {
-  padding: 100px 0;
-  background: var(--white);
-}
-
-.faq h2 {
-  font-family: var(--serif);
-  font-size: 2rem;
-  font-weight: 400;
-  color: var(--dark);
-  margin-bottom: 3rem;
-}
-
-.faq-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.faq-item {
-  padding: 1.8rem;
-  background: var(--cream);
-  border-radius: 8px;
-}
-
-.faq-item h3 {
-  font-family: var(--serif);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--dark);
-  margin-bottom: 0.7rem;
-}
-
-.faq-item p { font-size: 0.88rem; color: var(--mid); line-height: 1.7; }
-
-/* ============================
    CONTACTO
    ============================ */
 .contacto {
