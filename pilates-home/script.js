@@ -10,7 +10,7 @@ const ICONOS = {
 const CATEGORIAS = ['Todos', 'Equipos', 'Repuestos', 'Accesorios'];
 
 const PRODUCTOS = [
-  { id: 'reformer', cat: 'Equipos', icono: 'reformer', nombre: 'Reformer contemporáneo',
+  { id: 'reformer', cat: 'Equipos', icono: 'reformer', foto: 'reformer.png', nombre: 'Reformer contemporáneo',
     desc: 'Cama reformer de pilates en madera de guatambú, ideal para clases particulares, salones profesionales o el hogar.',
     specs: ['Largo 2,45 m · ancho 68 cm · alto 35 cm', 'Peso 70 kg · resistencia 115 kg', '5 resortes de 48 cm, sogas, poleas y mordazas', 'Barra de 6 posiciones, tabla de pique y box de regalo'], precio: null },
   { id: 'trapecio-combinado', cat: 'Equipos', icono: 'trapecio', nombre: 'Trapecio combinado',
@@ -44,7 +44,7 @@ function tarjeta(p) {
   const precio = p.precio ? `<span class="p">${pesos(p.precio)}</span>` : `<span class="c">Consultar precio</span>`;
   const specs = p.specs.length ? `<ul class="specs">${p.specs.map(s => `<li>${s}</li>`).join('')}</ul>` : '';
   return `<article class="card">
-    <div class="foto">${ICONOS[p.icono]}</div>
+    <div class="foto ${p.foto ? 'real' : ''}">${p.foto ? `<img src="${p.foto}" alt="${p.nombre}">` : ICONOS[p.icono]}</div>
     <h3>${p.nombre}</h3>
     <p class="desc">${p.desc}</p>
     ${specs}
