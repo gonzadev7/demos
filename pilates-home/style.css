@@ -52,8 +52,12 @@ h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: .8rem; }
 .hero h1 em { color: var(--sage-d); font-style: italic; }
 .lead { font-size: 1.05rem; color: var(--mid); max-width: 480px; margin-bottom: 1.8rem; }
 .hero-cta { display: flex; gap: .8rem; flex-wrap: wrap; }
-.hero-art { background: var(--sage-l); border-radius: 28px; padding: 2rem 1.2rem; }
-.art { width: 100%; height: auto; display: block; }
+.hero-art { background: var(--sage-l); border-radius: 28px; overflow: hidden; max-width: 420px; justify-self: end; width: 100%; }
+.art { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+.logo-img { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; display: block; background: #7E9C8A; }
+.logo-img { width: 44px; height: 44px; }
+.logo-img img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.04); display: block; }
+.foto.real { aspect-ratio: 1 / 1; background: #fff; }
 
 /* DATOS */
 .datos { background: var(--sage-d); color: #fff; margin-top: 30px; }

@@ -7,28 +7,31 @@ const ICONOS = {
   accesorio: '<svg viewBox="0 0 80 60"><circle cx="40" cy="30" r="20" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="40" cy="30" r="8" fill="currentColor" opacity=".4"/></svg>'
 };
 
-const CATEGORIAS = ['Todos', 'Equipos', 'Repuestos', 'Accesorios'];
+const CATEGORIAS = ['Todos', 'Equipos', 'Complementos', 'Repuestos', 'Accesorios'];
 
 const PRODUCTOS = [
   { id: 'reformer', cat: 'Equipos', icono: 'reformer', foto: 'reformer.png', nombre: 'Reformer contemporáneo',
     desc: 'Cama reformer de pilates en madera de guatambú, ideal para clases particulares, salones profesionales o el hogar.',
     specs: ['Largo 2,45 m · ancho 68 cm · alto 35 cm', 'Peso 70 kg · resistencia 115 kg', '5 resortes de 48 cm, sogas, poleas y mordazas', 'Barra de 6 posiciones, tabla de pique y box de regalo'], precio: null },
-  { id: 'trapecio-combinado', cat: 'Equipos', icono: 'trapecio', nombre: 'Trapecio combinado',
+  { id: 'trapecio-combinado', cat: 'Equipos', icono: 'trapecio', foto: 'trapecio-combinado.png', nombre: 'Trapecio combinado',
     desc: 'Equipo combinado con estructura metálica completa y todos los accesorios para trabajar en suspensión.',
     specs: ['Largo 2,40 m · ancho 69 cm · alto 60 cm', 'Capacidad 110 kg', '5 resortes + 8 resortes para trapecio', 'Cuerdas, manillares, lazos de pie y cinta de seguridad'], precio: null },
-  { id: 'trapecio', cat: 'Equipos', icono: 'trapecio', nombre: 'Trapecio de pilates',
+  { id: 'trapecio', cat: 'Equipos', icono: 'trapecio', foto: 'trapecio.png', nombre: 'Trapecio de pilates',
     desc: 'Estructura de madera maciza de guatambú con uniones machihembradas, estable y durable.',
     specs: ['Alto 220 cm · ancho 82 cm · largo 216 cm', 'Estructura de acero con bujes de polipropileno', '8 resortes de acero zincado de distintas intensidades'], precio: null },
-  { id: 'anillo', cat: 'Accesorios', icono: 'accesorio', nombre: 'Anillo de calistenia',
+  { id: 'ladel', cat: 'Complementos', icono: 'trapecio', foto: 'ladel.png', nombre: 'Ladel barrel',
+    desc: 'Barril de pilates con escalera, en madera. Para trabajar flexibilidad y fuerza.', specs: ['Madera con tapizado en cuerina negra'], precio: null },
+  { id: 'corrector', cat: 'Complementos', icono: 'trapecio', foto: 'corrector.png', nombre: 'Corrector espinal',
+    desc: 'Arco corrector de columna para trabajar movilidad y extensión.', specs: ['Tapizado en cuerina negra'], precio: null },
+  { id: 'anillo', cat: 'Accesorios', icono: 'accesorio', foto: 'anillo.png', nombre: 'Anillo de calistenia',
     desc: 'Anillo de madera de 1,5 m de largo.', specs: [], precio: 80000 },
-  { id: 'rolo', cat: 'Accesorios', icono: 'accesorio', nombre: 'Rolo de yoga 35 cm',
+  { id: 'rolo', cat: 'Accesorios', icono: 'accesorio', foto: 'rolo.png', nombre: 'Rolo de yoga 35 cm',
     desc: 'Rolo para trabajo de movilidad y relajación.', specs: [], precio: 29000 },
-  { id: 'hamaca', cat: 'Accesorios', icono: 'accesorio', nombre: 'Hamaca aérea de yoga y pilates',
+  { id: 'hamaca', cat: 'Accesorios', icono: 'accesorio', foto: 'hamaca.png', nombre: 'Hamaca aérea de yoga y pilates',
     desc: 'Hamaca para yoga y pilates aéreo.', specs: [], precio: 55000 }
 ];
 
-const REPUESTOS = ['Resortes para reformer', 'Aro flex', 'Bastón', 'Ruedas planas', 'Ruedas cónicas', 'Roldanas', 'Mordazas', 'Manillares de manos y pies', 'Antideslizante'];
-REPUESTOS.forEach((n, i) => PRODUCTOS.push({ id: 'rep' + i, cat: 'Repuestos', icono: 'repuesto', nombre: n, desc: 'Repuesto para tu equipo.', specs: [], precio: null, chico: true }));
+PRODUCTOS.push({ id: 'repuestos', cat: 'Repuestos', icono: 'repuesto', foto: 'repuestos.png', nombre: 'Repuestos para tu equipo', desc: 'Piezas de reposición para reformer y trapecio. Cotizamos cada una según tu equipo.', specs: ['Resortes para reformer', 'Aro flex y bastón', 'Ruedas planas y cónicas', 'Roldanas y mordazas', 'Manillares de manos y pies', 'Antideslizante'], precio: null });
 
 const pesos = n => '$' + n.toLocaleString('es-AR');
 let filtro = 'Todos';
@@ -54,13 +57,7 @@ function tarjeta(p) {
 
 function dibujarGrilla() {
   const lista = PRODUCTOS.filter(p => filtro === 'Todos' || p.cat === filtro);
-  const normales = lista.filter(p => !p.chico);
-  const chicos = lista.filter(p => p.chico);
-  let html = normales.map(tarjeta).join('');
-  if (chicos.length) {
-    html += `<div style="grid-column:1/-1"><h3 style="font-size:1.2rem;margin-top:.6rem">Repuestos</h3><p class="mini">Cotizamos cada pieza según tu equipo.</p><div class="rep-grid">${chicos.map(tarjeta).join('')}</div></div>`;
-  }
-  $('grilla').innerHTML = html;
+  $('grilla').innerHTML = lista.map(tarjeta).join('');
 }
 
 function dibujarCarrito() {
