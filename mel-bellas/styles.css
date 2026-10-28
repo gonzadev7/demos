@@ -1,0 +1,213 @@
+/* Demo Mel · Estéticamente Bellas · dirección moderna con contraste (28/10/2026)
+   Negro y dorado del logo, crema para respirar. Piezas del piloto: índice con panel, tiempos, CV. */
+
+:root {
+    --negro: #0b0908;
+    --cafe: #1d140f;
+    --crema: #f2e8da;
+    --crema-2: #e8dccb;
+    --oro: #c9a15e;
+    --oro-claro: #e6c98a;
+    --oro-osc: #8f6a2f;
+    --rosa: #e8b4ac;
+    --tinta: #1a1410;
+    --tinta-suave: #5c4e43;
+    --linea-clara: #d6c6b0;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Manrope', system-ui, sans-serif;
+    --ancho: 1180px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+body {
+    margin: 0;
+    background: var(--negro);
+    color: var(--crema);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.05; margin: 0; }
+em { font-style: italic; color: var(--oro-claro); }
+p { margin: 0; }
+a { color: inherit; }
+
+.wrap { width: min(var(--ancho), 100% - 40px); margin-inline: auto; }
+
+/* Encabezado: arranca como la portada, toma el dorado de la marca al hacer scroll */
+.top {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--negro);
+    color: var(--crema);
+    border-bottom: 1px solid rgba(201, 161, 94, .55);
+    transition: background .3s, color .3s, border-color .3s;
+}
+.top.solido { background: var(--oro); color: var(--negro); border-bottom-color: rgba(11, 9, 8, .35); }
+.top-row { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.marca { display: flex; align-items: baseline; gap: 10px; text-decoration: none; padding: 10px 0; }
+.marca-nombre { font-family: var(--serif); font-size: 21px; font-weight: 600; letter-spacing: .04em; }
+.marca-sello { font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--oro-claro); transition: color .3s; }
+.solido .marca-sello { color: var(--cafe); }
+.nav { display: flex; gap: 28px; font-size: 14px; }
+.nav a { text-decoration: none; color: inherit; opacity: .85; }
+.nav a:hover { opacity: 1; }
+.nav .nav-inscripcion { opacity: 1; border-bottom: 1px solid currentColor; }
+.menu-btn { display: none; background: none; border: 1px solid currentColor; padding: 6px 14px; font: inherit; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; color: inherit; }
+
+/* Botones */
+.btn {
+    display: inline-block; padding: 15px 28px; font-size: 14px; font-weight: 600; letter-spacing: .06em;
+    text-decoration: none; border: 1px solid transparent; transition: background .2s, color .2s, border-color .2s;
+}
+.btn-oro { background: var(--oro); color: var(--negro); }
+.btn-oro:hover { background: var(--oro-claro); }
+.btn-linea { border-color: rgba(242, 232, 218, .5); color: var(--crema); }
+.btn-linea:hover { background: var(--crema); color: var(--negro); }
+
+/* Portada */
+.portada { padding: 72px 0 56px; }
+.portada-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 56px; align-items: center; }
+.volanta { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--oro); margin-bottom: 24px; }
+.portada-titulo { font-size: clamp(44px, 6.2vw, 92px); letter-spacing: -.01em; max-width: 14ch; }
+.portada-bajada { margin-top: 28px; max-width: 46ch; font-size: 19px; color: #d7cabb; }
+.portada-acciones { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+.portada-marca { display: flex; justify-content: center; }
+.sello-logo {
+    width: min(360px, 100%); height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: cover;
+    outline: 1px solid var(--oro); outline-offset: 10px;
+}
+.datos { list-style: none; padding: 0; margin: 72px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(201, 161, 94, .4); }
+.datos li { padding: 22px 20px 0 0; font-size: 14px; color: #bfb1a0; }
+.datos li + li { padding-left: 20px; border-left: 1px solid rgba(201, 161, 94, .25); }
+.datos strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 34px; color: var(--oro-claro); line-height: 1.1; }
+
+/* Secciones */
+section { padding: 96px 0; }
+.seccion-num { font-family: var(--serif); font-style: italic; color: var(--oro-osc); font-size: 20px; margin-bottom: 12px; }
+.cabecera { margin-bottom: 48px; }
+.cabecera h2 { font-size: clamp(36px, 4.8vw, 62px); }
+.cabecera-texto { margin-top: 16px; max-width: 48ch; color: var(--tinta-suave); }
+
+/* Temario (crema) · PIEZA: índice con panel */
+.temario { background: var(--crema); color: var(--tinta); }
+.temario em { color: var(--oro-osc); }
+.indice { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+.indice-lista { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--tinta); }
+.indice-item {
+    width: 100%; display: flex; gap: 20px; align-items: baseline; text-align: left;
+    background: none; border: 0; border-bottom: 1px solid var(--linea-clara);
+    padding: 22px 0; font: inherit; font-family: var(--serif); font-size: clamp(22px, 2.4vw, 29px); font-weight: 500;
+    color: var(--tinta-suave); cursor: pointer; transition: color .2s, padding .2s;
+}
+.indice-item span { font-family: var(--sans); font-size: 13px; color: var(--oro-osc); min-width: 24px; }
+.indice-item:hover { color: var(--tinta); }
+.indice-item.activo { color: var(--tinta); padding-left: 12px; }
+.indice-item.activo span::after { content: ' —'; }
+.indice-item:focus-visible { outline: 2px solid var(--oro-osc); outline-offset: 2px; }
+.indice-paneles { position: sticky; top: 96px; }
+.panel { background: var(--cafe); color: var(--crema); padding: 44px; min-height: 360px; border-top: 3px solid var(--oro); }
+.panel h3 { font-size: 42px; margin-bottom: 18px; color: var(--oro-claro); }
+.panel > p { color: #e4d8c8; }
+.panel-sub { margin-top: 28px !important; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--oro) !important; }
+.etiquetas { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.etiquetas li { border: 1px solid rgba(230, 201, 138, .45); padding: 6px 14px; font-size: 14px; }
+.panel-nota { margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(242, 232, 218, .2); font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--rosa); }
+
+/* Cómo se cursa (café) · PIEZA: tiempos */
+.metodo { background: var(--cafe); color: var(--crema); }
+.metodo .seccion-num { color: var(--oro); }
+.metodo .cabecera-texto { color: #cdbfae; }
+.tiempos { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); }
+.tiempos li { padding: 0 32px 0 0; }
+.tiempos li + li { padding-left: 32px; border-left: 1px solid rgba(201, 161, 94, .3); }
+.tiempo-num { font-family: var(--serif); font-size: 72px; color: var(--oro); line-height: 1; }
+.tiempos h3 { font-size: 32px; margin: 18px 0 12px; }
+.tiempos p { color: #cdbfae; }
+.cita { margin: 80px 0 0; padding-top: 40px; border-top: 1px solid rgba(201, 161, 94, .3); }
+.cita p { font-family: var(--serif); font-size: clamp(32px, 4.4vw, 56px); line-height: 1.15; max-width: 20ch; }
+
+/* Quién enseña (crema) · PIEZA: CV */
+.quien { background: var(--crema); color: var(--tinta); }
+.quien-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: start; }
+.quien .cabecera { margin-bottom: 0; }
+.cv { margin: 0; border-top: 1px solid var(--tinta); }
+.cv div { display: grid; grid-template-columns: 120px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--linea-clara); }
+.cv dt { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--oro-osc); padding-top: 6px; }
+.cv dd { margin: 0; font-family: var(--serif); font-size: 28px; font-weight: 500; line-height: 1.2; overflow-wrap: anywhere; }
+.cv dd span { display: block; font-family: var(--sans); font-size: 15px; font-weight: 400; color: var(--tinta-suave); margin-top: 4px; }
+
+/* Inscripción (negro) */
+.inscripcion { background: var(--negro); text-align: center; }
+.inscripcion .seccion-num { color: var(--oro); }
+.inscripcion-titulo { font-size: clamp(40px, 6.4vw, 88px); max-width: 14ch; margin-inline: auto; }
+.ficha-curso { margin: 40px auto 0; max-width: 560px; border-top: 1px solid var(--oro); text-align: left; }
+.ficha-fila { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(201, 161, 94, .3); }
+.ficha-fila span { color: #bfb1a0; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; padding-top: 4px; }
+.ficha-fila strong { font-family: var(--serif); font-weight: 500; font-size: 26px; text-align: right; }
+.ficha-fila .pendiente { color: var(--rosa); }
+.inscripcion-acciones { margin-top: 36px; display: flex; justify-content: center; }
+.nota { margin-top: 20px; font-size: 14px; color: #bfb1a0; }
+.nota.resaltada { color: var(--oro-claro); font-weight: 600; }
+
+/* Pie */
+.pie { padding: 28px 0; font-size: 14px; color: #bfb1a0; border-top: 1px solid rgba(201, 161, 94, .3); }
+.pie-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.pie strong { font-weight: 600; color: var(--crema); }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .menu-btn { display: block; min-height: 44px; padding: 8px 16px; }
+    .nav {
+        display: none; position: absolute; top: 64px; left: 0; right: 0;
+        flex-direction: column; gap: 0; background: var(--oro); color: var(--negro);
+        border-bottom: 1px solid rgba(11, 9, 8, .35);
+    }
+    .nav.abierta { display: flex; }
+    .nav a { padding: 16px 20px; border-top: 1px solid rgba(11, 9, 8, .2); opacity: 1; }
+    .nav .nav-inscripcion { border-bottom: 0; font-weight: 600; }
+    .portada { padding-top: 56px; }
+    .portada-grid, .indice, .quien-grid { grid-template-columns: 1fr; }
+    .portada-grid { gap: 40px; }
+    .portada-marca { order: -1; justify-content: center; width: 100%; }
+    .sello-logo { width: 168px; outline-offset: 7px; margin-inline: auto; }
+    .portada-texto { text-align: center; }
+    .portada-titulo, .portada-bajada { margin-inline: auto; }
+    .portada-acciones { flex-direction: column; align-items: stretch; }
+    .portada-acciones .btn { text-align: center; }
+    .inscripcion { text-align: center; }
+    .inscripcion-titulo { margin-inline: auto; }
+    .ficha-curso { margin-inline: auto; text-align: left; }
+    .inscripcion-acciones { display: flex; flex-direction: column; align-items: stretch; max-width: 560px; margin-inline: auto; }
+    .inscripcion-acciones .btn { text-align: center; }
+    .indice { gap: 0; }
+    .indice-paneles { display: none; }
+    .panel { padding: 28px 22px; min-height: 0; margin-bottom: 12px; }
+    .panel h3 { font-size: 32px; }
+    .tiempos { grid-template-columns: 1fr; gap: 36px; }
+    .tiempos li, .tiempos li + li { padding: 0; border-left: 0; }
+    section { padding: 72px 0; }
+    .quien-grid { gap: 36px; }
+}
+
+@media (max-width: 560px) {
+    body { font-size: 16px; }
+    .marca-nombre { font-size: 18px; }
+    .pie-row { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+    .datos { grid-template-columns: 1fr; }
+    .datos li, .datos li + li { padding: 16px 0; border-left: 0; border-bottom: 1px solid rgba(201, 161, 94, .25); }
+    .cv div { grid-template-columns: 1fr; gap: 4px; }
+    .cv dd { font-size: 24px; }
+    .ficha-fila strong { font-size: 22px; }
+}
+
+@media (max-width: 380px) {
+    .marca-sello { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}
