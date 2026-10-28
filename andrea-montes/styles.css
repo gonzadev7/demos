@@ -1,0 +1,184 @@
+/* Demo Andrea S. Montes · dirección editorial (28/10/2026)
+   Piezas reutilizables marcadas con "PIEZA:" (índice con panel, tiempos, CV). */
+
+:root {
+    --marfil: #f6f0e8;
+    --marfil-2: #eee4d8;
+    --tinta: #2a1a1d;
+    --tinta-suave: #5d4a4d;
+    --bordo: #6e1f2e;
+    --bordo-osc: #4f1520;
+    --rosa: #e6c7c1;
+    --linea: #d8c8ba;
+    --serif: 'Bodoni Moda', Georgia, serif;
+    --sans: 'Instrument Sans', system-ui, sans-serif;
+    --ancho: 1180px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+body {
+    margin: 0;
+    background: var(--marfil);
+    color: var(--tinta);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; margin: 0; }
+em { font-style: italic; color: var(--bordo); }
+p { margin: 0; }
+a { color: inherit; }
+
+.wrap { width: min(var(--ancho), 100% - 40px); margin-inline: auto; }
+
+/* Encabezado */
+.top {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(246, 240, 232, .92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--linea);
+}
+.top-row { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.marca { display: flex; align-items: baseline; gap: 10px; text-decoration: none; }
+.marca-nombre { font-family: var(--serif); text-transform: uppercase; letter-spacing: .14em; font-size: 15px; }
+.marca-sello { font-family: var(--serif); font-style: italic; color: var(--bordo); font-size: 14px; }
+.nav { display: flex; gap: 28px; font-size: 14px; }
+.nav a { text-decoration: none; color: var(--tinta-suave); }
+.nav a:hover { color: var(--bordo); }
+.nav .nav-turno { color: var(--bordo); border-bottom: 1px solid var(--bordo); }
+.menu-btn { display: none; background: none; border: 1px solid var(--tinta); padding: 6px 14px; font: inherit; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; color: var(--tinta); }
+
+/* Botones */
+.btn {
+    display: inline-block; padding: 14px 26px; font-size: 14px; letter-spacing: .06em;
+    text-decoration: none; border: 1px solid transparent; transition: background .2s, color .2s;
+}
+.btn-lleno { background: var(--bordo); color: var(--marfil); }
+.btn-lleno:hover { background: var(--bordo-osc); }
+.btn-linea { border-color: var(--tinta); }
+.btn-linea:hover { background: var(--tinta); color: var(--marfil); }
+.btn-claro { background: var(--marfil); color: var(--bordo); }
+.btn-claro:hover { background: var(--rosa); }
+.btn-linea-clara { border-color: var(--marfil); color: var(--marfil); }
+.btn-linea-clara:hover { background: var(--marfil); color: var(--bordo); }
+
+/* Portada */
+.portada { padding: 72px 0 48px; border-bottom: 1px solid var(--linea); }
+.volanta { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--tinta-suave); margin-bottom: 24px; }
+.portada-titulo { font-size: clamp(38px, 5.4vw, 80px); letter-spacing: -.02em; max-width: 20ch; }
+.portada-pie { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; margin-top: 40px; }
+.portada-texto { max-width: 52ch; color: var(--tinta-suave); }
+.portada-acciones { display: flex; gap: 12px; flex-wrap: wrap; }
+.datos { list-style: none; padding: 0; margin: 72px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--linea); }
+.datos li { padding: 20px 20px 0 0; font-size: 14px; color: var(--tinta-suave); }
+.datos li + li { padding-left: 20px; border-left: 1px solid var(--linea); }
+.datos strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 30px; color: var(--tinta); }
+
+/* Cabeceras de sección */
+section { padding: 96px 0; }
+.seccion-num { font-family: var(--serif); font-style: italic; color: var(--bordo); font-size: 18px; margin-bottom: 12px; }
+.cabecera { margin-bottom: 48px; }
+.cabecera h2, .encuentros h2 { font-size: clamp(34px, 4.6vw, 58px); }
+.cabecera-texto { margin-top: 16px; max-width: 48ch; color: var(--tinta-suave); }
+
+/* PIEZA: índice con panel (lista numerada a la izquierda, detalle a la derecha) */
+.indice { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+.indice-lista { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--tinta); }
+.indice-item {
+    width: 100%; display: flex; gap: 20px; align-items: baseline; text-align: left;
+    background: none; border: 0; border-bottom: 1px solid var(--linea);
+    padding: 22px 0; font: inherit; font-family: var(--serif); font-size: clamp(20px, 2.2vw, 26px);
+    color: var(--tinta-suave); cursor: pointer; transition: color .2s, padding .2s;
+}
+.indice-item span { font-family: var(--sans); font-size: 13px; color: var(--bordo); min-width: 24px; }
+.indice-item:hover { color: var(--tinta); }
+.indice-item.activo { color: var(--tinta); padding-left: 12px; }
+.indice-item.activo span::after { content: ' —'; }
+.indice-item:focus-visible { outline: 2px solid var(--bordo); outline-offset: 2px; }
+.indice-paneles { position: sticky; top: 96px; }
+.panel { background: var(--bordo); color: var(--marfil); padding: 44px; min-height: 360px; }
+.panel h3 { font-size: 40px; margin-bottom: 18px; }
+.panel > p { color: #f1e1dd; }
+.panel-sub { margin-top: 28px !important; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--rosa) !important; }
+.etiquetas { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.etiquetas li { border: 1px solid rgba(246, 240, 232, .45); padding: 6px 14px; font-size: 14px; }
+.panel-nota { margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(246, 240, 232, .3); font-family: var(--serif); font-style: italic; font-size: 19px; }
+
+/* PIEZA: tiempos (pasos con numeral romano sobre fondo oscuro) */
+.metodo { background: var(--tinta); color: var(--marfil); }
+.cabecera-clara .seccion-num { color: var(--rosa); }
+.tiempos { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); }
+.tiempos li { padding: 0 32px 0 0; }
+.tiempos li + li { padding-left: 32px; border-left: 1px solid rgba(246, 240, 232, .2); }
+.tiempo-num { font-family: var(--serif); font-size: 64px; color: var(--rosa); line-height: 1; }
+.tiempos h3 { font-size: 30px; margin: 18px 0 12px; }
+.tiempos p { color: #cdbfbf; }
+.cita { margin: 80px 0 0; padding-top: 40px; border-top: 1px solid rgba(246, 240, 232, .2); }
+.cita p { font-family: var(--serif); font-style: italic; font-size: clamp(26px, 3.6vw, 44px); line-height: 1.25; max-width: 24ch; }
+
+/* PIEZA: CV (lista de definiciones con año o rótulo a la izquierda) */
+.formacion-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; }
+.cv { margin: 0; border-top: 1px solid var(--tinta); }
+.cv div { display: grid; grid-template-columns: 120px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--linea); }
+.cv dt { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--bordo); padding-top: 6px; }
+.cv dd { margin: 0; font-family: var(--serif); font-size: 24px; line-height: 1.25; }
+.cv dd span { display: block; font-family: var(--sans); font-size: 15px; color: var(--tinta-suave); margin-top: 4px; }
+
+/* Encuentros */
+.encuentros { background: var(--marfil-2); }
+.encuentros-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.encuentros-texto > p { font-size: 19px; }
+.lista-raya { list-style: none; padding: 0; margin: 24px 0 32px; }
+.lista-raya li { padding: 12px 0 12px 28px; border-bottom: 1px solid var(--linea); position: relative; }
+.lista-raya li::before { content: '—'; position: absolute; left: 0; color: var(--bordo); }
+
+/* Turnos */
+.turnos { background: var(--bordo); color: var(--marfil); }
+.turnos .seccion-num { color: var(--rosa); }
+.turnos-titulo { font-size: clamp(36px, 6vw, 80px); max-width: 16ch; }
+.turnos-titulo span { font-style: italic; color: var(--rosa); }
+.turnos-texto { margin-top: 24px; max-width: 46ch; color: #f1e1dd; }
+.turnos-acciones { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+.nota { margin-top: 20px; font-size: 14px; color: var(--rosa); }
+.nota.resaltada { color: var(--marfil); font-weight: 600; }
+
+/* Pie */
+.pie { padding: 28px 0; font-size: 14px; color: var(--tinta-suave); }
+.pie-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.pie strong { font-weight: 600; color: var(--tinta); }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .menu-btn { display: block; }
+    .nav {
+        display: none; position: absolute; top: 64px; left: 0; right: 0;
+        flex-direction: column; gap: 0; background: var(--marfil); border-bottom: 1px solid var(--linea);
+    }
+    .nav.abierta { display: flex; }
+    .nav a { padding: 16px 20px; border-top: 1px solid var(--linea); }
+    .nav .nav-turno { border-bottom: 0; }
+    .portada { padding-top: 64px; }
+    .portada-pie, .indice, .formacion-grid, .encuentros-grid { grid-template-columns: 1fr; }
+    .indice { gap: 24px; }
+    .indice-paneles { position: static; }
+    .panel { padding: 32px 24px; min-height: 0; }
+    .tiempos { grid-template-columns: 1fr; gap: 36px; }
+    .tiempos li, .tiempos li + li { padding: 0; border-left: 0; }
+    section { padding: 72px 0; }
+}
+
+@media (max-width: 560px) {
+    body { font-size: 16px; }
+    .datos { grid-template-columns: 1fr; }
+    .datos li, .datos li + li { padding: 16px 0; border-left: 0; border-bottom: 1px solid var(--linea); }
+    .cv div { grid-template-columns: 1fr; gap: 4px; }
+    .marca-nombre { font-size: 13px; letter-spacing: .1em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}

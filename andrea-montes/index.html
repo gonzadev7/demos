@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lic. Andrea S. Montes | Cosmetología facial y corporal en Pilar, Tortuguitas y Nordelta</title>
+    <meta name="description" content="Licenciada en Cosmetología Facial y Corporal, matrícula 0580/01. Tratamientos faciales, corporales, depilación definitiva y acompañamiento pre y post quirúrgico con el Método AM®.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="top">
+        <div class="wrap top-row">
+            <a href="#inicio" class="marca">
+                <span class="marca-nombre">Andrea S. Montes</span>
+                <span class="marca-sello">AM®</span>
+            </a>
+            <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">Menú</button>
+            <nav class="nav">
+                <a href="#tratamientos">Tratamientos</a>
+                <a href="#metodo">Método AM®</a>
+                <a href="#formacion">Formación</a>
+                <a href="#encuentros">Encuentros</a>
+                <a href="#turnos" class="nav-turno">Turnos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Portada -->
+        <section class="portada" id="inicio">
+            <div class="wrap">
+                <p class="volanta">Lic. en Cosmetología Facial y Corporal &middot; Matrícula 0580/01</p>
+                <h1 class="portada-titulo">La ciencia nos enseña a comprender la piel. <em>La conciencia, a cuidarla.</em></h1>
+                <div class="portada-pie">
+                    <p class="portada-texto">Tratamientos faciales, corporales y depilación definitiva en Tortuguitas, Pilar y Nordelta. Antes de cualquier tratamiento hay una evaluación profesional: primero entendemos tu piel, después elegimos qué hacer.</p>
+                    <div class="portada-acciones">
+                        <a href="#turnos" class="btn btn-lleno js-contacto">Coordinar una evaluación</a>
+                        <a href="#tratamientos" class="btn btn-linea">Ver tratamientos</a>
+                    </div>
+                </div>
+                <ul class="datos">
+                    <li><strong>+25</strong> años de experiencia</li>
+                    <li><strong>Método AM®</strong> Skincare Consciente</li>
+                    <li><strong>3 zonas</strong> Tortuguitas &middot; Pilar &middot; Nordelta</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Índice de tratamientos -->
+        <section class="tratamientos" id="tratamientos">
+            <div class="wrap">
+                <div class="cabecera">
+                    <p class="seccion-num">01</p>
+                    <h2>¿Qué querés trabajar?</h2>
+                    <p class="cabecera-texto">Elegí lo que te preocupa y te cuento con qué lo trabajo. La indicación final se define en la evaluación.</p>
+                </div>
+
+                <div class="indice">
+                    <ol class="indice-lista" role="tablist">
+                        <li><button class="indice-item activo" role="tab" aria-selected="true" data-panel="rostro"><span>01</span>Rostro: arrugas, flacidez y textura</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-panel="labios"><span>02</span>Labios</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-panel="cuerpo"><span>03</span>Cuerpo: celulitis, adiposidad y firmeza</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-panel="depilacion"><span>04</span>Depilación definitiva</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-panel="cirugia"><span>05</span>Antes y después de una cirugía</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-panel="oriental"><span>06</span>Técnicas orientales</button></li>
+                    </ol>
+
+                    <div class="indice-paneles">
+                        <article class="panel activo" id="rostro" role="tabpanel">
+                            <h3>Rostro</h3>
+                            <p>Tensado facial, tratamiento de arrugas y anti-aging. Tratamientos personalizados para renovar, hidratar y mejorar la calidad de la piel.</p>
+                            <p class="panel-sub">Con qué se trabaja</p>
+                            <ul class="etiquetas">
+                                <li>FRAX Face Lite®</li>
+                                <li>HIFU</li>
+                                <li>Microneedling</li>
+                                <li>Fotobiomodulación LED</li>
+                                <li>Bioestimulación anti-age</li>
+                                <li>Máscara hidroplástica</li>
+                                <li>HydraSkin</li>
+                            </ul>
+                        </article>
+
+                        <article class="panel" id="labios" role="tabpanel" hidden>
+                            <h3>Baby Lips</h3>
+                            <p>Rejuvenecimiento de labios. No se trata de transformarlos, sino de devolverles hidratación, suavidad y vitalidad.</p>
+                            <p class="panel-sub">Resultado buscado</p>
+                            <ul class="etiquetas">
+                                <li>Más hidratación</li>
+                                <li>Más luminosidad</li>
+                                <li>Labios revitalizados</li>
+                            </ul>
+                        </article>
+
+                        <article class="panel" id="cuerpo" role="tabpanel" hidden>
+                            <h3>Cuerpo</h3>
+                            <p>Modelación corporal para celulitis, adiposidad localizada, reducción y firmeza. No todos los cuerpos responden igual: por eso el plan sale de la evaluación.</p>
+                            <p class="panel-sub">Con qué se trabaja</p>
+                            <ul class="etiquetas">
+                                <li>Criolipólisis</li>
+                                <li>TECAR 448 kHz</li>
+                                <li>Modelación corporal</li>
+                            </ul>
+                            <p class="panel-nota">No son días seguidos: es un tratamiento progresivo a lo largo de los meses.</p>
+                        </article>
+
+                        <article class="panel" id="depilacion" role="tabpanel" hidden>
+                            <h3>Depilación definitiva</h3>
+                            <p>Depilación láser con formación, bioseguridad y atención profesional. Depilate con personas idóneas.</p>
+                            <p class="panel-sub">Qué cuidamos</p>
+                            <ul class="etiquetas">
+                                <li>Evaluación de la piel</li>
+                                <li>Bioseguridad</li>
+                                <li>Profesional matriculada</li>
+                            </ul>
+                        </article>
+
+                        <article class="panel" id="cirugia" role="tabpanel" hidden>
+                            <h3>Antes y después de tu cirugía</h3>
+                            <p>Acompañamiento de todo el proceso. El drenaje linfático suave y el seguimiento profesional ayudan a disminuir el edema durante la recuperación.</p>
+                            <p class="panel-sub">Con qué se trabaja</p>
+                            <ul class="etiquetas">
+                                <li>Drenaje linfático</li>
+                                <li>Seguimiento profesional</li>
+                            </ul>
+                        </article>
+
+                        <article class="panel" id="oriental" role="tabpanel" hidden>
+                            <h3>Técnicas orientales</h3>
+                            <p>Conocimientos orientales integrados desde una mirada profesional, con formación internacional en Taiwán.</p>
+                            <p class="panel-sub">Técnicas</p>
+                            <ul class="etiquetas">
+                                <li>Masaje Kobido</li>
+                                <li>Reflexología</li>
+                                <li>Técnica Lithosensa con Gua Sha</li>
+                                <li>Digitopresión facial</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Método -->
+        <section class="metodo" id="metodo">
+            <div class="wrap">
+                <div class="cabecera cabecera-clara">
+                    <p class="seccion-num">02</p>
+                    <h2>Método AM® en tres tiempos</h2>
+                </div>
+                <ol class="tiempos">
+                    <li>
+                        <span class="tiempo-num">I</span>
+                        <h3>Evaluación</h3>
+                        <p>Tu piel y tu cuerpo son únicos. Cada tratamiento empieza con un diagnóstico personalizado.</p>
+                    </li>
+                    <li>
+                        <span class="tiempo-num">II</span>
+                        <h3>Protocolo</h3>
+                        <p>Un plan diseñado para vos: tecnología, técnica y activos elegidos según lo que tu piel necesita.</p>
+                    </li>
+                    <li>
+                        <span class="tiempo-num">III</span>
+                        <h3>Seguimiento</h3>
+                        <p>El tratamiento es progresivo, a lo largo de los meses, con seguimiento profesional.</p>
+                    </li>
+                </ol>
+                <blockquote class="cita">
+                    <p>«El secreto no está en hacer más tratamientos, sino en elegir el adecuado.»</p>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Formación -->
+        <section class="formacion" id="formacion">
+            <div class="wrap formacion-grid">
+                <div class="cabecera">
+                    <p class="seccion-num">03</p>
+                    <h2>Formación</h2>
+                    <p class="cabecera-texto">Ciencia, salud y belleza, con más de 25 años de práctica.</p>
+                </div>
+                <dl class="cv">
+                    <div><dt>Título</dt><dd>Licenciada en Cosmetología Facial y Corporal<span>Universidad del Gran Rosario</span></dd></div>
+                    <div><dt>Matrícula</dt><dd>N.º 0580/01</dd></div>
+                    <div><dt>Título</dt><dd>Técnica en Cosmiatría</dd></div>
+                    <div><dt>2024</dt><dd>Beauty Training Course<span>Capacitación internacional en Taiwán</span></dd></div>
+                    <div><dt>Además</dt><dd>Asesora de imagen y maquilladora</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Encuentros -->
+        <section class="encuentros" id="encuentros">
+            <div class="wrap encuentros-grid">
+                <div>
+                    <p class="seccion-num">04</p>
+                    <h2>Skincare Consciente <em>en grupo</em></h2>
+                </div>
+                <div class="encuentros-texto">
+                    <p>Encuentros para conocer tu piel, conectar con vos misma y transformar el autocuidado en un hábito consciente.</p>
+                    <ul class="lista-raya">
+                        <li>Cómo es tu piel y qué necesita</li>
+                        <li>Rutinas de cuidado</li>
+                        <li>Práctica de Técnica Lithosensa con Gua Sha y digitopresión facial</li>
+                    </ul>
+                    <a href="#turnos" class="btn btn-linea js-contacto">Avisame del próximo encuentro</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Turnos -->
+        <section class="turnos" id="turnos">
+            <div class="wrap">
+                <p class="seccion-num">05</p>
+                <h2 class="turnos-titulo">Atiendo en <span>Tortuguitas</span>, <span>Pilar</span> y <span>Nordelta</span>.</h2>
+                <p class="turnos-texto">Escribime contándome qué querés trabajar y coordinamos una evaluación personalizada.</p>
+                <div class="turnos-acciones">
+                    <a href="#" class="btn btn-claro js-contacto">Escribir por WhatsApp</a>
+                    <a href="#" class="btn btn-linea-clara js-contacto">Instagram @andreasolmontes</a>
+                </div>
+                <p class="nota" id="nota-contacto" aria-live="polite">Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="wrap pie-row">
+            <p><strong>AM® Andrea S. Montes</strong> &middot; Licenciada en Cosmetología &middot; Mat. 0580/01</p>
+            <p class="dev-credit">Demo desarrollada por <a href="https://www.instagram.com/gondev.web" target="_blank" rel="noopener">@gondev.web</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
