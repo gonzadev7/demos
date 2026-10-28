@@ -38,19 +38,23 @@ a { color: inherit; }
 /* Encabezado */
 .top {
     position: sticky; top: 0; z-index: 10;
-    background: rgba(246, 240, 232, .92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--linea);
+    background: var(--marfil);
+    color: var(--tinta);
+    border-bottom: 1px solid rgba(110, 31, 46, .55);
+    transition: background .3s, color .3s, border-color .3s;
 }
+/* Al hacer scroll (o con el menú abierto) toma el color de la marca */
+.top.solido { background: var(--bordo); color: var(--marfil); border-bottom-color: rgba(246, 240, 232, .35); }
 .top-row { display: flex; align-items: center; justify-content: space-between; height: 64px; }
 .marca { display: flex; align-items: baseline; gap: 10px; text-decoration: none; }
 .marca-nombre { font-family: var(--serif); text-transform: uppercase; letter-spacing: .14em; font-size: 15px; }
-.marca-sello { font-family: var(--serif); font-style: italic; color: var(--bordo); font-size: 14px; }
+.marca-sello { font-family: var(--serif); font-style: italic; color: var(--bordo); font-size: 14px; transition: color .3s; }
+.solido .marca-sello { color: var(--rosa); }
 .nav { display: flex; gap: 28px; font-size: 14px; }
-.nav a { text-decoration: none; color: var(--tinta-suave); }
-.nav a:hover { color: var(--bordo); }
-.nav .nav-turno { color: var(--bordo); border-bottom: 1px solid var(--bordo); }
-.menu-btn { display: none; background: none; border: 1px solid var(--tinta); padding: 6px 14px; font: inherit; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; color: var(--tinta); }
+.nav a { text-decoration: none; color: inherit; opacity: .85; }
+.nav a:hover { opacity: 1; }
+.nav .nav-turno { opacity: 1; border-bottom: 1px solid currentColor; }
+.menu-btn { display: none; background: none; border: 1px solid currentColor; padding: 6px 14px; font: inherit; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; color: inherit; }
 
 /* Botones */
 .btn {
@@ -68,7 +72,12 @@ a { color: inherit; }
 
 /* Portada */
 .portada { padding: 72px 0 48px; border-bottom: 1px solid var(--linea); }
-.volanta { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--tinta-suave); margin-bottom: 24px; }
+.firma { display: flex; align-items: center; gap: 18px; margin-bottom: 28px; }
+.firma-foto {
+    width: 88px; height: 88px; border-radius: 50%; object-fit: cover;
+    outline: 1px solid var(--bordo); outline-offset: 4px;
+}
+.volanta { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--tinta-suave); line-height: 1.8; }
 .portada-titulo { font-size: clamp(38px, 5.4vw, 80px); letter-spacing: -.02em; max-width: 20ch; }
 .portada-pie { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; margin-top: 40px; }
 .portada-texto { max-width: 52ch; color: var(--tinta-suave); }
@@ -156,16 +165,17 @@ section { padding: 96px 0; }
     .menu-btn { display: block; }
     .nav {
         display: none; position: absolute; top: 64px; left: 0; right: 0;
-        flex-direction: column; gap: 0; background: var(--marfil); border-bottom: 1px solid var(--linea);
+        flex-direction: column; gap: 0; background: var(--bordo); border-bottom: 1px solid rgba(246, 240, 232, .35);
     }
     .nav.abierta { display: flex; }
-    .nav a { padding: 16px 20px; border-top: 1px solid var(--linea); }
+    .nav a { padding: 16px 20px; border-top: 1px solid rgba(246, 240, 232, .2); }
     .nav .nav-turno { border-bottom: 0; }
     .portada { padding-top: 64px; }
     .portada-pie, .indice, .formacion-grid, .encuentros-grid { grid-template-columns: 1fr; }
-    .indice { gap: 24px; }
-    .indice-paneles { position: static; }
-    .panel { padding: 32px 24px; min-height: 0; }
+    .indice { gap: 0; }
+    .indice-paneles { display: none; }
+    .panel { padding: 28px 22px; min-height: 0; margin-bottom: 12px; }
+    .panel h3 { font-size: 30px; }
     .tiempos { grid-template-columns: 1fr; gap: 36px; }
     .tiempos li, .tiempos li + li { padding: 0; border-left: 0; }
     section { padding: 72px 0; }
@@ -176,7 +186,14 @@ section { padding: 96px 0; }
     .datos { grid-template-columns: 1fr; }
     .datos li, .datos li + li { padding: 16px 0; border-left: 0; border-bottom: 1px solid var(--linea); }
     .cv div { grid-template-columns: 1fr; gap: 4px; }
-    .marca-nombre { font-size: 13px; letter-spacing: .1em; }
+    .marca-nombre { font-size: 12px; letter-spacing: .06em; white-space: nowrap; }
+    .firma { gap: 14px; }
+    .firma-foto { width: 68px; height: 68px; }
+    .volanta { font-size: 11px; letter-spacing: .04em; }
+}
+
+@media (max-width: 420px) {
+    .marca-sello { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

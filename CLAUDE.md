@@ -18,12 +18,11 @@ Gonzalo crea landing pages personalizadas como demos para prospectos de Instagra
 El estado actualizado de todos los leads está en:
 `C:\Users\casa\.claude\projects\c--Users-casa-Documents-GitHub\memory\crm_leads.md`
 
-Actualizar el CRM después de cada interacción sin que Gonzalo lo pida.
-
 ## Demos
 - Carpeta: `c:\Users\casa\Documents\GitHub\demos\[nombre-lead]\`
 - Cada demo tiene: `index.html`, `styles.css`, `script.js`
-- Template de referencia: `demos/crv-legales/` — seguir su estructura exacta
+- Sin plantilla fija (reforma del 28/10/2026): cada demo es original según el rubro. Reglas completas en `Negocio/CLAUDE.md` ("Armar una demo"); piezas reutilizables marcadas con `PIEZA:` en `andrea-montes/styles.css`; registro de estilos en `_estilos.md`.
+- Foto de perfil de Instagram SIEMPRE, original y completa, UNA sola vez (en la portada; nunca repetida en el encabezado)
 - Colores: basarse en el feed general del prospecto (tonos dominantes, paleta visual) — no en gráficas promocionales aisladas
 - Logos cuadrados con fondo propio: quitar `padding` y `background` del `.hero-photo img`
 - GitHub Pages URL: `gonzadev7.github.io/demos/[nombre-carpeta]/`
@@ -34,6 +33,7 @@ Flujo: VS Code → GitHub Desktop → Netlify (clientes activos).
 
 ## Reglas clave
 - Precio SIEMPRE después de que reaccionen a la demo
-- Actualizar CRM automáticamente tras cada interacción
-- Seguir la estructura exacta del template (no inventar CSS propio)
+- Estructura y dirección visual distintas en cada demo (ver `_estilos.md`)
+- Encabezado: arranca integrado a la portada (con línea divisoria fina de 1 px siempre) y al hacer scroll (o con el menú abierto) pasa a un color distinto a la portada, elegido entre los colores que ya dominan la web (principal de la marca o un fondo grande), nunca uno nuevo ni un acento; revisarlo sobre todas las secciones (línea fina si coincide con alguna)
+- Nunca publicar (push) sin revisar la demo en escritorio Y en celular (330-390 px, página entera, sin scroll horizontal)
 - Colores del feed general, no de gráficas promocionales aisladas
