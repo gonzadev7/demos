@@ -1,0 +1,173 @@
+/* Demo Cande Manzano · dirección cálido orgánico (29/10/2026)
+   Lila y crema de su feed, hojas botánicas, serif suave. */
+
+:root {
+    --crema: #f8f3ec;
+    --lavanda: #efe8f4;
+    --tinta: #2d2438;
+    --suave: #5e5470;
+    --lila: #6b5a93;
+    --ciruela: #46375f;
+    --lila-claro: #d9cfea;
+    --linea: #ddd3e6;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Albert Sans', system-ui, sans-serif;
+    --ancho: 1120px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; background: var(--crema); color: var(--tinta); font-family: var(--sans); font-size: 17px; line-height: 1.65; overflow-x: hidden; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.12; margin: 0; }
+em { font-style: italic; color: var(--lila); }
+p { margin: 0; }
+a { color: inherit; }
+.wrap { width: min(var(--ancho), 100% - 40px); margin-inline: auto; }
+
+.hoja { position: absolute; width: 150px; height: 300px; color: var(--lila-claro); pointer-events: none; }
+
+/* Encabezado */
+.top { position: sticky; top: 0; z-index: 10; background: var(--crema); color: var(--tinta); border-bottom: 1px solid rgba(107, 90, 147, .55); transition: background .3s, color .3s, border-color .3s; }
+.top.solido { background: var(--ciruela); color: var(--crema); border-bottom-color: rgba(248, 243, 236, .35); }
+.top-row { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.marca { display: flex; align-items: center; gap: 10px; min-height: 44px; text-decoration: none; }
+.marca-nombre { font-family: var(--serif); font-size: 20px; }
+.marca-sello { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--lila); transition: color .3s; }
+.solido .marca-sello { color: var(--lila-claro); }
+.nav { display: flex; gap: 28px; font-size: 15px; }
+.nav a { text-decoration: none; opacity: .85; }
+.nav a:hover { opacity: 1; }
+.nav .nav-turno { opacity: 1; border-bottom: 1px solid currentColor; }
+.menu-btn { display: none; min-height: 44px; background: none; border: 1px solid currentColor; border-radius: 22px; padding: 6px 20px; font: inherit; font-size: 14px; color: inherit; cursor: pointer; }
+
+/* Botones */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 28px; border-radius: 28px; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid transparent; transition: background .2s, color .2s; }
+.btn-lleno { background: var(--ciruela); color: var(--crema); }
+.btn-lleno:hover { background: var(--lila); }
+.btn-linea { border-color: var(--ciruela); }
+.btn-linea:hover { background: var(--ciruela); color: var(--crema); }
+.btn-claro { background: var(--crema); color: var(--ciruela); }
+.btn-claro:hover { background: var(--lila-claro); }
+.btn-linea-clara { border-color: var(--crema); color: var(--crema); }
+.btn-linea-clara:hover { background: var(--crema); color: var(--ciruela); }
+
+/* Portada */
+.portada { position: relative; padding: 72px 0 0; overflow: hidden; }
+.hoja-portada { right: 4%; top: 30px; width: 190px; height: 380px; opacity: .8; }
+.portada-grid { position: relative; }
+.firma { display: flex; align-items: center; gap: 20px; margin-bottom: 32px; }
+.firma-foto { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--lila-claro); }
+.volanta { font-size: 14px; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); line-height: 1.8; }
+.portada-titulo { font-size: clamp(42px, 6.4vw, 88px); letter-spacing: -.015em; max-width: 14ch; }
+.portada-texto { margin-top: 28px; max-width: 56ch; color: var(--suave); font-size: 18px; }
+.portada-acciones { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+.datos { position: relative; list-style: none; padding: 0; margin: 72px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--linea); }
+.datos li { padding: 24px 20px 28px 0; font-size: 14px; color: var(--suave); }
+.datos li + li { padding-left: 24px; border-left: 1px solid var(--linea); }
+.datos strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 26px; color: var(--tinta); }
+
+/* Cabeceras */
+section { padding: 96px 0; }
+.seccion-num { font-family: var(--serif); font-style: italic; color: var(--lila); font-size: 18px; margin-bottom: 10px; }
+.cabecera { margin-bottom: 44px; }
+.cabecera h2, .consulta-titulo { font-size: clamp(34px, 4.8vw, 60px); }
+.cabecera-texto { margin-top: 16px; max-width: 46ch; color: var(--suave); }
+
+/* Índice con panel */
+.hoy { background: var(--lavanda); }
+.indice { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+.indice-lista { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--ciruela); }
+.indice-item { width: 100%; min-height: 56px; display: flex; gap: 20px; align-items: baseline; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--linea); padding: 22px 0; font: inherit; font-family: var(--serif); font-size: clamp(21px, 2.3vw, 28px); color: var(--suave); cursor: pointer; transition: color .2s, padding .2s; }
+.indice-item span { font-family: var(--sans); font-size: 13px; color: var(--lila); min-width: 24px; }
+.indice-item:hover { color: var(--tinta); }
+.indice-item.activo { color: var(--tinta); padding-left: 12px; }
+.indice-item.activo span::after { content: ' —'; }
+.indice-item:focus-visible { outline: 2px solid var(--lila); outline-offset: 2px; }
+.indice-paneles { position: sticky; top: 96px; }
+.panel { background: var(--ciruela); color: var(--crema); border-radius: 28px; padding: 44px; min-height: 340px; }
+.panel h3 { font-size: 36px; margin-bottom: 16px; }
+.panel > p { color: #e6dff0; }
+.panel-sub { margin-top: 28px !important; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--lila-claro) !important; }
+.etiquetas { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.etiquetas li { border: 1px solid rgba(248, 243, 236, .45); border-radius: 20px; padding: 6px 16px; font-size: 14px; }
+.panel-nota { margin-top: 24px; padding-top: 18px; border-top: 1px solid rgba(248, 243, 236, .3); font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.35; }
+
+/* Contenido que comparte */
+.contenido { position: relative; background: var(--ciruela); color: var(--crema); overflow: hidden; }
+.contenido .wrap { position: relative; }
+.hoja-contenido { right: 3%; bottom: -20px; opacity: .22; color: var(--lila-claro); }
+.cabecera-clara .seccion-num, .contenido em { color: var(--lila-claro); }
+.cabecera-clara .cabecera-texto { color: #e6dff0; }
+.cv { margin: 0; border-top: 1px solid var(--ciruela); }
+.cv div { display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--linea); }
+.cv dt { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--lila); padding-top: 6px; }
+.cv dd { margin: 0; font-family: var(--serif); font-size: 24px; line-height: 1.25; }
+.cv dd span { display: block; font-family: var(--sans); font-size: 15px; color: var(--suave); margin-top: 4px; }
+.cv-claro { border-top-color: var(--lila-claro); }
+.cv-claro div { border-bottom-color: rgba(248, 243, 236, .22); }
+.cv-claro dt { color: var(--lila-claro); }
+.cv-claro dd span { color: #cfc5df; }
+
+/* Quién es */
+.quien-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; }
+.quien .cabecera-texto { font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--ciruela); }
+
+/* Consulta */
+.consulta { position: relative; background: var(--lila); color: var(--crema); overflow: hidden; }
+.hoja-consulta { right: 6%; top: 10px; width: 170px; height: 340px; opacity: .3; color: var(--crema); }
+.consulta-in { position: relative; }
+.consulta .seccion-num { color: var(--lila-claro); }
+.consulta em { color: var(--lila-claro); }
+.consulta-texto { margin-top: 20px; max-width: 44ch; color: #f1ecf7; font-size: 18px; }
+.consulta-acciones { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+.nota { margin-top: 22px; font-size: 14px; color: var(--lila-claro); }
+.nota.resaltada { color: var(--crema); font-weight: 600; }
+
+/* Pie */
+.pie { padding: 28px 0; font-size: 14px; color: var(--suave); }
+.pie-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.pie strong { font-weight: 600; color: var(--tinta); }
+.dev-credit a { display: inline-block; padding: 12px 4px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .menu-btn { display: inline-flex; align-items: center; }
+    .nav { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--ciruela); color: var(--crema); border-bottom: 1px solid rgba(248, 243, 236, .35); }
+    .nav.abierta { display: flex; }
+    .nav a { padding: 16px 20px; min-height: 52px; border-top: 1px solid rgba(248, 243, 236, .2); }
+    .nav .nav-turno { border-bottom: 0; }
+    .indice, .quien-grid { grid-template-columns: 1fr; }
+    .indice { gap: 0; }
+    .indice-paneles { display: none; }
+    .panel { padding: 28px 22px; min-height: 0; margin-bottom: 12px; border-radius: 22px; }
+    .panel h3 { font-size: 28px; }
+    section { padding: 72px 0; }
+    .portada { padding-top: 48px; }
+    .hoja-portada { opacity: .35; right: -30px; }
+}
+
+@media (max-width: 700px) {
+    /* en celular: portada, contenido y cierre centrados */
+    .portada-grid, .consulta-in { text-align: center; }
+    .firma { flex-direction: column; gap: 14px; margin-bottom: 24px; }
+    .portada-titulo { margin-inline: auto; }
+    .portada-texto { margin-inline: auto; }
+    .portada-acciones, .consulta-acciones { flex-direction: column; align-items: stretch; }
+    .consulta-texto { margin-inline: auto; }
+    .datos { grid-template-columns: 1fr; margin-top: 48px; }
+    .datos li, .datos li + li { padding: 18px 0; border-left: 0; border-bottom: 1px solid var(--linea); text-align: center; }
+    .cv div { grid-template-columns: 1fr; gap: 4px; }
+    .quien .cabecera, .contenido .cabecera { text-align: left; }
+    .pie-row { flex-direction: column; align-items: center; text-align: center; }
+    .marca-sello { display: none; }
+    .marca-nombre { font-size: 19px; }
+}
+
+@media (max-width: 560px) {
+    body { font-size: 16px; }
+    .hoja-contenido, .hoja-consulta { opacity: .15; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cande Manzano | Nutricionista, consultas online · M.P. 3402</title>
+    <meta name="description" content="Licenciada en Nutrición M.P. 3402. Especialista en sobrepeso y obesidad. Alimentación real para tu vida diaria, en consultas online.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Hoja botánica reutilizable -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="hoja" viewBox="0 0 120 240">
+            <path d="M60 238 C58 170 62 90 60 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M60 200 C30 192 14 168 12 140 C40 146 58 170 60 200Z" fill="currentColor"/>
+            <path d="M60 170 C90 162 108 138 110 110 C82 116 62 140 60 170Z" fill="currentColor"/>
+            <path d="M60 130 C34 122 20 100 18 76 C42 82 58 104 60 130Z" fill="currentColor"/>
+            <path d="M60 98 C86 90 100 68 102 44 C78 50 62 72 60 98Z" fill="currentColor"/>
+            <path d="M60 60 C46 52 40 34 42 16 C56 22 62 40 60 60Z" fill="currentColor"/>
+        </symbol>
+    </svg>
+
+    <header class="top">
+        <div class="wrap top-row">
+            <a href="#inicio" class="marca">
+                <span class="marca-nombre">Cande Manzano</span>
+                <span class="marca-sello">Nutricionista</span>
+            </a>
+            <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">Menú</button>
+            <nav class="nav">
+                <a href="#hoy">Con qué llegás</a>
+                <a href="#contenido">Contenido</a>
+                <a href="#quien">Quién es</a>
+                <a href="#consulta" class="nav-turno">Consulta online</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Portada -->
+        <section class="portada" id="inicio">
+            <svg class="hoja hoja-portada" aria-hidden="true"><use href="#hoja"/></svg>
+            <div class="wrap portada-grid">
+                <div class="firma">
+                    <img src="perfil.jpg" alt="Cande Manzano, nutricionista" class="firma-foto" width="120" height="120">
+                    <p class="volanta">Cande Manzano<br>Lic. en Nutrición<br>M.P. 3402</p>
+                </div>
+                <h1 class="portada-titulo">Alimentación real <em>para tu vida diaria.</em></h1>
+                <p class="portada-texto">Soy nutricionista y me especializo en sobrepeso y obesidad. Atiendo online, y lo que comparto en mi Instagram, desde recetas hasta un planificador de comidas cada domingo, es la misma forma de trabajar: sin perfección, con una manera que puedas sostener.</p>
+                <div class="portada-acciones">
+                    <a href="#consulta" class="btn btn-lleno js-contacto">Escribirle a Cande</a>
+                    <a href="#hoy" class="btn btn-linea">¿Con qué llegás hoy?</a>
+                </div>
+            </div>
+            <ul class="wrap datos">
+                <li><strong>M.P. 3402</strong> Licenciada en Nutrición</li>
+                <li><strong>Sobrepeso y obesidad</strong> Su especialidad</li>
+                <li><strong>Online</strong> Consultas desde donde estés</li>
+            </ul>
+        </section>
+
+        <!-- Índice: con qué llegás hoy -->
+        <section class="hoy" id="hoy">
+            <div class="wrap">
+                <div class="cabecera">
+                    <p class="seccion-num">01</p>
+                    <h2>¿Con qué llegás <em>hoy</em>?</h2>
+                    <p class="cabecera-texto">Elegí lo que más se parece a lo que te pasa con la comida.</p>
+                </div>
+
+                <div class="indice">
+                    <ol class="indice-lista" role="tablist">
+                        <li><button class="indice-item activo" role="tab" aria-selected="true" data-panel="peso"><span>01</span>Quiero bajar de peso</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-panel="cocinar"><span>02</span>No sé qué cocinar</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-panel="sostener"><span>03</span>Me cuesta sostenerlo</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-panel="dudas"><span>04</span>Tengo dudas</button></li>
+                    </ol>
+
+                    <div class="indice-paneles">
+                        <article class="panel activo" id="peso" role="tabpanel">
+                            <h3>Sobrepeso y obesidad</h3>
+                            <p>Es el área en la que Cande se especializa. La base, como dice su perfil, es alimentación real para tu vida diaria.</p>
+                            <p class="panel-sub">Cómo se cursa</p>
+                            <ul class="etiquetas">
+                                <li>Consulta online</li>
+                                <li>Desde donde estés</li>
+                            </ul>
+                        </article>
+
+                        <article class="panel" id="cocinar" role="tabpanel" hidden>
+                            <h3>Un planificador cada domingo</h3>
+                            <p>Cande comparte en su Instagram ideas de comidas completas, variadas y equilibradas, armadas en un planificador semanal de lunes a domingo.</p>
+                            <p class="panel-sub">Algunas ideas del planificador</p>
+                            <ul class="etiquetas">
+                                <li>Yogur natural con granola y frutillas</li>
+                                <li>Hamburguesa de lentejas al plato</li>
+                                <li>Sopa de vegetales con pollo</li>
+                            </ul>
+                        </article>
+
+                        <article class="panel" id="sostener" role="tabpanel" hidden>
+                            <h3>Encontrar tu manera</h3>
+                            <p>No siempre se trata de saber qué comer, sino de poder sostenerlo en la semana real.</p>
+                            <p class="panel-nota">«No necesitás hacerlo perfecto… Necesitás encontrar tu manera.»</p>
+                        </article>
+
+                        <article class="panel" id="dudas" role="tabpanel" hidden>
+                            <h3>Dudas y consultas</h3>
+                            <p>En su Instagram hay una sección de Dudas y otra de Consultas. Si algo no te queda claro, escribile y te cuenta cómo seguir.</p>
+                            <p class="panel-sub">Dónde</p>
+                            <ul class="etiquetas">
+                                <li>Instagram @tunutri.cm</li>
+                                <li>WhatsApp</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenido que comparte -->
+        <section class="contenido" id="contenido">
+            <svg class="hoja hoja-contenido" aria-hidden="true"><use href="#hoja"/></svg>
+            <div class="wrap">
+                <div class="cabecera cabecera-clara">
+                    <p class="seccion-num">02</p>
+                    <h2>Lo que Cande <em>comparte</em></h2>
+                    <p class="cabecera-texto">Además de las consultas, en su Instagram hay material para el día a día.</p>
+                </div>
+                <dl class="cv cv-claro">
+                    <div><dt>Recetas</dt><dd>Muffins con chocolate y otras recetas<span>Como los muffins con invitada especial</span></dd></div>
+                    <div><dt>Domingos</dt><dd>Ideas de comidas completas, variadas y equilibradas<span>Un planificador semanal para guardar y agendar</span></dd></div>
+                    <div><dt>Investiga</dt><dd>La nutri investiga<span>Una serie de publicaciones de su feed</span></dd></div>
+                    <div><dt>Cuidado</dt><dd>Mi rutina de cuidado<span>Otra serie de su feed</span></dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Quién es -->
+        <section class="quien" id="quien">
+            <div class="wrap quien-grid">
+                <div class="cabecera">
+                    <p class="seccion-num">03</p>
+                    <h2>Quién <em>es</em></h2>
+                    <p class="cabecera-texto">«Volví. Y esta vez, con una mirada diferente sobre la salud.»</p>
+                </div>
+                <dl class="cv">
+                    <div><dt>Título</dt><dd>Licenciada en Nutrición</dd></div>
+                    <div><dt>Matrícula</dt><dd>M.P. 3402</dd></div>
+                    <div><dt>Especialidad</dt><dd>Sobrepeso y obesidad</dd></div>
+                    <div><dt>Nombre</dt><dd>María Candelaria Manzano</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Consulta -->
+        <section class="consulta" id="consulta">
+            <svg class="hoja hoja-consulta" aria-hidden="true"><use href="#hoja"/></svg>
+            <div class="wrap consulta-in">
+                <p class="seccion-num">04</p>
+                <h2 class="consulta-titulo">Consultas <em>online</em>.</h2>
+                <p class="consulta-texto">Escribile contándole qué te pasa con la comida y coordinan cómo seguir.</p>
+                <div class="consulta-acciones">
+                    <a href="#" class="btn btn-claro js-contacto">Escribir por WhatsApp</a>
+                    <a href="#" class="btn btn-linea-clara js-contacto">Instagram @tunutri.cm</a>
+                </div>
+                <p class="nota" id="nota-contacto" aria-live="polite">Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="wrap pie-row">
+            <p><strong>Cande Manzano</strong> &middot; Lic. en Nutrición &middot; M.P. 3402</p>
+            <p class="dev-credit">Demo desarrollada por <a href="https://www.instagram.com/gondev.web" target="_blank" rel="noopener">@gondev.web</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
