@@ -1,0 +1,155 @@
+/* Demo Lic. Nancy Triñanes · dirección clínico minimalista (29/10/2026)
+   Blanco hueso, azul petróleo, mucho aire, líneas finas. */
+
+:root {
+    --hueso: #f7f8f6;
+    --agua: #e3eeec;
+    --tinta: #16262b;
+    --suave: #4f6166;
+    --petroleo: #1d4b57;
+    --petroleo-osc: #143741;
+    --menta: #bfd9d4;
+    --linea: #d6dedc;
+    --serif: 'Newsreader', Georgia, serif;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+    --ancho: 1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; background: var(--hueso); color: var(--tinta); font-family: var(--sans); font-size: 17px; line-height: 1.65; overflow-x: hidden; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.15; margin: 0; }
+em { font-style: italic; color: var(--petroleo); }
+p { margin: 0; }
+a { color: inherit; }
+.wrap { width: min(var(--ancho), 100% - 40px); margin-inline: auto; }
+
+/* Encabezado */
+.top { position: sticky; top: 0; z-index: 10; background: var(--hueso); color: var(--tinta); border-bottom: 1px solid rgba(29, 75, 87, .55); transition: background .3s, color .3s, border-color .3s; }
+.top.solido { background: var(--petroleo); color: var(--hueso); border-bottom-color: rgba(247, 248, 246, .35); }
+.top-row { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.marca { display: flex; align-items: center; gap: 12px; min-height: 44px; text-decoration: none; }
+.marca-nombre { font-family: var(--serif); font-size: 21px; }
+.marca-sello { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--petroleo); transition: color .3s; }
+.solido .marca-sello { color: var(--menta); }
+.nav { display: flex; gap: 28px; font-size: 15px; }
+.nav a { text-decoration: none; opacity: .85; }
+.nav a:hover { opacity: 1; }
+.nav .nav-turno { opacity: 1; border-bottom: 1px solid currentColor; }
+.menu-btn { display: none; min-height: 44px; background: none; border: 1px solid currentColor; padding: 6px 20px; font: inherit; font-size: 14px; color: inherit; cursor: pointer; }
+
+/* Botones */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 28px; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid transparent; transition: background .2s, color .2s; }
+.btn-lleno { background: var(--petroleo); color: var(--hueso); }
+.btn-lleno:hover { background: var(--petroleo-osc); }
+.btn-linea { border-color: var(--petroleo); color: var(--petroleo); }
+.btn-linea:hover { background: var(--petroleo); color: var(--hueso); }
+.btn-claro { background: var(--hueso); color: var(--petroleo); }
+.btn-claro:hover { background: var(--menta); }
+.btn-linea-clara { border-color: var(--hueso); color: var(--hueso); }
+.btn-linea-clara:hover { background: var(--hueso); color: var(--petroleo); }
+
+/* Portada */
+.portada { padding: 88px 0 96px; }
+.portada-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 72px; align-items: end; }
+.volanta { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--petroleo); margin-bottom: 28px; }
+.portada-titulo { font-size: clamp(34px, 4.6vw, 62px); letter-spacing: -.01em; max-width: 20ch; }
+.portada-bajada { margin-top: 28px; max-width: 50ch; color: var(--suave); font-size: 18px; }
+.portada-acciones { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+.ficha { border-top: 2px solid var(--petroleo); padding-top: 8px; }
+.ficha dl { margin: 0; }
+.ficha div { padding: 16px 0; border-bottom: 1px solid var(--linea); }
+.ficha dt { font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--petroleo); }
+.ficha dd { margin: 4px 0 0; font-family: var(--serif); font-size: 20px; line-height: 1.3; }
+
+/* Cabeceras */
+section { padding: 96px 0; }
+.seccion-num { font-size: 14px; letter-spacing: .14em; color: var(--petroleo); margin-bottom: 14px; }
+.cabecera { margin-bottom: 44px; }
+.cabecera h2 { font-size: clamp(32px, 4.2vw, 52px); }
+.cabecera-texto { margin-top: 16px; max-width: 46ch; color: var(--suave); }
+
+/* Temas (acordeón) */
+.temas { background: var(--agua); }
+.acordeon { border-top: 1px solid var(--petroleo); max-width: 780px; }
+.acordeon details { border-bottom: 1px solid var(--linea); }
+.acordeon summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; padding: 20px 0; font-family: var(--serif); font-size: clamp(22px, 2.6vw, 30px); }
+.acordeon summary::-webkit-details-marker { display: none; }
+.acordeon summary::after { content: '+'; font-family: var(--sans); font-size: 26px; color: var(--petroleo); transition: transform .2s; }
+.acordeon details[open] summary::after { content: '−'; }
+.acordeon summary:focus-visible { outline: 2px solid var(--petroleo); outline-offset: 2px; }
+.acordeon details p { padding: 0 0 24px; max-width: 58ch; color: var(--suave); }
+.aviso { margin-top: 32px; font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--petroleo); }
+
+/* Trayectoria */
+.trayectoria-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; }
+.linea-tiempo { list-style: none; margin: 0; padding: 0 0 0 28px; border-left: 1px solid var(--petroleo); }
+.linea-tiempo li { position: relative; padding: 0 0 40px; }
+.linea-tiempo li:last-child { padding-bottom: 0; }
+.linea-tiempo li::before { content: ''; position: absolute; left: -35px; top: 6px; width: 13px; height: 13px; background: var(--hueso); border: 2px solid var(--petroleo); border-radius: 50%; }
+.hito { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--petroleo); }
+.linea-tiempo h3 { font-size: 28px; margin: 6px 0; }
+.linea-tiempo p { color: var(--suave); }
+
+/* Modalidad */
+.modalidad { background: var(--petroleo); color: var(--hueso); }
+.cabecera-clara .seccion-num { color: var(--menta); }
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid rgba(247, 248, 246, .3); }
+.dos article { padding: 32px 32px 8px 0; }
+.dos article + article { padding-left: 32px; border-left: 1px solid rgba(247, 248, 246, .3); }
+.dos h3 { font-size: 30px; margin-bottom: 10px; }
+.dos p { color: #d3e3e0; max-width: 34ch; }
+
+/* Consultorio */
+.consultorio { background: var(--agua); }
+.consultorio h2 { font-size: clamp(32px, 4.6vw, 58px); max-width: 18ch; }
+.consultorio-texto { margin-top: 20px; max-width: 46ch; color: var(--suave); font-size: 18px; }
+.consultorio-acciones { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+.consultorio .btn-claro { background: var(--petroleo); color: var(--hueso); }
+.consultorio .btn-claro:hover { background: var(--petroleo-osc); }
+.consultorio .btn-linea-clara { border-color: var(--petroleo); color: var(--petroleo); }
+.consultorio .btn-linea-clara:hover { background: var(--petroleo); color: var(--hueso); }
+.nota { margin-top: 22px; font-size: 14px; color: var(--suave); }
+.nota.resaltada { color: var(--petroleo); font-weight: 600; }
+
+/* Pie */
+.pie { padding: 28px 0; font-size: 14px; color: var(--suave); }
+.pie-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.pie strong { font-weight: 600; color: var(--tinta); }
+.dev-credit a { display: inline-block; padding: 12px 4px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .menu-btn { display: inline-flex; align-items: center; }
+    .nav { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--petroleo); color: var(--hueso); border-bottom: 1px solid rgba(247, 248, 246, .35); }
+    .nav.abierta { display: flex; }
+    .nav a { padding: 16px 20px; min-height: 52px; border-top: 1px solid rgba(247, 248, 246, .2); }
+    .nav .nav-turno { border-bottom: 0; }
+    .portada-grid, .trayectoria-grid { grid-template-columns: 1fr; gap: 48px; }
+    section { padding: 72px 0; }
+    .portada { padding: 56px 0 72px; }
+}
+
+@media (max-width: 700px) {
+    /* en celular: portada, modalidad y cierre centrados */
+    .portada-texto, .consultorio-in { text-align: center; }
+    .portada-titulo, .portada-bajada, .consultorio h2, .consultorio-texto { margin-inline: auto; }
+    .portada-acciones, .consultorio-acciones { flex-direction: column; align-items: stretch; }
+    .ficha { text-align: center; }
+    .dos { grid-template-columns: 1fr; }
+    .dos article, .dos article + article { padding: 24px 0; border-left: 0; text-align: center; }
+    .dos article + article { border-top: 1px solid rgba(247, 248, 246, .3); }
+    .dos p { margin-inline: auto; }
+    .modalidad .cabecera { text-align: center; }
+    .marca-sello { display: none; }
+    .marca-nombre { font-size: 20px; }
+    .pie-row { flex-direction: column; align-items: center; text-align: center; }
+}
+
+@media (max-width: 560px) {
+    body { font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}
