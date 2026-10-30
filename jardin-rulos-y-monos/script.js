@@ -25,7 +25,7 @@ const nota = document.getElementById('nota-contacto');
 document.querySelectorAll('.js-contacto').forEach(btn => {
     btn.addEventListener('click', e => {
         e.preventDefault();
-        nota.textContent = 'Esta es una demo: en la versión oficial este botón abre WhatsApp o el mapa.';
+        nota.textContent = 'Esta es una demo: en la versión oficial este botón abre WhatsApp o Instagram.';
         nota.classList.add('resaltada');
         nota.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });

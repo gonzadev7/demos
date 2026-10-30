@@ -53,7 +53,7 @@ a { color: inherit; }
 .nav { display: flex; gap: 28px; font-size: 15px; align-items: center; }
 .nav a { text-decoration: none; color: inherit; opacity: .88; }
 .nav a:hover { opacity: 1; }
-.nav .nav-insc { opacity: 1; border: 1.5px solid currentColor; border-radius: 999px; padding: 8px 18px; }
+.nav .nav-insc { opacity: 1; border-bottom: 1.5px solid currentColor; padding-bottom: 2px; }
 .menu-btn { display: none; background: none; border: 1.5px solid currentColor; border-radius: 999px; padding: 0 20px; min-height: 44px; font: inherit; font-size: 15px; cursor: pointer; color: inherit; }
 
 /* Botones */
@@ -169,7 +169,7 @@ section { padding: 92px 0; }
     }
     .nav.abierta { display: flex; }
     .nav a { padding: 14px 0; font-size: 17px; text-align: center; border-bottom: 1px solid rgba(251, 244, 230, .2); }
-    .nav .nav-insc { border-radius: 999px; margin-top: 12px; padding: 12px 18px; border: 1.5px solid currentColor; }
+    .nav .nav-insc { margin-top: 0; padding: 14px 0; border-bottom: 1px solid rgba(251, 244, 230, .2); }
 
     .portada { text-align: center; padding-top: 44px; }
     .firma { flex-direction: column; gap: 14px; }
@@ -196,3 +196,7 @@ section { padding: 92px 0; }
     .insc-acciones { flex-direction: column; }
     .pie-row { flex-direction: column; align-items: center; text-align: center; }
 }
+
+.dev-credit { width: 100%; text-align: center; opacity: .8; }
+.dev-credit a { color: inherit; text-decoration: underline; }
+.dev-credit a { display: inline-block; padding: 13px 6px; }
