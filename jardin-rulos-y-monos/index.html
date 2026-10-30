@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rulos y Moños | Escuela infantil en Liniers, de 45 días a 4 años</title>
+    <meta name="description" content="Escuela infantil en Liniers (Ibarrola 7065) para niños de 45 días a 4 años. Abierto de 8 a 18 hs, con un proyecto por cada sala. Inscripción abierta todo el año.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="top">
+        <div class="wrap top-row">
+            <a href="#inicio" class="marca">Rulos y Moños</a>
+            <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">Menú</button>
+            <nav class="nav">
+                <a href="#horarios">Horarios</a>
+                <a href="#salas">Salas</a>
+                <a href="#inscripcion" class="nav-insc">Inscripción</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Portada -->
+        <section class="portada" id="inicio">
+            <div class="wrap">
+                <div class="firma">
+                    <img src="perfil.jpg" alt="Logo de la escuela infantil Rulos y Moños" class="firma-foto" width="112" height="112">
+                    <p class="volanta">Escuela infantil<br>Ibarrola 7065, Liniers</p>
+                </div>
+                <h1 class="portada-titulo">De los 45 días a los 4 años, con un proyecto para cada sala.</h1>
+                <svg class="rulo" viewBox="0 0 220 22" aria-hidden="true" focusable="false"><path d="M2 12c14-14 24-14 36 0s24 14 36 0 24-14 36 0 24 14 36 0 24-14 36 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+                <div class="portada-pie">
+                    <p class="portada-texto">Acompañamos el desarrollo de cada niño respetando sus tiempos, sus intereses y sus necesidades. La inscripción está abierta todo el año.</p>
+                    <div class="portada-acciones">
+                        <a href="#inscripcion" class="btn btn-lleno js-contacto">Escribir por WhatsApp</a>
+                        <a href="#horarios" class="btn btn-linea">Ver los horarios</a>
+                    </div>
+                </div>
+                <ul class="datos">
+                    <li><strong>45 días a 4 años</strong>edades que recibe el jardín</li>
+                    <li><strong>8 a 18 hs</strong>con prehora y posthora</li>
+                    <li><strong>Todo el año</strong>para sumarse a una sala</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Horarios -->
+        <section class="horarios" id="horarios">
+            <div class="wrap">
+                <div class="cabecera">
+                    <p class="seccion-num">Un día en el jardín</p>
+                    <h2>Elegís cuántas horas se queda.</h2>
+                    <p class="cabecera-texto">Cada jornada ocupa una franja del día. Cuando una familia necesita llegar antes o retirar más tarde, suma prehora o posthora.</p>
+                </div>
+
+                <div class="reloj" role="group" aria-label="Jornadas y horarios">
+                    <div class="reloj-horas" aria-hidden="true">
+                        <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+                    </div>
+
+                    <div class="fila">
+                        <h3>Prehora</h3>
+                        <div class="barra" aria-hidden="true"><span class="seg c-celeste" style="--a:1;--b:2"></span></div>
+                        <p class="fila-texto">De 8 a 9 hs.</p>
+                    </div>
+
+                    <div class="fila">
+                        <h3>Jornada simple</h3>
+                        <div class="barra" aria-hidden="true">
+                            <span class="seg c-amarillo" style="--a:2;--b:5"></span>
+                            <span class="seg c-amarillo" style="--a:7;--b:10"></span>
+                        </div>
+                        <p class="fila-texto">De 9 a 12 hs, o de 14 a 17 hs.</p>
+                    </div>
+
+                    <div class="fila">
+                        <h3>Jornada extendida</h3>
+                        <div class="barra" aria-hidden="true">
+                            <span class="seg c-verde" style="--a:2;--b:7"></span>
+                        </div>
+                        <div class="barra barra-2" aria-hidden="true">
+                            <span class="seg c-verde" style="--a:5;--b:10"></span>
+                        </div>
+                        <p class="fila-texto">De 9 a 14 hs, o de 12 a 17 hs.</p>
+                    </div>
+
+                    <div class="fila">
+                        <h3>Jornada completa</h3>
+                        <div class="barra" aria-hidden="true"><span class="seg c-rojo" style="--a:2;--b:10"></span></div>
+                        <p class="fila-texto">De 9 a 17 hs.</p>
+                    </div>
+
+                    <div class="fila">
+                        <h3>Posthora</h3>
+                        <div class="barra" aria-hidden="true"><span class="seg c-lila" style="--a:10;--b:11"></span></div>
+                        <p class="fila-texto">De 17 a 18 hs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Salas y proyecto -->
+        <section class="salas" id="salas">
+            <div class="wrap salas-grid">
+                <div class="salas-texto">
+                    <p class="seccion-num">El proyecto</p>
+                    <h2>Cada sala trabaja con su propio proyecto.</h2>
+                    <p>Acompañamos el desarrollo integral de cada niño, respetando sus tiempos, intereses y necesidades. Promovemos el aprendizaje a través de experiencias significativas, tanto individuales como en conjunto.</p>
+                    <p class="salas-ig">Las salas se ven por dentro en las destacadas de Instagram.</p>
+                    <a href="https://www.instagram.com/jardinrulosym/" class="btn btn-claro" target="_blank" rel="noopener">Ver @jardinrulosym</a>
+                </div>
+                <ul class="lista-salas">
+                    <li class="sala s-amarillo"><span class="sala-nombre">Sala de Bebés</span><span class="sala-nota">Los más chicos</span></li>
+                    <li class="sala s-lila"><span class="sala-nombre">Sala Lila</span><span class="sala-nota">En las destacadas</span></li>
+                    <li class="sala s-verde"><span class="sala-nombre">Sala Verde</span><span class="sala-nota">En las destacadas</span></li>
+                    <li class="sala s-celeste"><span class="sala-nombre">Expo de Arte</span><span class="sala-nota">En las destacadas</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Inscripción -->
+        <section class="inscripcion" id="inscripcion">
+            <div class="wrap">
+                <div class="insc-caja">
+                    <p class="seccion-num">Inscripción abierta todo el año</p>
+                    <h2>Escribinos y vemos qué sala y qué jornada le quedan bien a tu familia.</h2>
+                    <div class="insc-datos">
+                        <p><strong>Dónde</strong>Ibarrola 7065, Liniers</p>
+                        <p><strong>WhatsApp</strong>11 6373-1533</p>
+                        <p><strong>Instagram</strong>@jardinrulosym</p>
+                    </div>
+                    <div class="portada-acciones insc-acciones">
+                        <a href="#nota-contacto" class="btn btn-azul js-contacto">Escribir por WhatsApp</a>
+                        <a href="#nota-contacto" class="btn btn-linea-azul js-contacto">Cómo llegar</a>
+                    </div>
+                    <p class="nota" id="nota-contacto" role="status">Los botones de contacto se activan en la versión oficial.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="wrap pie-row">
+            <p class="pie-marca">Rulos y Moños</p>
+            <p>Escuela infantil · Ibarrola 7065, Liniers · 11 6373-1533</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
