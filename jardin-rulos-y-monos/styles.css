@@ -100,9 +100,13 @@ section { padding: 92px 0; }
 
 /* PIEZA nueva: reloj del día (jornadas como franjas sobre una línea de horas) */
 .reloj { max-width: 960px; }
-.reloj-horas { display: grid; grid-template-columns: repeat(10, 1fr) 0; margin-left: 200px; font-size: 13px; color: var(--tinta-suave); margin-bottom: 8px; }
+.reloj-horas {
+    display: grid; grid-template-columns: repeat(10, 1fr) 0; margin-left: 200px; font-size: 13px; color: var(--tinta-suave);
+    position: sticky; top: 66px; z-index: 5; background: var(--crema); padding: 10px 0 8px; border-bottom: 1px solid var(--linea);
+}
 .reloj-horas span { justify-self: start; width: 0; display: flex; justify-content: center; white-space: nowrap; }
 .fila { display: grid; grid-template-columns: 200px 1fr; column-gap: 0; padding: 18px 0; border-top: 1px solid var(--linea); align-items: center; }
+.reloj-horas + .fila { border-top: 0; }
 .fila:last-child { border-bottom: 1px solid var(--linea); }
 .fila h3 { grid-column: 1; grid-row: 1 / span 3; font-size: 20px; color: var(--azul); padding-right: 16px; }
 .barra {
@@ -177,7 +181,7 @@ section { padding: 92px 0; }
 
     .cabecera { text-align: center; }
     .cabecera-texto { margin-inline: auto; }
-    .reloj-horas { margin-left: 0; font-size: 13px; }
+    .reloj-horas { margin-left: 0; font-size: 13px; font-weight: 600; color: var(--azul); }
     .fila { grid-template-columns: 1fr; }
     .fila h3, .barra, .fila-texto { grid-column: 1; }
     .fila h3 { grid-row: auto; padding: 0 0 10px; text-align: left; }
