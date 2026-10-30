@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lic. Victoria Otero | Psicología deportiva en Quilmes y online</title>
+    <meta name="description" content="Psicóloga especializada en deportes. Atención individual para deportistas, plan de trabajo para clubes e instituciones y sesiones online. Consultorio en Lavalle 695, Quilmes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Big+Shoulders+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="top">
+        <div class="wrap top-row">
+            <a href="#inicio" class="marca">
+                <span class="marca-nombre">Victoria Otero</span>
+                <span class="marca-sello">Psicología y deporte</span>
+            </a>
+            <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">Menú</button>
+            <nav class="nav">
+                <a href="#trabajo">Con quién trabajo</a>
+                <a href="#ideas">Cómo lo pienso</a>
+                <a href="#quien">Quién soy</a>
+                <a href="#contacto" class="nav-contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Portada -->
+        <section class="portada" id="inicio">
+            <div class="wrap">
+                <div class="firma">
+                    <img src="perfil.jpg" alt="Lic. Victoria Otero" class="firma-foto" width="104" height="104">
+                    <p class="volanta">Lic. Victoria Otero<br>Psicóloga deportiva</p>
+                </div>
+                <h1 class="portada-titulo">Controla tu mente para conquistar tu cuerpo.</h1>
+                <div class="portada-pie">
+                    <p class="portada-texto">Acompaño a deportistas en el desarrollo de recursos psicológicos que les permiten rendir mejor, disfrutar más del deporte y afrontar los desafíos de la competencia.</p>
+                    <div class="portada-acciones">
+                        <a href="#contacto" class="btn btn-lleno js-contacto">Escribir por WhatsApp</a>
+                        <a href="#trabajo" class="btn btn-linea">Con quién trabajo</a>
+                    </div>
+                </div>
+                <ul class="datos">
+                    <li><strong>Atención individual</strong>para deportistas</li>
+                    <li><strong>Clubes e instituciones</strong>con plan de trabajo a medida</li>
+                    <li><strong>Sesiones online</strong>y consultorio en Quilmes</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Con quién trabajo: índice con panel -->
+        <section class="trabajo" id="trabajo">
+            <div class="wrap">
+                <div class="cabecera">
+                    <p class="seccion-num">01 · Con quién trabajo</p>
+                    <h2>¿Desde dónde llegás al deporte?</h2>
+                    <p class="cabecera-texto">Elegí la opción que más se parece a tu caso y mirá cómo es el trabajo.</p>
+                </div>
+
+                <div class="indice">
+                    <div class="indice-lista" role="tablist">
+                        <button class="indice-item activo" data-panel="p-atleta" role="tab" aria-selected="true"><span class="n">01</span>Soy deportista</button>
+                        <button class="indice-item" data-panel="p-club" role="tab" aria-selected="false"><span class="n">02</span>Represento a un club</button>
+                        <button class="indice-item" data-panel="p-workshop" role="tab" aria-selected="false"><span class="n">03</span>Quiero un workshop</button>
+                        <button class="indice-item" data-panel="p-online" role="tab" aria-selected="false"><span class="n">04</span>Prefiero online</button>
+                    </div>
+                    <div class="indice-paneles">
+                        <article class="panel activo" id="p-atleta">
+                            <h3>Atención individual</h3>
+                            <p>Acompaño a deportistas en el desarrollo de recursos psicológicos que les permiten rendir mejor, disfrutar más del deporte y afrontar los desafíos de la competencia.</p>
+                            <ul class="lista-puntos">
+                                <li>Rendir mejor</li>
+                                <li>Disfrutar más del deporte</li>
+                                <li>Afrontar los desafíos de la competencia</li>
+                            </ul>
+                        </article>
+                        <article class="panel" id="p-club" hidden>
+                            <h3>Clubes e instituciones deportivas</h3>
+                            <p>Incorporar la psicología deportiva en la rutina de tus atletas marca la diferencia en competencia y gestión de la presión.</p>
+                            <p>Se arma un plan de trabajo personalizado para cada institución.</p>
+                        </article>
+                        <article class="panel" id="p-workshop" hidden>
+                            <h3>Workshop de psicología deportiva</h3>
+                            <p>Una instancia para que el equipo se lleve herramientas teórico-prácticas de psicología deportiva.</p>
+                        </article>
+                        <article class="panel" id="p-online" hidden>
+                            <h3>Sesiones online</h3>
+                            <p>La atención también se da online, para deportistas que no pueden llegar al consultorio.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cómo lo pienso -->
+        <section class="ideas" id="ideas">
+            <div class="wrap">
+                <p class="seccion-num">02 · Cómo lo pienso</p>
+                <h2 class="sr">Cómo lo pienso</h2>
+                <blockquote class="frase">No existe la perfección, pero sí un camino de mejora.</blockquote>
+                <blockquote class="frase frase-2">Optimiza tu rendimiento.</blockquote>
+            </div>
+        </section>
+
+        <!-- Quién soy -->
+        <section class="quien" id="quien">
+            <div class="wrap quien-grid">
+                <div>
+                    <p class="seccion-num">03 · Quién soy</p>
+                    <h2>Psicóloga especializada en deportes.</h2>
+                </div>
+                <dl class="cv">
+                    <div><dt>Título</dt><dd>Licenciada, psicóloga especializada en deportes</dd></div>
+                    <div><dt>Especialidad</dt><dd>Psicología y deporte</dd></div>
+                    <div><dt>Atiendo</dt><dd>Deportistas, clubes e instituciones deportivas</dd></div>
+                    <div><dt>Dónde</dt><dd>Consultorio en Lavalle 695, Quilmes, y online</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="contacto" id="contacto">
+            <div class="wrap">
+                <div class="caja">
+                    <p class="seccion-num">04 · Contacto</p>
+                    <h2>Escribime y consultá el plan de trabajo.</h2>
+                    <div class="datos-contacto">
+                        <p><strong>Consultorio</strong>Lavalle 695, Quilmes</p>
+                        <p><strong>WhatsApp</strong>11 6396-0477</p>
+                        <p><strong>Instagram</strong>@psicovictoriaotero</p>
+                    </div>
+                    <div class="portada-acciones caja-acciones">
+                        <a href="#nota-contacto" class="btn btn-claro js-contacto">Escribir por WhatsApp</a>
+                        <a href="#nota-contacto" class="btn btn-linea-clara js-contacto">Ver en Instagram</a>
+                    </div>
+                    <p class="nota" id="nota-contacto" role="status">Los botones de contacto se activan en la versión oficial.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="wrap pie-row">
+            <p class="pie-marca">Lic. Victoria Otero</p>
+            <p>Psicología deportiva · Lavalle 695, Quilmes · Atención online</p>
+            <p class="dev-credit">Demo desarrollada por <a href="https://www.instagram.com/gondev.web" target="_blank" rel="noopener">@gondev.web</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
