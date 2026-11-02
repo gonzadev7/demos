@@ -1,0 +1,145 @@
+/* Demo Locus Vital · dirección moderno con contraste (02/11/2026)
+   Colores: noche verdosa y turquesa del logo, crema y dorado del flyer de su Instagram. */
+
+:root {
+    --noche: #0d1a1a;
+    --noche-2: #14262a;
+    --crema: #efe8d8;
+    --dorado: #d3b06a;
+    --turquesa: #62cdbd;
+    --linea: rgba(239, 232, 216, .22);
+    --suave: #b9c4bd;
+    --titular: 'Josefin Sans', 'Trebuchet MS', sans-serif;
+    --sans: 'Nunito Sans', system-ui, sans-serif;
+    --ancho: 1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+body { margin: 0; background: var(--noche); color: var(--crema); font-family: var(--sans); font-size: 17px; line-height: 1.65; }
+
+h1, h2, h3 { font-family: var(--titular); font-weight: 300; line-height: 1.1; margin: 0; letter-spacing: .02em; }
+p { margin: 0; }
+a { color: inherit; }
+.wrap { width: min(var(--ancho), 100% - 40px); margin-inline: auto; }
+
+/* Encabezado: claro al inicio (contrasta con la portada) y del color de la portada con scroll */
+.top {
+    position: sticky; top: 0; z-index: 10; background: var(--crema); color: var(--noche);
+    border-bottom: 1px solid rgba(13, 26, 26, .35);
+    transition: background .3s, color .3s, border-color .3s;
+}
+.top.solido { background: var(--noche); color: var(--crema); border-bottom-color: var(--linea); }
+.top-row { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+.marca { display: flex; align-items: center; gap: 14px; text-decoration: none; min-height: 44px; }
+.marca-nombre { font-family: var(--titular); font-weight: 600; font-size: 22px; letter-spacing: .12em; text-transform: uppercase; }
+.marca-sello { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #3c6f68; transition: color .3s; }
+.solido .marca-sello { color: var(--turquesa); }
+.nav { display: flex; gap: 28px; font-size: 15px; align-items: center; }
+.nav a { text-decoration: none; opacity: .88; }
+.nav a:hover { opacity: 1; }
+.nav .nav-contacto { opacity: 1; border-bottom: 1.5px solid currentColor; padding-bottom: 2px; }
+.menu-btn { display: none; background: none; border: 1.5px solid currentColor; border-radius: 999px; padding: 0 22px; min-height: 44px; font: inherit; font-size: 15px; cursor: pointer; color: inherit; }
+
+/* Botones */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 30px; font-size: 15px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; border: 1.5px solid transparent; border-radius: 4px; transition: background .2s, color .2s; }
+.btn-lleno { background: var(--dorado); color: var(--noche); }
+.btn-lleno:hover { background: #e4c88d; }
+.btn-linea { border-color: var(--crema); color: var(--crema); }
+.btn-linea:hover { background: var(--crema); color: var(--noche); }
+.btn-claro { background: var(--noche); color: var(--crema); }
+.btn-claro:hover { background: #000; }
+.btn-linea-clara { border-color: var(--noche); color: var(--noche); }
+.btn-linea-clara:hover { background: var(--noche); color: var(--dorado); }
+
+/* Portada */
+.portada { padding: 80px 0 96px; text-align: center; }
+.logo { width: 170px; height: 170px; border-radius: 50%; object-fit: cover; border: 2px solid var(--dorado); box-shadow: 0 0 0 8px rgba(98, 205, 189, .12); margin-bottom: 30px; }
+.volanta { font-size: 14px; letter-spacing: .22em; text-transform: uppercase; color: var(--turquesa); margin-bottom: 18px; }
+.portada-titulo { font-size: clamp(40px, 6.4vw, 78px); max-width: 14ch; margin-inline: auto; color: var(--crema); }
+.portada-texto { margin: 24px auto 0; max-width: 52ch; color: var(--suave); font-size: 18px; }
+.portada-acciones { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 36px; }
+
+/* Secciones */
+section { padding: 96px 0; }
+.seccion-num { font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--dorado); font-weight: 700; margin-bottom: 14px; }
+h2 { font-size: clamp(32px, 4.6vw, 56px); }
+
+/* Espacios */
+.espacios { background: var(--noche-2); border-block: 1px solid var(--linea); }
+.grilla { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; }
+.espacio { border: 1px solid var(--linea); border-top: 3px solid var(--dorado); padding: 32px 30px 36px; background: var(--noche); }
+.espacio-n { font-family: var(--titular); font-size: 15px; letter-spacing: .2em; color: var(--turquesa); }
+.espacio h3 { font-size: 30px; font-weight: 400; margin: 10px 0 12px; }
+.espacio p { color: var(--suave); }
+.duraciones { list-style: none; padding: 0; margin: 20px 0 0; display: flex; gap: 10px; flex-wrap: wrap; }
+.duraciones li { min-width: 56px; text-align: center; padding: 8px 14px; border: 1px solid var(--dorado); color: var(--dorado); font-family: var(--titular); font-size: 18px; font-weight: 600; }
+
+/* Jornada */
+.jornada-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.jornada-fecha { border: 1px solid var(--dorado); padding: 40px 40px 44px; background: var(--noche); }
+.fecha-dia { font-family: var(--titular); text-transform: uppercase; letter-spacing: .3em; font-size: 15px; color: var(--turquesa); }
+.fecha-num { font-family: var(--titular); font-weight: 300; font-size: clamp(34px, 4.6vw, 54px); line-height: 1.1; margin: 8px 0 14px; color: var(--dorado); }
+.fecha-lugar { color: var(--crema); }
+.fecha-nota { margin-top: 12px; color: var(--suave); }
+
+/* Turnos */
+.turnos { background: var(--crema); color: var(--noche); }
+.turnos .seccion-num { color: #8a6a2a; }
+.turnos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.turnos-texto p { margin-bottom: 18px; max-width: 46ch; }
+.turnos-texto .btn { margin-top: 10px; }
+.turnos .btn-lleno { background: var(--noche); color: var(--crema); }
+.turnos .btn-lleno:hover { background: #000; }
+
+/* Contacto */
+.contacto { padding: 80px 0; }
+.caja { background: var(--dorado); color: var(--noche); padding: 56px 52px; }
+.caja .seccion-num { color: #4a3a14; }
+.caja h2 { font-size: clamp(36px, 5vw, 60px); }
+.datos-contacto { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 12px 52px; margin: 30px 0 4px; font-size: 18px; }
+.datos-contacto strong { display: block; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; opacity: .75; }
+.caja-acciones { justify-content: flex-start; }
+.nota { margin-top: 22px; font-size: 14px; }
+.nota.resaltada { font-weight: 700; background: var(--noche); color: var(--crema); padding: 10px 16px; display: inline-block; }
+.tel { white-space: nowrap; }
+
+/* Pie */
+.pie { background: var(--noche); border-top: 1px solid var(--linea); padding: 28px 0 36px; font-size: 14px; color: var(--suave); }
+.pie-row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; }
+.pie-marca { font-family: var(--titular); font-weight: 600; font-size: 18px; letter-spacing: .12em; text-transform: uppercase; color: var(--crema); }
+.dev-credit a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; }
+
+/* Celular */
+@media (max-width: 900px) {
+    .grilla, .jornada-grid, .turnos-grid { grid-template-columns: 1fr; gap: 24px; }
+    .jornada-grid, .turnos-grid { gap: 36px; }
+    .datos-contacto { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+    body { font-size: 16px; }
+    section { padding: 64px 0; }
+    .menu-btn { display: inline-flex; align-items: center; }
+    .marca-sello { display: none; }
+    .nav { display: none; position: absolute; top: 66px; left: 0; right: 0; flex-direction: column; gap: 0; align-items: stretch; background: var(--noche); color: var(--crema); padding: 8px 20px 20px; border-top: 1px solid var(--linea); }
+    .nav.abierta { display: flex; }
+    .nav a { padding: 14px 0; font-size: 17px; text-align: center; border-bottom: 1px solid var(--linea); }
+    .nav .nav-contacto { padding: 14px 0; }
+
+    .portada { padding: 48px 0 64px; }
+    .logo { width: 150px; height: 150px; }
+    .portada-acciones { flex-direction: column; }
+    .btn { width: 100%; }
+    .espacios, .jornada, .turnos, .caja { text-align: center; }
+    .espacio { text-align: center; }
+    .duraciones { justify-content: center; }
+    .jornada-fecha { padding: 32px 22px 36px; }
+    .turnos-texto p { margin-inline: auto; }
+    .caja { padding: 40px 24px 44px; }
+    .caja-acciones { justify-content: center; }
+    .datos-contacto { justify-items: center; }
+    .pie-row { flex-direction: column; align-items: center; text-align: center; }
+}
