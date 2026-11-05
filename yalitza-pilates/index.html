@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yalitza Pilates · Claudia Bazán · Bella Vista</title>
+<meta name="description" content="Pilates consciente 360° en Bella Vista con Claudia Bazán. Pre y post bariátrica, +60, fuerza, columpio y hábitos, esferodinamia.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header id="encabezado">
+  <a class="marca" href="#inicio">Yalitza Pilates</a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menú</button>
+  <nav id="nav" aria-label="Principal">
+    <a href="#que-buscas">Qué buscás</a>
+    <a href="#claudia">Claudia</a>
+    <a href="#empezar">Empezar</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <img class="perfil" src="perfil.jpg" width="144" height="144" alt="Claudia Bazán, de Yalitza Pilates, sentada sobre una esfera">
+    <p class="sobre">Claudia Bazán · Bella Vista</p>
+    <h1>Pilates consciente <em>360°</em></h1>
+    <p class="bajada">Pre y post bariátrica. +60. Fuerza, columpio y hábitos.</p>
+    <button class="btn" data-nota>Escribirle a Claudia</button>
+    <p class="nota" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+
+  <section class="datos" aria-label="Datos">
+    <h2 class="sr">Datos</h2>
+    <dl>
+      <div><dt>Dónde</dt><dd>Bella Vista, Buenos Aires</dd></div>
+      <div><dt>Método</dt><dd>Pilates consciente 360°</dd></div>
+      <div><dt>Para quién</dt><dd>Pre y post bariátrica · +60</dd></div>
+      <div><dt>Comunidad</dt><dd>Evolución 360°, grupo de WhatsApp</dd></div>
+    </dl>
+  </section>
+
+  <section class="busca" id="que-buscas">
+    <h2>¿Qué estás buscando hoy?</h2>
+    <div class="indice">
+      <div class="tabs" role="tablist" aria-label="Qué buscás">
+        <button role="tab" data-e="0" aria-selected="true">Pre y post bariátrica</button>
+        <button role="tab" data-e="1" aria-selected="false">+60: fuerza, columpio y hábitos</button>
+        <button role="tab" data-e="2" aria-selected="false">Esferodinamia</button>
+        <button role="tab" data-e="3" aria-selected="false">Esfera flow y EsferoKIDS</button>
+        <button role="tab" data-e="4" aria-selected="false">Una comunidad para acompañarme</button>
+      </div>
+      <div class="panel" aria-live="polite">
+        <h3 id="panel-titulo">Pre y post bariátrica</h3>
+        <p id="panel-texto">Claudia trabaja Pilates consciente antes y después de una cirugía bariátrica. Contale en qué momento estás y cómo te sentís.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="claudia" id="claudia">
+    <h2>En palabras<br>de Claudia</h2>
+    <blockquote>“Tus caderas no mejoran con la edad, mejoran con movilidad y fuerza.”</blockquote>
+    <p class="cita-pie">Del Instagram @yalitzapilates</p>
+    <blockquote>“Plancha sobre esfera: ¿por qué duele la cintura? 3 errores que lesionan.”</blockquote>
+    <p class="cita-pie">Del Instagram @yalitzapilates</p>
+  </section>
+
+  <section class="empezar" id="empezar">
+    <h2>Cómo empezar</h2>
+    <ol class="pasos">
+      <li><b>1</b><span>Escribile a Claudia por WhatsApp y contale qué buscás.</span></li>
+      <li><b>2</b><span>Ella te cuenta qué propuesta se adapta a vos.</span></li>
+      <li><b>3</b><span>Arrancás a moverte y, si querés, te sumás a Evolución 360°.</span></li>
+    </ol>
+  </section>
+
+  <section class="cierre" id="contacto">
+    <h2>Empezá cuando quieras.</h2>
+    <p>Bella Vista, Buenos Aires.</p>
+    <button class="btn" data-nota>Escribir por WhatsApp</button>
+    <p class="nota" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+<button class="flotante" data-nota aria-label="Escribirle a Claudia">Escribirle a Claudia</button>
+<p class="nota nota-flot" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+<script src="script.js"></script>
+</body>
+</html>
