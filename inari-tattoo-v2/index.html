@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inari Tattoo Studio · Villa Sarmiento</title>
+<meta name="description" content="Estudio de tatuajes en Villa Sarmiento, Zona Oeste. Fine Line, Anime, Japonés, BlackWork, Neotradicional y Realismo. Atención privada y profesional.">
+<meta name="robots" content="noindex">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header id="encabezado">
+  <a class="marca" href="#inicio"><img src="logo.jpg" width="36" height="36" alt="" aria-hidden="true"><span>Inari Tattoo Studio</span></a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menú</button>
+  <nav id="nav" aria-label="Principal">
+    <a href="#estilos">Estilos</a>
+    <a href="#estudio">El estudio</a>
+    <a href="#turno">Turnos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <span class="progreso" aria-hidden="true"></span>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <svg class="lineas lineas-d" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path pathLength="1" d="M1010-20C860 130 1120 280 960 430S760 650 900 830"/>
+      <path pathLength="1" d="M1090-20C940 140 1200 300 1040 450S840 660 980 830"/>
+      <path pathLength="1" d="M180 830C330 690 70 560 230 400S420 130 290-20"/>
+    </svg>
+    <svg class="lineas lineas-m" viewBox="0 0 390 844" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path pathLength="1" d="M330-20C250 120 400 240 320 400S210 640 300 870"/>
+      <path pathLength="1" d="M372-20C292 130 442 260 362 420S252 650 342 870"/>
+      <path pathLength="1" d="M40 870C120 730-20 620 60 470S130 150 70-20"/>
+    </svg>
+    <p class="sobre">Villa Sarmiento · Zona Oeste</p>
+    <h1><span class="renglon"><span>Entender el cuerpo.</span></span> <span class="renglon"><span><em>Respetar sus líneas.</em></span></span></h1>
+    <p class="bajada">Construimos una pieza que fluya con él. Atención privada y profesional, de lunes a sábados.</p>
+    <button class="btn" data-nota>Pedir turno</button>
+    <p class="nota" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    <span class="bajar" aria-hidden="true"></span>
+  </section>
+
+  <section class="datos" aria-label="Datos del estudio">
+    <h2 class="sr">Datos</h2>
+    <dl>
+      <div><dt>Dirección</dt><dd>Av. Presidente Perón 401, Villa Sarmiento</dd></div>
+      <div><dt>Horario</dt><dd>Lunes a sábados de 12 a 20 hs</dd></div>
+      <div><dt>Atención</dt><dd>Privada y profesional</dd></div>
+      <div><dt>Presupuesto</dt><dd>Cotizá tu estilo</dd></div>
+    </dl>
+  </section>
+
+  <div class="cinta" aria-hidden="true"><div class="cinta-pista"><span>Fine Line</span><span>Anime</span><span>Japonés</span><span>BlackWork</span><span>Neotradicional</span><span>Realismo</span><span>Fine Line</span><span>Anime</span><span>Japonés</span><span>BlackWork</span><span>Neotradicional</span><span>Realismo</span></div></div>
+
+  <section class="estilos" id="estilos">
+    <h2>Seis estilos,<br>un mismo nivel de exigencia.</h2>
+    <div class="indice">
+      <div class="tabs" role="tablist" aria-label="Estilos">
+        <button role="tab" data-e="0" aria-selected="true">Fine Line</button>
+        <button role="tab" data-e="1" aria-selected="false">Anime</button>
+        <button role="tab" data-e="2" aria-selected="false">Japonés</button>
+        <button role="tab" data-e="3" aria-selected="false">BlackWork</button>
+        <button role="tab" data-e="4" aria-selected="false">Neotradicional</button>
+        <button role="tab" data-e="5" aria-selected="false">Realismo</button>
+      </div>
+      <div class="panel" aria-live="polite">
+        <span class="panel-num" id="panel-num" aria-hidden="true">01 / 06</span>
+        <div class="marco"><img id="panel-foto" src="fineline.jpg" width="311" height="313" alt="Tatuaje fine line en un brazo, trabajo del estudio"><svg id="panel-vacio" class="vacio" viewBox="0 0 400 400" aria-hidden="true" hidden><path pathLength="1" d="M300-10C180 90 360 170 250 260S120 340 190 410"/><path pathLength="1" d="M360-10C240 100 420 190 310 280S180 350 250 410"/><path pathLength="1" d="M60 410C150 310-20 240 90 140S150 60 110-10"/></svg></div>
+        <h3 id="panel-titulo">Fine Line</h3>
+        <p id="panel-texto">Trabajo de línea fina. Mirá cómo lo resolvemos en el Instagram del estudio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="estudio" id="estudio">
+    <h2>Un estudio privado,<br>con nombre propio.</h2>
+    <p class="cita">“Se trata de entender el cuerpo, respetar sus líneas y construir una pieza que fluya con él.”</p>
+    <p class="cita-pie">Del Instagram de Inari Tattoo Studio · +10 mil seguidores</p>
+    <p class="estudio-txt">Nueva imagen. Mismo nivel de exigencia. Detrás de cada trabajo hay un equipo de artistas: conocelos en el Instagram del estudio.</p>
+  </section>
+
+  <section class="turno" id="turno">
+    <h2>Cómo pedir turno</h2>
+    <ol class="pasos">
+      <li><b>01</b><span>Escribinos por mensaje directo o WhatsApp contando qué querés tatuarte y en qué zona del cuerpo.</span></li>
+      <li><b>02</b><span>Te cotizamos según tu estilo.</span></li>
+      <li><b>03</b><span>Coordinamos el día y la hora. Atendemos de lunes a sábados de 12 a 20 hs.</span></li>
+    </ol>
+  </section>
+
+  <section class="cierre" id="contacto">
+    <h2>Contanos tu idea.</h2>
+    <p>Av. Presidente Perón 401, Villa Sarmiento.</p>
+    <button class="btn" data-nota>Escribir por WhatsApp</button>
+    <p class="nota" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    <button class="btn btn-sec" data-nota>Ver Instagram</button>
+    <p class="nota" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+<button class="flotante" data-nota aria-label="Pedir turno">Pedir turno</button>
+<p class="nota nota-flot" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+<script src="script.js"></script>
+</body>
+</html>
