@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bella Unghie hair &amp; nails · Belén de Escobar</title>
+<meta name="description" content="Pasión por tu cabello, elegancia en cada detalle. Colorimetría, cortes y manos y pies en Belén de Escobar. De martes a sábados de 10 a 20.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="encabezado" id="encabezado">
+  <a class="marca" href="#inicio" aria-label="Bella Unghie hair &amp; nails, inicio">BELLA UNGHIE</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+  <nav id="nav" aria-label="Principal">
+    <a href="#trabajamos">Qué trabajamos</a>
+    <a href="#tips">Tips</a>
+    <a href="#turno">Cómo pedir turno</a>
+    <a href="#contacto">Dónde estamos</a>
+  </nav>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <img class="logo" src="logo.jpg" width="120" height="120" alt="Bella Unghie hair &amp; nails, foto de perfil de Instagram">
+    <p class="sobre">Belén de Escobar · hair &amp; nails</p>
+    <h1>Pasión por tu cabello, <em>elegancia en cada detalle.</em></h1>
+    <p class="bajada">Lo nuestro es el color y el corte. Y también tus manos y tus pies.</p>
+    <button class="btn" type="button" data-nota>Pedí tu turno</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    <div class="paleta" aria-hidden="true">
+      <i style="--c:#ECE3D0"></i><i style="--c:#CFA763"></i><i style="--c:#B8683F"></i><i style="--c:#7A4630"></i><i style="--c:#3A2218"></i><i style="--c:#A3A19D"></i>
+    </div>
+  </section>
+
+  <section class="datos">
+    <h2 class="sr">Datos rápidos</h2>
+    <dl>
+      <div><dt>Atendemos</dt><dd>Martes a sábados<br>10:00 a 20:00</dd></div>
+      <div><dt>Estamos en</dt><dd>Belén de Escobar<br>Bo. San Matías</dd></div>
+      <div><dt>En Instagram</dt><dd>35,5 mil seguidores<br>@bellaunghie</dd></div>
+      <div><dt>En Google</dt><dd>4,9 de puntaje<br>46 opiniones</dd></div>
+    </dl>
+  </section>
+
+  <section class="foco" id="foco">
+    <p class="rotulo">Qué nos distingue</p>
+    <h2>Más enfocados en el color y los cortes.</h2>
+    <p>Se trabajan mucho las manos y los pies, pero el corazón del lugar es la <strong>colorimetría</strong> y los <strong>cortes</strong>. Venís por tu pelo; las uñas se suman si querés.</p>
+  </section>
+
+  <section class="trabajamos" id="trabajamos">
+    <p class="rotulo">Qué trabajamos</p>
+    <h2>Elegí por dónde empezar</h2>
+    <div class="indice">
+      <div class="tabs" role="tablist" aria-label="Servicios">
+        <button type="button" role="tab" data-serv aria-selected="true">Color</button>
+        <button type="button" role="tab" data-serv aria-selected="false">Cortes</button>
+        <button type="button" role="tab" data-serv aria-selected="false">Manos y pies</button>
+      </div>
+      <div class="panel" role="tabpanel" aria-live="polite">
+        <h3 id="panel-titulo"></h3>
+        <p id="panel-texto"></p>
+        <p class="cuando" id="panel-cuando"></p>
+        <div class="fotos" id="panel-fotos" hidden>
+          <img src="manos-m4.jpg" width="700" height="933" loading="lazy" alt="Manos con esmaltado en rosa fucsia y detalles de colores">
+          <img src="manos-m6.jpg" width="487" height="865" loading="lazy" alt="Uñas almendradas con degradé en blanco y negro y destellos">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tips" id="tips">
+    <p class="rotulo">Cuidá tu pelo en casa</p>
+    <h2>Los videos que hacemos para vos</h2>
+    <p class="intro">Además de trabajar en el salón, Sergio sube videos con tips de trabajo para que entiendas qué le hacés a tu pelo. Algunos de los últimos:</p>
+    <ol class="lista">
+      <li><span>01</span>¿Estás haciendo bien el baño de crema?</li>
+      <li><span>02</span>El Niño: kit de supervivencia capilar</li>
+      <li><span>03</span>¿Usás la cantidad correcta de producto?</li>
+      <li><span>04</span>Botox, keratina y alisado: no todo lo que te venden es verdad</li>
+      <li><span>05</span>¿Por qué ese producto que a todas les funciona a vos no te da el mismo resultado?</li>
+    </ol>
+    <button class="enlace" type="button" data-nota>Ver todos en @bellaunghie</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+
+  <section class="turno" id="turno">
+    <p class="rotulo">Cómo pedir turno</p>
+    <h2>Tres pasos y listo</h2>
+    <ol class="pasos">
+      <li><b>I</b><div><h3>Escribinos</h3><p>Por WhatsApp, el mismo canal por el que ya nos consultás.</p></div></li>
+      <li><b>II</b><div><h3>Contanos qué querés</h3><p>Color, corte, manos o pies. Si querés, mandá una foto de lo que tenés en mente.</p></div></li>
+      <li><b>III</b><div><h3>Confirmamos día y hora</h3><p>Atendemos de martes a sábados, de 10:00 a 20:00.</p></div></li>
+    </ol>
+  </section>
+
+  <div class="banda" aria-hidden="true"><i style="--c:#ECE3D0"></i><i style="--c:#CFA763"></i><i style="--c:#B8683F"></i><i style="--c:#7A4630"></i><i style="--c:#3A2218"></i><i style="--c:#A3A19D"></i></div>
+  <section class="cierre" id="contacto">
+    <p class="rotulo claro">Dónde estamos</p>
+    <h2>Belén de Escobar</h2>
+    <p>Bo. San Matías, Belén de Escobar, Provincia de Buenos Aires.<br>Martes a sábados, de 10:00 a 20:00.</p>
+    <button class="btn claro" type="button" data-nota>Pedí tu turno</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
