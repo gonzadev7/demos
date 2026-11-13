@@ -1,0 +1,110 @@
+:root{--verde:#0f5b62;--profundo:#08363b;--rojo:#d6453d;--blanco:#fbfcfc;--hielo:#e6f0f0;--tinta:#13262a;--gris:#51666a;--linea:#c5d6d7}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:'Source Sans 3',system-ui,sans-serif;background:var(--blanco);color:var(--tinta);line-height:1.6;font-size:1.05rem}
+h1,h2,h3{font-family:'Red Hat Display',system-ui,sans-serif;font-weight:800;line-height:1.08;color:var(--profundo)}
+h2{font-size:clamp(1.8rem,4.4vw,2.7rem);margin-bottom:24px}
+h3{font-size:1.2rem;font-weight:700;margin-bottom:4px}
+a{color:inherit}
+.solo-lector{position:absolute;left:-9999px}
+
+/* Encabezado: sólido en el verde de la marca, vidrio esmerilado al scrollear */
+.encabezado{position:fixed;top:0;left:0;right:0;z-index:20;background:var(--verde);color:#fff;border-bottom:1px solid rgba(255,255,255,.35);transition:background-color .3s,backdrop-filter .3s,border-color .3s}
+.encabezado.vidrio{background:rgba(15,91,98,.72);-webkit-backdrop-filter:blur(12px) saturate(1.2);backdrop-filter:blur(12px) saturate(1.2);border-color:rgba(255,255,255,.2)}
+.cinta{max-width:1080px;margin:0 auto;padding:0 24px;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.marca{text-decoration:none;min-height:44px;justify-content:center;font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1.2rem;line-height:1.1;display:flex;flex-direction:column}
+.marca small{font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
+nav{display:flex;gap:26px}
+nav a{text-decoration:none;font-weight:600;font-size:.95rem;padding:6px 0;border-bottom:1px solid transparent}
+nav a:hover{border-color:#fff}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.7);color:#fff;font:600 .95rem 'Source Sans 3',sans-serif;border-radius:8px;min-height:44px;padding:0 18px;cursor:pointer}
+
+main{padding-top:64px}
+section{padding:72px max(24px,calc((100% - 1032px)/2))}
+.etiqueta{font-weight:700;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rojo);margin-bottom:14px}
+
+/* Portada con línea de latido */
+.portada{padding-top:64px;padding-bottom:0;overflow:hidden}
+.portada h1{font-size:clamp(2.4rem,6.8vw,4.6rem);max-width:13em;margin-bottom:22px}
+.bajada{font-size:1.15rem;max-width:32em;color:var(--gris);margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;background:var(--rojo);color:#fff;border:0;border-radius:8px;font:700 1rem 'Source Sans 3',sans-serif;cursor:pointer;transition:background-color .2s}
+.btn:hover{background:#b8342d}
+.btn.claro{background:#fff;color:var(--profundo)}
+.btn.claro:hover{background:var(--hielo)}
+.nota{margin-top:14px;font-size:.92rem;color:var(--gris);max-width:30em}
+.latido{display:block;width:100%;height:110px;margin-top:40px}
+.latido path{fill:none;stroke:var(--rojo);stroke-width:3;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;animation:trazo 2.6s ease-out .3s forwards}
+@keyframes trazo{to{stroke-dashoffset:0}}
+
+/* Franja de datos */
+.datos{background:var(--profundo);color:#fff;padding-top:0;padding-bottom:0}
+.datos ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.datos li{padding:30px 18px;border-left:1px solid rgba(255,255,255,.2)}
+.datos li:first-child{border-left:0;padding-left:0}
+.datos b{display:block;font-family:'Red Hat Display',sans-serif;font-size:1.6rem;line-height:1.15}
+.datos span{font-size:.88rem;opacity:.8}
+
+/* Formación como CV */
+.cv{list-style:none;max-width:780px}
+.cv li{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--linea)}
+.cv li:last-child{border-bottom:1px solid var(--linea)}
+.cv li>span{font-weight:700;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);padding-top:5px}
+.cv p{color:var(--gris)}
+
+/* Pasos */
+.pasos{background:var(--hielo)}
+.pasos ol{list-style:none;max-width:760px}
+.pasos li{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:24px 0;border-top:1px solid var(--linea)}
+.pasos li:last-child{border-bottom:1px solid var(--linea)}
+.num{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--rojo);color:#fff;font:800 1.25rem 'Red Hat Display',sans-serif}
+.pasos p:not(.etiqueta){color:var(--gris);max-width:32em}
+
+/* Horarios */
+.dos{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
+table{width:100%;border-collapse:collapse}
+th,td{padding:13px 0;border-bottom:1px solid var(--linea);text-align:left;font-weight:500}
+td{text-align:right;font-variant-numeric:tabular-nums}
+th{font-weight:700}
+.cerrado th,.cerrado td{color:var(--gris);font-weight:400}
+address{font-style:normal;background:var(--hielo);border-radius:10px;padding:28px;line-height:1.7}
+address b{display:block;font-family:'Red Hat Display',sans-serif;font-size:1.35rem;color:var(--profundo);margin-bottom:8px}
+.tel{display:block;margin-top:14px;color:var(--gris)}
+
+/* Cierre */
+.contacto{background:var(--verde);color:#fff;text-align:center}
+.contacto h2{color:#fff;margin-left:auto;margin-right:auto;max-width:16em}
+.contacto p{margin:0 auto 26px;opacity:.92}
+.contacto .nota{margin:14px auto 0;color:#fff}
+.pie a{display:inline-block;padding:13px 6px}
+.pie{padding:14px 24px;text-align:center;font-size:.88rem;color:var(--gris);background:var(--blanco)}
+.flotante{display:none}
+
+@media (max-width:760px){
+  .menu-btn{display:inline-flex;align-items:center}
+  nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--verde);flex-direction:column;gap:0;padding:8px 24px 18px;border-top:1px solid rgba(255,255,255,.25)}
+  nav.abierto{display:flex}
+  nav a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+  section{padding:52px 20px}
+  .datos{padding-top:0;padding-bottom:0}
+  .portada{padding-bottom:0}
+  .cinta{padding:0 20px}
+  .portada{text-align:center;padding-top:44px}
+  .portada h1,.bajada{margin-left:auto;margin-right:auto}
+  .portada .btn{width:100%}
+  .nota{text-align:center;margin-left:auto;margin-right:auto}
+  .latido{height:80px}
+  .datos ul{grid-template-columns:1fr 1fr}
+  .datos li{padding:22px 14px;border-left:0;border-top:1px solid rgba(255,255,255,.2)}
+  .datos li:nth-child(-n+2){border-top:0}
+  .datos li:nth-child(odd){border-right:1px solid rgba(255,255,255,.2);padding-left:0}
+  .datos li:nth-child(even){padding-left:18px}
+  .datos b{font-size:1.3rem}
+  .cv li{grid-template-columns:1fr;gap:4px}
+  .pasos li{grid-template-columns:58px 1fr}
+  .dos{grid-template-columns:1fr;gap:28px}
+  .contacto .btn{width:100%}
+  .flotante{display:flex;position:fixed;left:16px;right:16px;bottom:14px;z-index:9;min-height:52px;align-items:center;justify-content:center;background:var(--rojo);color:#fff;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+  .flotante.oculta{display:none}
+  .pie{padding-bottom:86px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.latido path{animation:none;stroke-dashoffset:0}}

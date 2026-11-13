@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabriela Matute · Abogada laboralista en CABA</title>
+<meta name="description" content="Gabriela Matute, abogada. Defiende a trabajadores: despidos, ART, discriminación con enfoque de género. Asesora a pymes. Sucesiones y divorcios. CABA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="encabezado" id="encabezado">
+  <div class="cinta">
+    <a class="marca" href="#inicio">Gabriela Matute<small>Abogada</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#areas">Áreas</a>
+      <a href="#pasos">Cómo empezar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <p class="etiqueta">Estudio jurídico · CABA</p>
+    <h1>Defiendo a <em>trabajadores.</em></h1>
+    <p class="bajada">Despidos, ART y discriminación, con enfoque de género. También asesoro a pymes y llevo sucesiones y divorcios.</p>
+    <button class="btn" type="button" data-nota>Contame tu caso por WhatsApp</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+
+  <section class="datos" id="datos">
+    <h2 class="solo-lector">Datos rápidos</h2>
+    <ul>
+      <li><b>Trabajadores</b><span>Despidos, ART, discriminación</span></li>
+      <li><b>Género</b><span>Enfoque de género</span></li>
+      <li><b>Pymes</b><span>Asesoramiento</span></li>
+      <li><b>CABA</b><span>Buenos Aires</span></li>
+    </ul>
+  </section>
+
+  <section class="areas" id="areas">
+    <p class="etiqueta">Áreas</p>
+    <h2>¿Qué te está pasando?</h2>
+    <div class="indice">
+      <div class="lista" role="tablist" aria-label="Situaciones">
+        <button type="button" role="tab" id="t1" aria-selected="true" aria-controls="p1">Me despidieron</button>
+        <button type="button" role="tab" id="t2" aria-selected="false" aria-controls="p2" tabindex="-1">Tuve un accidente de trabajo</button>
+        <button type="button" role="tab" id="t3" aria-selected="false" aria-controls="p3" tabindex="-1">Sufro discriminación</button>
+        <button type="button" role="tab" id="t4" aria-selected="false" aria-controls="p4" tabindex="-1">Tengo una pyme</button>
+        <button type="button" role="tab" id="t5" aria-selected="false" aria-controls="p5" tabindex="-1">Sucesión o divorcio</button>
+      </div>
+      <div class="paneles">
+        <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
+          <h3>Despidos</h3>
+          <p>Defiendo a trabajadores que fueron despedidos. En la primera consulta revisamos tu situación y la documentación que tengas.</p>
+        </div>
+        <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+          <h3>ART</h3>
+          <p>Te acompaño si tuviste un accidente o una enfermedad vinculada a tu trabajo y necesitás reclamar frente a la ART.</p>
+        </div>
+        <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+          <h3>Discriminación, con enfoque de género</h3>
+          <p>Atiendo casos de discriminación en el trabajo, mirando cada situación con perspectiva de género.</p>
+        </div>
+        <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+          <h3>Asesoramiento a pymes</h3>
+          <p>Asesoro a pequeñas y medianas empresas en sus temas legales.</p>
+        </div>
+        <div class="panel" role="tabpanel" id="p5" aria-labelledby="t5" hidden>
+          <h3>Sucesiones y divorcios</h3>
+          <p>También llevo sucesiones y divorcios, además de la defensa de trabajadores.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pasos" id="pasos">
+    <p class="etiqueta">Cómo empezar</p>
+    <h2>Tu consulta, en tres pasos.</h2>
+    <ol>
+      <li><span class="num" aria-hidden="true">01</span><div><h3>Escribime</h3><p>Contame en pocas líneas qué pasó. Por WhatsApp, cuando puedas.</p></div></li>
+      <li><span class="num" aria-hidden="true">02</span><div><h3>Reuní lo que tengas</h3><p>Recibos de sueldo, mensajes, telegramas o cualquier papel que tengas sobre tu caso.</p></div></li>
+      <li><span class="num" aria-hidden="true">03</span><div><h3>Vemos qué camino sigue</h3><p>Analizamos tu situación y te explico las opciones.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>Contame qué pasó.</h2>
+    <p>Atención en CABA, por consulta previa.</p>
+    <button class="btn claro" type="button" data-nota>Contame tu caso por WhatsApp</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<a class="flotante" href="#contacto">Contame tu caso por WhatsApp</a>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facundo Allegri · Cardiología veterinaria en Rosario</title>
+<meta name="description" content="Facundo Allegri, médico veterinario cardiólogo, especialista en Cardiología Clínica Veterinaria (UBA). Kardia, Moreno 1441, Rosario.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="encabezado" id="encabezado">
+  <div class="cinta">
+    <a class="marca" href="#inicio">Facundo Allegri<small>Cardiología veterinaria</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#formacion">Formación</a>
+      <a href="#pasos">Cómo pedir turno</a>
+      <a href="#horarios">Horarios</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <p class="etiqueta">Cardiología veterinaria · Rosario</p>
+    <h1>El corazón de tu mascota, en manos de un cardiólogo.</h1>
+    <p class="bajada">Facundo Allegri, médico veterinario especialista en Cardiología Clínica Veterinaria (UBA). Atiende en Kardia, Moreno 1441, Rosario.</p>
+    <button class="btn" type="button" data-nota>Pedí tu turno por WhatsApp</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    <svg class="latido" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M0 70 H250 L290 70 L320 25 L360 105 L395 10 L430 70 H560 L585 58 L610 70 H700 L735 70 L765 30 L800 100 L830 70 H1000" pathLength="1"/>
+    </svg>
+  </section>
+
+  <section class="datos" id="datos">
+    <h2 class="solo-lector">Datos rápidos</h2>
+    <ul>
+      <li><b>UBA</b><span>Especialista en Cardiología Clínica</span></li>
+      <li><b>8:30 a 19 h</b><span>Lunes a viernes</span></li>
+      <li><b>4,8</b><span>Puntaje en Google</span></li>
+      <li><b>Rosario</b><span>Moreno 1441</span></li>
+    </ul>
+  </section>
+
+  <section class="formacion" id="formacion">
+    <p class="etiqueta">Quién te atiende</p>
+    <h2>Solo corazón: es su especialidad.</h2>
+    <ul class="cv">
+      <li><span>Título</span><div><h3>Médico veterinario</h3></div></li>
+      <li><span>Especialidad</span><div><h3>Cardiólogo veterinario</h3><p>Especialista en Cardiología Clínica Veterinaria (UBA).</p></div></li>
+      <li><span>Docencia</span><div><h3>Docente del servicio de Cardiología de la UBA</h3></div></li>
+    </ul>
+  </section>
+
+  <section class="pasos" id="pasos">
+    <p class="etiqueta">Cómo pedir turno</p>
+    <h2>Tres pasos, sin vueltas.</h2>
+    <ol>
+      <li><span class="num" aria-hidden="true">1</span><div><h3>Escribinos o pedí turno online</h3><p>Por WhatsApp o desde el enlace de turnos online que ya tiene Facundo.</p></div></li>
+      <li><span class="num" aria-hidden="true">2</span><div><h3>Elegís el día</h3><p>Coordinamos dentro de la atención: lunes a viernes, de 8:30 a 19.</p></div></li>
+      <li><span class="num" aria-hidden="true">3</span><div><h3>Venís a Kardia</h3><p>Te esperamos en Moreno 1441, Rosario, con tu mascota y sus estudios previos si los tiene.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="horarios" id="horarios">
+    <p class="etiqueta">Horarios y dirección</p>
+    <h2>De lunes a viernes.</h2>
+    <div class="dos">
+      <table>
+        <caption class="solo-lector">Horarios de atención</caption>
+        <tbody>
+          <tr><th scope="row">Lunes</th><td>8:30 a 19:00</td></tr>
+          <tr><th scope="row">Martes</th><td>8:30 a 19:00</td></tr>
+          <tr><th scope="row">Miércoles</th><td>8:30 a 19:00</td></tr>
+          <tr><th scope="row">Jueves</th><td>8:30 a 19:00</td></tr>
+          <tr><th scope="row">Viernes</th><td>8:30 a 19:00</td></tr>
+          <tr class="cerrado"><th scope="row">Sábado</th><td>Cerrado</td></tr>
+          <tr class="cerrado"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+      <address>
+        <b>Kardia · Cardiología veterinaria</b>
+        Moreno 1441<br>Rosario, Santa Fe
+        <span class="tel">Teléfono: 0341 617-6303</span>
+      </address>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>Pedí turno para tu mascota.</h2>
+    <p>Lunes a viernes, de 8:30 a 19 h.</p>
+    <button class="btn claro" type="button" data-nota>Pedí tu turno por WhatsApp</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<a class="flotante" href="#contacto">Pedí tu turno por WhatsApp</a>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
