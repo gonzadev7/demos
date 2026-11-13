@@ -23,7 +23,7 @@ section{padding:72px max(24px,calc((100% - 1032px)/2))}
 .etiqueta{font-weight:700;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:var(--verde);margin-bottom:14px}
 
 .portada{position:relative;overflow:hidden;padding-top:84px;padding-bottom:84px}
-.sol{position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(217,167,58,.55) 0%,rgba(217,167,58,.22) 45%,rgba(217,167,58,0) 70%);pointer-events:none}
+.sol{position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:rgba(217,167,58,.18);pointer-events:none}
 .portada>*:not(.sol){position:relative}
 .portada h1{font-size:clamp(2.6rem,7.6vw,5.2rem);max-width:11em;margin-bottom:22px}
 .portada h1 em{font-style:italic;color:var(--verde)}
