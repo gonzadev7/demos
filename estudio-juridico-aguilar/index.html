@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>María Agustina Aguilar · Abogada en Del Viso</title>
+<meta name="description" content="María Agustina Aguilar, abogada. Estudio en Juan Manuel Blanes 1206, Del Viso. Atención de lunes a sábado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="encabezado" id="encabezado">
+  <div class="cinta">
+    <a class="marca" href="#inicio">Agustina Aguilar<small>Abogada</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#datos">Datos</a>
+      <a href="#pasos">Cómo empezar</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#local">En el local</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <p class="etiqueta">Abogada · Del Viso</p>
+    <h1>María Agustina Aguilar, abogada en Del Viso.</h1>
+    <p class="bajada">Atiende de lunes a sábado en Juan Manuel Blanes 1206. Matrícula CASM&nbsp;T·XXV&nbsp;F·471.</p>
+    <button class="btn" type="button" data-nota>Escribinos por WhatsApp</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    <figure class="fachada">
+      <img src="fachada.jpg" alt="Frente del estudio, con el cartel de María Agustina Aguilar, abogada" width="1000" height="562">
+      <figcaption>El estudio, en Juan Manuel Blanes 1206.</figcaption>
+    </figure>
+  </section>
+
+  <section class="datos" id="datos">
+    <h2 class="solo-lector">Datos rápidos</h2>
+    <ul>
+      <li><b>CASM T·XXV F·471</b><span>Matrícula</span></li>
+      <li><b>9 a 13 h</b><span>Lunes a viernes</span></li>
+      <li><b>10 a 14 h</b><span>Sábados</span></li>
+      <li><b>5,0</b><span>Puntaje en Google</span></li>
+    </ul>
+  </section>
+
+  <section class="pasos" id="pasos">
+    <p class="etiqueta">Cómo empezar</p>
+    <h2>Tu consulta, en tres pasos.</h2>
+    <ol>
+      <li><span class="num" aria-hidden="true">I</span><div><h3>Escribinos</h3><p>Contá en pocas líneas qué necesitás resolver.</p></div></li>
+      <li><span class="num" aria-hidden="true">II</span><div><h3>Coordinamos el horario</h3><p>Te proponemos un día y una hora dentro de la atención del estudio.</p></div></li>
+      <li><span class="num" aria-hidden="true">III</span><div><h3>Venís al estudio</h3><p>Te esperamos en Juan Manuel Blanes 1206, Del Viso. Traé la documentación que tengas sobre tu consulta.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="horarios" id="horarios">
+    <p class="etiqueta">Horarios y dirección</p>
+    <h2>Mañanas de lunes a sábado.</h2>
+    <div class="dos">
+      <table>
+        <caption class="solo-lector">Horarios de atención</caption>
+        <tbody>
+          <tr><th scope="row">Lunes</th><td>9:00 a 13:00</td></tr>
+          <tr><th scope="row">Martes</th><td>9:00 a 13:00</td></tr>
+          <tr><th scope="row">Miércoles</th><td>9:00 a 13:00</td></tr>
+          <tr><th scope="row">Jueves</th><td>9:00 a 13:00</td></tr>
+          <tr><th scope="row">Viernes</th><td>9:00 a 13:00</td></tr>
+          <tr><th scope="row">Sábado</th><td>10:00 a 14:00</td></tr>
+          <tr class="cerrado"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+      <address>
+        <b>Estudio Jurídico Agustina Aguilar</b>
+        Juan Manuel Blanes 1206<br>Del Viso, Provincia de Buenos Aires
+        <span class="tel">Teléfono: 011 2711-6161</span>
+      </address>
+    </div>
+  </section>
+
+  <section class="local" id="local">
+    <p class="etiqueta">En el mismo local</p>
+    <h2>Estudio Zona Dominial.</h2>
+    <p>El cartel del frente comparte el local con el estudio del Lic. Mario S. Aguilar. En las vidrieras se lee:</p>
+    <ul class="pildoras">
+      <li>Asesoramiento inmobiliario</li>
+      <li>Gestoría integral</li>
+      <li>Análisis de sistema</li>
+      <li>Asesoramiento informático</li>
+    </ul>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>Escribinos y coordinamos tu consulta.</h2>
+    <p>De lunes a viernes de 9 a 13 y sábados de 10&nbsp;a&nbsp;14.</p>
+    <button class="btn claro" type="button" data-nota>Escribinos por WhatsApp</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<a class="flotante" href="#contacto">Escribinos por WhatsApp</a>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
