@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lic. Abril García · Kinesiología y Fisiatría en Cipolletti y Neuquén</title>
+<meta name="description" content="Lic. Abril García, kinesióloga y fisiatra con diplomatura en Neurorrehabilitación. Atiende en Cipolletti, en Neuquén y a domicilio, particular y por obra social.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Albert+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="encabezado" id="encabezado">
+  <a class="marca" href="#inicio">Abril García <small>Kinesiología</small></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+  <nav id="nav" aria-label="Principal">
+    <a href="#enfoque">Enfoque</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#donde">Dónde atiendo</a>
+    <a href="#turno">Turnos</a>
+  </nav>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <img class="perfil" src="perfil.jpg" width="240" height="240" alt="Abril García, kinesióloga, con ambo verde">
+    <p class="titulo-prof">Lic. en Kinesiología y Fisiatría</p>
+    <h1>Buscar la causa, <em>no solo perseguir el síntoma.</em></h1>
+    <p class="bajada">Acompaño tu proceso de rehabilitación para que el cambio se sostenga en el tiempo y vuelvas a moverte con confianza. Atiendo en Cipolletti, en Neuquén y a domicilio.</p>
+    <div class="accion">
+      <button class="btn" type="button" data-nota>Escribime para agendar tu turno</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+  </section>
+
+  <div class="franja" role="region" aria-label="Datos rápidos">
+    <p><b>MPN 1538 · MPRN 1955</b>matrículas de Neuquén y Río Negro</p>
+    <p><b>Neurorrehabilitación</b>diplomatura</p>
+    <p><b>Cipolletti y Neuquén</b>y también a domicilio</p>
+    <p><b>Particular y obra social</b>consultá por la tuya</p>
+  </div>
+
+  <section class="iceberg" id="enfoque">
+    <div class="iceberg-texto">
+      <p class="etiqueta">Mi enfoque</p>
+      <h2>¿Te aliviaron el dolor y a los días volvió igual?</h2>
+      <p>Ahí está la clave: lo que sentís es la punta del iceberg. Trabajar solo sobre el dolor es apagar la alarma sin revisar por qué sonó.</p>
+      <p>Por eso mi abordaje es personalizado y basado en la evidencia, orientado a la funcionalidad y a tu calidad de vida, con seguimiento continuo.</p>
+    </div>
+    <div class="iceberg-dibujo" aria-hidden="true">
+      <span class="punta">el dolor</span>
+      <span class="linea-agua"></span>
+      <span class="base">la causa</span>
+    </div>
+  </section>
+
+  <section class="servicios" id="servicios">
+    <p class="etiqueta">Servicios</p>
+    <h2>¿Qué necesitás trabajar?</h2>
+    <div class="indice">
+      <div class="indice-lista" role="tablist" aria-label="Servicios">
+        <button type="button" role="tab" data-serv aria-selected="true">Neurorrehabilitación kinésica</button>
+        <button type="button" role="tab" data-serv aria-selected="false">Rehabilitación a domicilio</button>
+        <button type="button" role="tab" data-serv aria-selected="false">Lesiones traumatológicas y deportivas</button>
+        <button type="button" role="tab" data-serv aria-selected="false">Rehabilitación postquirúrgica</button>
+        <button type="button" role="tab" data-serv aria-selected="false">Kinesiología preventiva en el adulto mayor</button>
+        <button type="button" role="tab" data-serv aria-selected="false">Recuperación post entrenamiento</button>
+      </div>
+      <div class="indice-panel" role="tabpanel" aria-live="polite">
+        <h3 id="panel-titulo"></h3>
+        <p id="panel-texto"></p>
+        <p class="para-quien" id="panel-quien"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="donde" id="donde">
+    <p class="etiqueta">Dónde atiendo</p>
+    <h2>Cerca tuyo, o en tu casa</h2>
+    <div class="lugares">
+      <article>
+        <h3>Cipolletti</h3>
+        <p>Rehabilitación y kinesiología en Cipolletti, Río Negro.</p>
+      </article>
+      <article class="nuevo">
+        <p class="sello">Desde noviembre</p>
+        <h3>Neuquén</h3>
+        <p>Turnos de rehabilitación traumatológica en Agora, Araucaria 1428.</p>
+      </article>
+      <article>
+        <h3>A domicilio</h3>
+        <p>Rehabilitación en tu casa, para niños, adultos y adultos mayores.</p>
+      </article>
+    </div>
+    <div class="obras">
+      <h3>Atención particular y por obra social</h3>
+      <ul>
+        <li>PAMI</li><li>Avalian</li><li>Federada Salud</li><li>Medifé</li><li>Prevención Salud</li><li>Sancor Salud</li><li>SOSUNC</li><li>Galeno</li><li>Medicus</li>
+      </ul>
+      <p class="aclara">Entre otras. Si no ves la tuya, escribime y te digo.</p>
+    </div>
+  </section>
+
+  <section class="empezar">
+    <p class="etiqueta">Cómo empezar</p>
+    <h2>Tu primera consulta, en tres pasos</h2>
+    <ol class="pasos">
+      <li><b>I</b><div><h3>Escribime</h3><p>Por WhatsApp, contame qué te pasa y desde cuándo.</p></div></li>
+      <li><b>II</b><div><h3>Elegimos dónde</h3><p>Cipolletti, Neuquén o en tu casa, y si es particular o por obra social.</p></div></li>
+      <li><b>III</b><div><h3>Lo vemos en consulta</h3><p>Buscamos la causa y armamos un plan con seguimiento.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="cierre" id="turno">
+    <p class="etiqueta">Turnos</p>
+    <h2>Si te resonó, escribime y lo vemos en consulta.</h2>
+    <dl class="ficha">
+      <div><dt>Con quién</dt><dd>Lic. Abril García, MPN 1538 · MPRN 1955</dd></div>
+      <div><dt>Dónde</dt><dd>Cipolletti, Neuquén o a domicilio</dd></div>
+      <div><dt>Cómo</dt><dd>Particular y por obra social</dd></div>
+    </dl>
+    <div class="accion">
+      <button class="btn" type="button" data-nota>Agendá tu turno</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+
+<a class="flotante" href="#turno">Agendá tu turno</a>
+
+<script src="script.js"></script>
+</body>
+</html>

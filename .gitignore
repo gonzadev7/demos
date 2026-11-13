@@ -1,0 +1,12 @@
+# Este repo publica solo demos (GitHub Pages sirve todo lo que tiene).
+/CLAUDE.md
+/SITUACION_ACTUAL.md
+/_estilos.md
+/data/
+/crm/
+/hooks/
+/.claude/
+*.md
+.netlify/
+.env*
+/valebossio-psico/B*squeda _ Disney+*

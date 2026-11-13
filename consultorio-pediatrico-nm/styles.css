@@ -1,0 +1,146 @@
+/* Consultorio pediátrico NM — dirección editorial, magenta del logo sobre crema */
+:root {
+    --crema: #fff8f5;
+    --rosa-palido: #f8dfe8;
+    --magenta: #d01f6a;
+    --ciruela: #3a1530;
+    --tinta: #2b1226;
+    --tinta-suave: #6b4a60;
+    --linea: #ecd3dd;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'Figtree', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body { margin: 0; background: var(--crema); color: var(--tinta); font-family: var(--sans); font-size: 17px; line-height: 1.6; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; margin: 0; }
+p { margin: 0; }
+.wrap { width: min(1120px, 100% - 48px); margin-inline: auto; }
+
+/* Encabezado */
+.top { position: sticky; top: 0; z-index: 10; background: var(--crema); color: var(--tinta); border-bottom: 1px solid rgba(208, 31, 106, .55); transition: background .3s, color .3s, border-color .3s; }
+.top.solido { background: var(--magenta); color: #fff; border-bottom-color: rgba(255, 255, 255, .55); }
+.top-row { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.marca { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--serif); font-size: 21px; text-decoration: none; color: inherit; }
+.nav { display: flex; gap: 28px; font-size: 15px; }
+.nav a { text-decoration: none; color: inherit; opacity: .85; }
+.nav a:hover { opacity: 1; }
+.nav .nav-turno { opacity: 1; border-bottom: 1px solid currentColor; }
+.menu-btn { display: none; min-height: 44px; background: none; border: 1px solid currentColor; padding: 6px 20px; font: inherit; font-size: 14px; color: inherit; cursor: pointer; }
+
+/* Botones */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 28px; text-decoration: none; font-weight: 500; font-size: 16px; border: 1px solid transparent; }
+.btn-lleno { background: var(--magenta); color: #fff; }
+.btn-lleno:hover { background: var(--ciruela); }
+.btn-linea { border-color: var(--ciruela); color: var(--ciruela); }
+.btn-linea:hover { background: var(--ciruela); color: #fff; }
+.btn-claro { background: #fff; color: var(--ciruela); }
+.btn-linea-clara { border-color: rgba(255, 255, 255, .6); color: #fff; }
+.btn-linea-clara:hover { background: rgba(255, 255, 255, .15); }
+
+/* Portada */
+.portada { padding: 72px 0 88px; }
+.portada-grid { display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: center; }
+.portada-sello { text-align: center; }
+.sello { width: 148px; height: 148px; border-radius: 50%; overflow: hidden; margin: 0 auto 18px; background: #fff; border: 1px solid var(--linea); }
+.sello img { width: 170px; height: 170px; max-width: none; margin: -20px 0 0 -11px; }
+.volanta { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--tinta-suave); }
+.kicker { font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--magenta); font-weight: 600; margin-bottom: 18px; }
+.portada h1 { font-size: clamp(40px, 6vw, 76px); max-width: 15ch; }
+.bajada { margin-top: 24px; max-width: 46ch; font-size: 19px; color: var(--tinta-suave); }
+.acciones { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* Cabeceras de sección */
+.seccion-num { font-size: 13px; letter-spacing: .16em; color: var(--magenta); font-weight: 600; margin-bottom: 14px; }
+.cabecera h2 { font-size: clamp(32px, 4.4vw, 52px); }
+.cabecera-texto { margin-top: 16px; max-width: 46ch; color: var(--tinta-suave); }
+.cabecera { margin-bottom: 48px; }
+
+/* PIEZA: índice con panel (etapas) */
+.etapas { padding: 88px 0; background: #fff; border-top: 1px solid var(--linea); }
+.indice { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+.indice-lista { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--tinta); }
+.indice-item { width: 100%; display: flex; gap: 20px; align-items: baseline; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--linea); padding: 22px 0; font: inherit; font-family: var(--serif); font-size: clamp(22px, 2.4vw, 30px); color: var(--tinta-suave); cursor: pointer; transition: color .2s, padding .2s; min-height: 44px; }
+.indice-item span { font-family: var(--sans); font-size: 13px; color: var(--magenta); min-width: 28px; }
+.indice-item:hover { color: var(--tinta); }
+.indice-item.activo { color: var(--tinta); padding-left: 12px; }
+.indice-item:focus-visible { outline: 2px solid var(--magenta); outline-offset: 2px; }
+.indice-paneles { position: sticky; top: 96px; }
+.panel { background: var(--magenta); color: #fff; padding: 44px; min-height: 280px; }
+.panel h3 { font-size: 40px; margin-bottom: 22px; }
+.etiquetas { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.etiquetas li { border: 1px solid rgba(255, 255, 255, .6); padding: 8px 16px; font-size: 16px; }
+
+/* PIEZA: tiempos con numerales romanos */
+.compromiso { padding: 88px 0; background: var(--ciruela); color: #fff; }
+.cabecera-clara .seccion-num { color: #f7a9c6; }
+.tiempos { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
+.tiempos li { padding: 0 28px 0 0; }
+.tiempos li + li { padding-left: 28px; border-left: 1px solid rgba(255, 255, 255, .2); }
+.tiempo-num { font-family: var(--serif); font-size: 56px; color: #f7a9c6; line-height: 1; }
+.tiempos h3 { font-size: 26px; margin: 16px 0 12px; }
+.tiempos p { color: #e8cfdc; font-size: 16px; }
+
+/* Para familias */
+.familias { padding: 88px 0; }
+.familias-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; }
+.familias .cabecera { margin-bottom: 0; }
+.notas { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--tinta); }
+.notas li { padding: 22px 0; border-bottom: 1px solid var(--linea); font-family: var(--serif); font-size: 24px; line-height: 1.25; }
+.notas li span { display: block; font-family: var(--sans); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 6px; }
+
+/* PIEZA: CV */
+.doctora { padding: 88px 0; background: var(--rosa-palido); }
+.doctora-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; }
+.doctora .cabecera { margin-bottom: 0; }
+.cv { margin: 0; border-top: 1px solid var(--tinta); }
+.cv div { display: grid; grid-template-columns: 110px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(58, 21, 48, .2); }
+.cv dt { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--magenta); font-weight: 600; padding-top: 6px; }
+.cv dd { margin: 0; font-family: var(--serif); font-size: 24px; line-height: 1.25; }
+.cv dd span { display: block; font-family: var(--sans); font-size: 15px; color: var(--tinta-suave); margin-top: 4px; }
+
+/* Turnos */
+.turnos { padding: 96px 0; background: var(--magenta); color: #fff; border-top: 1px solid rgba(255, 255, 255, .55); }
+.turnos .seccion-num { color: #ffd3e4; }
+.turnos h2 { font-size: clamp(36px, 5vw, 60px); max-width: 16ch; }
+.turnos-texto { margin-top: 18px; max-width: 46ch; font-size: 18px; }
+.turnos-acciones { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px; }
+.datos { margin-top: 32px; font-style: normal; font-size: 16px; }
+.nota { margin-top: 22px; font-size: 15px; padding: 10px 14px; border-left: 3px solid rgba(255, 255, 255, .6); }
+.nota.resaltada { background: rgba(255, 255, 255, .18); }
+
+/* Pie */
+.pie { background: var(--tinta); color: #e8cfdc; padding: 28px 0; font-size: 14px; }
+.pie-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.pie a { color: #fff; }
+
+/* Celular */
+@media (max-width: 860px) {
+    .wrap { width: calc(100% - 40px); }
+    .menu-btn { display: inline-flex; align-items: center; }
+    .nav { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--magenta); color: #fff; border-bottom: 1px solid rgba(255, 255, 255, .55); }
+    .nav.abierta { display: flex; }
+    .nav a { padding: 16px 20px; min-height: 52px; border-top: 1px solid rgba(255, 255, 255, .25); }
+    .nav .nav-turno { border-bottom: 0; }
+    .portada { padding: 48px 0 64px; text-align: center; }
+    .portada-grid { grid-template-columns: 1fr; gap: 28px; }
+    .portada h1, .bajada { margin-inline: auto; }
+    .acciones { flex-direction: column; align-items: stretch; }
+    .indice, .familias-grid, .doctora-grid { grid-template-columns: 1fr; gap: 32px; }
+    .indice-paneles { position: static; }
+    .panel { padding: 28px; min-height: 0; }
+    .tiempos { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+    .tiempos li, .tiempos li + li { padding: 0; border-left: 0; }
+    .etapas, .compromiso, .familias, .doctora { padding: 64px 0; }
+    .cv div { grid-template-columns: 1fr; gap: 4px; }
+    .turnos { text-align: center; }
+    .turnos h2, .turnos-texto { margin-inline: auto; }
+    .turnos-acciones { flex-direction: column; align-items: stretch; }
+    .nota { text-align: left; }
+    .pie-row { flex-direction: column; text-align: center; }
+}
+@media (max-width: 520px) {
+    .tiempos { grid-template-columns: 1fr; }
+}

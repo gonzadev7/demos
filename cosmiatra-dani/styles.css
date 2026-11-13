@@ -1,0 +1,105 @@
+/* Demo Dani Cosmiatra · rosa empolvado y ciruela (11/11/2026). Fotos reales de su Instagram. */
+:root {
+    --crema: #fbf5f2;
+    --rosa: #f1ddd8;
+    --ciruela: #4a2c3a;
+    --ciruela-claro: #7a4a5e;
+    --acento: #b4637a;
+    --tinta: #2b1f25;
+    --tinta-suave: #5d4c55;
+    --linea: #e4cfc9;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', system-ui, sans-serif;
+    --ancho: 1100px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; background: var(--crema); color: var(--tinta); font-family: var(--sans); font-size: 17px; line-height: 1.65; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.08; margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+.wrap { width: min(var(--ancho), 100% - 40px); margin-inline: auto; }
+
+.top { position: sticky; top: 0; z-index: 10; background: var(--ciruela); color: #fff; border-bottom: 1px solid rgba(255,255,255,.3); transition: background .3s; }
+.top.solido { background: rgba(74,44,58,.62); -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%); }
+.top-row { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+.marca { display: flex; align-items: center; gap: 12px; text-decoration: none; min-height: 44px; }
+.marca-foto { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,.7); }
+.marca-nombre { font-family: var(--serif); font-weight: 600; font-size: 23px; }
+.nav { display: flex; gap: 28px; font-size: 15px; align-items: center; }
+.nav a { text-decoration: none; opacity: .9; }
+.nav a:hover { opacity: 1; }
+.nav .nav-contacto { opacity: 1; border-bottom: 1.5px solid currentColor; padding-bottom: 2px; }
+.menu-btn { display: none; background: none; border: 1.5px solid currentColor; border-radius: 999px; padding: 0 22px; min-height: 44px; font: inherit; font-size: 15px; cursor: pointer; color: inherit; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 30px; font-size: 16px; font-weight: 600; text-decoration: none; border: 1.5px solid transparent; border-radius: 999px; transition: background .2s, color .2s; }
+.btn-lleno { background: var(--acento); color: #fff; }
+.btn-lleno:hover { background: #8f4a60; }
+.btn-linea { border-color: var(--ciruela); color: var(--ciruela); }
+.btn-linea:hover { background: var(--ciruela); color: #fff; }
+.btn-claro { background: var(--crema); color: var(--ciruela); }
+.btn-claro:hover { background: #fff; }
+
+.portada { padding: 76px 0 84px; }
+.portada-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 64px; align-items: center; }
+.volanta { font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--acento); font-weight: 600; margin-bottom: 20px; }
+.portada-titulo { font-size: clamp(42px, 5.6vw, 72px); color: var(--ciruela); max-width: 14ch; }
+.portada-texto { margin-top: 22px; max-width: 40ch; color: var(--tinta-suave); font-size: 19px; }
+.portada-acciones { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
+.portada-foto img { width: 100%; max-width: 380px; height: auto; margin-inline: auto; border-radius: 200px 200px 28px 28px; border: 6px solid var(--rosa); }
+
+section { padding: 92px 0; }
+.seccion-num { font-size: 14px; letter-spacing: .1em; text-transform: uppercase; color: var(--acento); font-weight: 600; margin-bottom: 14px; }
+h2 { font-size: clamp(34px, 4.4vw, 54px); color: var(--ciruela); }
+
+.tratamientos { background: var(--rosa); }
+.tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 44px; }
+.trat { background: var(--crema); border-radius: 28px; padding: 36px 32px 40px; }
+.trat-2 { background: var(--ciruela); color: #fff; }
+.trat-n { font-size: 14px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: var(--acento); margin-bottom: 16px; }
+.trat-2 .trat-n { color: #f1c3cf; }
+.trat h3 { font-size: 40px; margin-bottom: 12px; }
+.lista { list-style: none; padding: 0; margin: 40px 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.lista li { border: 1.5px solid var(--ciruela-claro); color: var(--ciruela); border-radius: 999px; padding: 6px 18px; font-size: 15px; }
+
+.resultados-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; }
+.resultados-texto { margin-top: 22px; max-width: 42ch; color: var(--tinta-suave); font-size: 18px; }
+.ad { margin: 0; }
+.ad img { width: 100%; max-width: 360px; height: auto; border-radius: 28px; margin-inline: auto; }
+
+.contacto { padding: 0 0 92px; }
+.caja { background: var(--ciruela); color: #fff; border-radius: 32px; padding: 56px 52px; }
+.caja .seccion-num { color: #f1c3cf; }
+.caja h2 { color: #fff; }
+.caja-texto { margin-top: 18px; max-width: 46ch; font-size: 18px; }
+.caja-acciones { margin-top: 30px; }
+.nota { margin-top: 22px; font-size: 14px; opacity: .92; }
+.nota.resaltada { opacity: 1; font-weight: 600; background: var(--crema); color: var(--ciruela); padding: 10px 16px; display: inline-block; border-radius: 12px; }
+
+.pie { background: var(--ciruela); color: #fff; padding: 28px 0 36px; font-size: 14px; }
+.pie-row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; }
+.dev-credit a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; }
+.pie-marca { font-family: var(--serif); font-weight: 600; font-size: 20px; }
+
+@media (max-width: 900px) {
+    .portada-grid, .resultados-grid, .tres { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 760px) {
+    body { font-size: 16px; }
+    section { padding: 64px 0; }
+    .menu-btn { display: inline-flex; align-items: center; }
+    .nav { display: none; position: absolute; top: 66px; left: 0; right: 0; flex-direction: column; gap: 0; align-items: stretch; background: var(--ciruela); color: #fff; padding: 8px 20px 20px; border-top: 1px solid rgba(255,255,255,.3); }
+    .nav.abierta { display: flex; }
+    .nav a { padding: 14px 0; font-size: 17px; text-align: center; border-bottom: 1px solid rgba(255,255,255,.2); }
+    .portada { padding: 44px 0 56px; text-align: center; }
+    .portada-titulo, .portada-texto { margin-inline: auto; }
+    .portada-acciones { flex-direction: column; }
+    .btn { width: 100%; }
+    .tratamientos, .resultados, .caja { text-align: center; }
+    .lista { justify-content: center; }
+    .resultados-texto, .caja-texto { margin-inline: auto; }
+    .caja { padding: 40px 24px 44px; }
+    .caja-acciones { justify-content: center; }
+    .pie-row { flex-direction: column; text-align: center; }
+}

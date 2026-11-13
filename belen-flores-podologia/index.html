@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Belén Flores | Podología integral en Ingeniero Maschwitz</title>
+    <meta name="description" content="Podología integral en Ingeniero Maschwitz. Mirá casos reales de antes y después y agendá tu turno en Santiago del Estero 477.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+    <header class="top">
+        <div class="top-in">
+            <a href="#inicio" class="marca">Belén Flores <span>Podología</span></a>
+            <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menú</button>
+            <nav class="nav" id="nav">
+                <a href="#casos">Casos reales</a>
+                <a href="#turno">Cómo agendar</a>
+                <a href="#datos">Horarios y dirección</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="inicio">
+        <section class="hero">
+            <div class="hero-in">
+                <div class="hero-texto">
+                    <p class="chip">Agenda abierta</p>
+                    <h1>Podología integral en Ingeniero Maschwitz.</h1>
+                    <p class="bajada">Mirá cómo se ven los casos que se atienden en el consultorio y agendá tu turno.</p>
+                    <div class="hero-acciones">
+                        <a href="#nota-contacto" class="btn btn-lleno js-contacto">Agendá tu turno</a>
+                        <a href="#casos" class="btn btn-borde">Ver casos reales</a>
+                    </div>
+                </div>
+                <figure class="hero-foto">
+                    <img src="trabajo.jpg" alt="Atención podológica en el consultorio: manos con guantes trabajando sobre un pie" width="640" height="440">
+                </figure>
+            </div>
+            <ul class="franja">
+                <li><strong>5,0</strong><span>en Google, con 21 opiniones</span></li>
+                <li><strong>Lunes a sábado</strong><span>con turno</span></li>
+                <li><strong>Santiago del Estero 477</strong><span>Ingeniero Maschwitz</span></li>
+            </ul>
+        </section>
+
+        <section class="casos" id="casos">
+            <div class="cont">
+                <p class="etiqueta">Antes y después</p>
+                <h2>Lo que se trata en el consultorio</h2>
+                <div class="indice">
+                    <div class="indice-lista" role="tablist" aria-label="Casos del consultorio">
+                        <button role="tab" class="activo" data-panel="p1" aria-selected="true"><span>I</span> Onicogrifosis</button>
+                        <button role="tab" data-panel="p2" aria-selected="false"><span>II</span> Onicomicosis en paciente con diabetes</button>
+                        <button role="tab" data-panel="p3" aria-selected="false"><span>III</span> Extracción de heloma</button>
+                    </div>
+                    <div class="indice-paneles">
+                        <article class="panel activo" id="p1" role="tabpanel">
+                            <img src="caso-onicogrifosis.jpg" alt="Antes y después de un tratamiento de onicogrifosis en el dedo gordo del pie" width="900" height="745">
+                            <h3>Onicogrifosis</h3>
+                            <p>Engrosamiento exagerado de la lámina ungueal. Cambios en la 1ª sesión.</p>
+                            <a href="#nota-contacto" class="btn btn-lleno js-contacto">Agendá tu turno</a>
+                        </article>
+                        <article class="panel" id="p2" role="tabpanel">
+                            <img src="caso-onicomicosis.jpg" alt="Antes y después de un tratamiento de onicomicosis en un paciente con diabetes" width="900" height="745" loading="lazy">
+                            <h3>Onicomicosis en paciente con diabetes</h3>
+                            <p>Tratamiento de onicomicosis para paciente con diabetes.</p>
+                            <a href="#nota-contacto" class="btn btn-lleno js-contacto">Agendá tu turno</a>
+                        </article>
+                        <article class="panel" id="p3" role="tabpanel">
+                            <img src="caso-heloma.jpg" alt="Antes y después de la extracción de un heloma en el pie" width="900" height="745" loading="lazy">
+                            <h3>Extracción de heloma</h3>
+                            <p>Heloma causado por el roce constante del calzado.</p>
+                            <a href="#nota-contacto" class="btn btn-lleno js-contacto">Agendá tu turno</a>
+                        </article>
+                    </div>
+                </div>
+                <p class="aclaracion">Fotos y descripciones de casos publicadas por el consultorio en su ficha de Google.</p>
+            </div>
+        </section>
+
+        <section class="turno" id="turno">
+            <div class="cont">
+                <p class="etiqueta etiqueta-clara">Para pedir turno</p>
+                <h2>Cómo agendar</h2>
+                <ol class="pasos">
+                    <li><span class="num">I</span><h3>Escribís</h3><p>Contás qué te molesta en los pies o en las uñas.</p></li>
+                    <li><span class="num">II</span><h3>Coordinamos el turno</h3><p>Te pasamos los días y horarios disponibles.</p></li>
+                    <li><span class="num">III</span><h3>Venís al consultorio</h3><p>Santiago del Estero 477, en Ingeniero Maschwitz.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="datos" id="datos">
+            <div class="cont datos-in">
+                <div>
+                    <p class="etiqueta">Cómo llegar y cuándo</p>
+                    <h2>Horarios y dirección</h2>
+                    <p class="dir">Santiago del Estero 477<br>Ingeniero Maschwitz, Buenos Aires</p>
+                    <p class="dir-nota">Atención con turno previo.</p>
+                </div>
+                <table class="horarios">
+                    <caption class="solo-lector">Horarios de atención</caption>
+                    <tbody>
+                        <tr><th>Lunes</th><td>8:00 a 15:30</td></tr>
+                        <tr><th>Martes</th><td>9:00 a 17:00</td></tr>
+                        <tr><th>Miércoles</th><td>8:00 a 17:00</td></tr>
+                        <tr><th>Jueves</th><td>9:00 a 16:00</td></tr>
+                        <tr><th>Viernes</th><td>8:00 a 14:30</td></tr>
+                        <tr><th>Sábado</th><td>13:00 a 18:00</td></tr>
+                        <tr><th>Domingo</th><td>Cerrado</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="cierre">
+            <div class="cont cierre-in">
+                <h2>Agenda abierta: reservá tu turno.</h2>
+                <p class="cierre-bajada">Contanos qué te molesta y coordinamos el día y el horario.</p>
+                <a href="#nota-contacto" class="btn btn-claro js-contacto">Escribir por WhatsApp</a>
+                <p class="nota" id="nota-contacto" role="status">Los botones de contacto se activan en la versión oficial.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="cont pie-in">
+            <p>Belén Flores · Podología · Santiago del Estero 477, Ingeniero Maschwitz</p>
+            <p class="dev-credit">Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+        </div>
+    </footer>
+
+    <a href="#nota-contacto" class="flotante js-contacto" aria-label="Agendá tu turno">Agendá tu turno</a>
+    <script src="script.js?v=1"></script>
+</body>
+</html>

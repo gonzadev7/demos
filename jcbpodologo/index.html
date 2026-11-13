@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jcbpodologo | Podología en Belén de Escobar</title>
+    <meta name="description" content="Podología en Belén de Escobar. Consultá qué te molesta en los pies y pedí tu turno. Lunes a viernes de 9 a 18 y sábados de 8 a 12:30.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+    <header class="top">
+        <div class="top-in">
+            <a href="#inicio" class="marca">Jcbpodologo</a>
+            <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menú</button>
+            <nav class="nav" id="nav">
+                <a href="#molestias">Qué te molesta</a>
+                <a href="#consulta">Cómo es la consulta</a>
+                <a href="#consultorio">Consultorio</a>
+                <a href="#datos">Horarios y dirección</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="inicio">
+        <section class="hero">
+            <div class="hero-in">
+                <div class="hero-texto">
+                    <p class="etiqueta">Podología · Belén de Escobar</p>
+                    <h1>Si algo te molesta en los pies, consultanos.</h1>
+                    <p class="bajada">Contanos qué sentís o qué viste en tu pie y coordinamos tu turno en el consultorio de Don Bosco 804.</p>
+                    <div class="hero-acciones">
+                        <a href="#nota-contacto" class="btn btn-lleno js-contacto">Consultá qué te molesta</a>
+                        <a href="#datos" class="btn btn-borde">Ver horarios</a>
+                    </div>
+                    <ul class="datos-rapidos">
+                        <li><strong>4,9</strong> en Google, con 307 opiniones</li>
+                        <li><strong>Lun a vie</strong> 9 a 18 · <strong>Sáb</strong> 8 a 12:30</li>
+                    </ul>
+                </div>
+                <figure class="hero-foto">
+                    <img src="consultorio.jpg" alt="Sillón y equipo del consultorio de Jcbpodologo, con paredes de hojas verdes" width="1400" height="681">
+                </figure>
+            </div>
+        </section>
+
+        <section class="molestias" id="molestias">
+            <div class="cont">
+                <p class="etiqueta">Elegí lo que te pasa</p>
+                <h2>¿Qué te molesta?</h2>
+                <div class="indice">
+                    <div class="indice-lista" role="tablist" aria-label="Molestias frecuentes">
+                        <button role="tab" class="activo" data-panel="p1" aria-selected="true"><span>01</span> Uña encarnada</button>
+                        <button role="tab" data-panel="p2" aria-selected="false"><span>02</span> Uñas con hongos</button>
+                        <button role="tab" data-panel="p3" aria-selected="false"><span>03</span> Durezas y callos</button>
+                        <button role="tab" data-panel="p4" aria-selected="false"><span>04</span> Pie diabético</button>
+                        <button role="tab" data-panel="p5" aria-selected="false"><span>05</span> Control de rutina</button>
+                    </div>
+                    <div class="indice-paneles">
+                        <article class="panel activo" id="p1" role="tabpanel">
+                            <h3>Uña encarnada</h3>
+                            <p>Dolor, enrojecimiento o hinchazón en el borde de la uña, sobre todo al usar calzado cerrado. Mientras antes se consulte, más simple es de tratar.</p>
+                            <a href="#nota-contacto" class="btn btn-lleno js-contacto">Consultar por esto</a>
+                        </article>
+                        <article class="panel" id="p2" role="tabpanel">
+                            <h3>Uñas con hongos</h3>
+                            <p>Uñas amarillentas, gruesas o quebradizas. Se revisa el estado de la uña y se te indica cómo seguir.</p>
+                            <a href="#nota-contacto" class="btn btn-lleno js-contacto">Consultar por esto</a>
+                        </article>
+                        <article class="panel" id="p3" role="tabpanel">
+                            <h3>Durezas y callos</h3>
+                            <p>Zonas duras o con dolor al apoyar el pie. Se evalúa qué las provoca y cómo aliviarlas.</p>
+                            <a href="#nota-contacto" class="btn btn-lleno js-contacto">Consultar por esto</a>
+                        </article>
+                        <article class="panel" id="p4" role="tabpanel">
+                            <h3>Pie diabético</h3>
+                            <p>Si tenés diabetes, el cuidado de los pies requiere controles periódicos. Consultá antes de que aparezca una herida o una molestia.</p>
+                            <a href="#nota-contacto" class="btn btn-lleno js-contacto">Consultar por esto</a>
+                        </article>
+                        <article class="panel" id="p5" role="tabpanel">
+                            <h3>Control de rutina</h3>
+                            <p>Si no te duele nada pero querés que revisen tus pies y tus uñas, también podés pedir turno.</p>
+                            <a href="#nota-contacto" class="btn btn-lleno js-contacto">Consultar por esto</a>
+                        </article>
+                    </div>
+                </div>
+                <div class="casos"><p class="casos-t">Casos que se atienden en el consultorio</p><div class="casos-fotos"><img src="caso-1.jpg" alt="Uñas de los pies en consulta" width="800" height="449" loading="lazy"><img src="caso-2.jpg" alt="Uña del pie durante una consulta" width="800" height="524" loading="lazy"><img src="caso-3.jpg" alt="Revisión de uñas en el consultorio" width="800" height="600" loading="lazy"></div></div>
+                <p class="aclaracion">Los textos de esta sección son orientativos; en la versión oficial se ajustan a lo que ofrece el consultorio.</p>
+            </div>
+        </section>
+
+        <section class="consulta" id="consulta">
+            <div class="cont">
+                <p class="etiqueta">Para pedir turno</p>
+                <h2>Cómo es la consulta</h2>
+                <ol class="pasos">
+                    <li><span class="num">1</span><h3>Escribís</h3><p>Contás qué te molesta. Si querés, mandás una foto del pie.</p></li>
+                    <li><span class="num">2</span><h3>Coordinamos el turno</h3><p>Te pasamos días y horarios disponibles, de lunes a sábado.</p></li>
+                    <li><span class="num">3</span><h3>Venís al consultorio</h3><p>Don Bosco 804, esquina Colón, en Belén de Escobar.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="consultorio" id="consultorio">
+            <div class="cont consultorio-in">
+                <figure>
+                    <img src="sala.jpg" alt="Interior del consultorio de Jcbpodologo con luz natural" width="1000" height="563" loading="lazy">
+                </figure>
+                <div>
+                    <p class="etiqueta etiqueta-clara">El consultorio</p>
+                    <h2>Un lugar pensado para que vengas tranquilo</h2>
+                    <p>Así se ve el consultorio: luminoso, con el instrumental a mano y todo en orden para atenderte.</p>
+                    <a href="#nota-contacto" class="btn btn-claro js-contacto">Consultá por tu turno</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="datos" id="datos">
+            <div class="cont datos-in">
+                <div>
+                    <p class="etiqueta">Cómo llegar y cuándo</p>
+                    <h2>Horarios y dirección</h2>
+                    <p class="dir">Don Bosco 804, esquina Colón<br>Belén de Escobar, Buenos Aires</p>
+                    <p class="tel">Turnos al <strong>11 5404-8128</strong></p>
+                </div>
+                <table class="horarios">
+                    <caption class="solo-lector">Horarios de atención</caption>
+                    <tbody>
+                        <tr><th>Lunes a viernes</th><td>9:00 a 18:00</td></tr>
+                        <tr><th>Sábado</th><td>8:00 a 12:30</td></tr>
+                        <tr><th>Domingo</th><td>Cerrado</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="cierre">
+            <div class="cont cierre-in">
+                <h2>Contanos qué te molesta y reservá tu turno.</h2>
+                <p class="cierre-bajada">Atendemos de lunes a sábado en Don Bosco 804. Mientras antes consultes, antes se resuelve.</p>
+                <a href="#nota-contacto" class="btn btn-claro js-contacto">Escribir por WhatsApp</a>
+                <p class="nota" id="nota-contacto" role="status">Los botones de contacto se activan en la versión oficial.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="cont pie-in">
+            <p>Jcbpodologo · Don Bosco 804, Belén de Escobar</p>
+            <p class="dev-credit">Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+        </div>
+    </footer>
+
+    <a href="#nota-contacto" class="flotante js-contacto" aria-label="Consultá qué te molesta">Consultá qué te molesta</a>
+    <script src="script.js?v=4"></script>
+</body>
+</html>

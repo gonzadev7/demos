@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinesio Adonai | Masajes y kinesiología a domicilio en Zona Norte</title>
+    <meta name="description" content="Masajes, piedras calientes, quiropraxia y kinesiología a domicilio en Zona Norte. Gabriela Godoy, Kinesio Adonai.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="top">
+        <div class="wrap top-row">
+            <a href="#inicio" class="marca">Kinesio Adonai</a>
+            <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">Menú</button>
+            <nav class="nav">
+                <a href="#servicios">Servicios</a>
+                <a href="#domicilio">A domicilio</a>
+                <a href="#turnos" class="nav-turno">Turnos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Portada -->
+        <section class="portada" id="inicio">
+            <div class="wrap portada-grid">
+                <div class="portada-sello">
+                    <div class="sello"><img src="logo.png" alt="Logo de Kinesio Adonai: las letras K y A en trazo cursivo" width="170" height="170"></div>
+                </div>
+                <div class="portada-texto">
+                    <p class="kicker">Gabriela Godoy &middot; Zona Norte</p>
+                    <h1>Masajes y kinesiología, <span>en tu casa.</span></h1>
+                    <p class="bajada">Masajes con piedras calientes, quiropraxia, masaje deportivo y kinesiología. Voy hasta tu domicilio.</p>
+                    <div class="acciones">
+                        <a href="#turnos" class="btn btn-lleno">Pedir turno</a>
+                        <a href="#servicios" class="btn btn-linea">Ver servicios</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios (índice con panel) -->
+        <section class="servicios" id="servicios">
+            <div class="wrap">
+                <div class="cabecera">
+                    <p class="seccion-num">01</p>
+                    <h2>¿Qué necesitás hoy?</h2>
+                    <p class="cabecera-texto">Elegí una opción y mirá qué incluye.</p>
+                </div>
+                <div class="indice">
+                    <ul class="indice-lista" role="tablist">
+                        <li><button class="indice-item activo" role="tab" aria-selected="true" data-i="0"><span>01</span>Masaje corporal completo</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-i="1"><span>02</span>Con piedras calientes</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-i="2"><span>03</span>Con piedras y quiropraxia</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-i="3"><span>04</span>Masaje deportivo</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-i="4"><span>05</span>Kinesiología</button></li>
+                    </ul>
+                    <div class="indice-paneles">
+                        <div class="panel" data-i="0">
+                            <h3>Masaje corporal completo</h3>
+                            <ul class="etiquetas">
+                                <li>Todo el cuerpo</li>
+                                <li>A domicilio</li>
+                            </ul>
+                            <p class="panel-nota">Es la base de los combos: sumale piedras calientes o quiropraxia.</p>
+                        </div>
+                        <div class="panel" data-i="1" hidden>
+                            <h3>Masaje corporal con piedras calientes</h3>
+                            <ul class="etiquetas">
+                                <li>Masaje corporal completo</li>
+                                <li>Piedras calientes</li>
+                            </ul>
+                            <p class="panel-nota">El calor de las piedras acompaña el masaje.</p>
+                        </div>
+                        <div class="panel" data-i="2" hidden>
+                            <h3>Masaje con piedras calientes y quiropraxia</h3>
+                            <ul class="etiquetas">
+                                <li>Masaje corporal completo</li>
+                                <li>Piedras calientes</li>
+                                <li>Quiropraxia</li>
+                            </ul>
+                            <p class="panel-nota">El combo más completo de los tres.</p>
+                        </div>
+                        <div class="panel" data-i="3" hidden>
+                            <h3>Masaje deportivo</h3>
+                            <ul class="etiquetas">
+                                <li>Masaje deportivo</li>
+                                <li>Estiramientos terapéuticos</li>
+                            </ul>
+                            <p class="panel-nota">Se hace en tu domicilio, como todas las sesiones.</p>
+                        </div>
+                        <div class="panel" data-i="4" hidden>
+                            <h3>Sesión de kinesiología</h3>
+                            <ul class="etiquetas">
+                                <li>Kinesiología</li>
+                                <li>Fisioterapia</li>
+                            </ul>
+                            <p class="panel-nota">Sesión de kinesiología con fisioterapia, también en tu casa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- A domicilio (tres pasos) -->
+        <section class="domicilio" id="domicilio">
+            <div class="wrap">
+                <div class="cabecera cabecera-clara">
+                    <p class="seccion-num">02</p>
+                    <h2>Sin salir de casa</h2>
+                    <p class="cabecera-texto">Atiendo a domicilio en Zona Norte. Así se pide.</p>
+                </div>
+                <ol class="tiempos">
+                    <li>
+                        <span class="tiempo-num">I</span>
+                        <h3>Escribís</h3>
+                        <p>Por WhatsApp, contándome qué servicio querés.</p>
+                    </li>
+                    <li>
+                        <span class="tiempo-num">II</span>
+                        <h3>Coordinamos</h3>
+                        <p>Acordamos el día y el horario que te quede bien.</p>
+                    </li>
+                    <li>
+                        <span class="tiempo-num">III</span>
+                        <h3>Voy a tu casa</h3>
+                        <p>Llego a tu domicilio y hago la sesión ahí.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Turnos -->
+        <section class="turnos" id="turnos">
+            <div class="wrap turnos-in">
+                <p class="seccion-num">03</p>
+                <h2>Pedí tu turno.</h2>
+                <p class="turnos-texto">Escribime por WhatsApp con el servicio que querés y tu zona, y coordinamos.</p>
+                <div class="turnos-acciones">
+                    <a href="#" class="btn btn-claro js-contacto">Escribir por WhatsApp</a>
+                    <a href="#" class="btn btn-linea-clara js-contacto">Ver Instagram</a>
+                </div>
+                <address class="datos">Zona Norte, Argentina<br>WhatsApp +54 9 11 2155-2201 &middot; @kinesioadonai</address>
+                <p class="nota" id="nota-contacto" aria-live="polite">Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="wrap pie-row">
+            <p><strong>Kinesio Adonai</strong> &middot; Gabriela Godoy &middot; Masajes y kinesiología a domicilio, Zona Norte</p>
+            <p class="dev-credit">Demo desarrollada por <a href="https://www.instagram.com/gondev.web" target="_blank" rel="noopener">@gondev.web</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

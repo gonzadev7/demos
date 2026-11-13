@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Pedido - Hamburguesas Individuales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer;">🍔 TuBurguer</div>
+            <a href="index.html" style="text-decoration: none; color: var(--secondary-color);">Volver a la tienda</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="checkout-container">
+            <h2>Datos de tu Pedido de Hamburguesas</h2>
+            <form id="checkout-form">
+                                <div class="form-group">
+                                    <label for="notas">Observaciones / Notas</label>
+                                    <textarea id="notas" placeholder="Ej: Sin cebolla, agregar servilletas, etc."></textarea>
+                                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" required placeholder="Ej: Juan Pérez">
+                </div>
+
+                <div class="form-group">
+                    <label for="entrega">Método de Entrega *</label>
+                    <select id="entrega" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="local">Retiro en Local</option>
+                        <option value="envio">Envío a Domicilio</option>
+                    </select>
+                </div>
+
+                <div id="direccion-group" class="form-group hidden">
+                    <label for="direccion">Dirección y Entre Calles *</label>
+                    <textarea id="direccion" placeholder="Ej: Av. Siempre Viva 123, entre Calle A y Calle B"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="pago">Método de Pago *</label>
+                    <select id="pago" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="Efectivo">Efectivo</option>
+                        <option value="Transferencia">Transferencia</option>
+                    </select>
+                </div>
+                <div id="pago-efectivo-group" class="form-group hidden">
+                    <label for="pago-efectivo">¿Con cuánto pagás?</label>
+                    <input type="number" id="pago-efectivo" min="0" step="1" placeholder="Ej: 5000">
+                </div>
+                </div>
+
+
+                <div class="order-summary">
+                    <h3>Resumen de tu Pedido de Hamburguesas</h3>
+                    <div id="summary-items"></div>
+                    <hr>
+                    <p><strong>Total: $<span id="summary-total">0</span></strong></p>
+                </div>
+
+                <button type="submit" class="btn-add" style="margin-top: 1rem;">Enviar Pedido de Hamburguesas por WhatsApp</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 TuBurguer - Todos los derechos reservados</p>
+            <p>Sitio desarrollado por <strong>Gonzalo Meza - Desarrollador Web</strong></p>
+            <a href="https://wa.me/5491122739810?text=Quiero%20saber%20sobre%20costos%20y%20mantenimientos%20del%20sistema" class="btn-system" target="_blank">
+                <i class="fab fa-whatsapp"></i> QUIERO ESTE SISTEMA
+            </a>
+        </div>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

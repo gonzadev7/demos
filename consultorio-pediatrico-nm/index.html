@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Norycel Moreno | Médica pediatra en Monte Grande</title>
+    <meta name="description" content="Consultorio pediátrico NM en Monte Grande. Dra. Norycel Moreno, médica pediatra (MP 552580). Atención particular y por obras sociales.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="top">
+        <div class="wrap top-row">
+            <a href="#inicio" class="marca">NM &middot; Consultorio Pediátrico</a>
+            <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">Menú</button>
+            <nav class="nav">
+                <a href="#etapas">Etapas</a>
+                <a href="#compromiso">Compromiso</a>
+                <a href="#doctora">La doctora</a>
+                <a href="#turnos" class="nav-turno">Turnos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Portada -->
+        <section class="portada" id="inicio">
+            <div class="wrap portada-grid">
+                <div class="portada-sello">
+                    <div class="sello"><img src="logo.png" alt="Logo del consultorio: un corazón con un bebé y una cruz" width="170" height="170"></div>
+                    <p class="volanta">Médica pediatra<br>Monte Grande</p>
+                </div>
+                <div class="portada-texto">
+                    <p class="kicker">Dra. Norycel Moreno</p>
+                    <h1>Cuidado y salud para cada etapa de su crecimiento.</h1>
+                    <p class="bajada">Acompaño a tu familia desde el recién nacido hasta la adolescencia. Atención particular y por obras sociales.</p>
+                    <div class="acciones">
+                        <a href="#turnos" class="btn btn-lleno">Pedir turno</a>
+                        <a href="#etapas" class="btn btn-linea">¿En qué etapa está tu hijo?</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Etapas (índice con panel) -->
+        <section class="etapas" id="etapas">
+            <div class="wrap">
+                <div class="cabecera">
+                    <p class="seccion-num">01</p>
+                    <h2>¿En qué etapa está tu hijo?</h2>
+                    <p class="cabecera-texto">Elegí una y mirá qué controles y temas se trabajan en cada momento.</p>
+                </div>
+                <div class="indice">
+                    <ul class="indice-lista" role="tablist">
+                        <li><button class="indice-item activo" role="tab" aria-selected="true" data-i="0"><span>I</span>Recién nacido</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-i="1"><span>II</span>Lactante</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-i="2"><span>III</span>Primera infancia</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-i="3"><span>IV</span>Edad escolar</button></li>
+                        <li><button class="indice-item" role="tab" aria-selected="false" data-i="4"><span>V</span>Adolescencia</button></li>
+                    </ul>
+                    <div class="indice-paneles">
+                        <div class="panel" data-i="0">
+                            <h3>Recién nacido</h3>
+                            <ul class="etiquetas">
+                                <li>Control y seguimiento</li>
+                                <li>Lactancia materna</li>
+                                <li>Crecimiento y desarrollo</li>
+                            </ul>
+                        </div>
+                        <div class="panel" data-i="1" hidden>
+                            <h3>Lactante</h3>
+                            <ul class="etiquetas">
+                                <li>Controles periódicos</li>
+                                <li>Vacunación</li>
+                                <li>Alimentación complementaria</li>
+                                <li>Prevención de enfermedades</li>
+                            </ul>
+                        </div>
+                        <div class="panel" data-i="2" hidden>
+                            <h3>Primera infancia</h3>
+                            <ul class="etiquetas">
+                                <li>Control de crecimiento</li>
+                                <li>Desarrollo del lenguaje</li>
+                                <li>Hábitos y estilo de vida saludable</li>
+                                <li>Prevención de accidentes</li>
+                            </ul>
+                        </div>
+                        <div class="panel" data-i="3" hidden>
+                            <h3>Edad escolar</h3>
+                            <ul class="etiquetas">
+                                <li>Control de salud anual</li>
+                                <li>Rendimiento escolar</li>
+                                <li>Hábitos y estilo de vida saludable</li>
+                                <li>Prevención y control de enfermedades</li>
+                            </ul>
+                        </div>
+                        <div class="panel" data-i="4" hidden>
+                            <h3>Adolescencia</h3>
+                            <ul class="etiquetas">
+                                <li>Cambios en la pubertad</li>
+                                <li>Salud emocional</li>
+                                <li>Educación en hábitos saludables</li>
+                                <li>Orientación y acompañamiento</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compromiso (tiempos en numerales romanos) -->
+        <section class="compromiso" id="compromiso">
+            <div class="wrap">
+                <div class="cabecera cabecera-clara">
+                    <p class="seccion-num">02</p>
+                    <h2>Mi compromiso con tu familia</h2>
+                </div>
+                <ol class="tiempos">
+                    <li>
+                        <span class="tiempo-num">I</span>
+                        <h3>Atención cálida y personalizada</h3>
+                        <p>Cada niño es distinto y la consulta se adapta a él.</p>
+                    </li>
+                    <li>
+                        <span class="tiempo-num">II</span>
+                        <h3>Información clara y confiable</h3>
+                        <p>Explicaciones simples para que sepas qué hacer en casa.</p>
+                    </li>
+                    <li>
+                        <span class="tiempo-num">III</span>
+                        <h3>Prevención y cuidado integral</h3>
+                        <p>Controles a tiempo para que los problemas no lleguen de sorpresa.</p>
+                    </li>
+                    <li>
+                        <span class="tiempo-num">IV</span>
+                        <h3>Acompañamiento a toda la familia</h3>
+                        <p>Los cambios del niño también son los de quienes lo cuidan.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Para familias -->
+        <section class="familias" id="familias">
+            <div class="wrap familias-grid">
+                <div class="cabecera">
+                    <p class="seccion-num">03</p>
+                    <h2>Información para familias</h2>
+                    <p class="cabecera-texto">En su Instagram, la doctora comparte guías para el día a día. Algunos temas:</p>
+                </div>
+                <ul class="notas">
+                    <li><span>Lactantes</span>Alimentación complementaria: cuándo empezar y cómo.</li>
+                    <li><span>Recién nacidos</span>Manchitas rojas: eritema tóxico, cuándo consultar.</li>
+                    <li><span>Niños</span>Niños y pantallas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- La doctora (CV) -->
+        <section class="doctora" id="doctora">
+            <div class="wrap doctora-grid">
+                <div class="cabecera">
+                    <p class="seccion-num">04</p>
+                    <h2>La doctora</h2>
+                    <p class="cabecera-texto">Dra. Norycel Moreno, médica pediatra.</p>
+                </div>
+                <dl class="cv">
+                    <div><dt>Título</dt><dd>Médica pediatra<span>Matrícula provincial 552580</span></dd></div>
+                    <div><dt>Máster</dt><dd>Máster en TGD</dd></div>
+                    <div><dt>Máster</dt><dd>Máster en Dirección y Gerencia de Hospitales</dd></div>
+                    <div><dt>Atención</dt><dd>Particular y obras sociales<span>Consultá tu cobertura por WhatsApp</span></dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Turnos -->
+        <section class="turnos" id="turnos">
+            <div class="wrap turnos-in">
+                <p class="seccion-num">05</p>
+                <h2>Pedí turno para tu hijo.</h2>
+                <p class="turnos-texto">Escribinos por WhatsApp con el nombre y la edad del niño y coordinamos el día.</p>
+                <div class="turnos-acciones">
+                    <a href="#" class="btn btn-claro js-contacto">Escribir por WhatsApp</a>
+                    <a href="#" class="btn btn-linea-clara js-contacto">Ver en Instagram</a>
+                </div>
+                <address class="datos">Arana 288, Monte Grande, Buenos Aires<br>WhatsApp 11 2466 0401 &middot; @consulpediatria</address>
+                <p class="nota" id="nota-contacto" aria-live="polite">Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="wrap pie-row">
+            <p><strong>Dra. Norycel Moreno</strong> &middot; Médica pediatra MP 552580 &middot; Arana 288, Monte Grande</p>
+            <p class="dev-credit">Demo desarrollada por <a href="https://www.instagram.com/gondev.web" target="_blank" rel="noopener">@gondev.web</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

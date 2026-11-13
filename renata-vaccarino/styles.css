@@ -1,0 +1,416 @@
+:root {
+    --primary: #3d52e0;
+    --accent-hover: #2a3bb8;
+    --dark: #111827;
+    --light: #f0f4ff;
+    --text: #1a1a2e;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--dark); }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* ===================== HEADER ===================== */
+.top-header {
+    background: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(61,82,224,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: var(--dark);
+}
+
+.header-name span { color: var(--primary); }
+
+.header-esp {
+    font-size: 0.72rem;
+    color: #888;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .header-container { justify-content: center; flex-direction: column; gap: 2px; }
+    .header-esp { letter-spacing: 1px; }
+}
+
+/* ===================== HERO ===================== */
+.hero {
+    background: var(--dark);
+    padding: 40px 20px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-bg { background: none; }
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.hero-photo img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 30px rgba(61,82,224,0.35);
+    object-fit: cover;
+    display: block;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(61,82,224,0.15);
+    color: #7b8ef5;
+    border: 1px solid rgba(61,82,224,0.35);
+    padding: 5px 18px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.hero-text h2 {
+    color: var(--white);
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+
+.hero-text > p {
+    font-size: 0.97rem;
+    color: rgba(255,255,255,0.68);
+    line-height: 1.75;
+    max-width: 520px;
+}
+
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 15px 34px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 0 24px rgba(61,82,224,0.4);
+    transition: all 0.3s;
+    margin-top: 8px;
+}
+
+.btn-hero:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* ===================== SECTION TITLE ===================== */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 0.93rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ===================== PAIN POINTS ===================== */
+.pain-points {
+    padding: 90px 0;
+    background: var(--light);
+}
+
+.pain-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.pain-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px 24px;
+    border-left: 4px solid var(--primary);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.pain-icon {
+    color: var(--primary);
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.pain-card p {
+    font-size: 0.93rem;
+    color: #444;
+    line-height: 1.65;
+    font-style: italic;
+}
+
+/* ===================== ENFOQUE ===================== */
+.enfoque {
+    padding: 90px 0;
+    background: var(--white);
+}
+
+.enfoque-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.enfoque-card {
+    background: var(--light);
+    border-radius: 14px;
+    padding: 36px 30px;
+    border-top: 4px solid var(--primary);
+}
+
+.enfoque-icon {
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.enfoque-card h3 {
+    font-size: 1.15rem;
+    color: var(--dark);
+    margin-bottom: 12px;
+    line-height: 1.35;
+}
+
+.enfoque-card p {
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.75;
+}
+
+/* ===================== PRIMERA CONSULTA ===================== */
+.primera-consulta {
+    padding: 90px 0;
+    background: var(--dark);
+}
+
+.primera-consulta .section-title h2 { color: var(--white); }
+.primera-consulta .section-title p { color: rgba(255,255,255,0.55); }
+
+.pc-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 680px;
+    margin: 0 auto 40px;
+}
+
+.pc-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(61,82,224,0.25);
+    border-radius: 12px;
+    padding: 24px 28px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.step-body h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.step-body p {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.pc-cta { text-align: center; }
+
+/* ===================== SOBRE MÍ ===================== */
+.sobre-mi {
+    padding: 90px 0;
+    background: var(--light);
+}
+
+.formaciones-centered {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.formaciones-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.formaciones-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.93rem;
+    color: #1a2060;
+    padding: 14px 20px;
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid #d0d8fa;
+}
+
+.formaciones-list li i {
+    color: var(--primary);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+/* ===================== CONTACTO ===================== */
+.contact {
+    padding: 90px 0;
+    background: var(--white);
+}
+
+.contact-simple {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-simple h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.contact-simple > p {
+    color: #666;
+    font-size: 0.97rem;
+    margin-bottom: 28px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.97rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background: var(--dark);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .brand h3 {
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+footer .brand span { color: var(--primary); }
+footer .brand p { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+
+.dev-credit { font-size: 0.75rem; color: rgba(255,255,255,0.25); margin-top: 4px; }
+.dev-credit a { color: #7b8ef5; text-decoration: none; font-weight: 600; }
+.dev-credit a:hover { opacity: 0.75; }
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    .hero { padding: 70px 20px 60px; }
+    .hero-content { grid-template-columns: 1fr; text-align: center; gap: 24px; justify-items: center; }
+    .hero-text { align-items: center; width: 100%; }
+    .hero-text h2 { font-size: 1.9rem; }
+    .hero-text p { font-size: 0.93rem; }
+
+    .pain-grid { grid-template-columns: 1fr; }
+    .enfoque-grid { grid-template-columns: 1fr; }
+
+    .pc-step { flex-direction: column; gap: 12px; }
+
+    .section-title h2 { font-size: 1.8rem; }
+}

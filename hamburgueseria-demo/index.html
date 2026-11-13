@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburguesas & Panes - Demo</title>
+    <meta name="description" content="Hamburguesas artesanales hechas al momento. Pan casero, carne premium y salsas propias. Pedí por WhatsApp o retirá en local.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+        <div id="spinner" class="spinner-overlay" style="display:none;">
+            <div class="spinner"></div>
+        </div>
+    <header>
+        <nav>
+            <div class="logo">🍔</div>
+            <div style="display: flex; align-items: center; gap: 1.5rem;">
+                <div class="categories-header">
+                    <label for="category-select" class="category-label">Categoría:</label>
+                    <select id="category-select">
+                        <option value="all">Todas</option>
+                        <option value="Clásicas">Clásicas</option>
+                        <option value="Especiales">Especiales</option>
+                        <option value="Veggie">Veggie</option>
+                        <option value="Pollo">Pollo</option>
+                    </select>
+                </div>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+                <!-- Selector de categorías ahora está en el header -->
+        <section class="hero">
+            <h1 class="main-impact-title">¡Explosión de Sabor en Cada Mordida!</h1>
+            <p>Las hamburguesas más irresistibles, jugosas y originales. ¡Viví la experiencia BurgerCombo!</p>
+        </section>
+
+        <section class="products" id="product-list">
+            <!-- Las hamburguesas se cargarán dinámicamente con JS -->
+        </section>
+
+        <section class="reviews">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"La hamburguesa clásica es deliciosa y súper jugosa. ¡Repetiré!"</p>
+                    <span>- Juan P. · Cliente frecuente</span>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"La veggie es la mejor opción para quienes no comemos carne. ¡Muy sabrosa!"</p>
+                    <span>- María G. · Cliente frecuente</span>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"La hamburguesa BBQ tiene un sabor único. ¡Recomendada!"</p>
+                    <span>- Carlos R. · Cliente frecuente</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 TuBurguer - Todos los derechos reservados</p>
+            <p>Sitio desarrollado por <strong>Gonzalo Meza - Desarrollador Web</strong></p>
+            <a href="https://wa.me/5491122273980?text=Quiero%20saber%20sobre%20costos%20y%20mantenimientos%20del%20sistema" class="btn-system" target="_blank">
+                <i class="fab fa-whatsapp"></i> QUIERO ESTE SISTEMA
+            </a>
+        </div>
+    </footer>
+
+    <!-- Carrito Flotante -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button id="close-cart">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Items del carrito -->
+        </div>
+        <div class="cart-footer">
+            <div class="total">Total: $<span id="cart-total">0</span></div>
+            <button id="checkout-btn" class="btn-primary">Finalizar Pedido</button>
+        </div>
+    </div>
+
+    <!-- Modal de Imagen -->
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="" alt="Hamburguesa" style="max-width:100%; border-radius:8px;">
+        </div>
+    </div>
+
+    <div id="toast" class="toast">¡Producto agregado!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

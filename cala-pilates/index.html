@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cala Pilates &amp; Yoga · Ingeniero Maschwitz</title>
+<meta name="description" content="Pilates, yoga y talleres en Ingeniero Maschwitz. Reservá tu clase de prueba en Cala, donde el movimiento se vuelve suave.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="encabezado" id="encabezado">
+  <a class="marca" href="#inicio">Cala <small>Pilates &amp; Yoga</small></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+  <nav id="nav" aria-label="Principal">
+    <a href="#clases">Clases</a>
+    <a href="#horarios">Horarios</a>
+    <a href="#mas">Talleres</a>
+    <a href="#turnos">Reservas</a>
+  </nav>
+</header>
+
+<main id="inicio">
+
+<section class="portada">
+  <div class="portada-texto">
+    <img class="logo" src="logo.jpg" alt="Logo de Cala: donde el movimiento se vuelve suave" width="150" height="150">
+    <p class="rubro">Pilates, yoga y talleres en Maschwitz</p>
+    <h1>Donde el movimiento se vuelve <em>suave</em></h1>
+    <p class="bajada">Un espacio para conectar. Vení a probar una clase y encontrá la que mejor se adapte a vos y a tu ritmo.</p>
+    <div class="accion">
+      <button class="btn" type="button" data-nota>Reservá tu clase de prueba</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+  </div>
+  <figure class="portada-foto"><img src="sala-yoga.jpg" alt="Clase de yoga en la sala de Cala" width="720" height="537"></figure>
+</section>
+
+<div class="franja" role="group" aria-label="Lo que hay en Cala">
+  <p><b>Reformer</b> de lunes a viernes</p>
+  <p><b>Sábados</b> de pilates postural</p>
+  <p><b>Yoga</b> y también talleres e instructorados</p>
+  <p><b>Casi 3.000</b> personas siguen a Cala en Instagram</p>
+</div>
+
+<section class="sabiendo">
+  <figure><img src="reformer.jpg" alt="Alumna entrenando en el reformer de Cala" width="720" height="537" loading="lazy"></figure>
+  <div>
+    <p class="etiqueta">Si nunca hiciste pilates</p>
+    <h2>No hace falta llegar sabiendo</h2>
+    <p>Lo importante es encontrar una actividad que disfrutes y que te den ganas de sostener en el tiempo.</p>
+    <p>En Cala te acompañamos en cada práctica, respetando tus tiempos y escuchando lo que tu cuerpo necesita.</p>
+    <div class="accion izq">
+      <button class="btn" type="button" data-nota>Quiero probar una clase</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+  </div>
+</section>
+
+<section class="clases" id="clases">
+  <p class="etiqueta">Clases</p>
+  <h2>¿Qué clase es para vos?</h2>
+  <div class="indice">
+    <div class="indice-lista" role="tablist" aria-label="Clases de Cala">
+      <button type="button" role="tab" aria-selected="true" aria-controls="panel" data-clase="0">Reformer</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="panel" data-clase="1">Avanzado</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="panel" data-clase="2">Power</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="panel" data-clase="3">Pilates postural</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="panel" data-clase="4">Yoga</button>
+    </div>
+    <div class="indice-panel" id="panel" role="tabpanel" aria-live="polite">
+      <h3 id="panel-titulo"></h3>
+      <p id="panel-texto"></p>
+      <p class="cuando" id="panel-cuando"></p>
+    </div>
+  </div>
+</section>
+
+<section class="horarios" id="horarios">
+  <p class="etiqueta">Noviembre</p>
+  <h2>Elegí tu horario y reservá tu lugar</h2>
+  <div class="grilla-marco">
+    <table class="grilla">
+      <caption class="oculto">Horarios de pilates de noviembre</caption>
+      <thead><tr><th scope="col">Hora</th><th scope="col">Lun</th><th scope="col">Mar</th><th scope="col">Mié</th><th scope="col">Jue</th><th scope="col">Vie</th><th scope="col">Sáb</th></tr></thead>
+      <tbody id="grilla-cuerpo"></tbody>
+    </table>
+  </div>
+  <ul class="leyenda">
+    <li><i class="k r">R</i> Reformer</li>
+    <li><i class="k a">A</i> Avanzado</li>
+    <li><i class="k w">W</i> Power</li>
+    <li><i class="k p">P</i> Pilates postural</li>
+  </ul>
+  <p class="aclara">Horarios de pilates publicados por Cala para noviembre. Los de yoga se consultan al reservar.</p>
+</section>
+
+<section class="nuncas">
+  <div>
+    <p class="etiqueta">Cómo se entrena en Cala</p>
+    <h2>Tres “nuncas” de pilates</h2>
+    <ol>
+      <li>Nunca compares tu progreso con el de otra persona.</li>
+      <li>Nunca subestimes un movimiento lento y controlado.</li>
+      <li>Nunca te saltees la respiración: es parte del ejercicio.</li>
+    </ol>
+  </div>
+  <figure><img src="yoga.jpg" alt="Alumna en una clase de yoga en Cala, con plantas de fondo" width="620" height="537" loading="lazy"></figure>
+</section>
+
+<section class="mas" id="mas">
+  <p class="etiqueta">Más que clases</p>
+  <h2>Tu espacio para sentirte bien</h2>
+  <div class="mas-lista">
+    <article><h3>Instructorado</h3><p>Formación en pilates reformer e hipopresivos, para quienes quieren dar el paso y enseñar.</p></article>
+    <article><h3>Talleres y workshops</h3><p>Encuentros para seguir aprendiendo y compartir con otras personas.</p></article>
+    <article><h3>Charlas</h3><p>Un lugar donde también se conversa sobre el cuerpo y el bienestar.</p></article>
+    <article><h3>Gift Card de Cala</h3><p>Regalale a alguien especial un rato para moverse y desconectar.</p></article>
+  </div>
+</section>
+
+<section class="pasos-sec">
+  <p class="etiqueta">Cómo empezar</p>
+  <h2>Tu primera clase, en tres pasos</h2>
+  <ol class="pasos">
+    <li><b>I</b><div><h3>Elegí clase y horario</h3><p>Mirá la grilla del mes y buscá el que te quede mejor.</p></div></li>
+    <li><b>II</b><div><h3>Escribinos</h3><p>Reservá tu clase de prueba y sacate las dudas.</p></div></li>
+    <li><b>III</b><div><h3>Te esperamos en Cala</h3><p>Los Rosales 2296, Ingeniero Maschwitz.</p></div></li>
+  </ol>
+</section>
+
+<section class="turnos" id="turnos">
+  <p class="etiqueta">Reservas</p>
+  <h2>Noviembre es una buena oportunidad para hacerte un ratito para vos</h2>
+  <dl class="ficha">
+    <div><dt>Dónde</dt><dd>Los Rosales 2296, Ingeniero Maschwitz</dd></div>
+    <div><dt>WhatsApp</dt><dd>11 3417-5678</dd></div>
+    <div><dt>Instagram</dt><dd>@cala.pilates.yoga</dd></div>
+  </dl>
+  <div class="accion">
+    <button class="btn claro" type="button" data-nota>Reservá tu clase de prueba</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+
+<a class="flotante" href="#turnos">Reservá tu clase de prueba</a>
+
+<script src="script.js"></script>
+</body>
+</html>
