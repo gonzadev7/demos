@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamá Activa · Natacha Broso · Entrenamiento para embarazo y posparto</title>
+<meta name="description" content="Entrenamiento para mujeres en embarazo y posparto, suelo pélvico y abdominales hipopresivos, con Natacha Broso. Presencial y a distancia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top" id="encabezado">
+  <div class="top-row">
+    <a class="marca" href="#inicio" aria-label="Mamá Activa"><b>MAMÁ</b><span>ACTIVA</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#momento">Tu momento</a>
+      <a href="#taller">Taller</a>
+      <a href="#modalidades">Modalidades</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="portada">
+  <div class="portada-texto">
+    <div class="perfil">
+      <img src="logo.jpg" alt="Natacha Broso entrenando embarazada, foto de perfil de @soymama_activa" width="140" height="140">
+      <p><b>Natacha Broso</b><span>Personal y Mamá · @soymama_activa</span></p>
+    </div>
+    <h1>Entrená en cada etapa: <em>embarazo</em>, posparto y suelo pélvico</h1>
+    <p class="bajada">Especialista en mujeres, embarazo y postparto. Clases presenciales y a distancia, y abdominales hipopresivos para volver a conectar con tu cuerpo.</p>
+    <div class="accion">
+      <button class="btn" type="button" data-nota>Quiero consultar por una clase</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+  </div>
+  <div class="portada-formas" aria-hidden="true"><i></i><i></i><i></i></div>
+</section>
+
+<div class="franja" role="group" aria-label="Datos de Mamá Activa">
+  <p><b>82,3 mil</b> personas siguen a Mamá Activa</p>
+  <p><b>Presencial</b> y a distancia</p>
+  <p><b>Lun a vie</b> de 10 a 18 h</p>
+  <p><b>Embarazo</b> y posparto</p>
+</div>
+
+<section class="momento" id="momento">
+  <p class="etiqueta">Tu momento</p>
+  <h2>¿En qué etapa estás?</h2>
+  <div class="indice">
+    <div class="indice-lista" role="tablist" aria-label="Etapas">
+      <button type="button" role="tab" aria-selected="true" aria-controls="panel" data-etapa="0">Estoy embarazada</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="panel" data-etapa="1">Tuve a mi bebé</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="panel" data-etapa="2">Quiero trabajar abdomen y suelo pélvico</button>
+    </div>
+    <div class="indice-panel" id="panel" role="tabpanel" aria-live="polite">
+      <h3 id="panel-titulo"></h3>
+      <p id="panel-texto"></p>
+      <p class="cuando" id="panel-cuando"></p>
+    </div>
+  </div>
+</section>
+
+<section class="taller" id="taller">
+  <figure class="afiche">
+    <img src="taller.png" alt="Afiche del taller Parto en movimiento: online, exclusivo para embarazadas, sábado 05/12 de 9:30 a 11:00" width="311" height="415">
+  </figure>
+  <div>
+    <p class="etiqueta">Próximo taller</p>
+    <h2>Parto en movimiento</h2>
+    <ul class="datos">
+      <li><b>Cuándo</b> Sábado 05/12, de 9:30 a 11:00</li>
+      <li><b>Dónde</b> Online</li>
+      <li><b>Para quién</b> Exclusivo para embarazadas</li>
+      <li><b>Cupos</b> Limitados</li>
+    </ul>
+    <div class="accion izq">
+      <button class="btn" type="button" data-nota>Reservar mi lugar</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+  </div>
+</section>
+
+<section class="modalidades" id="modalidades">
+  <p class="etiqueta">Modalidades</p>
+  <h2>Elegí cómo entrenar</h2>
+  <div class="mod-lista">
+    <article><span class="num">1</span><h3>Presencial</h3><p>Clases personalizadas, con atención pensada para tu etapa y tu cuerpo.</p></article>
+    <article><span class="num">2</span><h3>A distancia</h3><p>Clases online aptas posparto, para entrenar desde tu casa y a tu ritmo.</p></article>
+    <article><span class="num">3</span><h3>Talleres</h3><p>Encuentros especiales, como Parto en movimiento, con fecha y cupos limitados.</p></article>
+  </div>
+</section>
+
+<section class="pasos-sec">
+  <p class="etiqueta">Cómo empezar</p>
+  <h2>Tu primera clase, en tres pasos</h2>
+  <ol class="pasos">
+    <li><b>I</b><div><h3>Contanos en qué etapa estás</h3><p>Embarazo, posparto o trabajo de suelo pélvico y abdominales.</p></div></li>
+    <li><b>II</b><div><h3>Elegí modalidad</h3><p>Presencial, a distancia o el próximo taller.</p></div></li>
+    <li><b>III</b><div><h3>Empezá a moverte</h3><p>Natacha te acompaña desde la primera clase.</p></div></li>
+  </ol>
+</section>
+
+<section class="contacto" id="contacto">
+  <p class="etiqueta">Contacto</p>
+  <h2>Escribile a Natacha y reservá tu lugar</h2>
+  <dl class="ficha">
+    <div><dt>Atención</dt><dd>Lunes a viernes, de 10 a 18 h</dd></div>
+    <div><dt>WhatsApp</dt><dd>11 4175-4404</dd></div>
+    <div><dt>Instagram</dt><dd>@soymama_activa</dd></div>
+  </dl>
+  <div class="accion">
+    <button class="btn claro" type="button" data-nota>Quiero consultar por una clase</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+
+<a class="flotante oculta" href="#contacto">Quiero consultar por una clase</a>
+
+<script src="script.js"></script>
+</body>
+</html>
