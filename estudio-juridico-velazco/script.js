@@ -1,0 +1,60 @@
+(() => {
+  const encabezado = document.getElementById('encabezado');
+  const btnMenu = document.querySelector('.menu-btn');
+  const nav = document.getElementById('nav');
+
+  // Arranca sólido en el bordó de la vidriera; al scrollear pasa a vidrio esmerilado
+  const marcar = () => encabezado.classList.toggle('vidrio', window.scrollY > 10 && !nav.classList.contains('abierto'));
+  window.addEventListener('scroll', marcar, { passive: true });
+  btnMenu.addEventListener('click', () => {
+    btnMenu.setAttribute('aria-expanded', nav.classList.toggle('abierto'));
+    marcar();
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('abierto');
+    btnMenu.setAttribute('aria-expanded', 'false');
+    marcar();
+  }));
+
+  // Botones de contacto: en la demo solo muestran la nota
+  document.querySelectorAll('[data-nota]').forEach(b => b.addEventListener('click', () => {
+    const nota = b.nextElementSibling;
+    nota.hidden = false;
+    nota.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }));
+
+  // Índice de modalidades con panel
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const elegir = t => tabs.forEach(x => {
+    const on = x === t;
+    x.setAttribute('aria-selected', on);
+    x.tabIndex = on ? 0 : -1;
+    document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+  });
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => elegir(t));
+    t.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      const sig = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      elegir(sig); sig.focus();
+    });
+  });
+
+  // Botón flotante del celular: aparece cuando el botón de la portada sale de pantalla y se esconde al llegar al cierre
+  const flotante = document.querySelector('.flotante');
+  const cierre = document.getElementById('contacto');
+  const botonPortada = document.querySelector('.portada .btn');
+  const revisar = () => {
+    const portadaVisible = botonPortada.getBoundingClientRect().bottom > 0;
+    const cierreCerca = cierre.getBoundingClientRect().top < innerHeight * 0.85;
+    flotante.classList.toggle('oculta', portadaVisible || cierreCerca);
+  };
+  window.addEventListener('scroll', revisar, { passive: true });
+  flotante.addEventListener('click', e => {
+    e.preventDefault();
+    cierre.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  marcar();
+  revisar();
+})();
