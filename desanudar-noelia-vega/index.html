@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DesAnudar · Equipo terapéutico · Lic. Noelia Vega, Campana</title>
+<meta name="description" content="DesAnudar, equipo terapéutico de la Lic. Noelia Vega. Atención psicológica presencial en Osvaldo Demarco 129, Campana, y online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="encabezado" id="encabezado">
+  <div class="cinta">
+    <a class="marca" href="#inicio">DesAnudar<small>Equipo terapéutico</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#modalidad">Modalidades</a>
+      <a href="#pasos">Cómo empezar</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#contacto">Turnos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <div class="portada-texto">
+      <p class="etiqueta">Lic. Noelia Vega · Campana</p>
+      <h1>El nudo se puede <em>desatar</em>.</h1>
+      <p class="bajada">Atención psicológica presencial en Campana y online, estés donde estés.</p>
+      <button class="btn" type="button" data-nota>Pedí tu primera entrevista</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+    <figure class="logo">
+      <img src="logo.jpg" alt="Logo de DesAnudar, Equipo terapéutico: un lazo en forma de infinito" width="600" height="370">
+    </figure>
+  </section>
+
+  <section class="datos">
+    <h2 class="solo-lector">Datos rápidos</h2>
+    <ul>
+      <li><b>Presencial</b><span>Osvaldo Demarco 129, Campana</span></li>
+      <li><b>Online</b><span>Asistencia psicológica a distancia</span></li>
+      <li><b>Lunes a sábado</b><span>Sábados de 10 a 13 h</span></li>
+    </ul>
+  </section>
+
+  <section class="modalidad" id="modalidad">
+    <p class="etiqueta">Atención virtual y presencial</p>
+    <h2>Elegí cómo te queda más cómodo.</h2>
+    <div class="selector">
+      <div class="indice" role="tablist" aria-label="Modalidades">
+        <button role="tab" id="tab-pres" aria-controls="panel-pres" aria-selected="true">En el consultorio</button>
+        <button role="tab" id="tab-online" aria-controls="panel-online" aria-selected="false" tabindex="-1">Online</button>
+      </div>
+      <div class="panel" role="tabpanel" id="panel-pres" aria-labelledby="tab-pres">
+        <h3>En Campana</h3>
+        <p>Las sesiones presenciales son en Osvaldo Demarco 129, Campana.</p>
+        <p>De lunes a viernes por la mañana y por la tarde, y los sábados a la mañana.</p>
+      </div>
+      <div class="panel" role="tabpanel" id="panel-online" aria-labelledby="tab-online" hidden>
+        <h3>Asistencia psicológica online</h3>
+        <p>La misma atención, a distancia, desde tu casa o desde cualquier lugar.</p>
+        <p>Sirve si vivís lejos de Campana o si tus horarios no te dejan viajar al consultorio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pasos" id="pasos">
+    <p class="etiqueta">Cómo empezar</p>
+    <h2>Tres pasos para la primera entrevista.</h2>
+    <ol>
+      <li><span class="num" aria-hidden="true">1</span><div><h3>Escribinos</h3><p>Un mensaje corto alcanza: contá qué te trae y si preferís presencial u online.</p></div></li>
+      <li><span class="num" aria-hidden="true">2</span><div><h3>Coordinamos día y hora</h3><p>Te proponemos un horario dentro de la atención del equipo.</p></div></li>
+      <li><span class="num" aria-hidden="true">3</span><div><h3>Primera entrevista</h3><p>En el consultorio de Campana u online, como elijas.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="horarios" id="horarios">
+    <p class="etiqueta">Horarios y dirección</p>
+    <h2>De lunes a sábado.</h2>
+    <div class="dos">
+      <table>
+        <caption class="solo-lector">Horarios de atención</caption>
+        <tbody>
+          <tr><th scope="row">Lunes</th><td>9:00 a 19:00</td></tr>
+          <tr><th scope="row">Martes</th><td>9:00 a 18:00</td></tr>
+          <tr><th scope="row">Miércoles</th><td>9:00 a 18:00</td></tr>
+          <tr><th scope="row">Jueves</th><td>9:00 a 18:00</td></tr>
+          <tr><th scope="row">Viernes</th><td>9:00 a 18:00</td></tr>
+          <tr><th scope="row">Sábado</th><td>10:00 a 13:00</td></tr>
+          <tr class="cerrado"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+      <address>
+        <b>DesAnudar · Lic. Noelia Vega</b>
+        Osvaldo Demarco 129<br>Campana, Provincia de Buenos Aires
+        <span class="tel">Teléfono: 011 6371-5212</span>
+      </address>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>Escribinos y coordinamos tu primera entrevista.</h2>
+    <p>Presencial en Campana u online.</p>
+    <button class="btn claro" type="button" data-nota>Pedí tu primera entrevista</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<a class="flotante oculta" href="#contacto">Pedí tu primera entrevista</a>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
