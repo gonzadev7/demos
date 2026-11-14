@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tu Piel es Hoy · Cosmetología facial a domicilio</title>
+<meta name="description" content="Tu Piel es Hoy: limpieza facial, hidratación, peeling, tratamiento para manchas y masajes faciales. Sesiones personalizadas según tu piel. Voy a tu domicilio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="encabezado" id="encabezado">
+  <div class="cinta">
+    <a class="marca" href="#inicio">Tu Piel es Hoy<small>Cosmetología facial</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#tratamientos">Tratamientos</a>
+      <a href="#domicilio">A domicilio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Turnos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <div class="portada-texto">
+      <p class="etiqueta">Sesiones personalizadas según tu piel</p>
+      <h1>Tu piel <em>es hoy.</em></h1>
+      <p class="bajada">Limpieza facial, hidratación, peeling, tratamiento para manchas y masajes faciales. Voy a tu domicilio.</p>
+      <button class="btn" type="button" data-nota>Pedí tu turno</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+    <div class="sello" aria-hidden="true"><span>Voy a tu<br><b>domicilio</b></span></div>
+  </section>
+
+  <section class="tratamientos" id="tratamientos">
+    <p class="etiqueta">Tratamientos</p>
+    <h2>¿Qué querés trabajar en tu piel?</h2>
+    <div class="indice" role="tablist" aria-label="Tratamientos">
+      <button role="tab" id="t-limpieza" aria-controls="p-limpieza" aria-selected="true">Limpieza</button>
+      <button role="tab" id="t-hidratacion" aria-controls="p-hidratacion" aria-selected="false" tabindex="-1">Hidratación</button>
+      <button role="tab" id="t-peeling" aria-controls="p-peeling" aria-selected="false" tabindex="-1">Peeling</button>
+      <button role="tab" id="t-manchas" aria-controls="p-manchas" aria-selected="false" tabindex="-1">Manchas</button>
+      <button role="tab" id="t-masajes" aria-controls="p-masajes" aria-selected="false" tabindex="-1">Masajes</button>
+      <button role="tab" id="t-dermaplaning" aria-controls="p-dermaplaning" aria-selected="false" tabindex="-1">Dermaplaning</button>
+    </div>
+    <div class="panel" role="tabpanel" id="p-limpieza" aria-labelledby="t-limpieza">
+      <h3>Limpieza facial</h3>
+      <p>Elimina impurezas y células muertas.</p>
+      <p class="extra">También hago mascarillas faciales, según lo que tu piel necesite.</p>
+    </div>
+    <div class="panel" role="tabpanel" id="p-hidratacion" aria-labelledby="t-hidratacion" hidden>
+      <h3>Hidratación y humectación</h3>
+      <p><b>Hidratación:</b> aporta agua esencial a tu piel.</p>
+      <p><b>Humectación:</b> sella la humedad y protege la barrera.</p>
+    </div>
+    <div class="panel" role="tabpanel" id="p-peeling" aria-labelledby="t-peeling" hidden>
+      <h3>Peeling</h3>
+      <p>Renovación profunda para una piel suave.</p>
+    </div>
+    <div class="panel" role="tabpanel" id="p-manchas" aria-labelledby="t-manchas" hidden>
+      <h3>Tratamiento para manchas</h3>
+      <p>Aclara y unifica el tono.</p>
+    </div>
+    <div class="panel" role="tabpanel" id="p-masajes" aria-labelledby="t-masajes" hidden>
+      <h3>Masajes faciales</h3>
+      <p><b>Masajes faciales:</b> relajación, drenaje y luminosidad.</p>
+      <p><b>Masajes linfáticos faciales:</b> drenaje y rejuvenecimiento.</p>
+    </div>
+    <div class="panel" role="tabpanel" id="p-dermaplaning" aria-labelledby="t-dermaplaning" hidden>
+      <h3>Dermaplaning</h3>
+      <p>Exfoliación física no invasiva, con bisturí estéril.</p>
+    </div>
+  </section>
+
+  <section class="domicilio" id="domicilio">
+    <div class="domicilio-caja">
+      <p class="etiqueta">A domicilio</p>
+      <h2>Voy a tu domicilio.</h2>
+      <p>Tu sesión facial sin moverte de tu casa. Coordinamos el día por mensaje.</p>
+    </div>
+  </section>
+
+  <section class="sobre-mi" id="sobre-mi">
+    <p class="etiqueta">Sobre mí</p>
+    <h2>Formación para cuidar tu piel.</h2>
+    <ul class="formacion">
+      <li>Instrumentadora quirúrgica</li>
+      <li>Cosmetóloga</li>
+      <li>Estudiante de cosmiatría</li>
+      <li>Operadora de HIFU</li>
+    </ul>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>Escribime y coordinamos tu sesión.</h2>
+    <p>Sesiones personalizadas según tu piel, a domicilio.</p>
+    <button class="btn claro" type="button" data-nota>Pedí tu turno</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<a class="flotante oculta" href="#contacto">Pedí tu turno</a>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
