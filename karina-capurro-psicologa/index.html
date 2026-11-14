@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lic. Karina Capurro · Psicóloga en Olivos</title>
+<meta name="description" content="Lic. Karina Capurro, psicóloga en Olivos. Estimulación cognitiva para adultos mayores. Consultas presenciales y online. Francisco Borges 1949, Olivos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;1,500&family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="encabezado" id="encabezado">
+  <div class="cinta">
+    <a class="marca" href="#inicio">Karina Capurro<small>Psicóloga</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#cognitiva">Estimulación cognitiva</a>
+      <a href="#pasos">Consultas</a>
+      <a href="#consultorio">Consultorio</a>
+      <a href="#contacto">Turnos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <div class="forma" aria-hidden="true"></div>
+    <div class="portada-texto">
+      <p class="etiqueta">Psicóloga · Olivos</p>
+      <h1>Lic. Karina <em>Capurro</em></h1>
+      <p class="bajada">Psicología y estimulación cognitiva para adultos mayores. Consultas presenciales en Olivos y online.</p>
+      <button class="btn" type="button" data-nota>Pedí información</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+  </section>
+
+  <section class="cognitiva" id="cognitiva">
+    <div class="cognitiva-caja">
+      <p class="etiqueta">Adultos mayores</p>
+      <h2>Estimulación cognitiva para adultos mayores.</h2>
+      <p>Un espacio pensado para acompañar a las personas mayores, con encuentros en el consultorio de Olivos.</p>
+    </div>
+  </section>
+
+  <section class="pasos" id="pasos">
+    <p class="etiqueta">Consultas</p>
+    <h2>Presencial u online, como te quede mejor.</h2>
+    <ol>
+      <li><span class="num" aria-hidden="true">1</span><h3>Escribime</h3><p>Contame si buscás información o un turno.</p></li>
+      <li><span class="num" aria-hidden="true">2</span><h3>Elegimos la modalidad</h3><p>En el consultorio de Olivos u online.</p></li>
+      <li><span class="num" aria-hidden="true">3</span><h3>Coordinamos el día</h3><p>Te respondo en horario laboral.</p></li>
+    </ol>
+    <p class="aclaracion">Atención particular.</p>
+  </section>
+
+  <section class="consultorio" id="consultorio">
+    <div class="texto">
+      <p class="etiqueta">Consultorio</p>
+      <h2>En Olivos, sobre Francisco Borges.</h2>
+      <address>
+        <b>Lic. Karina Capurro</b>
+        Francisco Borges 1949<br>Olivos, Provincia de Buenos Aires
+        <span class="tel">Teléfono: 011 6445-0608</span>
+      </address>
+    </div>
+    <div class="mapa">
+      <iframe title="Mapa del consultorio en Francisco Borges 1949, Olivos" src="https://www.google.com/maps?q=Francisco+Borges+1949,+Olivos,+Buenos+Aires&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>Escribime y coordinamos tu consulta.</h2>
+    <p>Presencial en Olivos u online.</p>
+    <button class="btn claro" type="button" data-nota>Pedí información</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<a class="flotante oculta" href="#contacto">Pedí información</a>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
