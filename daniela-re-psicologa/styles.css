@@ -14,7 +14,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 body { margin: 0; font: 400 1.0625rem/1.65 var(--sans); color: var(--tinta); background: var(--crema); overflow-x: hidden; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.15; margin: 0 0 .5em; }
 h1 em, h2 em { font-style: italic; color: var(--oliva); }
 .solo-lector { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
@@ -125,7 +125,7 @@ address b { display: block; font: 600 1.2rem/1.4 var(--serif); }
   .portada-texto { justify-self: center; }
   .firma { justify-content: center; }
   .firma p { text-align: left; }
-  .flyer { justify-self: center; max-width: 190px; }
+  .flyer { display: none; }
   .portada .btn { width: 100%; max-width: 360px; }
   .portada .nota { margin: 1rem auto 0; }
   .hojas { width: 90px; }
