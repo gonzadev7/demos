@@ -1,0 +1,143 @@
+/* Daniela Re · botánico luminoso: crema y oliva de su flyer, malva de la pared de su foto */
+:root {
+  --crema: #fbf8ef;
+  --lino: #f1eedf;
+  --salvia: #a9b98a;
+  --oliva: #6f7f4c;
+  --musgo: #3e4a2b;
+  --malva: #a86f8f;
+  --tinta: #2b2f24;
+  --gris: #5d6352;
+  --serif: 'Petrona', Georgia, serif;
+  --sans: 'Rethink Sans', system-ui, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; font: 400 1.0625rem/1.65 var(--sans); color: var(--tinta); background: var(--crema); overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.15; margin: 0 0 .5em; }
+h1 em, h2 em { font-style: italic; color: var(--oliva); }
+.solo-lector { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.etiqueta { font: 700 .82rem/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--oliva); margin-top: 0; margin-bottom: .9rem; }
+section { padding: 4.5rem 1.25rem; }
+section > * { max-width: 1040px; margin-left: auto; margin-right: auto; }
+h2 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); }
+
+/* Encabezado: sólido en musgo arriba, vidrio esmerilado al scrollear */
+.encabezado { position: fixed; inset: 0 0 auto; z-index: 20; background: var(--musgo); color: var(--crema); border-bottom: 1px solid rgba(169, 185, 138, .55); transition: background .25s, color .25s; }
+.encabezado.vidrio { background: rgba(251, 248, 239, .72); color: var(--musgo); -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2); }
+.cinta { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.marca { font: 400 1.35rem/1 var(--serif); color: inherit; text-decoration: none; display: flex; flex-direction: column; justify-content: center; gap: .2rem; min-height: 44px; }
+.marca small { font: 500 .7rem/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; opacity: .8; }
+nav { display: flex; gap: 1.5rem; }
+nav a { color: inherit; text-decoration: none; font-size: .95rem; padding: .6rem 0; }
+nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.menu-btn { display: none; }
+
+/* Portada */
+.portada { position: relative; padding-top: calc(64px + 4rem); padding-left: max(1.25rem, calc((100% - 1040px) / 2)); padding-right: max(1.25rem, calc((100% - 1040px) / 2)); display: grid; grid-template-columns: 1.3fr .7fr; gap: 3rem; align-items: center; max-width: none; overflow: hidden; }
+.portada > .portada-texto, .portada > .flyer { position: relative; z-index: 1; }
+.portada-texto { max-width: 620px; }
+.hojas { position: absolute; width: 130px; fill: none; stroke: var(--salvia); stroke-width: 2; opacity: .7; z-index: 0; }
+.hojas .h { fill: rgba(169, 185, 138, .35); stroke: none; }
+.hojas-izq { left: -20px; bottom: -20px; transform: rotate(14deg); }
+.hojas-der { right: -10px; top: 70px; transform: scaleX(-1) rotate(-10deg); }
+.firma { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.6rem; }
+.firma img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 3px solid var(--crema); box-shadow: 0 0 0 2px var(--salvia); }
+.firma p { margin: 0; font: 600 1.15rem/1.25 var(--serif); }
+.firma span { display: block; font: 400 .9rem/1.4 var(--sans); color: var(--gris); }
+h1 { font-size: clamp(2.3rem, 6vw, 3.9rem); color: var(--musgo); }
+.tres { font: 500 1.1rem/1.5 var(--sans); color: var(--oliva); margin: 0 0 2rem; }
+.tres i { font-style: normal; color: var(--malva); padding: 0 .3rem; }
+.flyer { margin: 0; max-width: 290px; justify-self: end; transform: rotate(2.5deg); }
+.flyer img { border-radius: 6px; box-shadow: 0 18px 40px -18px rgba(62, 74, 43, .45); }
+
+.btn { font: 700 1rem/1 var(--sans); background: var(--malva); color: #fff; border: 0; border-radius: 999px; padding: 1rem 1.7rem; min-height: 48px; cursor: pointer; transition: background .2s; }
+.btn:hover { background: #8f5877; }
+.btn:focus-visible, .pestanas button:focus-visible, nav a:focus-visible { outline: 3px solid var(--oliva); outline-offset: 3px; }
+.btn.claro { background: var(--crema); color: var(--musgo); }
+.btn.claro:hover { background: #fff; }
+.nota { font-size: .92rem; background: var(--lino); color: var(--musgo); border-left: 3px solid var(--malva); padding: .7rem .9rem; margin: 1rem 0 0; max-width: 420px; }
+.contacto .nota { margin: 1rem auto 0; color: var(--musgo); }
+
+/* Datos rápidos */
+.datos { list-style: none; margin: 0; padding: 1.6rem 1.25rem; background: var(--musgo); color: var(--crema); display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
+.datos li { display: flex; flex-direction: column; gap: .2rem; }
+.datos b { font: 400 1.5rem/1.2 var(--serif); }
+.datos span { font-size: .9rem; opacity: .85; }
+
+/* Índice con panel */
+.con-quien { background: var(--crema); }
+.indice { display: grid; grid-template-columns: 240px 1fr; gap: 2rem; margin-top: 1.5rem; }
+.pestanas { display: flex; flex-direction: column; gap: .5rem; }
+.pestanas button { font: 500 1.05rem/1.2 var(--sans); text-align: left; padding: .9rem 1.1rem; min-height: 48px; border: 1px solid var(--salvia); border-radius: 12px; background: transparent; color: var(--musgo); cursor: pointer; }
+.pestanas button[aria-selected="true"] { background: var(--oliva); color: var(--crema); border-color: var(--oliva); }
+.panel { background: var(--lino); border-radius: 18px; padding: 2rem; }
+.panel h3 { font-size: 1.6rem; color: var(--musgo); }
+.panel p { margin: 0 0 .8rem; color: var(--gris); }
+
+/* Modalidad */
+.modalidad { background: var(--lino); }
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.modalidad article { background: var(--crema); border-radius: 18px; padding: 1.8rem; border-top: 4px solid var(--salvia); }
+.modalidad article:last-child { border-top-color: var(--malva); }
+.modalidad h3 { font-size: 1.5rem; color: var(--musgo); }
+.modalidad article p { margin: 0; color: var(--gris); }
+.prensa { margin-top: 2rem; font-size: .95rem; color: var(--gris); border-left: 2px solid var(--salvia); padding-left: 1rem; }
+.prensa cite { font-style: italic; }
+
+/* Pasos */
+.pasos { background: var(--musgo); color: var(--crema); }
+.pasos .etiqueta { color: var(--salvia); }
+.pasos ol { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
+.pasos .num { display: block; font: italic 400 2.6rem/1 var(--serif); color: var(--salvia); margin-bottom: .6rem; }
+.pasos h3 { font-size: 1.4rem; }
+.pasos li p { margin: 0; opacity: .88; }
+
+/* Horarios */
+table { width: 100%; border-collapse: collapse; align-self: start; }
+th, td { padding: .75rem .25rem; border-bottom: 1px solid #ddd8c4; text-align: left; font-weight: 400; }
+td { text-align: right; font-weight: 500; }
+tr.cerrado { color: #8a8d80; }
+address { font-style: normal; margin-bottom: 1rem; }
+address b { display: block; font: 600 1.2rem/1.4 var(--serif); }
+.tel { display: block; margin-top: .4rem; color: var(--gris); }
+
+/* Cierre */
+.contacto { background: var(--oliva); color: var(--crema); text-align: center; }
+.contacto h2 em { color: var(--crema); }
+.contacto p { margin: 0 auto 1.6rem; }
+
+.pie { text-align: center; padding: 1.5rem 1rem 6rem; font-size: .88rem; color: var(--gris); }
+.pie a { color: var(--musgo); }
+
+.flotante { display: none; }
+
+@media (max-width: 860px) {
+  .menu-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1rem; font: 600 .95rem/1 var(--sans); background: transparent; color: inherit; border: 1px solid currentColor; border-radius: 999px; cursor: pointer; }
+  nav { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--musgo); padding: .5rem 1.25rem 1rem; border-bottom: 1px solid rgba(169, 185, 138, .55); }
+  nav.abierto { display: flex; }
+  nav a { color: var(--crema); padding: .85rem 0; border-bottom: 1px solid rgba(251, 248, 239, .15); }
+  /* Regla de Gonza (16/11): en celular cada sección ocupa al menos una pantalla, con el contenido centrado */
+  main section { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; }
+  main section > *:not(.hojas) { width: 100%; }
+  .portada { display: grid; align-content: center; grid-template-columns: 1fr; text-align: center; gap: 2.5rem; padding-top: calc(64px + 2.5rem); }
+  .portada-texto { justify-self: center; }
+  .firma { justify-content: center; }
+  .firma p { text-align: left; }
+  .flyer { justify-self: center; max-width: 190px; }
+  .portada .btn { width: 100%; max-width: 360px; }
+  .portada .nota { margin: 1rem auto 0; }
+  .hojas { width: 90px; }
+  .hojas-der { top: 90px; }
+  .datos { grid-template-columns: 1fr 1fr; row-gap: 1.4rem; }
+  .indice { grid-template-columns: 1fr; gap: 1rem; }
+  .pestanas { flex-direction: row; flex-wrap: wrap; }
+  .pestanas button { flex: 1 1 auto; text-align: center; }
+  .panel { padding: 1.5rem; }
+  .dos, .pasos ol { grid-template-columns: 1fr; }
+  .pasos ol { gap: 1.6rem; }
+  .contacto .btn { width: 100%; max-width: 360px; }
+  .flotante { display: flex; align-items: center; justify-content: center; position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 15; min-height: 52px; border-radius: 999px; background: var(--malva); color: #fff; font: 700 1rem/1 var(--sans); text-decoration: none; box-shadow: 0 10px 28px -10px rgba(43, 47, 36, .55); transition: opacity .25s, transform .25s; }
+  .flotante.oculta { opacity: 0; transform: translateY(120%); pointer-events: none; }
+}

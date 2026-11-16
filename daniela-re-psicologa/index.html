@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lic. Daniela Re · Psicóloga en Campana y online</title>
+<meta name="description" content="Lic. Daniela Re, psicóloga. Adultos, adolescentes y adicciones. Atención online y en Viamonte 395, Campana. Lunes a jueves de 11 a 20, viernes de 11 a 18.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,600;1,400;1,500&family=Rethink+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="encabezado" id="encabezado">
+  <div class="cinta">
+    <a class="marca" href="#inicio">Daniela Re<small>Lic. en Psicología</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#con-quien">Con quién trabajo</a>
+      <a href="#modalidad">Online y presencial</a>
+      <a href="#pasos">Cómo empezar</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#contacto">Turnos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <svg class="hojas hojas-izq" viewBox="0 0 120 260" aria-hidden="true"><path d="M60 258C58 190 50 120 20 10"/><path class="h" d="M52 200c-30-6-44-26-46-44 22 2 40 18 46 44z"/><path class="h" d="M46 150c26-10 44-30 44-50-22 6-40 24-44 50z"/><path class="h" d="M36 104C10 96 0 76 2 58c20 4 32 22 34 46z"/><path class="h" d="M28 60c18-12 26-30 22-48-16 8-24 26-22 48z"/></svg>
+    <svg class="hojas hojas-der" viewBox="0 0 120 260" aria-hidden="true"><path d="M60 258C58 190 50 120 20 10"/><path class="h" d="M52 200c-30-6-44-26-46-44 22 2 40 18 46 44z"/><path class="h" d="M46 150c26-10 44-30 44-50-22 6-40 24-44 50z"/><path class="h" d="M36 104C10 96 0 76 2 58c20 4 32 22 34 46z"/><path class="h" d="M28 60c18-12 26-30 22-48-16 8-24 26-22 48z"/></svg>
+    <div class="portada-texto">
+      <div class="firma">
+        <img src="daniela.jpg" alt="Daniela Re sonriendo" width="480" height="480">
+        <p>Lic. Daniela Re<span>Psicóloga · Campana</span></p>
+      </div>
+      <h1>Atención psicológica <em>online</em> y en Campana.</h1>
+      <p class="tres">Adultos <i aria-hidden="true">·</i> Adolescentes <i aria-hidden="true">·</i> Adicciones</p>
+      <button class="btn" type="button" data-nota>Pedí tu primera entrevista</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+    <figure class="flyer">
+      <img src="flyer.jpg" alt="Flyer de Daniela Re: Atención Psicológica Online. Adultos, Adolescentes, Adicciones" width="575" height="806">
+    </figure>
+  </section>
+
+  <ul class="datos" aria-label="Datos rápidos">
+    <li><b>5,0</b><span>en Google · 9 opiniones</span></li>
+    <li><b>Online</b><span>y presencial en Campana</span></li>
+    <li><b>11 a 20 h</b><span>de lunes a jueves</span></li>
+    <li><b>Viamonte 395</b><span>Campana</span></li>
+  </ul>
+
+  <section class="con-quien" id="con-quien">
+    <p class="etiqueta">Con quién trabajo</p>
+    <h2>¿Para quién es la consulta?</h2>
+    <div class="indice">
+      <div class="pestanas" role="tablist" aria-label="Con quién trabajo">
+        <button role="tab" id="t-adultos" aria-controls="p-adultos" aria-selected="true">Adultos</button>
+        <button role="tab" id="t-adolescentes" aria-controls="p-adolescentes" aria-selected="false" tabindex="-1">Adolescentes</button>
+        <button role="tab" id="t-adicciones" aria-controls="p-adicciones" aria-selected="false" tabindex="-1">Adicciones</button>
+      </div>
+      <div class="panel" role="tabpanel" id="p-adultos" aria-labelledby="t-adultos">
+        <h3>Para vos</h3>
+        <p>Un espacio para poner en palabras lo que te preocupa y entender qué te está pasando, a tu ritmo.</p>
+        <p>Podés elegir hacerlo online, desde donde estés, o en el consultorio de Campana.</p>
+      </div>
+      <div class="panel" role="tabpanel" id="p-adolescentes" aria-labelledby="t-adolescentes" hidden>
+        <h3>Para adolescentes</h3>
+        <p>Un lugar propio para hablar de lo que les pasa, con alguien de afuera de la casa y de la escuela.</p>
+        <p>La consulta la puede hacer el adolescente o alguien de su familia.</p>
+      </div>
+      <div class="panel" role="tabpanel" id="p-adicciones" aria-labelledby="t-adicciones" hidden>
+        <h3>Consumos y adicciones</h3>
+        <p>Pedir ayuda es el primer paso. La consulta es sin juicios y con total reserva.</p>
+        <p>También pueden escribir familiares o personas cercanas que no saben cómo acompañar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="modalidad" id="modalidad">
+    <p class="etiqueta">Online y presencial</p>
+    <h2>Elegís cómo hacerlo.</h2>
+    <div class="dos">
+      <article>
+        <h3>Online</h3>
+        <p>Sesiones desde tu casa o donde estés, en los mismos días y horarios del consultorio.</p>
+      </article>
+      <article>
+        <h3>En Campana</h3>
+        <p>Consultorio en Viamonte 395, de lunes a jueves de 11 a 20 y los viernes de 11 a 18.</p>
+      </article>
+    </div>
+    <p class="prensa">Salud mental en Campana: Daniela formó parte de la nota del Centro Médico Rawson por el Día Mundial de la Salud Mental, publicada en <cite>La Auténtica Defensa</cite> el 11/10/2020.</p>
+  </section>
+
+  <section class="pasos" id="pasos">
+    <p class="etiqueta">Cómo empezar</p>
+    <h2>Tres pasos para la primera entrevista.</h2>
+    <ol>
+      <li><span class="num" aria-hidden="true">I</span><h3>Escribime</h3><p>Un mensaje corto alcanza: contame brevemente qué te trae y si preferís online o presencial.</p></li>
+      <li><span class="num" aria-hidden="true">II</span><h3>Coordinamos</h3><p>Buscamos un día y un horario, de lunes a viernes desde las 11.</p></li>
+      <li><span class="num" aria-hidden="true">III</span><h3>Primera entrevista</h3><p>Nos conocemos y vemos juntos cómo seguir.</p></li>
+    </ol>
+  </section>
+
+  <section class="horarios" id="horarios">
+    <p class="etiqueta">Horarios y dirección</p>
+    <h2>De lunes a viernes, desde las 11.</h2>
+    <div class="dos">
+      <table>
+        <caption class="solo-lector">Horarios de atención</caption>
+        <tbody>
+          <tr><th scope="row">Lunes</th><td>11:00 a 20:00</td></tr>
+          <tr><th scope="row">Martes</th><td>11:00 a 20:00</td></tr>
+          <tr><th scope="row">Miércoles</th><td>11:00 a 20:00</td></tr>
+          <tr><th scope="row">Jueves</th><td>11:00 a 20:00</td></tr>
+          <tr><th scope="row">Viernes</th><td>11:00 a 18:00</td></tr>
+          <tr class="cerrado"><th scope="row">Sábado y domingo</th><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+      <div class="lugar">
+        <address>
+          <b>Lic. Daniela Re</b>
+          Viamonte 395<br>Campana, Provincia de Buenos Aires
+          <span class="tel">Teléfono: 011 3049-5888</span>
+        </address>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>Dar el primer paso es <em>escribir</em>.</h2>
+    <p>Online o en Campana, de lunes a viernes.</p>
+    <button class="btn claro" type="button" data-nota>Pedí tu primera entrevista</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<a class="flotante oculta" href="#contacto">Pedí tu primera entrevista</a>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
