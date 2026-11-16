@@ -95,12 +95,15 @@ tr.cerrado { color: #8b929c; }
 .donde { margin-top: 1.5rem; color: var(--gris); font-weight: 500; }
 
 /* Cierre */
-.contacto { background: var(--azul); color: var(--blanco); text-align: center; }
-.contacto .etiqueta { color: #cfe3fa; }
+.contacto { position: relative; overflow: hidden; background: var(--carbon); color: var(--blanco); text-align: center; border-top: 4px solid var(--azul); }
+.contacto::before { content: "RECOVERY"; position: absolute; left: 50%; bottom: -.12em; transform: translateX(-50%); font: 700 clamp(6rem, 22vw, 20rem)/1 var(--titulo); letter-spacing: .02em; color: transparent; -webkit-text-stroke: 1.5px rgba(31, 122, 224, .3); white-space: nowrap; pointer-events: none; }
+.contacto > * { position: relative; }
+.contacto .etiqueta { color: #7fb6f2; }
 .contacto h2 { max-width: 760px; }
-.contacto p { margin: 0 auto 1.8rem; }
-.contacto .btn { background: var(--grafito); }
-.contacto .btn:hover { background: #000; }
+.contacto p { margin: 0 auto 1.6rem; color: #c9d1dc; }
+.opciones { list-style: none; padding: 0; margin: 0 auto 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; max-width: 640px; }
+.opciones li { font: 500 .95rem/1 var(--sans); padding: .7rem 1.1rem; border: 1px solid rgba(127, 182, 242, .45); border-radius: 999px; color: var(--blanco); background: rgba(255, 255, 255, .04); }
+.contacto .cuando { margin: 1.2rem auto 0; font-size: .9rem; color: #9aa5b4; }
 .contacto .nota { margin: 1rem auto 0; background: rgba(255, 255, 255, .15); border-left-color: #fff; }
 
 .pie { background: var(--grafito); color: #aab4c2; text-align: center; padding: 1.6rem 1rem 6rem; font-size: .88rem; }
