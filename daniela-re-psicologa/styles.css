@@ -61,7 +61,7 @@ h1 { font-size: clamp(2.3rem, 6vw, 3.9rem); color: var(--musgo); }
 .contacto .nota { margin: 1rem auto 0; color: var(--musgo); }
 
 /* Datos rápidos */
-.datos { list-style: none; margin: 0; padding: 1.6rem 1.25rem; background: var(--musgo); color: var(--crema); display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
+.datos { grid-column: 1 / -1; border-radius: 18px; position: relative; z-index: 1; list-style: none; margin: 0; padding: 1.6rem 1.25rem; background: var(--musgo); color: var(--crema); display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
 .datos li { display: flex; flex-direction: column; gap: .2rem; }
 .datos b { font: 400 1.5rem/1.2 var(--serif); }
 .datos span { font-size: .9rem; opacity: .85; }
@@ -118,8 +118,11 @@ address b { display: block; font: 600 1.2rem/1.4 var(--serif); }
   nav { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--musgo); padding: .5rem 1.25rem 1rem; border-bottom: 1px solid rgba(169, 185, 138, .55); }
   nav.abierto { display: flex; }
   nav a { color: var(--crema); padding: .85rem 0; border-bottom: 1px solid rgba(251, 248, 239, .15); }
-  /* Regla de Gonza (16/11): en celular cada sección ocupa al menos una pantalla, con el contenido centrado */
-  main section { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; }
+  /* Regla de Gonza (16/11): en celular cada sección es una pantalla y el scroll se frena en cada una (nunca dos secciones a la vez; solo el pie se ve junto al cierre) */
+  html { scroll-snap-type: y mandatory; scroll-padding-top: 64px; }
+  main section { min-height: calc(100vh - 64px); min-height: calc(100svh - 64px); display: flex; flex-direction: column; justify-content: center; scroll-snap-align: start; scroll-snap-stop: always; }
+  main .portada { min-height: 100vh; min-height: 100svh; }
+  .pie { scroll-snap-align: end; }
   main section > *:not(.hojas) { width: 100%; }
   .portada { display: grid; align-content: center; grid-template-columns: 1fr; text-align: center; gap: 2.5rem; padding-top: calc(64px + 2.5rem); }
   .portada-texto { justify-self: center; }
