@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Physical Wellbeing Center · Recuperación, rendimiento y bienestar en San Isidro</title>
+<meta name="description" content="Physical Wellbeing Center, San Isidro. Circuito Recovery: botas de compresión, sauna húmedo y crioterapia. Kinesiología deportiva, masajes y nutrición deportiva.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261116e">
+</head>
+<body>
+<header class="encabezado" id="encabezado">
+  <div class="cinta">
+    <a class="marca" href="#inicio">
+      <img src="logo.jpg" alt="" width="150" height="150">
+      <span>Physical Wellbeing<small>Center</small></span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#circuito">Circuito Recovery</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#contacto">Turnos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <div class="portada-texto">
+      <p class="etiqueta">San Isidro · Buenos Aires</p>
+      <h1>Recuperación<span>·</span> Rendimiento<span>·</span> Bienestar</h1>
+      <p class="bajada">Presoterapia, sauna y crioterapia en un mismo circuito. Además, kinesiología, masajes y nutrición deportiva.</p>
+      <button class="btn" type="button" data-nota>Reservá tu Circuito Recovery</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+    <figure class="portada-foto">
+      <img src="botas.jpg" alt="Deportista en el sillón con las botas de compresión puestas" width="480" height="640">
+    </figure>
+    <ul class="datos" aria-label="Datos rápidos">
+      <li><b>5</b><span>servicios</span></li>
+      <li><b>3 etapas</b><span>en el circuito</span></li>
+      <li><b>15 a 21 h</b><span>de lunes a viernes</span></li>
+      <li><b>San Isidro</b><span>Buenos Aires</span></li>
+    </ul>
+  </section>
+
+  <section class="servicios" id="servicios">
+    <p class="etiqueta">Nuestros servicios</p>
+    <h2>¿Qué estás buscando?</h2>
+    <div class="indice">
+      <div class="pestanas" role="tablist" aria-label="Servicios">
+        <button role="tab" id="t-recovery" aria-controls="p-recovery" aria-selected="true">Recovery</button>
+        <button role="tab" id="t-vip" aria-controls="p-vip" aria-selected="false" tabindex="-1">Recovery VIP</button>
+        <button role="tab" id="t-kine" aria-controls="p-kine" aria-selected="false" tabindex="-1">Kinesiología</button>
+        <button role="tab" id="t-masajes" aria-controls="p-masajes" aria-selected="false" tabindex="-1">Masajes</button>
+        <button role="tab" id="t-nutri" aria-controls="p-nutri" aria-selected="false" tabindex="-1">Nutrición deportiva</button>
+      </div>
+      <div class="panel" role="tabpanel" id="p-recovery" aria-labelledby="t-recovery">
+        <img src="circuito.jpg" alt="Dos personas en el circuito Recovery, con botas de compresión y mate" width="480" height="640" loading="lazy">
+        <div>
+          <h3>Circuito Recovery</h3>
+          <p>Bienestar para el cuerpo y un cable a tierra para la mente. Un espacio privado, con profesionales que te acompañan.</p>
+          <p class="dato">Botas de compresión · Sauna húmedo · Crioterapia</p>
+        </div>
+      </div>
+      <div class="panel" role="tabpanel" id="p-vip" aria-labelledby="t-vip" hidden>
+        <img src="recovery-room.jpg" alt="Entrada del Recovery Room con el logo de Physical Wellbeing Center" width="480" height="640" loading="lazy">
+        <div>
+          <h3>Recovery VIP</h3>
+          <p>El circuito Recovery completo más 15 minutos de masajes.</p>
+          <p class="dato">Pistola masajeadora con frío y calor · Rolo eléctrico · Sillón masajeador · Botas de compresión · Sauna húmedo · Pileta de crioterapia · Masajes</p>
+        </div>
+      </div>
+      <div class="panel" role="tabpanel" id="p-kine" aria-labelledby="t-kine" hidden>
+        <img src="kinesiologia.jpg" alt="Kinesiólogo trabajando sobre un paciente en camilla" width="480" height="640" loading="lazy">
+        <div>
+          <h3>Kinesiología deportiva</h3>
+          <p>Abordaje de lesiones deportivas con evaluación y tratamientos individualizados. El objetivo no es solo aliviar el dolor: es recuperar la función y acompañarte en la vuelta a la actividad.</p>
+          <p class="dato">Evaluar. Tratar. Readaptar. Volver más fuerte.</p>
+        </div>
+      </div>
+      <div class="panel" role="tabpanel" id="p-masajes" aria-labelledby="t-masajes" hidden>
+        <img src="masajes.jpg" alt="Masajista trabajando sobre la pierna de un paciente" width="480" height="640" loading="lazy">
+        <div>
+          <h3>Masajes</h3>
+          <p>La recuperación también está en las manos de quienes saben cuidarte. Para aliviar tensiones, liberar cargas musculares y ayudarte a sentirte mejor.</p>
+          <p class="dato">Lunes a viernes de 14 a 21 h · Sábados de 8 a 13 h</p>
+        </div>
+      </div>
+      <div class="panel sin-foto" role="tabpanel" id="p-nutri" aria-labelledby="t-nutri" hidden>
+        <div>
+          <h3>Nutrición deportiva</h3>
+          <p>Para que lo que comés acompañe tu entrenamiento y tu recuperación.</p>
+          <p class="dato">Consultá disponibilidad al reservar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="circuito" id="circuito">
+    <div class="circuito-texto">
+      <p class="etiqueta">El circuito incluye</p>
+      <h2>Tu momento de <em>Recovery</em></h2>
+      <ol>
+        <li><span class="num">01</span><div><h3>Botas de compresión <small>20 min</small></h3><p>Tecnología de presión secuencial que estimula la circulación y acelera la recuperación muscular.</p></div></li>
+        <li><span class="num">02</span><div><h3>Sauna húmedo <small>10 a 15 min</small></h3><p>Calor y vapor que relajan la musculatura y ayudan a liberar tensiones.</p></div></li>
+        <li><span class="num">03</span><div><h3>Crioterapia <small>6 a 8 min</small></h3><p>Inmersión en agua fría que ayuda a disminuir la inflamación y aliviar la fatiga muscular.</p></div></li>
+      </ol>
+    </div>
+    <figure class="circuito-foto">
+      <img src="crioterapia.jpg" alt="Deportista en la pileta de crioterapia tomando mate" width="480" height="640" loading="lazy">
+    </figure>
+  </section>
+
+  <section class="horarios" id="horarios">
+    <p class="etiqueta">Horarios</p>
+    <h2>Cuándo podés venir</h2>
+    <div class="tablas">
+      <div class="tabla">
+        <h3>Recovery</h3>
+        <table>
+          <tr><th scope="row">Lunes a viernes</th><td>15:00 a 21:00</td></tr>
+          <tr><th scope="row">Sábado</th><td>09:00 a 13:00</td></tr>
+          <tr class="cerrado"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+        </table>
+      </div>
+      <div class="tabla">
+        <h3>Masajes</h3>
+        <table>
+          <tr><th scope="row">Lunes a viernes</th><td>14:00 a 21:00</td></tr>
+          <tr><th scope="row">Sábado</th><td>08:00 a 13:00</td></tr>
+          <tr class="cerrado"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="donde">Physical Wellbeing Center · San Isidro, Buenos Aires</p>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <p class="etiqueta">Turnos</p>
+    <h2>¡Vení a vivir tu experiencia Recovery!</h2>
+    <p>Elegí el servicio y el horario, y te confirmamos el turno.</p>
+    <button class="btn" type="button" data-nota>Reservar turno</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+
+<a class="flotante oculta" href="#contacto">Reservá tu turno</a>
+<script src="script.js?v=20261116e"></script>
+</body>
+</html>
