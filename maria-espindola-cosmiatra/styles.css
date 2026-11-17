@@ -1,0 +1,172 @@
+/* María Espíndola · neón nocturno: el negro de su logo, el oro rosa de la firma y el rosa del neón Skincare de su estudio */
+:root {
+  --noche: #1b0f18;
+  --ciruela: #2a1726;
+  --vino: #3a1f33;
+  --neon: #ff4fa8;
+  --neon-suave: #ff8cc6;
+  --oro: #e0ab95;
+  --rubor: #f8e6ec;
+  --crema: #fff8f9;
+  --tinta: #24151f;
+  --gris: #6c5864;
+  --serif: 'Gloock', Georgia, serif;
+  --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --firma: 'Allura', cursive;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; font: 400 1.0625rem/1.65 var(--sans); color: var(--tinta); background: var(--crema); overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+figure { margin: 0; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; margin: 0 0 .5em; }
+h1 em, h2 em { font-style: normal; color: var(--neon); }
+.solo-lector { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.etiqueta { font: 700 .8rem/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--neon); margin: 0 0 1rem; }
+section { padding: 4.5rem 1.25rem; }
+section > * { max-width: 1040px; margin-left: auto; margin-right: auto; }
+h2 { font-size: clamp(2rem, 4.6vw, 3.1rem); }
+
+/* Encabezado: sólido en el negro ciruela de la marca, vidrio esmerilado al scrollear */
+.encabezado { position: fixed; inset: 0 0 auto; z-index: 20; background: var(--noche); color: #fff; border-bottom: 1px solid rgba(255, 79, 168, .55); transition: background .25s, border-color .25s; }
+.encabezado.vidrio { background: rgba(27, 15, 24, .62); border-bottom-color: rgba(255, 79, 168, .35); -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3); }
+.cinta { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.marca { font: 400 1.3rem/1 var(--serif); color: inherit; text-decoration: none; display: flex; flex-direction: column; justify-content: center; gap: .25rem; min-height: 44px; }
+.marca small { font: 500 .66rem/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--oro); }
+nav { display: flex; gap: 1.5rem; }
+nav a { color: inherit; text-decoration: none; font-size: .95rem; padding: .6rem 0; }
+nav a:hover { color: var(--neon-suave); }
+.menu-btn { display: none; }
+
+/* Portada */
+.portada { position: relative; background: var(--noche); color: #fff; padding-top: calc(64px + 3.5rem); padding-left: max(1.25rem, calc((100% - 1040px) / 2)); padding-right: max(1.25rem, calc((100% - 1040px) / 2)); display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; max-width: none; overflow: hidden; }
+.portada-texto { max-width: 580px; }
+.logo { width: 110px; aspect-ratio: 1; border-radius: 50%; overflow: hidden; margin-bottom: 1.4rem; box-shadow: 0 0 0 1px rgba(224, 171, 149, .6), 0 0 28px rgba(255, 79, 168, .35); }
+.logo img { width: 100%; height: 100%; object-fit: cover; }
+h1 { font-size: clamp(2.4rem, 5.8vw, 4.1rem); }
+.bajada { font-size: 1.12rem; color: rgba(255, 255, 255, .8); max-width: 30em; margin: 0 0 2rem; }
+.neon { justify-self: center; width: min(100%, 360px); aspect-ratio: 3 / 4; border-radius: 180px 180px 24px 24px; overflow: hidden; border: 1px solid rgba(255, 79, 168, .7); box-shadow: 0 0 40px rgba(255, 79, 168, .35); }
+.neon img { width: 100%; height: 100%; object-fit: cover; }
+
+.btn { font: 700 1rem/1 var(--sans); background: var(--neon); color: var(--noche); border: 0; border-radius: 999px; padding: 1rem 1.8rem; min-height: 50px; cursor: pointer; box-shadow: 0 0 22px rgba(255, 79, 168, .45); transition: background .2s, box-shadow .2s; }
+.btn:hover { background: var(--neon-suave); box-shadow: 0 0 30px rgba(255, 79, 168, .6); }
+.btn:focus-visible, nav a:focus-visible, .menu-btn:focus-visible, .opciones button:focus-visible { outline: 3px solid var(--oro); outline-offset: 3px; }
+.nota { font-size: .92rem; background: var(--rubor); color: var(--tinta); border-left: 3px solid var(--neon); padding: .7rem .9rem; margin: 1rem 0 0; max-width: 420px; text-align: left; }
+
+/* Datos rápidos (dentro de la portada) */
+.datos { grid-column: 1 / -1; list-style: none; margin: 0; padding: 1.4rem 1.25rem; border: 1px solid rgba(224, 171, 149, .35); border-radius: 20px; background: rgba(255, 255, 255, .04); display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
+.datos li { display: flex; flex-direction: column; gap: .25rem; }
+.datos li + li { border-left: 1px solid rgba(224, 171, 149, .25); }
+.datos b { font: 400 1.45rem/1.15 var(--serif); color: var(--oro); }
+.datos span { font-size: .85rem; color: rgba(255, 255, 255, .72); }
+
+/* Tratamientos: índice con panel */
+.tratamientos { background: var(--crema); }
+.indice { display: grid; grid-template-columns: .9fr 1.1fr; gap: 2rem; margin-top: 2rem; align-items: start; }
+.opciones { display: flex; flex-direction: column; gap: .6rem; }
+.opciones button { font: 500 1.02rem/1.25 var(--sans); text-align: left; min-height: 52px; padding: .8rem 1.1rem; border-radius: 14px; border: 1px solid #ecd3dc; background: #fff; color: var(--tinta); cursor: pointer; transition: background .2s, border-color .2s; }
+.opciones button:hover { border-color: var(--neon); }
+.opciones button[aria-selected="true"] { background: var(--noche); color: #fff; border-color: var(--noche); box-shadow: inset 4px 0 0 var(--neon); }
+.panel { background: var(--rubor); border-radius: 22px; padding: 2rem; min-height: 100%; }
+.panel h3 { font-size: 1.9rem; }
+.panel p { color: var(--gris); margin: 0 0 1.4rem; }
+.chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.chips li { background: #fff; border: 1px solid #efc7d6; border-radius: 999px; padding: .45rem .95rem; font-size: .92rem; font-weight: 500; }
+
+/* Sobre María */
+.maria { background: var(--ciruela); color: #fff; }
+.maria .dos { display: grid; grid-template-columns: .8fr 1.2fr; gap: 3rem; align-items: center; }
+.placa { border-radius: 24px; overflow: hidden; max-width: 360px; }
+.placa img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.credenciales { list-style: none; padding: 0; margin: 1.6rem 0 0; display: grid; gap: 1rem; }
+.credenciales li { display: flex; flex-direction: column; gap: .15rem; padding-left: 1rem; border-left: 2px solid var(--neon); }
+.credenciales b { font: 400 1.35rem/1.2 var(--serif); color: var(--oro); }
+.credenciales span { color: rgba(255, 255, 255, .75); font-size: .95rem; }
+
+/* El estudio */
+.estudio { background: var(--crema); }
+.fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.5rem; max-width: 760px; }
+.fotos img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 20px; }
+
+/* Pasos */
+.pasos { background: var(--noche); color: #fff; }
+.pasos ol { list-style: none; padding: 0; margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.pasos li { border: 1px solid rgba(255, 79, 168, .4); border-radius: 20px; padding: 1.6rem; background: rgba(255, 255, 255, .03); }
+.pasos .num { display: block; font: 400 2.4rem/1 var(--serif); color: var(--neon); text-shadow: 0 0 14px rgba(255, 79, 168, .6); margin-bottom: .7rem; }
+.pasos h3 { font-size: 1.5rem; }
+.pasos li p { margin: 0; color: rgba(255, 255, 255, .75); }
+
+/* Horarios */
+.horarios { background: var(--crema); }
+.horarios .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+table { width: 100%; border-collapse: collapse; align-self: start; }
+th, td { padding: .85rem .25rem; border-bottom: 1px solid #ecd9e0; text-align: left; font-weight: 400; vertical-align: top; }
+td { text-align: right; font-weight: 700; }
+td small { display: block; font-weight: 700; font-size: 1em; }
+tr.cerrado { color: #a8939d; }
+tr.cerrado td { font-weight: 400; }
+address { font-style: normal; margin-bottom: 1rem; }
+address b { display: block; font: 400 1.4rem/1.25 var(--serif); }
+.mapa { width: 100%; height: 230px; border: 0; border-radius: 16px; }
+
+/* Cierre */
+.contacto { background: var(--noche); border-top: 1px solid rgba(255, 79, 168, .5); color: #fff; text-align: center; }
+.firma { font: 400 clamp(2.6rem, 7vw, 4rem)/1 var(--firma); color: var(--oro); margin: 0 auto .6rem; }
+.contacto p { margin: 0 auto 1.6rem; color: rgba(255, 255, 255, .8); }
+.contacto .nota { margin: 1rem auto 0; }
+
+.pie { text-align: center; padding: 1.5rem 1rem 6rem; font-size: .88rem; color: var(--gris); background: var(--crema); }
+.pie a { color: #c21f78; }
+
+.flotante { display: none; }
+
+@media (max-width: 860px) {
+  .menu-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1rem; font: 600 .95rem/1 var(--sans); background: transparent; color: inherit; border: 1px solid rgba(255, 79, 168, .7); border-radius: 999px; cursor: pointer; }
+  nav { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--noche); padding: .5rem 1.25rem 1rem; border-bottom: 1px solid rgba(255, 79, 168, .45); }
+  nav.abierto { display: flex; }
+  nav a { padding: .85rem 0; border-bottom: 1px solid rgba(255, 255, 255, .12); }
+  /* Regla de Gonza (16/11): en celular cada sección es una pantalla y el scroll se frena en cada una */
+  html { scroll-snap-type: y mandatory; scroll-padding-top: 64px; }
+  main section { min-height: calc(100vh - 64px); min-height: calc(100svh - 64px); display: flex; flex-direction: column; justify-content: center; scroll-snap-align: start; scroll-snap-stop: always; padding-top: 2.2rem; padding-bottom: 2.2rem; }
+  main .portada { min-height: 100vh; min-height: 100svh; }
+  .tratamientos, .maria, .estudio, .pasos, .horarios { padding-bottom: 5.5rem; }
+  .pie { scroll-snap-align: end; }
+  main section > * { width: 100%; }
+  section { text-align: center; }
+  .portada { display: grid; align-content: center; grid-template-columns: 1fr; gap: 1.4rem; padding-top: calc(64px + 1.4rem); }
+  .portada-texto { justify-self: center; }
+  .logo { width: 92px; margin: 0 auto 1rem; }
+  .neon { display: none; }
+  .bajada { margin-left: auto; margin-right: auto; font-size: 1.02rem; margin-bottom: 1.3rem; }
+  .portada .btn, .contacto .btn { width: 100%; max-width: 360px; }
+  .nota { margin-left: auto; margin-right: auto; }
+  .datos { grid-template-columns: 1fr 1fr; row-gap: 1rem; padding: 1rem .7rem; }
+  .datos li + li { border-left: 0; }
+  .datos b { font-size: 1.2rem; }
+  .datos span { font-size: .8rem; }
+  .indice { grid-template-columns: 1fr; gap: 1rem; margin-top: 1rem; }
+  .opciones { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: .45rem; }
+  .opciones button { min-height: 44px; padding: .55rem .9rem; font-size: .9rem; text-align: center; }
+  .opciones button[aria-selected="true"] { box-shadow: none; }
+  .panel { padding: 1.3rem 1.2rem; }
+  .panel h3 { font-size: 1.5rem; }
+  .panel p { margin-bottom: 1rem; }
+  .chips { justify-content: center; }
+  .maria .dos { grid-template-columns: 1fr; gap: 1.2rem; }
+  .placa { max-width: 180px; margin: 0 auto; border-radius: 90px 90px 18px 18px; }
+  .credenciales { margin-top: 1rem; gap: .7rem; }
+  .credenciales li { border-left: 0; padding-left: 0; border-top: 1px solid rgba(255, 79, 168, .4); padding-top: .6rem; }
+  .credenciales b { font-size: 1.15rem; }
+  .fotos { gap: .7rem; margin-top: 1rem; }
+  .fotos img { aspect-ratio: auto; height: 50svh; max-height: 420px; }
+  .pasos ol { grid-template-columns: 1fr; gap: .8rem; margin-top: 1rem; }
+  .pasos li { padding: 1.1rem 1.2rem; }
+  .pasos .num { font-size: 1.8rem; margin-bottom: .3rem; }
+  .pasos h3 { font-size: 1.3rem; margin-bottom: .2rem; }
+  .horarios .dos { grid-template-columns: 1fr; gap: 1.2rem; }
+  th, td { padding: .55rem .25rem; }
+  address { margin-bottom: .7rem; }
+  .mapa { height: 150px; }
+  .flotante { display: flex; align-items: center; justify-content: center; position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 15; min-height: 52px; border-radius: 999px; background: var(--neon); color: var(--noche); font: 700 1rem/1 var(--sans); text-decoration: none; box-shadow: 0 0 24px rgba(255, 79, 168, .5); transition: opacity .25s, transform .25s; }
+  .flotante.oculta { opacity: 0; transform: translateY(120%); pointer-events: none; }
+}

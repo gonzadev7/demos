@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>María Espíndola · Estudio de Cosmetología y Cosmiatría en Boulogne</title>
+<meta name="description" content="Estudio de Cosmetología y Cosmiatría de María Espíndola en Padre Castiglia 1239, Boulogne. Cosmiatra oncológica. Acné severo, rosácea, piel sensible, HIFU, peeling y radiofrecuencia. Desde 2005.">
+<meta name="theme-color" content="#1b0f18">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261117b">
+</head>
+<body>
+<header class="encabezado" id="encabezado">
+  <div class="cinta">
+    <a class="marca" href="#inicio">María Espíndola<small>Cosmetología y Cosmiatría</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#tratamientos">Tratamientos</a>
+      <a href="#maria">Sobre María</a>
+      <a href="#estudio">El estudio</a>
+      <a href="#pasos">Cómo reservar</a>
+      <a href="#horarios">Horarios</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <div class="portada-texto">
+      <figure class="logo"><img src="logo.jpg?v=20261117b" alt="Logo de María Espíndola, Estudio de Cosmiatría y Cosmetología" width="300" height="300"></figure>
+      <p class="etiqueta">Skincare · Boulogne</p>
+      <h1>Acné severo, rosácea y <em>piel sensible</em>.</h1>
+      <p class="bajada">Estudio de Cosmetología y Cosmiatría de María Espíndola, cosmiatra oncológica. Desde 2005.</p>
+      <button class="btn" type="button" data-nota>Reservá tu turno</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+    <figure class="neon">
+      <img src="skincare.jpg" alt="El estudio: cartel de neón Skincare, sillón con corazón de neón y vitrina de productos" width="760" height="1013">
+    </figure>
+    <ul class="datos" aria-label="Datos rápidos">
+      <li><b>Desde 2005</b><span>en cosmiatría</span></li>
+      <li><b>Oncológica</b><span>cosmiatra especializada</span></li>
+      <li><b>5,0</b><span>en Google · 37 opiniones</span></li>
+      <li><b>Boulogne</b><span>Padre Castiglia 1239</span></li>
+    </ul>
+  </section>
+
+  <section class="tratamientos" id="tratamientos">
+    <p class="etiqueta">Tratamientos</p>
+    <h2>¿Qué querés <em>trabajar</em>?</h2>
+    <div class="indice">
+      <div class="opciones" role="tablist" aria-label="Elegí qué querés trabajar">
+        <button type="button" role="tab" id="t-acne" aria-controls="p-acne" aria-selected="true">Acné y piel sensible</button>
+        <button type="button" role="tab" id="t-onco" aria-controls="p-onco" aria-selected="false" tabindex="-1">Piel en tratamiento oncológico</button>
+        <button type="button" role="tab" id="t-firmeza" aria-controls="p-firmeza" aria-selected="false" tabindex="-1">Firmeza</button>
+        <button type="button" role="tab" id="t-textura" aria-controls="p-textura" aria-selected="false" tabindex="-1">Textura y luminosidad</button>
+        <button type="button" role="tab" id="t-cuerpo" aria-controls="p-cuerpo" aria-selected="false" tabindex="-1">Cuerpo</button>
+      </div>
+      <div class="panel" role="tabpanel" id="p-acne" aria-labelledby="t-acne" tabindex="0">
+        <h3>Acné y piel sensible</h3>
+        <p>Acné severo, rosácea y piel sensible: lo primero que María nombra en su presentación.</p>
+        <ul class="chips"><li>Antiacné</li><li>Rosácea</li><li>Piel sensible</li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p-onco" aria-labelledby="t-onco" hidden>
+        <h3>Piel en tratamiento oncológico</h3>
+        <p>María es cosmiatra oncológica: acompaña el cuidado de la piel de quienes están en tratamiento.</p>
+        <ul class="chips"><li>Cosmiatría oncológica</li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p-firmeza" aria-labelledby="t-firmeza" hidden>
+        <h3>Firmeza</h3>
+        <p>Aparatología y tratamientos para trabajar la firmeza del rostro.</p>
+        <ul class="chips"><li>HIFU</li><li>Radiofrecuencia</li><li>Exosomas</li><li>Plasma frío</li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p-textura" aria-labelledby="t-textura" hidden>
+        <h3>Textura y luminosidad</h3>
+        <p>Para renovar la piel y mejorar su textura.</p>
+        <ul class="chips"><li>Peeling</li><li>HydraFacial</li><li>Microneedling</li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p-cuerpo" aria-labelledby="t-cuerpo" hidden>
+        <h3>Cuerpo</h3>
+        <p>Tratamientos corporales en el mismo estudio.</p>
+        <ul class="chips"><li>Maderoterapia</li><li>Láser lipólisis</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="maria" id="maria">
+    <div class="dos">
+      <figure class="placa"><img src="placa.jpg" alt="Placa de la entrada: María Espíndola, Estudio de Cosmetología y Cosmiatría" width="700" height="933" loading="lazy"></figure>
+      <div class="maria-texto">
+        <p class="etiqueta">Sobre María</p>
+        <h2>Más de veinte años cuidando <em>la piel</em>.</h2>
+        <ul class="credenciales">
+          <li><b>Desde 2005</b><span>en cosmetología y cosmiatría</span></li>
+          <li><b>Cosmiatra oncológica</b><span>cuidado de la piel durante el tratamiento</span></li>
+          <li><b>MN 20857 · MN 16802</b><span>matrículas</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="estudio" id="estudio">
+    <p class="etiqueta">El estudio</p>
+    <h2>Tu momento de <em>skincare</em>, en Boulogne.</h2>
+    <div class="fotos">
+      <figure><img src="beauty-studio.jpg" alt="Pared con el neón Skincare, el cartel Beauty Studio y la vitrina de productos" width="700" height="933" loading="lazy"></figure>
+      <figure><img src="cabina.jpg" alt="Cabina de tratamientos con camilla y aparatología" width="700" height="933" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section class="pasos" id="pasos">
+    <p class="etiqueta">Cómo reservar</p>
+    <h2>Tu turno en <em>tres pasos</em>.</h2>
+    <ol>
+      <li><span class="num" aria-hidden="true">I</span><h3>Escribís</h3><p>Contás qué querés trabajar y qué día te queda bien.</p></li>
+      <li><span class="num" aria-hidden="true">II</span><h3>Seña del 50 %</h3><p>Todos los turnos se toman con una seña del 50 %.</p></li>
+      <li><span class="num" aria-hidden="true">III</span><h3>Comprobante</h3><p>Enviás el comprobante y tu turno queda reservado.</p></li>
+    </ol>
+  </section>
+
+  <section class="horarios" id="horarios">
+    <p class="etiqueta">Horarios y dirección</p>
+    <h2>De martes a <em>sábado</em>.</h2>
+    <div class="dos">
+      <table>
+        <caption class="solo-lector">Horarios de atención</caption>
+        <tbody>
+          <tr><th scope="row">Martes a viernes</th><td>9 a 12 h<small>y de 16 a 20 h</small></td></tr>
+          <tr><th scope="row">Sábados</th><td>9 a 16 h</td></tr>
+          <tr class="cerrado"><th scope="row">Domingo y lunes</th><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+      <div class="lugar">
+        <address>
+          <b>Estudio María Espíndola</b>
+          Padre Castiglia 1239<br>Boulogne, Provincia de Buenos Aires
+        </address>
+        <iframe class="mapa" title="Mapa: Padre Castiglia 1239, Boulogne" src="https://maps.google.com/maps?q=Padre%20Castiglia%201239%2C%20Boulogne%2C%20Buenos%20Aires&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <p class="firma" aria-hidden="true">María Espíndola</p>
+    <h2>Reservá tu turno.</h2>
+    <p>Martes a sábado, en Padre Castiglia 1239, Boulogne.</p>
+    <button class="btn" type="button" data-nota>Reservá tu turno</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<a class="flotante oculta" href="#contacto">Reservá tu turno</a>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+<script src="script.js?v=20261117b"></script>
+</body>
+</html>
