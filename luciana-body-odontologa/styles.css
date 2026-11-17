@@ -1,0 +1,154 @@
+/* Dra. Luciana Body · clínico luminoso con acento rojo labial (de su imagen de perfil) */
+:root {
+  --esmalte: #fbfaf7;
+  --porcelana: #f2efe9;
+  --encia: #f6dcd8;
+  --rojo: #b5132f;
+  --rojo-hondo: #8c0c22;
+  --grafito: #1f1c1d;
+  --gris: #5f5a58;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'Geist', system-ui, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; font: 400 1.0625rem/1.65 var(--sans); color: var(--grafito); background: var(--esmalte); overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.08; margin: 0 0 .5em; letter-spacing: -.01em; }
+h1 em, h2 em { font-style: italic; color: var(--rojo); }
+.solo-lector { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.etiqueta { font: 500 .8rem/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--rojo); margin-top: 0; margin-bottom: 1rem; }
+section { padding: 4.5rem 1.25rem; }
+section > * { max-width: 1040px; margin-left: auto; margin-right: auto; }
+h2 { font-size: clamp(2.1rem, 5vw, 3.2rem); }
+
+/* Encabezado: sólido en rojo arriba, vidrio esmerilado al scrollear */
+.encabezado { position: fixed; inset: 0 0 auto; z-index: 20; background: var(--rojo); color: #fff; border-bottom: 1px solid rgba(255, 255, 255, .25); transition: background .25s, color .25s, border-color .25s; }
+.encabezado.vidrio { background: rgba(251, 250, 247, .74); color: var(--grafito); border-bottom-color: rgba(181, 19, 47, .3); -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2); }
+.cinta { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.marca { font: 400 1.4rem/1 var(--serif); color: inherit; text-decoration: none; display: flex; flex-direction: column; justify-content: center; gap: .2rem; min-height: 44px; }
+.marca small { font: 500 .68rem/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; opacity: .85; }
+nav { display: flex; gap: 1.5rem; }
+nav a { color: inherit; text-decoration: none; font-size: .95rem; padding: .6rem 0; }
+nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.menu-btn { display: none; }
+
+/* Portada */
+.portada { position: relative; padding-top: calc(64px + 4rem); padding-left: max(1.25rem, calc((100% - 1040px) / 2)); padding-right: max(1.25rem, calc((100% - 1040px) / 2)); display: grid; grid-template-columns: 1.2fr .8fr; gap: 3rem; align-items: center; max-width: none; overflow: hidden; background: var(--porcelana); }
+.portada-texto { max-width: 600px; }
+h1 { font-size: clamp(2.5rem, 6.4vw, 4.4rem); }
+.bajada { font-size: 1.15rem; color: var(--gris); max-width: 30em; margin: 0 0 2rem; }
+.sonrisa { margin: 0; justify-self: center; width: min(100%, 380px); aspect-ratio: 1; border-radius: 50%; overflow: hidden; border: 10px solid var(--encia); box-shadow: 0 30px 60px -30px rgba(140, 12, 34, .45); }
+.sonrisa img { width: 100%; height: 100%; object-fit: cover; object-position: 40% 50%; }
+
+.btn { font: 700 1rem/1 var(--sans); background: var(--rojo); color: #fff; border: 0; border-radius: 999px; padding: 1rem 1.8rem; min-height: 50px; cursor: pointer; transition: background .2s; }
+.btn:hover { background: var(--rojo-hondo); }
+.btn:focus-visible, nav a:focus-visible, .menu-btn:focus-visible { outline: 3px solid var(--grafito); outline-offset: 3px; }
+.btn.claro { background: #fff; color: var(--rojo); }
+.btn.claro:hover { background: var(--encia); }
+.nota { font-size: .92rem; background: var(--encia); color: var(--grafito); border-left: 3px solid var(--rojo); padding: .7rem .9rem; margin: 1rem 0 0; max-width: 420px; }
+.contacto .nota { margin: 1rem auto 0; text-align: left; }
+
+/* Datos rápidos (dentro de la portada) */
+.datos { grid-column: 1 / -1; list-style: none; margin: 0; padding: 1.5rem 1.25rem; background: #fff; border: 1px solid #e7e1da; border-radius: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
+.datos li { display: flex; flex-direction: column; gap: .25rem; }
+.datos li + li { border-left: 1px solid #ece6df; }
+.datos b { font: 400 1.6rem/1.15 var(--serif); color: var(--rojo); }
+.datos span { font-size: .88rem; color: var(--gris); }
+
+/* Obras sociales */
+.obras { background: var(--grafito); color: #fff; }
+.obras .etiqueta { color: #f39aa9; }
+.tres-os { list-style: none; padding: 0; margin: 2rem auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.tres-os li { font: 400 clamp(1.7rem, 3.4vw, 2.4rem)/1.1 var(--serif); text-align: center; padding: 2rem 1rem; border: 1px solid rgba(255, 255, 255, .22); border-radius: 18px; }
+.tres-os li:nth-child(2) { background: var(--rojo); border-color: var(--rojo); }
+.aclara { color: rgba(255, 255, 255, .82); max-width: 40em; margin-top: 0; }
+.aclara b { color: #fff; }
+
+/* Trabajos */
+.trabajos { background: var(--esmalte); }
+.galeria { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; align-items: start; }
+.galeria figure { margin: 0; }
+.galeria img { width: 100%; height: 440px; object-fit: cover; border-radius: 18px; }
+.galeria figcaption { margin-top: .6rem; font-size: .92rem; color: var(--gris); }
+/* Escritorio: cada foto entera, misma altura (ancho proporcional a su formato) */
+@media (min-width: 861px) {
+  .galeria { display: flex; max-width: 780px; }
+  .galeria figure:nth-child(1) { flex: .84; }
+  .galeria figure:nth-child(2) { flex: .56; }
+  .galeria img { height: auto; }
+}
+
+/* Pasos */
+.pasos { background: var(--encia); }
+.pasos ol { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+.pasos li { background: var(--esmalte); border-radius: 18px; padding: 1.6rem; }
+.pasos .num { display: block; font: 400 2.6rem/1 var(--serif); color: var(--rojo); margin-bottom: .7rem; }
+.pasos h3 { font-size: 1.55rem; }
+.pasos li p { margin: 0; color: var(--gris); }
+
+/* Horarios */
+.horarios { background: var(--esmalte); }
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+table { width: 100%; border-collapse: collapse; align-self: start; }
+th, td { padding: .75rem .25rem; border-bottom: 1px solid #e5ded6; text-align: left; font-weight: 400; vertical-align: top; }
+td { text-align: right; font-weight: 500; }
+td small { display: block; font-weight: 400; font-size: .82rem; color: var(--gris); }
+tr.cerrado { color: #9a9390; }
+address { font-style: normal; margin-bottom: 1rem; }
+address b { display: block; font: 400 1.45rem/1.25 var(--serif); }
+.mapa { width: 100%; height: 230px; border: 0; border-radius: 16px; }
+
+/* Cierre */
+.contacto { background: var(--rojo); color: #fff; text-align: center; }
+.contacto h2 em { color: #fff; }
+.contacto p { margin: 0 auto 1.6rem; }
+
+.pie { text-align: center; padding: 1.5rem 1rem 6rem; font-size: .88rem; color: var(--gris); }
+.pie a { color: var(--rojo); }
+
+.flotante { display: none; }
+
+@media (max-width: 860px) {
+  .menu-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1rem; font: 600 .95rem/1 var(--sans); background: transparent; color: inherit; border: 1px solid currentColor; border-radius: 999px; cursor: pointer; }
+  nav { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--rojo); padding: .5rem 1.25rem 1rem; border-bottom: 1px solid rgba(255, 255, 255, .25); }
+  nav.abierto { display: flex; }
+  nav a { color: #fff; padding: .85rem 0; border-bottom: 1px solid rgba(255, 255, 255, .18); }
+  /* Regla de Gonza (16/11): en celular cada sección es una pantalla y el scroll se frena en cada una */
+  html { scroll-snap-type: y mandatory; scroll-padding-top: 64px; }
+  main section { min-height: calc(100vh - 64px); min-height: calc(100svh - 64px); display: flex; flex-direction: column; justify-content: center; scroll-snap-align: start; scroll-snap-stop: always; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  main .portada { min-height: 100vh; min-height: 100svh; }
+  /* Aire abajo para que el botón flotante no tape el contenido */
+  .obras, .trabajos, .pasos, .horarios { padding-bottom: 5.5rem; }
+  .pie { scroll-snap-align: end; }
+  main section > * { width: 100%; }
+  .portada { display: grid; align-content: center; grid-template-columns: 1fr; text-align: center; gap: 1.6rem; padding-top: calc(64px + 1.5rem); }
+  .portada-texto { justify-self: center; }
+  .sonrisa { order: -1; width: 120px; border-width: 5px; }
+  .bajada { margin-left: auto; margin-right: auto; font-size: 1.05rem; margin-bottom: 1.4rem; }
+  .portada .btn { width: 100%; max-width: 360px; }
+  .portada .nota { margin: 1rem auto 0; text-align: left; }
+  .datos { grid-template-columns: 1fr 1fr; row-gap: 1.1rem; padding: 1.1rem .8rem; }
+  .datos li + li { border-left: 0; }
+  .datos b { font-size: 1.3rem; }
+  .datos span { font-size: .8rem; }
+  .obras, .trabajos, .pasos, .horarios { text-align: center; }
+  .tres-os { grid-template-columns: 1fr; gap: .7rem; margin: 1.4rem auto; }
+  .tres-os li { padding: 1.1rem 1rem; }
+  .aclara { margin-left: auto; margin-right: auto; }
+  .galeria { gap: .8rem; }
+  .galeria img { height: 52svh; max-height: 420px; }
+  .galeria figcaption { font-size: .82rem; }
+  .pasos ol { grid-template-columns: 1fr; gap: .8rem; margin-top: 1rem; }
+  .pasos li { padding: 1.1rem 1.2rem; }
+  .pasos .num { font-size: 1.9rem; margin-bottom: .3rem; }
+  .pasos h3 { font-size: 1.35rem; margin-bottom: .2rem; }
+  .dos { grid-template-columns: 1fr; gap: 1.2rem; }
+  th, td { padding: .5rem .25rem; }
+  .lugar { text-align: center; }
+  address { margin-bottom: .7rem; }
+  .mapa { height: 150px; }
+  .contacto .btn { width: 100%; max-width: 360px; }
+  .flotante { display: flex; align-items: center; justify-content: center; position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 15; min-height: 52px; border-radius: 999px; background: var(--rojo); color: #fff; font: 700 1rem/1 var(--sans); text-decoration: none; box-shadow: 0 10px 28px -10px rgba(31, 28, 29, .55); transition: opacity .25s, transform .25s; }
+  .flotante.oculta { opacity: 0; transform: translateY(120%); pointer-events: none; }
+}
