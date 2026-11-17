@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VS Centro Cosmetológico · Vanesa Sosa, dermatocosmiatra en Boulogne</title>
+<meta name="description" content="Vanesa Sosa, dermatocosmiatra. Tratamientos no invasivos facial y corporal con alta tecnología en Av. Sarratea 711 y Olazábal 144, Boulogne Sur Mer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Urbanist:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261117c">
+</head>
+<body>
+<header class="encabezado" id="encabezado">
+  <div class="cinta">
+    <a class="marca" href="#inicio">Vanesa Sosa<small>Centro Cosmetológico</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#tratamientos">Tratamientos</a>
+      <a href="#rutinas">Rutinas y productos</a>
+      <a href="#espacios">Dónde atiendo</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#contacto">Turnos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <div class="portada-texto">
+      <p class="sello">Dermatocosmiatra · Boulogne Sur Mer</p>
+      <h1>Estética facial y corporal, <em>con alta tecnología</em>.</h1>
+      <p class="bajada">Tratamientos no invasivos, faciales y corporales, y rutinas personalizadas para tu piel.</p>
+      <button class="btn" type="button" data-nota>Pedí tu turno</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+    <figure class="espejo">
+      <div class="marco"><img src="cabina.jpg" alt="Cabina de Vanesa Sosa con camilla rosa y su logo en la pared" width="720" height="944"></div>
+    </figure>
+    <ul class="datos" aria-label="Datos rápidos">
+      <li><b>5,0</b><span>en Google · 10 opiniones</span></li>
+      <li><b>2 espacios</b><span>Sarratea y Olazábal</span></li>
+      <li><b>Facial y corporal</b><span>tratamientos no invasivos</span></li>
+      <li><b>Lun a vie</b><span>desde las 9</span></li>
+    </ul>
+  </section>
+
+  <section class="tratamientos" id="tratamientos">
+    <p class="etiqueta">Tratamientos</p>
+    <h2>¿Qué querés tratar?</h2>
+    <div class="indice">
+      <div class="pestanas" role="tablist" aria-label="Tratamientos">
+        <button role="tab" id="t-facial" aria-controls="p-facial" aria-selected="true">Facial</button>
+        <button role="tab" id="t-tecno" aria-controls="p-tecno" aria-selected="false" tabindex="-1">Alta tecnología</button>
+        <button role="tab" id="t-corporal" aria-controls="p-corporal" aria-selected="false" tabindex="-1">Corporal y depilación</button>
+      </div>
+      <div class="panel" role="tabpanel" id="p-facial" aria-labelledby="t-facial">
+        <h3>Cuidado facial</h3>
+        <p>Tratamientos faciales no invasivos, de la limpieza profunda al acné y la rosácea.</p>
+        <ul class="chips"><li>Limpiezas profundas</li><li>Peeling</li><li>Dermaplaning</li><li>Dermapen</li><li>Acné</li><li>Rosácea</li></ul>
+      </div>
+      <div class="panel con-foto" role="tabpanel" id="p-tecno" aria-labelledby="t-tecno" hidden>
+        <div>
+          <h3>Alta tecnología</h3>
+          <p>Tratamientos no invasivos con equipos de alta tecnología.</p>
+          <ul class="chips"><li>HIFU</li><li>Radiofrecuencia</li><li>R. fraccionada</li><li>Thermage</li><li>Electroporación</li><li>IPL</li><li>Alta frecuencia</li></ul>
+        </div>
+        <img src="hifu.jpg" alt="Pantalla del equipo de HIFU con el mapa de tratamiento del rostro" width="720" height="1280" loading="lazy">
+      </div>
+      <div class="panel" role="tabpanel" id="p-corporal" aria-labelledby="t-corporal" hidden>
+        <h3>Corporal y depilación</h3>
+        <p>Tratamientos corporales no invasivos y depilación definitiva.</p>
+        <ul class="chips"><li>Depilación definitiva</li><li>Tratamientos corporales</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="rutinas" id="rutinas">
+    <div class="rutinas-texto">
+      <p class="etiqueta">Rutinas y productos</p>
+      <h2>Tu rutina, <em>pensada para tu piel</em>.</h2>
+      <p>Rutinas personalizadas y venta de productos de farmacia magistral o por catálogo.</p>
+      <ul class="marcas" aria-label="Marcas"><li>Lidherma</li><li>Exel</li><li>Idraet</li><li>Carthage</li><li>Icono</li></ul>
+    </div>
+    <div class="par">
+      <img src="exovit.jpg" alt="Ampolla Exovit de Icono en su caja violeta" width="760" height="1688" loading="lazy">
+      <img src="producto.jpg" alt="Ampolla de tratamiento sostenida frente al logo de Vanesa Sosa" width="760" height="1688" loading="lazy">
+    </div>
+  </section>
+
+  <section class="espacios" id="espacios">
+    <p class="etiqueta">Dónde atiendo</p>
+    <h2>Dos espacios en Boulogne.</h2>
+    <div class="sedes">
+      <figure>
+        <img src="frente.jpg" alt="Frente del centro con cortinas rosas y el vinilo Centro Cosmetológico" width="760" height="1688" loading="lazy">
+        <figcaption><b>Av. Sarratea 711</b>Boulogne Sur Mer</figcaption>
+      </figure>
+      <figure>
+        <img src="tocador.jpg" alt="Rincón con espejo de luces, cortina rosa y puff fucsia" width="760" height="1688" loading="lazy">
+        <figcaption><b>Olazábal 144</b>Boulogne Sur Mer</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="horarios" id="horarios">
+    <p class="etiqueta">Horarios</p>
+    <h2>De lunes a viernes.</h2>
+    <div class="dos">
+      <table>
+        <caption class="solo-lector">Horarios de atención</caption>
+        <tbody>
+          <tr><th scope="row">Lunes</th><td>11:00 a 16:00</td></tr>
+          <tr><th scope="row">Martes</th><td>9:00 a 17:00</td></tr>
+          <tr><th scope="row">Miércoles</th><td>9:00 a 17:00</td></tr>
+          <tr><th scope="row">Jueves</th><td>9:00 a 17:00</td></tr>
+          <tr><th scope="row">Viernes</th><td>9:00 a 16:00</td></tr>
+          <tr class="cerrado"><th scope="row">Sábado y domingo</th><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+      <iframe class="mapa" title="Mapa: Av. Sarratea 711, Boulogne" src="https://maps.google.com/maps?q=Av.%20Sarratea%20711%2C%20Boulogne%20Sur%20Mer&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <p class="etiqueta">Turnos</p>
+    <h2>Reservá tu turno <em>en Boulogne</em>.</h2>
+    <p>Contame qué querés tratar y coordinamos día, horario y espacio.</p>
+    <button class="btn claro" type="button" data-nota>Pedí tu turno</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+  </section>
+</main>
+
+<a class="flotante oculta" href="#contacto">Pedí tu turno</a>
+
+<footer class="pie">
+  <p>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+</footer>
+<script src="script.js?v=20261117c"></script>
+</body>
+</html>
