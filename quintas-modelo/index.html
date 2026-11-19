@@ -2,7 +2,7 @@
 <html lang="es-AR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
 <title>Quinta del Ombú · Pileta, parrilla y pasto por el día</title>
 <meta name="description" content="Alquiler de quinta por el día en el GBA: pileta, parrilla y parque para hasta 40 personas. Elegí tu fecha de la temporada.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,7 +108,7 @@
       <li><b>Mandás la seña</b><span>Te pasamos el alias y subís el comprobante por WhatsApp.</span></li>
       <li><b>Te confirmamos</b><span>Cuando vemos la seña, te escribimos y la fecha queda tuya.</span></li>
     </ol>
-    <a class="btn btn-linea" href="https://quintas1--asistente-demos-gd.netlify.app/quintas-modelo/" target="_blank" rel="noopener">Probá el asistente de reservas</a>
+    <button type="button" class="btn btn-linea" data-asistente>Probá el asistente de reservas</button>
   </div>
 </section>
 
@@ -125,6 +125,39 @@
 </main>
 
 <a class="flotante" id="flotante" href="#" data-wa aria-label="Escribir por WhatsApp">WhatsApp</a>
-<script src="script.js?v=2"></script>
+<div class="asis-teaser" id="asis-teaser" hidden>
+  <button type="button" class="asis-teaser-t" data-asistente>
+    <b>👋 ¿Querés ver si tu fecha está libre?</b>
+    <span>Preguntame, te respondo al instante.</span>
+  </button>
+  <button type="button" class="asis-teaser-x" id="asis-teaser-x" aria-label="Cerrar el aviso">&times;</button>
+</div>
+<button type="button" class="asis-fab" id="asis-fab" data-asistente aria-controls="asis" aria-expanded="false" aria-label="Abrir el asistente de reservas">
+  <span class="asis-emoji" aria-hidden="true">👋</span>
+  <svg class="asis-cierra" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3z" transform="translate(1.4 0)"/></svg>
+  <span class="asis-punto" aria-hidden="true"></span>
+  <span class="asis-txt">Reservá acá</span>
+</button>
+<section class="asis" id="asis" role="dialog" aria-label="Asistente de reservas de Quinta del Ombú" hidden>
+  <header class="asis-bar">
+    <span class="asis-av" aria-hidden="true">🏡</span>
+    <div class="asis-quien"><b>Asistente de Quinta del Ombú</b><small><i></i> Asistente virtual · responde al instante</small></div>
+    <button type="button" class="asis-x" id="asis-x" aria-label="Cerrar el asistente">&times;</button>
+  </header>
+  <div class="asis-lista" id="asis-lista" role="log" aria-live="polite"></div>
+  <div class="asis-chips" id="asis-chips">
+    <button type="button" data-q="¿Qué fechas hay libres?">📅 Ver fechas libres</button>
+    <button type="button" data-q="¿Qué incluye el alquiler?">🏊 ¿Qué incluye?</button>
+    <button type="button" data-q="¿Cuántas personas entran?">👥 ¿Cuántas personas entran?</button>
+    <button type="button" data-q="Quiero reservar la quinta">🎉 Quiero reservar</button>
+  </div>
+  <form class="asis-form" id="asis-form" autocomplete="off">
+    <textarea id="asis-campo" rows="1" maxlength="700" placeholder="Escribí tu consulta" aria-label="Escribí tu consulta"></textarea>
+    <button type="submit" class="asis-enviar" id="asis-enviar" aria-label="Enviar"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.4 20.4 20.85 12 3.4 3.6 3.39 10.13 15.85 12 3.39 13.87z"/></svg></button>
+  </form>
+  <p class="asis-pie">Es una prueba: las fechas libres son de ejemplo y no se manda nada a nadie.</p>
+</section>
+<script src="asistente.js?v=4"></script>
+<script src="script.js?v=4"></script>
 </body>
 </html>
