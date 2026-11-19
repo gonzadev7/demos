@@ -44,6 +44,9 @@ h1{font:900 clamp(52px,9vw,104px)/.92 var(--display);letter-spacing:.005em;max-w
 .btn:hover{background:#cf431d;border-color:#cf431d}
 .btn-linea{background:transparent;color:var(--agua);border-color:var(--agua)}
 .btn-linea:hover{background:var(--agua);border-color:var(--agua);color:#fff}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn-claro{background:transparent;border-color:#fff;color:#fff}
+.btn-claro:hover{background:#fff;border-color:#fff;color:var(--agua-osc)}
 .btn-grande{min-height:60px;padding:0 40px;font-size:19px}
 .datos{display:flex;flex-wrap:wrap;gap:0;margin-top:44px;border-top:1px solid rgba(255,255,255,.5);max-width:560px}
 .datos div{flex:0 1 auto;padding:14px 0 0;margin-right:28px}
@@ -189,9 +192,9 @@ button.btn{font:inherit;font-weight:700;cursor:pointer}
 .asis-pie{margin:0;padding:0 14px 10px;background:#fff;font:400 12px/1.3 var(--texto);color:var(--gris);text-align:center}
 .flotante{bottom:92px}
 @media(max-width:560px){
-  .asis{right:0;left:0;bottom:0;width:auto;height:72vh;max-height:100%;border-radius:18px 18px 0 0}
+  .asis{right:0;left:0;bottom:0;width:auto;top:0;height:100dvh;max-height:100%;border-radius:0}
   .asis-fab.abierto{display:none}
-  html.asis-teclado .asis{border-radius:14px 14px 0 0}
+  html.asis-teclado .asis{border-radius:0}
   html.asis-teclado .asis-chips,html.asis-teclado .asis-pie{display:none}
   html.asis-abierto{overflow:hidden}
   .asis-teaser{right:12px;bottom:88px}

@@ -31,13 +31,15 @@
   function guardar() { try { sessionStorage.setItem(CLAVE, JSON.stringify(estado)); } catch (e) {} }
 
   function libres() {
-    var a = ahora(), out = [];
-    for (var i = 0; i < DIAS_ADELANTE; i++) {
-      var slot = sumar(a.fecha, i) + 'T10:00';
-      if (azar(slot) >= OCUPACION && slot > a.clave && !estado.reservas.some(function (r) { return r.slot === slot; })) out.push(slot);
+    var a = ahora(), out = [], Q = window.QUINTA;
+    if (!Q) return out;
+    for (var i = 0; i < 120; i++) {
+      var f = sumar(a.fecha, i), slot = f + 'T10:00';
+      if (Q.libre(f) && slot > a.clave && !estado.reservas.some(function (r) { return r.slot === slot; })) out.push(slot);
     }
     return out;
   }
+  function marcarCalendario() { if (window.QUINTA) estado.reservas.forEach(function (r) { window.QUINTA.apartadas[r.slot.split('T')[0]] = 1; }); }
   function etiqueta(slot) { var f = slot.split('T')[0], p = f.split('-'); return DIAS[dow(f)] + ' ' + Number(p[2]) + '/' + Number(p[1]); }
   function visitante() {
     try {
@@ -66,10 +68,11 @@
   }
   function bienvenida() {
     if (estado.msgs.length) return;
-    estado.msgs.push({ role: 'model', text: '¡Hola! 👋 Soy el asistente virtual de Quinta del Ombú. Te cuento qué incluye la quinta, miro qué fechas hay libres y te dejo la tuya apartada. ¿Qué necesitás?' });
+    estado.msgs.push({ role: 'model', text: '¡Hola! 👋 ¿Cuál es tu consulta?' });
     guardar();
   }
 
+  marcarCalendario();
   var puntos = null;
   function escribiendo(on) {
     if (on && !puntos) {
@@ -100,13 +103,13 @@
       acc.push({ tipo: tipo, p: datos.split('|').map(function (s) { return s.trim(); }) }); return '';
     }).replace(/\n{3,}/g, '\n\n').trim();
     var nuevas = [];
-    acc.forEach(function (a) { if (a.tipo === 'CANCELAR') estado.reservas = estado.reservas.filter(function (r) { return r.slot !== a.p[0]; }); });
+    acc.forEach(function (a) { if (a.tipo === 'CANCELAR') { estado.reservas = estado.reservas.filter(function (r) { return r.slot !== a.p[0]; }); if (window.QUINTA) window.QUINTA.apartar(a.p[0].split('T')[0], false); } });
     acc.forEach(function (a) {
       if (a.tipo !== 'RESERVA') return;
       var slot = a.p[0];
       if (libres().indexOf(slot) > -1 && estado.reservas.length < 10) {
         var r = { slot: slot, nombre: (a.p[1] || 'Sin nombre').slice(0, 60), zona: (a.p[2] || '').slice(0, 60) };
-        estado.reservas.push(r); nuevas.push(r);
+        estado.reservas.push(r); nuevas.push(r); if (window.QUINTA) window.QUINTA.apartar(slot.split('T')[0], true);
       }
     });
     return { texto: limpio.replace(/\*\*?([^*]+)\*\*?/g, '$1'), nuevas: nuevas };
@@ -166,13 +169,14 @@
     if (panel.hidden) return;
     if (!vv || !chico.matches) { panel.style.bottom = ''; panel.style.height = ''; panel.style.top = ''; document.documentElement.classList.remove('asis-teclado'); return; }
     var tapado = Math.max(0, window.innerHeight - vv.height - vv.offsetTop);
-    var teclado = tapado > 120;
+    var teclado = tapado > 120 || document.activeElement === campo;
     document.documentElement.classList.toggle('asis-teclado', teclado);
     panel.style.bottom = tapado + 'px';
-    panel.style.height = (teclado ? vv.height - 8 : Math.round(vv.height * 0.72)) + 'px';
+    panel.style.height = vv.height + 'px';
     lista.scrollTop = lista.scrollHeight;
   }
   if (vv) { vv.addEventListener('resize', acomodar); vv.addEventListener('scroll', acomodar); }
+  campo.addEventListener('focus', acomodar); campo.addEventListener('blur', function () { setTimeout(acomodar, 50); });
   chico.addEventListener('change', acomodar);
 
   function ajustar() { campo.style.height = 'auto'; campo.style.height = Math.min(campo.scrollHeight, 96) + 'px'; }
@@ -180,7 +184,7 @@
     bienvenida(); pintar(); panel.hidden = false; teaser.hidden = true;
     fab.setAttribute('aria-expanded', 'true'); fab.classList.add('abierto'); fab.classList.remove('llama');
     document.documentElement.classList.add('asis-abierto'); acomodar();
-    setTimeout(function () { campo.focus({ preventScroll: true }); lista.scrollTop = lista.scrollHeight; }, 60);
+    setTimeout(function () { if (!chico.matches) campo.focus({ preventScroll: true }); lista.scrollTop = lista.scrollHeight; }, 60);
   }
   function cerrarPanel() {
     panel.hidden = true; fab.setAttribute('aria-expanded', 'false'); fab.classList.remove('abierto');
@@ -190,6 +194,13 @@
     var b = e.target.closest('[data-asistente]');
     if (!b) return;
     e.preventDefault(); panel.hidden ? abrir() : cerrarPanel();
+  });
+  // "Reservar esta fecha" del calendario: abre el chat y arranca la reserva con ese día.
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-reservar]');
+    if (!b) return;
+    e.preventDefault(); if (panel.hidden) abrir();
+    enviar('Quiero reservar la quinta el ' + b.getAttribute('data-dia'));
   });
   cerrar.addEventListener('click', cerrarPanel);
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) cerrarPanel(); });

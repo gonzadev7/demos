@@ -21,8 +21,19 @@
   function pesos(n){return '$'+n.toLocaleString('es-AR')}
   function clave(y,m,d){return y+'-'+String(m+1).padStart(2,'0')+'-'+String(d).padStart(2,'0')}
   function ocupado(y,m,d,alta){var s=(y*13+m*31+d*17)%10;return alta?s<6:s<2}
+  // Disponibilidad compartida con el asistente: calendario y chat ven exactamente los mismos días libres.
+  var Q=window.QUINTA={apartadas:{},
+    libre:function(iso){
+      var a=iso.split('-').map(Number),y=a[0],m=a[1]-1,d=a[2];
+      if(!MESES.some(function(M){return M.y===y&&M.m===m}))return false;
+      var dow=new Date(y,m,d).getDay(),alta=dow===0||dow===6||!!FERIADOS[iso];
+      return !ocupado(y,m,d,alta)&&!Q.apartadas[iso];
+    },
+    apartar:function(iso,on){if(on)Q.apartadas[iso]=1;else delete Q.apartadas[iso];dibujar(actual)}
+  };
+  var actual=0;
   function dibujar(i){
-    var M=MESES[i];cal.innerHTML='';
+    actual=i;var M=MESES[i];cal.innerHTML='';
     var primero=new Date(M.y,M.m,1).getDay(),lunes=(primero+6)%7,total=new Date(M.y,M.m+1,0).getDate();
     for(var v=0;v<lunes;v++){var e=document.createElement('span');e.className='vacio';cal.appendChild(e)}
     for(var d=1;d<=total;d++){
@@ -30,21 +41,21 @@
         var f=new Date(M.y,M.m,d),dow=f.getDay(),alta=dow===0||dow===6||FERIADOS[clave(M.y,M.m,d)];
         var b=document.createElement('button');b.type='button';b.textContent=d;
         b.className='dia'+(alta?' alta':'');
-        var oc=ocupado(M.y,M.m,d,alta);
-        if(oc){b.classList.add('ocupado');b.disabled=true;b.setAttribute('aria-label',d+' de '+NOMBRE[M.m]+', ocupado')}
+        var oc=ocupado(M.y,M.m,d,alta),ap=Q.apartadas[clave(M.y,M.m,d)];
+        if(oc||ap){b.classList.add('ocupado');b.disabled=true;b.setAttribute('aria-label',d+' de '+NOMBRE[M.m]+(ap?', apartado por vos':', ocupado'))}
         else{b.setAttribute('aria-label',d+' de '+NOMBRE[M.m]+', libre');
           b.addEventListener('click',function(){
             [].forEach.call(cal.querySelectorAll('.sel'),function(x){x.classList.remove('sel')});
-            b.classList.add('sel');mostrar(f,alta);
+            b.classList.add('sel');mostrar(f,alta,clave(M.y,M.m,d));
           })}
         cal.appendChild(b);
       })(d);
     }
     [].forEach.call(meses.children,function(t,j){t.setAttribute('aria-selected',j===i)});
   }
-  function mostrar(f,alta){
+  function mostrar(f,alta,iso){
     var p=alta?PRECIO_ALTA:PRECIO_SEMANA,t=DIAS[f.getDay()]+' '+f.getDate()+' de '+NOMBRE[f.getMonth()];
-    elegida.innerHTML='<strong>'+t.charAt(0).toUpperCase()+t.slice(1)+'</strong><p>Día completo '+pesos(p)+'. Seña para reservar: '+pesos(p/2)+'.</p><a class="btn" href="#" data-wa>Consultar esta fecha</a>';
+    elegida.innerHTML='<strong>'+t.charAt(0).toUpperCase()+t.slice(1)+'</strong><p>Día completo '+pesos(p)+'. Seña para reservar: '+pesos(p/2)+'.</p><button type="button" class="btn" data-reservar="'+iso+'" data-dia="'+t+'">Reservar esta fecha</button>';
   }
   MESES.forEach(function(M,i){
     var t=document.createElement('button');t.type='button';t.className='mes';t.setAttribute('role','tab');t.textContent=M.n;
