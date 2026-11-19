@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quinta del Ombú · Pileta, parrilla y pasto por el día</title>
+<meta name="description" content="Alquiler de quinta por el día en el GBA: pileta, parrilla y parque para hasta 40 personas. Elegí tu fecha de la temporada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body>
+
+<header class="top" id="top">
+  <a class="marca" href="#inicio">Quinta del Ombú</a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menú</button>
+  <nav id="nav" class="nav">
+    <a href="#fechas">Fechas</a>
+    <a href="#incluye">Qué incluye</a>
+    <a href="#precios">Precios</a>
+    <a href="#reservar">Cómo reservar</a>
+    <a class="nav-cta" href="#contacto" data-wa>Consultar</a>
+  </nav>
+</header>
+
+<main>
+<section class="portada sec" id="inicio">
+  <div class="azulejos" aria-hidden="true"></div>
+  <div class="luz" aria-hidden="true"></div>
+  <div class="portada-in">
+    <p class="lugar">Del Viso, Pilar · a 15 minutos de la Panamericana</p>
+    <h1>Pileta, parrilla y pasto. Todo el día para tu grupo.</h1>
+    <p class="bajada">Quinta cerrada para hasta 40 personas. Llegás, prendés el fuego y no compartís nada con nadie.</p>
+    <a class="btn" id="cta-portada" href="#fechas">Ver fechas libres</a>
+    <dl class="datos">
+      <div><dt>Capacidad</dt><dd>40 personas</dd></div>
+      <div><dt>Pileta</dt><dd>9 × 4 m</dd></div>
+      <div><dt>Horario</dt><dd>10 a 20 h</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec fechas" id="fechas">
+  <div class="wrap">
+    <h2>Elegí tu día de la temporada</h2>
+    <p class="sub">Tocá una fecha libre y mirá el precio y la seña.</p>
+    <div class="meses" role="tablist" aria-label="Mes"></div>
+    <div class="cal-wrap">
+      <div class="cal-sem" aria-hidden="true"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+      <div class="cal" id="cal" role="grid"></div>
+      <ul class="ref">
+        <li><i class="k libre"></i>Libre</li>
+        <li><i class="k alta"></i>Fin de semana y feriado</li>
+        <li><i class="k ocupado"></i>Ocupado</li>
+      </ul>
+    </div>
+    <aside class="elegida" id="elegida" aria-live="polite">
+      <p class="e-vacio">Todavía no elegiste fecha.</p>
+    </aside>
+    <p class="nota">Fechas y precios de muestra: en tu web son los reales y los actualizás con un mensaje.</p>
+  </div>
+</section>
+
+<section class="sec incluye" id="incluye">
+  <div class="wrap">
+    <h2>Qué hay en la quinta</h2>
+    <figure class="foto">
+      <img src="img/pileta.jpg" width="1920" height="1437" loading="lazy" alt="Pileta de forma libre rodeada de plantas y lajas">
+      <figcaption>Foto de muestra: Vic Brincat, <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>, vía Wikimedia Commons. En tu web van las fotos de tu quinta.</figcaption>
+    </figure>
+    <ul class="pizarra">
+      <li><span class="q">Pileta</span><span class="d">9 × 4 m, de 0,80 a 1,50 m de profundidad. Sector bajo para chicos.</span></li>
+      <li><span class="q">Parrilla</span><span class="d">Parrilla grande y horno de barro con leña incluida.</span></li>
+      <li><span class="q">Quincho</span><span class="d">Techado, con mesas largas para 40. Heladera y freezer.</span></li>
+      <li><span class="q">Parque</span><span class="d">Media hectárea con sombra de ombúes y lugar para jugar a la pelota.</span></li>
+      <li><span class="q">Baños</span><span class="d">Dos baños con ducha y un vestuario.</span></li>
+      <li><span class="q">Cocheras</span><span class="d">Lugar para 10 autos dentro del predio.</span></li>
+    </ul>
+    <p class="nota">Descripción de muestra.</p>
+  </div>
+</section>
+
+<section class="sec precios" id="precios">
+  <div class="wrap">
+    <h2>Precios por día completo</h2>
+    <table class="tarifas">
+      <tbody>
+        <tr><th scope="row">Lunes a viernes</th><td>$120.000</td></tr>
+        <tr><th scope="row">Sábados, domingos y feriados</th><td>$180.000</td></tr>
+        <tr><th scope="row">Noche (de 20 a 2 h)</th><td>+$60.000</td></tr>
+      </tbody>
+    </table>
+    <ul class="reglas">
+      <li>Reservás con el 50 % de seña.</li>
+      <li>Si cancelás con 7 días de aviso, movemos la seña a otra fecha.</li>
+      <li>Se devuelve la garantía de $30.000 al día siguiente si todo quedó en orden.</li>
+    </ul>
+    <p class="nota">Valores de muestra.</p>
+  </div>
+</section>
+
+<section class="sec pasos" id="reservar">
+  <div class="wrap">
+    <h2>Cómo reservar</h2>
+    <ol class="secuencia">
+      <li><b>Elegís la fecha</b><span>Mirás el calendario y tocás el día.</span></li>
+      <li><b>Mandás la seña</b><span>Te pasamos el alias y subís el comprobante por WhatsApp.</span></li>
+      <li><b>Te confirmamos</b><span>Cuando vemos la seña, te escribimos y la fecha queda tuya.</span></li>
+    </ol>
+    <a class="btn btn-linea" href="https://quintas1--asistente-demos-gd.netlify.app/quintas-modelo/" target="_blank" rel="noopener">Probá el asistente de reservas</a>
+  </div>
+</section>
+
+<section class="sec cierre" id="contacto">
+  <div class="wrap">
+    <h2>Escribinos y cerramos tu fecha</h2>
+    <p class="sub">Respondemos en el día.</p>
+    <a class="btn btn-grande" href="#" data-wa id="cta-cierre">Escribir por WhatsApp</a>
+    <p class="nota nota-wa" id="nota-wa" hidden>Botón de muestra: en la web real abre tu WhatsApp con la fecha elegida.</p>
+    <address>Camino de los Ombúes 1200, Del Viso, Pilar<br>Dirección de muestra</address>
+    <p class="pie">Modelo de ejemplo armado por Gonzalo Meza · gondev.web</p>
+  </div>
+</section>
+</main>
+
+<a class="flotante" id="flotante" href="#" data-wa aria-label="Escribir por WhatsApp">WhatsApp</a>
+<script src="script.js?v=2"></script>
+</body>
+</html>
