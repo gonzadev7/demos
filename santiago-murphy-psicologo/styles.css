@@ -69,7 +69,12 @@ nav a:hover { color: #c9d8e6; }
 .marco-video { aspect-ratio: 16 / 10; border-radius: 10px; background: var(--azul); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--pared); box-shadow: 12px 12px 0 rgba(77, 107, 74, .25); }
 .marco-video p { margin: 0; font: 400 1.2rem 'Newsreader', serif; text-align: center; padding: 0 16px; }
 .marco-video small { font-size: .85rem; opacity: .85; text-align: center; padding: 0 16px; }
-.lista-videos { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; min-width: 0; }
+.lista-videos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; min-width: 0; align-items: start; }
+.video-real { margin: 0; min-width: 0; }
+.video-real video { display: block; width: 100%; aspect-ratio: 9 / 16; max-height: 70vh; object-fit: contain; background: var(--azul); border-radius: 10px; box-shadow: 8px 8px 0 rgba(77, 107, 74, .25); }
+.video-real figcaption { margin-top: 14px; display: flex; flex-direction: column; gap: 4px; }
+.video-real strong { font: 400 1.1rem 'Newsreader', serif; }
+.video-real small { font-size: .85rem; color: var(--suave); }
 .lista-videos .marco-video { min-width: 0; }
 .lista-videos .marco-video { aspect-ratio: 16 / 7; box-shadow: 8px 8px 0 rgba(77, 107, 74, .25); }
 .lista-videos .play { width: 48px; height: 48px; }
@@ -115,6 +120,8 @@ address b { display: block; font: 600 1.2rem 'Newsreader', serif; color: var(--a
 .flotante { display: none; }
 
 @media (max-width: 760px) {
+  .lista-videos { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .video-real { max-width: 300px; margin-inline: auto; width: 100%; }
   main > section { padding: 40px 20px; }
   .menu-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid rgba(251, 250, 246, .6); border-radius: 6px; background: transparent; color: var(--pared); font: 700 .95rem 'Figtree', sans-serif; cursor: pointer; }
   nav { display: none; position: absolute; top: var(--alto); left: 0; right: 0; flex-direction: column; gap: 0; background: var(--azul); padding: 8px 20px 16px; }
