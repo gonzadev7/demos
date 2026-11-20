@@ -1,0 +1,142 @@
+/* NG Estética · centro de estética. Paleta de su Instagram y del consultorio: verde salvia, crema y dorado */
+:root {
+  --azul: #4f6b5a;
+  --azul-suave: #8aa896;
+  --miel: #b8955a;
+  --verde: #7a8f6b;
+  --pared: #fbf8f3;
+  --papel: #f1ede4;
+  --texto: #2b2f2a;
+  --suave: #667064;
+  --linea: #e3ddd0;
+  --alto: 64px;
+  --radio: 14px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--alto); }
+body { margin: 0; background: var(--pared); color: var(--texto); font: 400 1.0625rem/1.7 'Figtree', system-ui, sans-serif; }
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; line-height: 1.15; color: var(--azul); margin: 0 0 .6em; }
+h1 { font-size: clamp(2.3rem, 5vw, 3.7rem); }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.5rem); }
+h3 { font-size: 1.3rem; font-weight: 600; }
+p { margin: 0 0 1em; }
+.solo-lector { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.etiqueta { font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; color: var(--verde); font-weight: 700; margin-bottom: .8em; }
+.contenedor { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+main > section { padding: 88px 0; }
+.titulo-seccion { max-width: 640px; margin-bottom: 44px; }
+.titulo-seccion p:not(.etiqueta) { color: var(--suave); font-size: 1.1rem; margin: 0; }
+.titulo-seccion.centrado { margin-inline: auto; text-align: center; }
+
+/* Encabezado: sólido en azul, vidrio esmerilado al scrollear */
+.encabezado { position: fixed; inset: 0 0 auto; z-index: 20; background: var(--azul); border-bottom: 1px solid rgba(251, 248, 243, .55); transition: background .25s, backdrop-filter .25s; }
+.encabezado.vidrio { background: rgba(79, 107, 90, .78); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); }
+.cinta { max-width: 1120px; margin: 0 auto; padding: 0 24px; height: var(--alto); display: flex; align-items: center; justify-content: space-between; }
+.marca { color: var(--pared); text-decoration: none; font: 400 1.3rem 'Cormorant Garamond', serif; display: flex; flex-direction: column; justify-content: center; min-height: 44px; line-height: 1.1; }
+.marca small { font: 600 .72rem 'Figtree', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #d9e6dd; }
+nav { display: flex; gap: 28px; }
+nav a { color: var(--pared); text-decoration: none; font-size: .95rem; }
+nav a:hover { color: #d9e6dd; }
+.menu-btn { display: none; }
+
+/* Botones */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 32px; border: 0; border-radius: 999px; background: var(--azul); color: #fff; font: 700 1rem 'Figtree', sans-serif; cursor: pointer; transition: background .2s, transform .2s, box-shadow .2s; box-shadow: 0 8px 20px -10px rgba(79, 107, 90, .7); }
+.btn:hover { background: var(--verde); transform: translateY(-1px); }
+.btn.claro { background: var(--pared); color: var(--azul); box-shadow: none; }
+.btn.claro:hover { background: #e3eee6; }
+.btn-texto { display: inline-flex; align-items: center; min-height: 48px; color: var(--azul); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--miel); align-self: center; }
+.btn-texto:hover { color: var(--verde); }
+.nota { font-size: .9rem; margin: 14px 0 0; color: var(--suave); }
+
+/* Portada */
+.portada { padding: calc(var(--alto) + 56px) 0 64px !important; background: linear-gradient(180deg, var(--pared) 0%, var(--papel) 100%); }
+.portada-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: center; }
+.portada h1 em { color: var(--miel); }
+.bajada { font-size: 1.2rem; color: var(--suave); max-width: 36ch; margin-bottom: 28px; }
+.acciones { display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; }
+.foto-portada { margin: 0; }
+.foto-portada img { width: 100%; max-width: 420px; margin-left: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 20%; border-radius: 22px; box-shadow: 0 30px 60px -30px rgba(43, 47, 42, .45); }
+.datos { list-style: none; padding: 0; margin: 56px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); background: #fff; border: 1px solid var(--linea); border-radius: var(--radio); box-shadow: 0 16px 36px -28px rgba(43, 47, 42, .5); }
+.datos li { display: flex; flex-direction: column; padding: 22px 28px; }
+.datos li + li { border-left: 1px solid var(--linea); }
+.datos b { font: 600 1.15rem 'Cormorant Garamond', serif; color: var(--azul); }
+.datos span { font-size: .95rem; color: var(--suave); }
+
+/* Tratamientos */
+.tratamientos { background: var(--pared); }
+.lista-trat { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.lista-trat li { background: #fff; border: 1px solid var(--linea); border-top: 3px solid var(--miel); border-radius: var(--radio); padding: 26px 24px; box-shadow: 0 16px 36px -28px rgba(43, 47, 42, .5); }
+.lista-trat h3 { margin-bottom: .3em; }
+.lista-trat p { color: var(--suave); margin: 0; font-size: .98rem; }
+.aviso { margin: 28px 0 0; color: var(--suave); }
+
+/* Consultorio */
+.centro { background: var(--papel); }
+.galeria { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.galeria img { width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radio); }
+
+/* Pasos */
+.turno { background: var(--pared); }
+.turno ol { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.turno li { background: #fff; border: 1px solid var(--linea); border-radius: var(--radio); padding: 32px 28px; box-shadow: 0 16px 36px -28px rgba(43, 47, 42, .5); }
+.num { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: var(--azul); color: #fff; font: 600 1.3rem 'Cormorant Garamond', serif; margin-bottom: 18px; }
+.turno li p { color: var(--suave); margin: 0; }
+
+/* Horarios */
+.horarios { background: var(--papel); }
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 14px 0; border-bottom: 1px solid var(--linea); text-align: left; font-weight: 400; }
+td { text-align: right; font-weight: 600; color: var(--azul); }
+.cerrado, .cerrado td { color: var(--suave); font-weight: 400; }
+address { font-style: normal; background: #fff; border-radius: var(--radio); padding: 32px; border: 1px solid var(--linea); border-top: 4px solid var(--miel); box-shadow: 0 16px 36px -28px rgba(43, 47, 42, .5); }
+address b { display: block; font: 600 1.3rem 'Cormorant Garamond', serif; color: var(--azul); margin-bottom: 8px; }
+.tel { display: block; margin-top: 12px; color: var(--suave); }
+
+/* Cierre y pie */
+.contacto { background: var(--azul); color: var(--pared); text-align: center; }
+.contacto h2 { color: var(--pared); }
+.contacto p { opacity: .92; }
+.contacto .nota { color: #e3eee6; }
+.contacto .btn.claro { margin-top: 8px; }
+.contacto { display: flex; flex-direction: column; padding-bottom: 0 !important; }
+.contacto > .contenedor { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 56px; }
+.pie { background: #3a5144; color: rgba(251, 248, 243, .8); font-size: .9rem; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0 24px; }
+.pie a { color: var(--pared); display: inline-block; padding: 12px 0; }
+
+.flotante { display: none; }
+
+@media (max-width: 860px) {
+  .galeria { grid-template-columns: 1fr 1fr; }
+  .lista-trat { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 760px) {
+  main > section { padding: 56px 0; min-height: calc(100vh - var(--alto)); min-height: calc(100svh - var(--alto)); display: flex; flex-direction: column; justify-content: center; }
+  .contenedor { padding: 0 20px; }
+  .menu-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid rgba(251, 248, 243, .6); border-radius: 8px; background: transparent; color: var(--pared); font: 700 .95rem 'Figtree', sans-serif; cursor: pointer; }
+  nav { display: none; position: absolute; top: var(--alto); left: 0; right: 0; flex-direction: column; gap: 0; background: var(--azul); padding: 8px 20px 16px; }
+  nav.abierto { display: flex; }
+  nav a { padding: 12px 0; border-bottom: 1px solid rgba(251, 248, 243, .15); }
+  .portada { padding: calc(var(--alto) + 28px) 0 44px !important; min-height: 100vh; min-height: 100svh; }
+  .portada-grid { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+  .foto-portada { order: -1; }
+  .foto-portada img { max-width: 260px; margin: 0 auto; aspect-ratio: 1 / 1; border-radius: 50%; border: 4px solid var(--miel); box-shadow: 0 20px 40px -24px rgba(43, 47, 42, .5); }
+  .bajada { margin-inline: auto; }
+  .acciones { flex-direction: column; align-items: stretch; gap: 8px; }
+  .acciones .btn { width: 100%; }
+  .btn-texto { justify-content: center; border-bottom: 0; text-decoration: underline; text-decoration-color: var(--miel); text-underline-offset: 6px; }
+  .datos { grid-template-columns: 1fr; margin-top: 36px; text-align: left; }
+  .datos li + li { border-left: 0; border-top: 1px solid var(--linea); }
+  .titulo-seccion { margin-bottom: 32px; }
+  .lista-trat { grid-template-columns: 1fr; gap: 12px; text-align: left; }
+  .galeria { gap: 10px; }
+  .turno ol { grid-template-columns: 1fr; gap: 16px; }
+  .dos { grid-template-columns: 1fr; gap: 32px; }
+  .contacto .btn { width: 100%; max-width: 360px; }
+  .pie { justify-content: center; padding: 0 20px; }
+  .pie span:first-child { display: none; }
+  .flotante { display: flex; align-items: center; justify-content: center; position: fixed; left: 16px; right: 16px; bottom: 16px; min-height: 52px; border-radius: 999px; background: var(--miel); color: #fff; text-decoration: none; font-weight: 700; z-index: 15; box-shadow: 0 10px 24px -10px rgba(43, 47, 42, .6); transition: opacity .2s, transform .2s; }
+  .flotante.oculta { opacity: 0; transform: translateY(20px); pointer-events: none; }
+}
