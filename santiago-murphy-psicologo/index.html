@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261120a">
+<link rel="stylesheet" href="styles.css?v=20261120b">
 </head>
 <body>
 <header class="encabezado" id="encabezado">
@@ -26,72 +26,85 @@
 
 <main id="inicio">
   <section class="portada">
-    <div class="portada-texto">
-      <div class="firma">
-        <img src="santiago.jpg" alt="Santiago Murphy" width="720" height="1156">
-        <p>Santiago Murphy<span>Psicólogo · San Isidro</span></p>
+    <div class="contenedor portada-grid">
+      <div class="portada-texto">
+        <p class="etiqueta">Psicólogo · San Isidro</p>
+        <h1>Un lugar tranquilo para hablar de lo que <em>te pasa</em>.</h1>
+        <p class="bajada">Consultorio en San Isidro, de lunes a viernes.</p>
+        <div class="acciones">
+          <button class="btn" type="button" data-nota>Escribime para coordinar</button>
+          <a class="btn-texto" href="#videos">Mirá los videos</a>
+        </div>
+        <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
       </div>
-      <h1>Un lugar tranquilo para hablar de lo que <em>te pasa</em>.</h1>
-      <p class="bajada">Consultorio en San Isidro, de lunes a viernes.</p>
-      <button class="btn" type="button" data-nota>Escribime para coordinar</button>
-      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+      <figure class="foto-portada">
+        <img src="santiago.jpg" alt="Santiago Murphy, psicólogo, sonriendo" width="720" height="1156">
+      </figure>
+    </div>
+    <div class="contenedor">
       <ul class="datos">
         <li><b>Rivadavia 195</b><span>San Isidro</span></li>
         <li><b>Lunes a jueves</b><span>10 a 20 h</span></li>
         <li><b>Viernes</b><span>10 a 15 h</span></li>
       </ul>
     </div>
-    <figure class="foto-portada">
-      <img src="sala.jpg" alt="El consultorio: un sillón con almohadones azules, mesa de madera y piso de parquet" width="780" height="1040">
-    </figure>
   </section>
 
   <section class="videos" id="videos">
-    <div class="videos-texto">
-      <p class="etiqueta">Mirá y escuchá</p>
-      <h2>Videos cortos, simples y prácticos.</h2>
-      <p>Para que quien entre te vea y te escuche antes de escribirte: una presentación breve y un video sobre un tema de la vida diaria en las relaciones, sin tecnicismos.</p>
-    </div>
-    <div class="lista-videos">
-      <figure class="video-real">
-        <video controls preload="metadata" playsinline poster="poster-presentacion.jpg" width="360" height="640" aria-label="Video: Me quiero presentar, 29 segundos">
-          <source src="video-presentacion.mp4" type="video/mp4">
-        </video>
-        <figcaption><strong>Me quiero presentar</strong><small>0:29 · Psicólogo en San Isidro, atención a adultos</small></figcaption>
-      </figure>
-      <figure class="video-real">
-        <video controls preload="metadata" playsinline poster="poster-palabras.jpg" width="360" height="640" aria-label="Video: Ponerse en el modelo del otro, 4 minutos">
-          <source src="video-palabras.mp4" type="video/mp4">
-        </video>
-        <figcaption><strong>Ponerse en el modelo del otro</strong><small>4:06 · El sentido que cada persona le da a las palabras</small></figcaption>
-      </figure>
+    <div class="contenedor">
+      <header class="titulo-seccion">
+        <p class="etiqueta">Mirá y escuchá</p>
+        <h2>Videos cortos, simples y prácticos.</h2>
+        <p>Para que quien entre te vea y te escuche antes de escribirte: una presentación breve y un video sobre un tema de la vida diaria en las relaciones, sin tecnicismos.</p>
+      </header>
+      <div class="lista-videos">
+        <figure class="video-real">
+          <video controls preload="metadata" playsinline poster="poster-presentacion.jpg" width="360" height="640" aria-label="Video: Me quiero presentar, 29 segundos">
+            <source src="video-presentacion.mp4" type="video/mp4">
+          </video>
+          <figcaption><strong>Me quiero presentar</strong><small>0:29 · Psicólogo en San Isidro, atención a adultos</small></figcaption>
+        </figure>
+        <figure class="video-real">
+          <video controls preload="metadata" playsinline poster="poster-palabras.jpg" width="360" height="640" aria-label="Video: Ponerse en el modelo del otro, 4 minutos">
+            <source src="video-palabras.mp4" type="video/mp4">
+          </video>
+          <figcaption><strong>Ponerse en el modelo del otro</strong><small>4:06 · El sentido que cada persona le da a las palabras</small></figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
   <section class="consultorio" id="consultorio">
-    <div class="consultorio-fotos">
-      <img src="escritorio.jpg" alt="Escritorio de madera junto a la ventana, con una lámpara" width="780" height="1040">
-      <img src="rincon.jpg" alt="Un rincón del consultorio con lámpara de pie, plantas y un cuadro de colores" width="720" height="1280">
-    </div>
-    <div class="consultorio-texto">
-      <p class="etiqueta">El consultorio</p>
-      <h2>Luz natural, plantas y madera.</h2>
-      <p>Las consultas son en Rivadavia 195, en San Isidro, en un ambiente reservado y tranquilo.</p>
+    <div class="contenedor">
+      <header class="titulo-seccion">
+        <p class="etiqueta">El consultorio</p>
+        <h2>Luz natural, plantas y madera.</h2>
+        <p>Las consultas son en Rivadavia 195, en San Isidro, en un ambiente reservado y tranquilo.</p>
+      </header>
+      <div class="galeria">
+        <img src="sala.jpg" alt="El consultorio: un sillón con almohadones azules, mesa de madera y piso de parquet" width="780" height="1040" loading="lazy">
+        <img src="escritorio.jpg" alt="Escritorio de madera junto a la ventana, con una lámpara" width="780" height="1040" loading="lazy">
+        <img src="rincon.jpg" alt="Un rincón del consultorio con lámpara de pie, plantas y un cuadro de colores" width="720" height="1280" loading="lazy">
+      </div>
     </div>
   </section>
 
   <section class="pasos" id="pasos">
-    <p class="etiqueta">Cómo empezar</p>
-    <h2>Tres pasos para el primer encuentro.</h2>
-    <ol>
-      <li><span class="num" aria-hidden="true">1</span><h3>Escribime</h3><p>Un mensaje corto alcanza.</p></li>
-      <li><span class="num" aria-hidden="true">2</span><h3>Coordinamos</h3><p>Acordamos un día y una hora, de lunes a viernes.</p></li>
-      <li><span class="num" aria-hidden="true">3</span><h3>Nos encontramos</h3><p>En el consultorio de Rivadavia 195, San Isidro.</p></li>
-    </ol>
+    <div class="contenedor">
+      <header class="titulo-seccion centrado">
+        <p class="etiqueta">Cómo empezar</p>
+        <h2>Tres pasos para el primer encuentro.</h2>
+      </header>
+      <ol>
+        <li><span class="num" aria-hidden="true">1</span><h3>Escribime</h3><p>Un mensaje corto alcanza.</p></li>
+        <li><span class="num" aria-hidden="true">2</span><h3>Coordinamos</h3><p>Acordamos un día y una hora, de lunes a viernes.</p></li>
+        <li><span class="num" aria-hidden="true">3</span><h3>Nos encontramos</h3><p>En el consultorio de Rivadavia 195, San Isidro.</p></li>
+      </ol>
+    </div>
   </section>
 
   <section class="horarios" id="horarios">
-    <div class="dos">
+    <div class="contenedor dos">
       <div>
         <p class="etiqueta">Horarios y dirección</p>
         <h2>De lunes a viernes.</h2>
@@ -113,15 +126,21 @@
   </section>
 
   <section class="contacto" id="contacto">
-    <h2>Escribime y coordinamos.</h2>
-    <p>Consultorio en San Isidro, de lunes a viernes.</p>
-    <button class="btn claro" type="button" data-nota>Escribime para coordinar</button>
-    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
-    <p class="pie">Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+    <div class="contenedor">
+      <h2>Escribime y coordinamos.</h2>
+      <p>Consultorio en San Isidro, de lunes a viernes.</p>
+      <button class="btn claro" type="button" data-nota>Escribime para coordinar</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+    <footer class="pie">
+      <span>© Santiago Murphy · Psicólogo · Rivadavia 195, San Isidro</span>
+      <span>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></span>
+    </footer>
   </section>
 </main>
 
+
 <a class="flotante oculta" href="#contacto">Escribime para coordinar</a>
-<script src="script.js?v=20261120a"></script>
+<script src="script.js?v=20261120b"></script>
 </body>
 </html>
