@@ -49,28 +49,6 @@ h2{font:900 clamp(38px,6vw,68px)/.95 var(--display);text-transform:uppercase;col
 .sub{margin:12px 0 22px;color:var(--gris)}
 .nota{margin-top:20px;font-size:14px;color:var(--gris);max-width:60ch}
 
-/* Calendario */
-.fechas{background:#fff}
-.meses{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.mes{min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--agua);background:#fff;color:var(--agua);font:700 16px var(--texto);cursor:pointer}
-.mes[aria-selected=true]{background:var(--agua);color:#fff}
-.cal-sem,.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
-.cal-sem span{text-align:center;font-size:13px;font-weight:700;color:var(--gris);padding-bottom:4px}
-.dia{height:46px;min-width:0;padding:0;border:0;border-radius:10px;background:var(--celeste);color:var(--agua-osc);font:700 17px var(--texto);cursor:pointer}
-.dia.alta{background:#fff;box-shadow:inset 0 0 0 2px var(--agua);}
-.dia.ocupado{background:#e6eaea;color:#9aa6a8;text-decoration:line-through;cursor:not-allowed}
-.dia.sel{background:var(--brasa);color:#fff;box-shadow:none}
-.dia:disabled{cursor:not-allowed}
-.vacio{visibility:hidden}
-.ref{display:flex;flex-wrap:wrap;gap:6px 20px;list-style:none;padding:12px 0 0;font-size:14px;color:var(--gris)}
-.ref li{display:flex;align-items:center;gap:8px}
-.k{width:16px;height:16px;border-radius:5px;display:inline-block}
-.k.libre{background:var(--celeste)}.k.alta{background:#fff;box-shadow:inset 0 0 0 2px var(--agua)}.k.ocupado{background:#e6eaea}
-.elegida{margin-top:16px;padding:16px 20px;border-radius:14px;background:var(--cal);border-left:6px solid var(--agua);min-height:92px}
-.elegida strong{font:700 26px/1.1 var(--display);letter-spacing:.02em;display:block;color:var(--agua-osc)}
-.elegida p{margin:4px 0 12px}
-.elegida .btn{min-height:46px;padding:0 24px;font-size:16px}
-.e-vacio{color:var(--gris);margin:0}
 
 /* Pizarra */
 .eventos{margin-top:22px;font-weight:700;color:var(--pasto);max-width:60ch}
@@ -118,7 +96,6 @@ address{font-style:normal;margin-top:28px;font-weight:500}
   .datos dd{font-size:24px}
   .datos div{margin-right:18px}
   .btn{width:100%}
-  .elegida .btn{width:100%}
 }
 @media (prefers-reduced-motion:reduce){
   .luz{animation:none}
