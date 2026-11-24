@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quinta Rincón del Cielo · Pileta, jacuzzi y quincho en Moreno</title>
+<meta name="description" content="Quinta Rincón del Cielo, en Moreno: pileta con cascada, jacuzzi y quincho de paja para tu cumpleaños, reunión o día de descanso. Elegí tu fecha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+
+<header class="top" id="top">
+  <a class="marca" href="#inicio">Rincón del Cielo</a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menú</button>
+  <nav id="nav" class="nav">
+    <a href="#fechas">Fechas</a>
+    <a href="#quinta">La quinta</a>
+    <a href="#reservar">Cómo reservar</a>
+    <a class="nav-cta" href="#contacto" data-wa>Consultar</a>
+  </nav>
+</header>
+
+<main>
+<section class="portada sec" id="inicio">
+  <div class="portada-in">
+    <p class="lugar">Moreno · Gral. Lemos 5320</p>
+    <h1>Tu día de pileta, jacuzzi y quincho.</h1>
+    <p class="bajada">Pileta con cascada de piedra, jacuzzi y quincho de paja para festejar, juntarte y descansar en familia o con amigos.</p>
+    <div class="ctas"><a class="btn" id="cta-portada" href="#fechas">Ver fechas libres</a></div>
+    <dl class="datos">
+      <div><dt>Horario</dt><dd>10 a 18 h</dd></div>
+      <div><dt>Días</dt><dd>Todos</dd></div>
+      <div><dt>Zona</dt><dd>Moreno</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec fechas" id="fechas">
+  <div class="wrap">
+    <h2>Elegí tu día</h2>
+    <p class="sub">Tocá una fecha libre y mirá el valor de ejemplo.</p>
+    <div class="meses" role="tablist" aria-label="Mes"></div>
+    <div class="cal-wrap">
+      <div class="cal-sem" aria-hidden="true"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+      <div class="cal" id="cal" role="grid"></div>
+      <ul class="ref">
+        <li><i class="k libre"></i>Libre</li>
+        <li><i class="k alta"></i>Fin de semana y feriado</li>
+        <li><i class="k ocupado"></i>Ocupado</li>
+      </ul>
+    </div>
+    <aside class="elegida" id="elegida" aria-live="polite">
+      <p class="e-vacio">Todavía no elegiste fecha.</p>
+    </aside>
+    <p class="nota">Fechas y valores de muestra: en tu web son los reales y los actualizás con un mensaje.</p>
+  </div>
+</section>
+
+<section class="sec quinta" id="quinta">
+  <div class="wrap">
+    <h2>Así es Rincón del Cielo</h2>
+    <div class="galeria">
+      <figure class="g-grande"><img src="img/pileta-noche.jpg" width="720" height="530" loading="lazy" alt="Pileta iluminada de noche, con cascada de piedra" ><figcaption>Pileta con cascada, de noche</figcaption></figure>
+      <figure><img src="img/quincho.jpg" width="1200" height="2132" loading="lazy" alt="Quincho con mesa larga de madera y sillas" style="object-position:center 55%"><figcaption>Quincho con mesa de madera</figcaption></figure>
+      <figure><img src="img/cascada.jpg" width="720" height="1010" loading="lazy" alt="Pileta iluminada de noche junto a una palmera" style="object-position:center 40%"><figcaption>Pileta y palmera, de noche</figcaption></figure>
+    </div>
+    <ul class="pizarra">
+      <li><span class="q">Pileta</span><span class="d">Con cascada de piedra y luces para disfrutarla también de noche.</span></li>
+      <li><span class="q">Jacuzzi</span><span class="d">Al lado de la pileta, entre la palmera y el parque.</span></li>
+      <li><span class="q">Quincho</span><span class="d">Quincho de paja con mesas y sillas, para comer y compartir.</span></li>
+      <li><span class="q">Parque</span><span class="d">Espacio verde para estar al aire libre.</span></li>
+      <li><span class="q">Horario</span><span class="d">Todos los días de 10 a 18 h.</span></li>
+    </ul>
+    <p class="nota">Fotos y datos de la ficha de Google de la quinta. Capacidad, valores y servicios: los cargamos con tus datos.</p>
+  </div>
+</section>
+
+<section class="sec pasos" id="reservar">
+  <div class="wrap">
+    <h2>Cómo reservar</h2>
+    <ol class="secuencia">
+      <li><b>Elegís la fecha</b><span>Mirás el calendario y tocás el día.</span></li>
+      <li><b>Mandás la seña</b><span>Te pasamos el alias y mandás el comprobante por WhatsApp.</span></li>
+      <li><b>Te confirmamos</b><span>Cuando vemos la seña, te escribimos y la fecha queda tuya.</span></li>
+    </ol>
+    <p class="nota">Los pasos de muestra se ajustan a como reservás vos.</p>
+  </div>
+</section>
+
+<section class="sec cierre" id="contacto">
+  <div class="wrap">
+    <h2>Escribinos y cerramos tu fecha</h2>
+    <p class="sub">Atendemos todos los días de 10 a 18 h.</p>
+    <a class="btn btn-grande" href="#" data-wa id="cta-cierre">Escribir por WhatsApp</a>
+    <p class="nota nota-wa" id="nota-wa" hidden>Botón de muestra: en la web real abre tu WhatsApp con la fecha elegida.</p>
+    <address>Gral. Lemos 5320, Moreno</address>
+    <p class="pie">Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+  </div>
+</section>
+</main>
+
+<a class="flotante" id="flotante" href="#" data-wa aria-label="Escribir por WhatsApp">WhatsApp</a>
+<script src="script.js?v=1"></script>
+</body>
+</html>
