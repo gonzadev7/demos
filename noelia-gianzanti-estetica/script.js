@@ -18,7 +18,7 @@
 
   // Botones de contacto: en la demo solo muestran la nota
   document.querySelectorAll('[data-nota]').forEach(b => b.addEventListener('click', () => {
-    const nota = b.nextElementSibling;
+    const nota = b.closest(".portada-texto, .contenedor").querySelector(".nota");
     nota.hidden = false;
     nota.scrollIntoView({ block: 'center', behavior: 'smooth' });
   }));
