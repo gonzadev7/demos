@@ -19,7 +19,7 @@ img { max-width: 100%; height: auto; display: block; }
 h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.12; margin: 0 0 .5em; letter-spacing: -.01em; }
 h1 em, h2 em { font-style: normal; color: var(--cesped); }
 .solo-lector { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-.etiqueta { font: 600 .8rem/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--cesped-osc); margin: 0 0 .9rem; }
+.etiqueta { font: 600 .8rem/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--cesped-osc); margin: 0 auto .9rem; }
 section { padding: 4.5rem 1.25rem; }
 section > * { max-width: 1040px; margin-left: auto; margin-right: auto; }
 h2 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); }
@@ -86,16 +86,23 @@ table { width: 100%; border-collapse: collapse; align-self: start; }
 th, td { padding: .75rem .25rem; border-bottom: 1px solid var(--linea); text-align: left; font-weight: 400; }
 td { text-align: right; font-weight: 600; }
 tr.cerrado { color: #8a9094; }
-.mapa { width: 100%; min-height: 300px; height: 100%; border: 0; border-radius: 16px; }
+.direccion { background: var(--grafito); color: #fff; border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+.direccion .etiqueta { color: #b9d98a; margin: 0 0 .9rem; }
+.direccion p { margin: 0; }
+.direccion-calle { font: 700 1.6rem/1.2 var(--display); color: #fff; margin-bottom: .3rem !important; }
 
 /* Cierre */
 .contacto { background: var(--cesped); color: #fff; text-align: center; }
 .contacto .etiqueta { color: #e4f0cf; }
 .contacto h2 em { color: #e4f0cf; }
-.contacto > p { margin: 0 auto 1.6rem; }
+.contacto-centro > p { margin: 0 auto 1.6rem; }
 .contacto .nota { color: var(--grafito); }
-.pie { margin: 2.2rem auto 0 !important; font-size: .85rem; opacity: .85; }
-.pie a { color: #fff; display: inline-block; padding: .8rem .4rem; }
+/* Pie: cierra la última pantalla, separado del llamado a la acción */
+.contacto { padding-bottom: 1.25rem; }
+.pie { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .25rem 1.5rem; margin-top: 4.5rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, .22); font-size: .82rem; color: rgba(255, 255, 255, .72); text-align: left; }
+.pie-marca { letter-spacing: .01em; }
+.pie a { color: #fff; font-weight: 600; text-decoration: underline; text-decoration-color: rgba(255, 255, 255, .45); text-underline-offset: 3px; display: inline-flex; align-items: center; min-height: 44px; }
+.pie a:hover { text-decoration-color: #fff; }
 
 .flotante { display: none; }
 
@@ -128,8 +135,9 @@ tr.cerrado { color: #8a9094; }
   .num { min-width: 2.4rem; }
   .dos { grid-template-columns: 1fr; gap: 1.2rem; }
   th, td { padding: .5rem .25rem; }
-  .mapa { min-height: 200px; height: 200px; }
+  .direccion { padding: 1.4rem; }
   .contacto .btn { width: 100%; max-width: 360px; }
+.contacto-centro { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; }  .pie { flex-direction: column; justify-content: center; text-align: center; gap: 0; margin-top: 1.5rem; padding-top: .75rem; }
   .flotante { display: flex; align-items: center; justify-content: center; position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 15; min-height: 52px; border-radius: 12px; background: var(--cesped); color: #fff; font: 600 1rem/1 var(--sans); text-decoration: none; box-shadow: 0 10px 28px -10px rgba(35, 40, 44, .6); transition: opacity .25s, transform .25s; }
   .flotante.oculta { opacity: 0; transform: translateY(120%); pointer-events: none; }
 }
