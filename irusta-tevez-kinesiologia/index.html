@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Irusta &amp; Tevez · Kinesiología en Córdoba</title>
+<meta name="description" content="Irusta & Tevez Kinesiología. Boxes de atención y sala de ejercicio en Rivadeo 1453, Córdoba. Lunes a viernes de 8 a 20.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261124b">
+</head>
+<body>
+<header class="encabezado" id="encabezado">
+  <div class="cinta">
+    <a class="marca" href="#inicio">Irusta &amp; Tevez<small>Kinesiología</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#lugar">El lugar</a>
+      <a href="#turno">Cómo pedir turno</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#contacto">Turnos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <div class="portada-texto">
+      <p class="sello">Kinesiología · Córdoba</p>
+      <h1>Kinesiología con <em>sala de ejercicio propia</em>.</h1>
+      <p class="bajada">Boxes de atención y una sala equipada para entrenar, en Rivadeo 1453.</p>
+      <button class="btn" type="button" data-nota>Pedí tu turno</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+    <figure class="foto-portada">
+      <img src="img/boxes-doble.jpg" alt="Dos boxes de atención con camillas y cortinas grises" width="1000" height="563">
+    </figure>
+    <ul class="datos" aria-label="Datos rápidos">
+      <li><b>4,9</b><span>en Google · 46 opiniones</span></li>
+      <li><b>Rivadeo 1453</b><span>Córdoba</span></li>
+      <li><b>Lun a vie</b><span>de 8 a 20</span></li>
+      <li><b>Sala de ejercicio</b><span>con espaldera y bici</span></li>
+    </ul>
+  </section>
+
+  <section class="lugar" id="lugar">
+    <p class="etiqueta">El lugar</p>
+    <h2>Así es por dentro.</h2>
+    <div class="indice">
+      <div class="pestanas" role="tablist" aria-label="Espacios">
+        <button role="tab" id="t-boxes" aria-controls="p-boxes" aria-selected="true">Boxes de atención</button>
+        <button role="tab" id="t-sala" aria-controls="p-sala" aria-selected="false" tabindex="-1">Sala de ejercicio</button>
+        <button role="tab" id="t-recepcion" aria-controls="p-recepcion" aria-selected="false" tabindex="-1">Recepción</button>
+      </div>
+      <div class="panel" role="tabpanel" id="p-boxes" aria-labelledby="t-boxes">
+        <div class="panel-texto">
+          <h3>Boxes de atención</h3>
+          <p>Camillas separadas por cortinas, con taburete y equipos de apoyo a mano.</p>
+        </div>
+        <img src="img/box-camilla.jpg" alt="Box con camilla, taburete y equipo de apoyo" width="800" height="1504" loading="lazy" style="object-position: 50% 70%">
+      </div>
+      <div class="panel" role="tabpanel" id="p-sala" aria-labelledby="t-sala" hidden>
+        <div class="panel-texto">
+          <h3>Sala de ejercicio</h3>
+          <p>Piso de césped sintético, espaldera, bicicleta, cajón de salto, pesas y elementos de entrenamiento.</p>
+        </div>
+        <img src="img/sala-ejercicio.jpg" alt="Sala de ejercicio con césped sintético, espaldera, bicicleta y estantería con elementos" width="800" height="1442" loading="lazy" style="object-position: 50% 62%">
+      </div>
+      <div class="panel" role="tabpanel" id="p-recepcion" aria-labelledby="t-recepcion" hidden>
+        <div class="panel-texto">
+          <h3>Recepción</h3>
+          <p>Sala de espera con mostrador, asientos y plantas, a la entrada del consultorio.</p>
+        </div>
+        <img src="img/recepcion.jpg" alt="Recepción con mostrador de madera, plantas y bancos blancos" width="800" height="1424" loading="lazy" style="object-position: 50% 60%">
+      </div>
+    </div>
+  </section>
+
+  <section class="turno" id="turno">
+    <p class="etiqueta">Cómo pedir turno</p>
+    <h2>Tres pasos.</h2>
+    <ol class="pasos">
+      <li><span class="num">I</span><div><b>Escribís por WhatsApp</b><p>Contás qué te pasa o qué te indicó tu médico.</p></div></li>
+      <li><span class="num">II</span><div><b>Coordinamos el turno</b><p>Elegís día y horario, de lunes a viernes de 8 a 20.</p></div></li>
+      <li><span class="num">III</span><div><b>Venís a Rivadeo 1453</b><p>Te esperamos en Córdoba, en el consultorio.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="horarios" id="horarios">
+    <p class="etiqueta">Horarios y dirección</p>
+    <h2>De lunes a viernes.</h2>
+    <div class="dos">
+      <table>
+        <caption class="solo-lector">Horarios de atención</caption>
+        <tbody>
+          <tr><th scope="row">Lunes</th><td>8:00 a 20:00</td></tr>
+          <tr><th scope="row">Martes</th><td>8:00 a 20:00</td></tr>
+          <tr><th scope="row">Miércoles</th><td>8:00 a 20:00</td></tr>
+          <tr><th scope="row">Jueves</th><td>8:00 a 20:00</td></tr>
+          <tr><th scope="row">Viernes</th><td>8:00 a 20:00</td></tr>
+          <tr class="cerrado"><th scope="row">Sábado y domingo</th><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+      <iframe class="mapa" title="Mapa: Rivadeo 1453, Córdoba" src="https://maps.google.com/maps?q=Rivadeo%201453%2C%20C%C3%B3rdoba%2C%20Argentina&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <p class="etiqueta">Turnos</p>
+    <h2>Pedí tu turno <em>en Córdoba</em>.</h2>
+    <p>Escribinos y coordinamos día y horario.</p>
+    <button class="btn claro" type="button" data-nota>Pedí tu turno</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    <p class="pie">Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+  </section>
+</main>
+
+<a class="flotante oculta" href="#contacto">Pedí tu turno</a>
+<script src="script.js?v=20261124b"></script>
+</body>
+</html>
