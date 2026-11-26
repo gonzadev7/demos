@@ -82,8 +82,10 @@ h1{font:400 clamp(46px,8vw,96px)/.98 var(--display);max-width:13ch;text-wrap:bal
 .secuencia span{color:var(--gris)}
 
 /* Cierre con pie modelo 25/11 */
-.cierre{background:var(--teja-osc);color:#fff;padding-bottom:20px;align-items:stretch}
-.cierre .wrap{display:flex;flex-direction:column}
+/* Cierre: pileta de noche (foto de una visitante, excepción aprobada por Gonza 26/11 13:46, solo demo) */
+.cierre{position:relative;background:var(--teja-osc) url(img/noche.jpg) center 70%/cover;color:#fff;padding-bottom:20px;align-items:stretch}
+.cierre::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,24,.72),rgba(20,14,24,.55) 45%,rgba(20,14,24,.85))}
+.cierre .wrap{position:relative;display:flex;flex-direction:column}
 .llamado{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
 .cierre h2{color:#fff}
 .cierre .sub{color:#f6e2d8}
