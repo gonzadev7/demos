@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261126b">
+<link rel="stylesheet" href="styles.css?v=20261126d">
 </head>
 <body>
 <header class="encabezado" id="encabezado">
@@ -18,6 +18,7 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
     <nav id="nav" aria-label="Principal">
       <a href="#tratamientos">Tratamientos</a>
+      <a href="#resultados">Antes y después</a>
       <a href="#doctora">La doctora</a>
       <a href="#consulta">Cómo es la consulta</a>
       <a href="#contacto">Turnos</a>
@@ -85,6 +86,24 @@
     </div>
   </section>
 
+  <section class="resultados" id="resultados">
+    <p class="etiqueta">Antes y después</p>
+    <h2>Resultados <em>naturales</em>.</h2>
+    <div class="casos">
+      <figure class="caso ancho">
+        <div class="par">
+          <img src="antes-despues-endolifting.jpg" alt="Perfil de una paciente antes y después de Endolifting facial" width="1264" height="561" loading="lazy">
+          <span class="rotulo izq">Antes</span><span class="rotulo der">Después</span>
+        </div>
+        <figcaption>Endolifting<span>Contorno redefinido, sin cirugía</span></figcaption>
+      </figure>
+      <figure class="caso">
+        <div class="par"><img src="antes-despues-labios.jpg" alt="Labios antes y después del perfilamiento con ácido hialurónico" width="334" height="302" loading="lazy"></div>
+        <figcaption>Perfilamiento de labios<span>Con ácido hialurónico</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="doctora" id="doctora">
     <figure class="foto-doctora">
       <img src="consultorio.jpg" alt="La Dra. Alvarez Lamas con ambo blanco en el consultorio" width="474" height="593" loading="lazy">
@@ -92,7 +111,7 @@
     <div class="doctora-texto">
       <p class="etiqueta">La doctora</p>
       <h2>Dra. Martha <em>Alvarez Lamas</em></h2>
-      <p>Cirujana plástica, especialista en láser Diodo. Estética facial y corporal en Recoleta, en el centro oficial Velas.</p>
+      <p>Cirujana plástica, especialista en láser Diodo. Estética facial y corporal en Recoleta.</p>
       <p class="prensa-titulo">En la prensa</p>
       <ul class="prensa">
         <li><b>Revista Intercountries</b><span>“Endolifting: una nueva mirada sobre el rejuvenecimiento”</span></li>
@@ -112,17 +131,22 @@
   </section>
 
   <section class="contacto" id="contacto">
-    <p class="etiqueta">Consultas y turnos</p>
-    <h2>Reservá tu turno, <em>tu piel lo necesita</em>.</h2>
-    <p>Agüero 1595, Recoleta · Barrio Norte, Agüero y Santa Fe.</p>
-    <button class="btn claro" type="button" data-nota>Consultas y turnos</button>
-    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
-    <p class="pie">Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+    <div class="llamado">
+      <p class="etiqueta">Consultas y turnos</p>
+      <h2>Reservá tu turno, <em>tu piel lo necesita</em>.</h2>
+      <p>Agüero 1595, Recoleta · Barrio Norte, Agüero y Santa Fe.</p>
+      <button class="btn claro" type="button" data-nota>Consultas y turnos</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+    <footer class="pie">
+      <span>Dra. Martha Alvarez Lamas · Recoleta</span>
+      <span>Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></span>
+    </footer>
   </section>
 </main>
 
 <a class="flotante oculta" href="#contacto">Consultas y turnos</a>
 
-<script src="script.js?v=20261126b"></script>
+<script src="script.js?v=20261126d"></script>
 </body>
 </html>

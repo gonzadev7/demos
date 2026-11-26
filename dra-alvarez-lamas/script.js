@@ -3,7 +3,7 @@
   const btnMenu = document.querySelector('.menu-btn');
   const nav = document.getElementById('nav');
 
-  // Arranca sólido en nude; al scrollear pasa a vidrio esmerilado
+  // Arranca sólido en el negro del logo; al scrollear pasa a vidrio esmerilado
   const marcar = () => encabezado.classList.toggle('vidrio', window.scrollY > 10 && !nav.classList.contains('abierto'));
   window.addEventListener('scroll', marcar, { passive: true });
   btnMenu.addEventListener('click', () => {
