@@ -76,9 +76,18 @@ h2{font:900 clamp(38px,6vw,68px)/.95 var(--display);text-transform:uppercase;col
 .secuencia span{color:var(--gris)}
 
 /* Cierre */
-.cierre{background:var(--celeste)}
+.cierre{position:relative;background:var(--agua-osc) url(img/quincho.jpg) center 55%/cover;color:#fff;align-items:stretch}
+.cierre::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,30,45,.55),rgba(4,30,45,.72) 50%,rgba(4,30,45,.9))}
+.cierre .wrap{position:relative;display:flex;flex-direction:column}
+.llamado{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.cierre h2{color:#fff}
+.cierre .sub{color:#e6f6fc}
+.cierre .btn{background:#fff;color:var(--agua-osc);border-color:#fff}
+.cierre .nota{color:#fff;background:rgba(0,0,0,.25);padding:10px 14px;border-radius:10px}
+.cierre address{color:#fff}
 address{font-style:normal;margin-top:28px;font-weight:500}
-.pie{margin-top:36px;font-size:14px;color:var(--agua-osc)}
+.pie{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.25rem 1.5rem;margin-top:3rem;padding-top:.5rem;border-top:1px solid rgba(255,255,255,.25);font-size:13.5px;color:rgba(255,255,255,.8)}
+.pie a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
 
 /* Botón flotante (celular): aparece cuando el botón de la portada sale de pantalla */
 .flotante{position:fixed;right:16px;bottom:16px;z-index:15;min-height:52px;padding:0 24px;display:none;align-items:center;background:var(--brasa);color:#fff;border-radius:999px;font:700 16px var(--texto);text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.28);opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .2s,transform .2s}
