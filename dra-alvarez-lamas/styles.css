@@ -1,0 +1,144 @@
+/* Dra. Alvarez Lamas · editorial de revista de belleza: nude y rosé de sus placas, tinta negra de su logo AL */
+:root {
+  --hueso: #faf6f2;
+  --nude: #f1e4dc;
+  --rose: #d8b4a3;
+  --rose-osc: #9c6b58;
+  --cafe: #5c4339;
+  --tinta: #1d1918;
+  --gris: #6e605a;
+  --serif: 'Bodoni Moda', 'Didot', Georgia, serif;
+  --sans: 'Outfit', system-ui, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; font: 300 1.0625rem/1.7 var(--sans); color: var(--tinta); background: var(--hueso); overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.12; margin: 0 0 .5em; }
+h1 em, h2 em { font-style: italic; color: var(--rose-osc); }
+b { font-weight: 500; }
+.etiqueta { font: 500 .8rem/1 var(--sans); letter-spacing: .28em; text-transform: uppercase; color: var(--rose-osc); margin-top: 0; margin-bottom: 1rem; }
+section { padding: 4.5rem 1.25rem; }
+section > * { max-width: 1040px; margin-left: auto; margin-right: auto; }
+h2 { font-size: clamp(1.9rem, 4.6vw, 2.9rem); }
+
+/* Encabezado: sólido en nude arriba, vidrio esmerilado al scrollear */
+.encabezado { position: fixed; inset: 0 0 auto; z-index: 20; background: var(--nude); color: var(--tinta); border-bottom: 1px solid rgba(156, 107, 88, .55); transition: background .25s; }
+.encabezado.vidrio { background: rgba(250, 246, 242, .72); -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2); }
+.cinta { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.marca { font: 400 1.25rem/1 var(--serif); color: inherit; text-decoration: none; display: flex; flex-direction: column; justify-content: center; gap: .3rem; min-height: 44px; }
+.marca small { font: 500 .62rem/1 var(--sans); letter-spacing: .3em; text-transform: uppercase; color: var(--rose-osc); }
+nav { display: flex; gap: 1.6rem; }
+nav a { color: inherit; text-decoration: none; font-weight: 400; font-size: .95rem; padding: .6rem 0; }
+nav a:hover { text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--rose); }
+.menu-btn { display: none; }
+
+/* Portada */
+.portada { padding-top: calc(64px + 3.5rem); padding-left: max(1.25rem, calc((100% - 1040px) / 2)); padding-right: max(1.25rem, calc((100% - 1040px) / 2)); display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; max-width: none; background: var(--nude); }
+.portada > * { max-width: none; margin: 0; }
+.firma { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.8rem; }
+.firma img { width: 76px; height: 76px; border-radius: 50%; border: 1px solid var(--rose); background: #fff; flex: none; }
+.firma p { margin: 0; font: 400 1.15rem/1.3 var(--serif); }
+.firma span { display: block; font: 400 .82rem/1.4 var(--sans); color: var(--gris); letter-spacing: .02em; }
+h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); }
+.bajada { font-size: 1.15rem; color: var(--cafe); margin: 0 0 2rem; max-width: 30em; }
+.retrato { justify-self: center; width: min(100%, 380px); position: relative; }
+.retrato::before { content: ""; position: absolute; inset: -14px 14px 14px -14px; border: 1px solid var(--rose-osc); border-radius: 999px 999px 0 0; pointer-events: none; }
+.retrato img { position: relative; border-radius: 999px 999px 0 0; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; width: 100%; }
+
+.btn { font: 500 1rem/1 var(--sans); letter-spacing: .04em; background: var(--tinta); color: var(--hueso); border: 0; border-radius: 999px; padding: 1.05rem 2rem; min-height: 48px; cursor: pointer; transition: background .2s; }
+.btn:hover { background: var(--cafe); }
+.btn:focus-visible, .pestanas button:focus-visible, nav a:focus-visible, .marca:focus-visible, .menu-btn:focus-visible { outline: 2px solid var(--rose-osc); outline-offset: 3px; }
+.btn.claro { background: var(--hueso); color: var(--tinta); }
+.btn.claro:hover { background: #fff; }
+.nota { font-size: .92rem; background: var(--hueso); color: var(--tinta); border-left: 3px solid var(--rose-osc); padding: .7rem .9rem; margin: 1rem 0 0; max-width: 420px; text-align: left; }
+
+/* Datos rápidos (dentro de la portada) */
+.datos { grid-column: 1 / -1; list-style: none; margin: 0; padding: 1.4rem 0 0; border-top: 1px solid rgba(156, 107, 88, .45); display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
+.datos li { display: flex; flex-direction: column; gap: .15rem; }
+.datos b { font: 400 1.2rem/1.25 var(--serif); }
+.datos span { font-size: .88rem; color: var(--gris); }
+
+/* Tratamientos: índice con panel */
+.indice { display: grid; grid-template-columns: 270px 1fr; gap: 2rem; margin-top: 1.5rem; }
+.pestanas { display: flex; flex-direction: column; gap: .5rem; }
+.pestanas button { font: 400 1.02rem/1.25 var(--sans); text-align: left; padding: .9rem 1.1rem; min-height: 48px; border: 1px solid var(--rose); border-radius: 4px; background: transparent; color: var(--tinta); cursor: pointer; }
+.pestanas button[aria-selected="true"] { background: var(--tinta); border-color: var(--tinta); color: var(--hueso); }
+.panel { background: var(--nude); padding: 2.2rem; border-top: 3px solid var(--rose-osc); }
+.tecnica { font: 500 .8rem/1 var(--sans); letter-spacing: .22em; text-transform: uppercase; color: var(--rose-osc); margin: 0 0 .9rem; }
+.panel h3 { font-size: 1.75rem; }
+.panel p { margin: 0 0 1.1rem; color: var(--cafe); }
+.chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.chips li { background: var(--hueso); border: 1px solid var(--rose); border-radius: 999px; padding: .45rem .95rem; font-size: .93rem; }
+
+/* La doctora */
+.doctora { background: var(--tinta); color: var(--hueso); display: grid; grid-template-columns: .8fr 1.2fr; gap: 3.5rem; align-items: center; padding-left: max(1.25rem, calc((100% - 1040px) / 2)); padding-right: max(1.25rem, calc((100% - 1040px) / 2)); }
+.doctora > * { max-width: none; margin: 0; }
+.doctora .etiqueta { color: var(--rose); }
+.doctora h2 em { color: var(--rose); }
+.foto-doctora { margin: 0; }
+.foto-doctora img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center 15%; width: 100%; border-radius: 2px; }
+.doctora-texto > p { opacity: .88; max-width: 32em; }
+.prensa-titulo { font: 500 .8rem/1 var(--sans) !important; letter-spacing: .28em; text-transform: uppercase; color: var(--rose); margin: 2rem 0 .8rem; opacity: 1 !important; }
+.prensa { list-style: none; padding: 0; margin: 0; }
+.prensa li { padding: .9rem 0; border-top: 1px solid rgba(216, 180, 163, .35); }
+.prensa b { display: block; font: 400 1.2rem/1.3 var(--serif); }
+.prensa span { font-size: .95rem; opacity: .78; font-style: italic; }
+
+/* Cómo es la consulta */
+.consulta { background: var(--hueso); }
+.pasos { list-style: none; padding: 0; margin: 1.8rem auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.pasos li { border-top: 1px solid var(--tinta); padding-top: 1.2rem; }
+.pasos span { font: 400 2.4rem/1 var(--serif); color: var(--rose-osc); display: block; margin-bottom: .8rem; }
+.pasos h3 { font-size: 1.4rem; }
+.pasos p { margin: 0; color: var(--gris); }
+
+/* Cierre */
+.contacto { background: linear-gradient(rgba(58, 38, 31, .8), rgba(58, 38, 31, .86)), url(consultorio-pie.jpg) 70% center / cover no-repeat var(--cafe); color: var(--hueso); text-align: center; }
+.contacto .btn.claro { box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .5); }
+.contacto .etiqueta { color: var(--rose); }
+.contacto h2 em { color: var(--rose); }
+.contacto > p:not(.etiqueta):not(.nota):not(.pie) { margin: 0 auto 1.8rem; }
+.contacto .nota { margin: 1rem auto 0; }
+.pie { font-size: .85rem; margin: 3rem auto 0; opacity: .85; }
+.pie a { color: inherit; display: inline-block; padding: .7rem .2rem; }
+
+.flotante { display: none; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@media (max-width: 860px) {
+  .menu-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.1rem; font: 500 .95rem/1 var(--sans); background: transparent; color: inherit; border: 1px solid currentColor; border-radius: 999px; cursor: pointer; }
+  nav { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--nude); padding: .5rem 1.25rem 1rem; border-bottom: 1px solid rgba(156, 107, 88, .55); }
+  nav.abierto { display: flex; }
+  nav a { padding: .85rem 0; border-bottom: 1px solid rgba(29, 25, 24, .1); }
+  html { scroll-padding-top: 64px; }
+  main section { min-height: calc(100vh - 64px); min-height: calc(100svh - 64px); display: flex; flex-direction: column; justify-content: center; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  main .portada { min-height: 100vh; min-height: 100svh; display: grid; align-content: center; grid-template-columns: 1fr; text-align: center; gap: 1.5rem; padding-top: calc(64px + 1.5rem); }
+  main section > * { width: 100%; }
+  .firma { justify-content: center; text-align: left; margin-bottom: 1.3rem; }
+  .firma img { width: 64px; height: 64px; }
+  .bajada { margin: 0 auto 1.4rem; font-size: 1.05rem; }
+  .retrato { display: none; }
+  .portada .btn { width: 100%; max-width: 360px; }
+  .portada .nota { margin: 1rem auto 0; }
+  .datos { grid-template-columns: 1fr 1fr; row-gap: 1.1rem; }
+  .datos b { font-size: 1.05rem; }
+  .indice { grid-template-columns: 1fr; gap: 1rem; }
+  .pestanas { flex-direction: row; flex-wrap: wrap; }
+  .pestanas button { flex: 1 1 40%; text-align: center; font-size: .95rem; padding: .7rem .6rem; }
+  .panel { padding: 1.5rem; }
+  .panel h3 { font-size: 1.45rem; }
+  .doctora { grid-template-columns: 1fr; gap: 1.4rem; text-align: center; }
+  .foto-doctora { width: 62%; max-width: 260px; justify-self: center; }
+  .doctora-texto > p { margin-left: auto; margin-right: auto; }
+  .prensa-titulo { margin-top: 1.4rem; }
+  .prensa li { padding: .6rem 0; }
+  .pasos { grid-template-columns: 1fr; gap: 1.1rem; text-align: center; }
+  .pasos li { padding-top: .9rem; }
+  .pasos span { font-size: 1.9rem; margin-bottom: .4rem; }
+  .contacto .btn { width: 100%; max-width: 360px; }
+  .pie { margin-top: 2.2rem; }
+  .flotante { display: flex; align-items: center; justify-content: center; position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 15; min-height: 52px; border-radius: 999px; background: var(--tinta); color: var(--hueso); font: 500 1rem/1 var(--sans); letter-spacing: .04em; text-decoration: none; box-shadow: 0 10px 28px -10px rgba(29, 25, 24, .6); transition: opacity .25s, transform .25s; }
+  .flotante.oculta { opacity: 0; transform: translateY(120%); pointer-events: none; }
+}

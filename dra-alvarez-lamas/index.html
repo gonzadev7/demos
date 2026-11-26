@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Dra. Martha Alvarez Lamas · Cirujana plástica en Recoleta</title>
+<meta name="description" content="Dra. Martha Alvarez Lamas, cirujana plástica especialista en láser Diodo. Endolifting, lipólisis láser, láser fraccionado y perfilamiento de labios en Agüero 1595, Recoleta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261126b">
+</head>
+<body>
+<header class="encabezado" id="encabezado">
+  <div class="cinta">
+    <a class="marca" href="#inicio">Dra. Alvarez Lamas<small>Cirujana plástica</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#tratamientos">Tratamientos</a>
+      <a href="#doctora">La doctora</a>
+      <a href="#consulta">Cómo es la consulta</a>
+      <a href="#contacto">Turnos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada">
+    <div class="portada-texto">
+      <div class="firma">
+        <img src="logo.jpg" alt="Logo AL de la Dra. Alvarez Lamas, cirujana plástica" width="150" height="150">
+        <p>Dra. Martha Alvarez Lamas<span>Cirujana plástica · Especialista en láser Diodo</span></p>
+      </div>
+      <h1>Redefiní tu contorno <em>sin cirugía</em>.</h1>
+      <p class="bajada">Endolifting y lipólisis láser con tecnología láser avanzada. Recuperación rápida, sin cicatrices ni hematomas.</p>
+      <button class="btn" type="button" data-nota>Consultas y turnos</button>
+      <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    </div>
+    <figure class="retrato">
+      <img src="retrato.jpg" alt="La Dra. Martha Alvarez Lamas en su consultorio" width="474" height="593">
+    </figure>
+    <ul class="datos" aria-label="Datos rápidos">
+      <li><b>Cirujana plástica</b><span>especialista en láser Diodo</span></li>
+      <li><b>Facial y corporal</b><span>estética sin cirugía</span></li>
+      <li><b>Downtime mínimo</b><span>en Endolifting</span></li>
+      <li><b>Recoleta</b><span>Agüero 1595</span></li>
+    </ul>
+  </section>
+
+  <section class="tratamientos" id="tratamientos">
+    <p class="etiqueta">Tratamientos</p>
+    <h2>¿Qué querés trabajar?</h2>
+    <div class="indice">
+      <div class="pestanas" role="tablist" aria-label="Tratamientos">
+        <button role="tab" id="t-contorno" aria-controls="p-contorno" aria-selected="true">Contorno facial y corporal</button>
+        <button role="tab" id="t-piel" aria-controls="p-piel" aria-selected="false" tabindex="-1">Textura y arrugas</button>
+        <button role="tab" id="t-labios" aria-controls="p-labios" aria-selected="false" tabindex="-1">Labios</button>
+        <button role="tab" id="t-vascular" aria-controls="p-vascular" aria-selected="false" tabindex="-1">Rosácea y arañitas</button>
+      </div>
+      <div class="panel" role="tabpanel" id="p-contorno" aria-labelledby="t-contorno">
+        <p class="tecnica">Endolifting® y lipólisis láser</p>
+        <h3>Contorno redefinido, sin cirugía</h3>
+        <p>Un tratamiento con láser, facial o corporal. La recuperación es rápida, sin cicatrices ni hematomas.</p>
+        <ul class="chips"><li>Facial</li><li>Corporal</li><li>Downtime mínimo</li><li>Sin cicatrices</li><li>Sin hematomas</li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p-piel" aria-labelledby="t-piel" hidden>
+        <p class="tecnica">Láser fraccionado no ablativo</p>
+        <h3>Renová tu piel con tecnología láser no invasiva</h3>
+        <p>Rejuvenecimiento facial, también en cuello y escote.</p>
+        <ul class="chips"><li>Rejuvenecimiento facial</li><li>Cuello y escote</li><li>Peribucal “código de barras”: 3 sesiones</li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p-labios" aria-labelledby="t-labios" hidden>
+        <p class="tecnica">Fillers con ácido hialurónico</p>
+        <h3>Perfilamiento de labios</h3>
+        <p>Más definición, mayor armonía y resultados naturales.</p>
+        <ul class="chips"><li>Perfilamiento de labios</li><li>Fillers</li><li>Ácido hialurónico</li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p-vascular" aria-labelledby="t-vascular" hidden>
+        <p class="tecnica">Láser Diodo</p>
+        <h3>Rosácea y arañas vasculares</h3>
+        <p>Tratamiento con láser Diodo, su especialidad.</p>
+        <ul class="chips"><li>Rosácea</li><li>Arañas vasculares</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doctora" id="doctora">
+    <figure class="foto-doctora">
+      <img src="consultorio.jpg" alt="La Dra. Alvarez Lamas con ambo blanco en el consultorio" width="474" height="593" loading="lazy">
+    </figure>
+    <div class="doctora-texto">
+      <p class="etiqueta">La doctora</p>
+      <h2>Dra. Martha <em>Alvarez Lamas</em></h2>
+      <p>Cirujana plástica, especialista en láser Diodo. Estética facial y corporal en Recoleta, en el centro oficial Velas.</p>
+      <p class="prensa-titulo">En la prensa</p>
+      <ul class="prensa">
+        <li><b>Revista Intercountries</b><span>“Endolifting: una nueva mirada sobre el rejuvenecimiento”</span></li>
+        <li><b>Mujer Feliz</b><span>Nota en Recoleta</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="consulta" id="consulta">
+    <p class="etiqueta">Cómo es la consulta</p>
+    <h2>Tres pasos para tu turno.</h2>
+    <ol class="pasos">
+      <li><span>I</span><h3>Nos escribís</h3><p>Por WhatsApp, contándonos qué querés trabajar.</p></li>
+      <li><span>II</span><h3>Consulta</h3><p>En el consultorio de Agüero 1595, Recoleta, para ver cuál es el tratamiento indicado.</p></li>
+      <li><span>III</span><h3>Tus sesiones</h3><p>Coordinamos las sesiones del tratamiento, en el día y horario que te quede mejor.</p></li>
+    </ol>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <p class="etiqueta">Consultas y turnos</p>
+    <h2>Reservá tu turno, <em>tu piel lo necesita</em>.</h2>
+    <p>Agüero 1595, Recoleta · Barrio Norte, Agüero y Santa Fe.</p>
+    <button class="btn claro" type="button" data-nota>Consultas y turnos</button>
+    <p class="nota" role="status" hidden>Los botones de contacto se activan cuando arrancamos con la versión oficial.</p>
+    <p class="pie">Demo desarrollada por <a href="https://www.instagram.com/gondev.web/" target="_blank" rel="noopener">@gondev.web</a></p>
+  </section>
+</main>
+
+<a class="flotante oculta" href="#contacto">Consultas y turnos</a>
+
+<script src="script.js?v=20261126b"></script>
+</body>
+</html>
