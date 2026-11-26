@@ -1,0 +1,125 @@
+:root{
+  --teja:#c4502a; --teja-osc:#8a3418; --cielo:#4a3560; --rosa:#f2b8a0; --pasto:#4c7a36;
+  --cal:#fbf5ec; --arena:#f4e3cf; --carbon:#2a1f1c; --gris:#6b5d57;
+  --hh:60px;
+  --display:"Young Serif",Georgia,serif;
+  --texto:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh)}
+body{font:400 17px/1.55 var(--texto);color:var(--carbon);background:var(--cal);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rosa);outline-offset:3px}
+
+/* Encabezado: sólido (teja de la casa) al inicio, vidrio esmerilado al scrollear. Sin botón de contacto */
+.top{position:fixed;inset:0 0 auto 0;height:var(--hh);z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:var(--teja-osc);color:#fff;border-bottom:1px solid rgba(255,255,255,.35);transition:background .25s}
+.top.scrolled{background:rgba(138,52,24,.66);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%)}
+.marca{display:inline-flex;align-items:center;min-height:44px;font:400 24px/1 var(--display);text-decoration:none}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-weight:500;font-size:15px}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.6);color:#fff;font:500 15px var(--texto);padding:0 16px;height:44px;border-radius:999px;cursor:pointer}
+
+/* Secciones */
+.sec{min-height:100svh;padding:calc(var(--hh) + 36px) 20px 64px;display:flex;align-items:center}
+.wrap{max-width:960px;margin:0 auto;width:100%}
+h2{font:400 clamp(36px,5.6vw,62px)/1.02 var(--display);color:var(--teja-osc);max-width:18ch;text-wrap:balance}
+.etiqueta{font-weight:800;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--pasto);margin-bottom:10px}
+.sub{margin:14px 0 22px;color:var(--gris);max-width:56ch}
+.nota{margin-top:20px;font-size:14px;color:var(--gris);max-width:60ch}
+
+/* Portada: foto real al atardecer */
+.portada{position:relative;padding-bottom:48px;align-items:flex-end;background:var(--cielo) url(img/portada.jpg) center 60%/cover;color:#fff;overflow:hidden}
+.portada::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,31,28,.35),rgba(42,31,28,.05) 35%,rgba(42,31,28,.82))}
+.portada-in{position:relative;max-width:1100px;margin:0 auto;width:100%}
+.lugar{font-weight:700;font-size:15px;letter-spacing:.04em;opacity:.92;margin-bottom:16px}
+h1{font:400 clamp(46px,8vw,96px)/.98 var(--display);max-width:13ch;text-wrap:balance}
+.bajada{font-size:clamp(18px,2.2vw,22px);max-width:46ch;margin:22px 0 30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;background:var(--teja);color:#fff;border:2px solid var(--teja);border-radius:999px;font:700 17px var(--texto);text-decoration:none;text-align:center;cursor:pointer}
+.btn:hover{background:var(--teja-osc);border-color:var(--teja-osc)}
+.btn-grande{min-height:60px;padding:0 40px;font-size:19px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.datos{display:flex;flex-wrap:wrap;margin-top:40px;border-top:1px solid rgba(255,255,255,.5);max-width:560px}
+.datos div{padding:14px 0 0;margin-right:30px}
+.datos dt{font-size:14px;opacity:.85}
+.datos dd{font:400 28px/1.1 var(--display);margin-top:2px;white-space:nowrap}
+
+/* Galería y pizarra */
+.adentro{background:var(--arena)}
+.galeria{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.galeria figure{margin:0}
+.galeria img{display:block;width:100%;height:clamp(150px,26vh,260px);object-fit:cover;border-radius:14px}
+.galeria .g-grande{grid-column:1/-1}
+.afuera .galeria{grid-template-columns:1.25fr 1fr}
+.afuera .galeria .g-grande{grid-column:auto}
+.afuera .galeria img{height:clamp(170px,30vh,320px)}
+@media (max-width:760px){
+  .afuera .galeria{grid-template-columns:1fr}
+  .afuera .galeria img{height:clamp(150px,22vh,210px)}
+}
+.galeria figcaption{margin-top:6px;font-size:13px;color:var(--gris)}
+.pizarra{list-style:none;padding:0;margin-top:26px;border-top:2px solid var(--carbon)}
+.pizarra li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:14px 0;border-bottom:1px solid rgba(42,31,28,.22)}
+.q{font:400 26px/1.1 var(--display);color:var(--teja)}
+.d{align-self:center}
+
+/* Todo el año: foto del atardecer */
+.anio{position:relative;background:var(--cielo) url(img/atardecer.jpg) center/cover;color:#fff}
+.anio::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,26,50,.55),rgba(40,26,50,.82))}
+.anio .wrap{position:relative}
+.anio h2{color:#fff}
+.anio .etiqueta{color:var(--rosa)}
+.anio .sub{color:#f6e7df}
+.usos{list-style:none;padding:0;margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.usos li{padding:18px 20px;border-radius:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.usos b{display:block;font:400 24px/1.15 var(--display);color:var(--rosa);margin-bottom:4px}
+
+/* Pasos */
+.secuencia{list-style:none;padding:0;margin:26px 0 28px;counter-reset:p}
+.secuencia li{counter-increment:p;display:grid;grid-template-columns:64px 1fr;column-gap:16px;padding:18px 0;border-bottom:1px solid rgba(42,31,28,.2)}
+.secuencia li::before{content:counter(p);grid-row:1/3;font:400 56px/.9 var(--display);color:var(--teja)}
+.secuencia b{font:700 20px/1.25 var(--texto)}
+.secuencia span{color:var(--gris)}
+
+/* Cierre con pie modelo 25/11 */
+.cierre{background:var(--teja-osc);color:#fff;padding-bottom:20px;align-items:stretch}
+.cierre .wrap{display:flex;flex-direction:column}
+.llamado{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.cierre h2{color:#fff}
+.cierre .sub{color:#f6e2d8}
+.cierre .btn{background:#fff;color:var(--teja-osc);border-color:#fff}
+.cierre .btn:hover{background:var(--arena);border-color:var(--arena)}
+.cierre .nota{color:#fff;background:rgba(0,0,0,.2);padding:10px 14px;border-radius:10px}
+.pie{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.25rem 1.5rem;margin-top:4rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.22);font-size:13.5px;color:rgba(255,255,255,.75)}
+.pie a{color:#fff;font-weight:700;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
+
+/* Botón flotante (celular) */
+.flotante{position:fixed;right:16px;bottom:16px;z-index:15;min-height:52px;padding:0 24px;display:none;align-items:center;background:var(--teja);color:#fff;border-radius:999px;font:700 16px var(--texto);text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.28);opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .2s,transform .2s}
+.flotante.on{opacity:1;pointer-events:auto;transform:none}
+
+@media (max-width:760px){
+  .sec{padding-bottom:44px}
+  .menu-btn{display:inline-block}
+  .nav{position:fixed;top:var(--hh);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--teja-osc);padding:8px 20px 20px;transform:translateY(-130%);transition:transform .25s;visibility:hidden}
+  .nav.open{transform:none;visibility:visible}
+  .nav a{padding:6px 0;font-size:18px;border-bottom:1px solid rgba(255,255,255,.2)}
+  .portada{text-align:center}
+  .portada h1,.portada .bajada{margin-left:auto;margin-right:auto}
+  .ctas{justify-content:center}
+  .datos{justify-content:center;margin-left:auto;margin-right:auto}
+  .datos div{margin:0 10px}
+  .datos dd{font-size:23px}
+  .pizarra li{grid-template-columns:1fr;gap:2px}
+  .usos{grid-template-columns:1fr;gap:10px}
+  .usos li{padding:14px 16px}
+  .flotante{display:inline-flex}
+  .btn{width:100%}
+  .cierre{padding-bottom:12px}
+  .llamado{align-items:center;text-align:center}
+  .llamado h2{margin:0 auto}
+  .pie{flex-direction:column;justify-content:center;text-align:center;gap:0;margin-top:1.5rem;padding-top:.75rem;max-height:90px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .flotante,.top,.nav{transition:none}
+}
